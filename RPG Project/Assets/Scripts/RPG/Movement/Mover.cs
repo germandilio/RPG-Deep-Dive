@@ -17,7 +17,7 @@ namespace RPG.Movement
 
         private ActionScheduler _actionScheduler;
 
-        private static readonly int ForwardSpeed = Animator.StringToHash("forwardSpeed");
+        private static readonly int ForwardSpeedId = Animator.StringToHash("ForwardSpeed");
 
         private void Awake()
         {
@@ -36,6 +36,7 @@ namespace RPG.Movement
             _actionScheduler.StartAction(this);
             MoveTo(destination);
         }
+        
         public void MoveTo(Vector3 destination)
         {
             _navMeshAgent.SetDestination(destination);
@@ -45,9 +46,9 @@ namespace RPG.Movement
         private void UpdateAnimator()
         {
             Vector3 localVelocity = transform.InverseTransformDirection(_navMeshAgent.velocity);
-            _animator.SetFloat(ForwardSpeed, localVelocity.z);
+            _animator.SetFloat(ForwardSpeedId, localVelocity.z);
         }
-
+        
         public void Cancel()
         {
             _navMeshAgent.isStopped = true;
