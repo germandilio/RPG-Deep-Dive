@@ -5,20 +5,23 @@ using RPG.Movement;
 
 namespace RPG.Control
 {
-    [RequireComponent(typeof(Mover))]
+    [RequireComponent(typeof(Fighter), typeof(Health))]
     public class PlayerController : MonoBehaviour
     {
         private Fighter _fighterSystem;
         private Mover _mover;
-
+        private Health _healthSystem;
         private void Awake()
         {
             _mover = GetComponent<Mover>();
             _fighterSystem = GetComponent<Fighter>();
+            _healthSystem = GetComponent<Health>();
         }
 
         private void Update()
         {
+            if (_healthSystem.IsDead) return;
+            
             if (InteractWithCombat()) return;
 
             if (InteractWithMovement()) return;
@@ -32,11 +35,13 @@ namespace RPG.Control
             foreach (RaycastHit hit in hits)
             {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (!_fighterSystem.CanAttack(target)) continue;
+                if (target == null) continue;
+
+                if (!_fighterSystem.CanAttack(target.gameObject)) continue;
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    _fighterSystem.Attack(target);
+                    _fighterSystem.Attack(target.gameObject);
                 }
                 return true;
             }

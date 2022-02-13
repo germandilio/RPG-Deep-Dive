@@ -13,19 +13,21 @@ namespace RPG.Combat
         [SerializeField]
         [Tooltip("Distance to enemy, where player should stop when attacking")]
         private float weaponRange = 2f;
+
         [SerializeField]
         [Tooltip("Damage, which player apply to Combat target")]
         private float weaponDamage = 25f;
-        
+
         [SerializeField]
         [Tooltip("Time in seconds between player attacks")]
         private float timeBetweenAttacks = 2f;
-        private float _timeSinceLastAttack;    
-        
+
+        private float _timeSinceLastAttack = Mathf.Infinity;
+
         private Mover _movementSystem;
         private ActionScheduler _actionScheduler;
 
-        private CombatTarget _target;
+        private Health _target;
 
         private Animator _animator;
         private static readonly int AttackId = Animator.StringToHash("Attack");
@@ -42,7 +44,7 @@ namespace RPG.Combat
         {
             _timeSinceLastAttack += Time.deltaTime;
             if (_target == null) return;
-            
+
             if (Vector3.Distance(transform.position, _target.transform.position) >= weaponRange)
                 _movementSystem.MoveTo(_target.transform.position);
             else
@@ -54,8 +56,8 @@ namespace RPG.Combat
 
         private void AttackBehaviour()
         {
-            if (_target == null) return;
-            
+            if (!CanAttack(_target.gameObject)) return;
+
             transform.LookAt(_target.transform);
             if (_timeSinceLastAttack >= timeBetweenAttacks)
             {
@@ -74,12 +76,23 @@ namespace RPG.Combat
             _animator.ResetTrigger(StopAttackingId);
         }
 
-        public void Attack(CombatTarget combatTarget)
+        public void Attack(GameObject combatTarget)
         {
             Debug.Log("you're attacking");
-            _target = combatTarget;
-            
+            _target = combatTarget.GetComponent<Health>();
+
             _actionScheduler.StartAction(this);
+        }
+
+        public bool CanAttack(GameObject target)
+        {
+            Health healthComponent;
+            if (target == null || (healthComponent = target.GetComponent<Health>()) == null)
+            {
+                return false;
+            }
+            
+            return !healthComponent.IsDead;
         }
 
         public void Cancel()
@@ -96,15 +109,9 @@ namespace RPG.Combat
         {
             // Apply damage
             if (_target == null) return;
-
-            var healthComponent = _target.GetComponent<Health>();
-            if (!healthComponent.IsDead)
-                healthComponent.TakeDamage(weaponDamage);
-        }
-
-        public bool CanAttack(CombatTarget target)
-        {
-            return target != null && !target.GetComponent<Health>().IsDead;
+            ;
+            if (!_target.IsDead)
+                _target.TakeDamage(weaponDamage);
         }
     }
 }

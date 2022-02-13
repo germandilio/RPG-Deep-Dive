@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Combat;
 using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace RPG.Movement
 {
-    [RequireComponent(typeof(NavMeshAgent), typeof(Animator),
-        typeof(ActionScheduler))]
+    [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ActionScheduler))]
+    [RequireComponent(typeof(Health))]
     public class Mover : MonoBehaviour, IAction
     {
         private NavMeshAgent _navMeshAgent;
+        private ActionScheduler _actionScheduler;
+        private Health _healthSystem;
 
         private Animator _animator;
-
-        private ActionScheduler _actionScheduler;
-
         private static readonly int ForwardSpeedId = Animator.StringToHash("ForwardSpeed");
 
         private void Awake()
@@ -24,10 +24,14 @@ namespace RPG.Movement
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
             _actionScheduler = GetComponent<ActionScheduler>();
+            _healthSystem = GetComponent<Health>();
         }
 
         private void Update()
         {
+            // disable navMeshAgent after death
+            _navMeshAgent.enabled = !_healthSystem.IsDead;
+            
             UpdateAnimator();
         }
 
