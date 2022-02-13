@@ -6,6 +6,10 @@ namespace RPG.Core
     {
         private IAction _currentAction;
         
+        /// <summary>
+        /// Starts new action with cancelling previous action.
+        /// </summary>
+        /// <param name="action"> Action to start.</param>
         public void StartAction(IAction action)
         {
             if (action == _currentAction) return;

@@ -8,16 +8,13 @@ namespace RPG.Control
     [RequireComponent(typeof(Mover))]
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField]
-        private Fighter fighterSystem;
-        
-        [SerializeField]
-        private Mover mover;
+        private Fighter _fighterSystem;
+        private Mover _mover;
 
         private void Awake()
         {
-            mover = GetComponent<Mover>();
-            fighterSystem = GetComponent<Fighter>();
+            _mover = GetComponent<Mover>();
+            _fighterSystem = GetComponent<Fighter>();
         }
 
         private void Update()
@@ -39,7 +36,7 @@ namespace RPG.Control
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    fighterSystem.Attack(target);
+                    _fighterSystem.Attack(target);
                 }
                 return true;
             }
@@ -58,7 +55,7 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(0))
                 {
-                    mover.StartMoveAction(hit.point);
+                    _mover.StartMoveAction(hit.point);
                 }
                 // there is object to interact with
                 return true;
@@ -67,6 +64,10 @@ namespace RPG.Control
             return false;
         }
 
+        /// <summary>
+        /// Convert mouse position to ray from camera to object under mouse pointer
+        /// </summary>
+        /// <returns>Ray, where origin: main camera.</returns>
         private static Ray GetMouseRay()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

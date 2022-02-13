@@ -11,18 +11,19 @@ namespace RPG.Movement
         typeof(ActionScheduler))]
     public class Mover : MonoBehaviour, IAction
     {
-        [SerializeField]
-        private NavMeshAgent navMeshAgent;
+        private NavMeshAgent _navMeshAgent;
 
-        [SerializeField]
-        private Animator animator ;
+        private Animator _animator;
+
+        private ActionScheduler _actionScheduler;
 
         private static readonly int ForwardSpeed = Animator.StringToHash("forwardSpeed");
 
         private void Awake()
         {
-            navMeshAgent = GetComponent<NavMeshAgent>();
-            animator = GetComponent<Animator>();
+            _navMeshAgent = GetComponent<NavMeshAgent>();
+            _animator = GetComponent<Animator>();
+            _actionScheduler = GetComponent<ActionScheduler>();
         }
 
         private void Update()
@@ -32,24 +33,24 @@ namespace RPG.Movement
 
         public void StartMoveAction(Vector3 destination)
         {
-            GetComponent<ActionScheduler>().StartAction(this);
+            _actionScheduler.StartAction(this);
             MoveTo(destination);
         }
         public void MoveTo(Vector3 destination)
         {
-            navMeshAgent.SetDestination(destination);
-            navMeshAgent.isStopped = false;
+            _navMeshAgent.SetDestination(destination);
+            _navMeshAgent.isStopped = false;
         }
         
         private void UpdateAnimator()
         {
-            Vector3 localVelocity = transform.InverseTransformDirection(navMeshAgent.velocity);
-            animator.SetFloat(ForwardSpeed, localVelocity.z);
+            Vector3 localVelocity = transform.InverseTransformDirection(_navMeshAgent.velocity);
+            _animator.SetFloat(ForwardSpeed, localVelocity.z);
         }
 
         public void Cancel()
         {
-            navMeshAgent.isStopped = true;
+            _navMeshAgent.isStopped = true;
         }
     }
 }
