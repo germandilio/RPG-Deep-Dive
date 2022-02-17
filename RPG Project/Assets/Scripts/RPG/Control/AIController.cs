@@ -12,7 +12,11 @@ namespace RPG.Control
     {
         [SerializeField]
         private PatrolPath patrolPath;
-        
+
+        [SerializeField]
+        [Range(0, 1)]
+        [Tooltip("Character speed will be multiplied by this factor, when enemy patrolling.")]
+        private float patrolSpeedFactor = 0.2f;
         [SerializeField]
         private float chaseDistance = 5f;
         [SerializeField]
@@ -88,7 +92,7 @@ namespace RPG.Control
             if (_timeOnCurrentWaypoint >= dwellTime)
             {
                 // move enemy to next waypoint
-                _moverSystem.StartMoveAction(nextPosition);
+                _moverSystem.StartMoveAction(nextPosition, patrolSpeedFactor);
             }
         }
 
