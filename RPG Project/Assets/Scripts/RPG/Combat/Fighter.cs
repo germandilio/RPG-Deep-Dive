@@ -105,7 +105,7 @@ namespace RPG.Combat
         /// <summary>
         /// Animation event to apply damage
         /// </summary>
-        private void Hit()
+        private void OnHit()
         {
             // Apply damage
             if (_target == null) return;
