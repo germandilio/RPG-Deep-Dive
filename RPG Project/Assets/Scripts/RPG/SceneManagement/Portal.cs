@@ -58,8 +58,7 @@ namespace RPG.SceneManagement
         private void UpdatePlayer(Portal anotherPortal)
         {
             var player = GameObject.FindWithTag("Player");
-            // player.GetComponent<NavMeshAgent>()?.Warp(anotherPortal.spawnPoint.position);
-            player.transform.position = anotherPortal.spawnPoint.position;
+            player.GetComponent<NavMeshAgent>()?.Warp(anotherPortal.spawnPoint.position);
             player.transform.rotation = anotherPortal.spawnPoint.rotation;
         }
 
