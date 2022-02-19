@@ -5,12 +5,13 @@ using RPG.Combat;
 using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
+using Saving;
 
 namespace RPG.Movement
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ActionScheduler))]
     [RequireComponent(typeof(Health))]
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField]
         private float maxSpeed = 6f;
@@ -62,6 +63,16 @@ namespace RPG.Movement
         public void Cancel()
         {
             _navMeshAgent.isStopped = true;
+        }
+
+        public object CaptureState()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RestoreState(object state)
+        {
+            throw new NotImplementedException();
         }
     }
 }

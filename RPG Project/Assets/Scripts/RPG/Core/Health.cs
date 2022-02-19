@@ -38,7 +38,7 @@ namespace RPG.Combat
             _animator.SetTrigger(DeadId);
             IsDead = true;
             
-            // TODO (13/02/2022) set enable to false on enemy capsule collider
+            // TODO set enable to false on enemy capsule collider
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }
     }
