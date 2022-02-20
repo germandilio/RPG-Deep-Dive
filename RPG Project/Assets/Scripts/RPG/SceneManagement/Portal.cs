@@ -15,16 +15,16 @@ namespace RPG.SceneManagement
         [SerializeField]
         [Tooltip("Time in seconds to wait after scene loaded before fade in")]
         private float fadeWaitTime = 0.3f;
-        
+
         [SerializeField]
         private Scenes destinationScene;
 
         [SerializeField]
         private DestinationPortal destinationPortal;
-        
+
         [SerializeField]
         private Transform spawnPoint;
-        
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
@@ -37,22 +37,22 @@ namespace RPG.SceneManagement
         {
             if (destinationScene == Scenes.None)
                 yield break;
-            
+
             DontDestroyOnLoad(gameObject);
 
             Fader fader = FindObjectOfType<Fader>();
             yield return fader.FadeOut(timeToFadeOut);
-            
+
             // save current scene before transition
             SavingWrapper saving = FindObjectOfType<SavingWrapper>();
             saving.Save();
-            
+
             // load next scene
-            yield return SceneManager.LoadSceneAsync((int)destinationScene);
+            yield return SceneManager.LoadSceneAsync((int) destinationScene);
 
             // TODO find different way to stabilize the object initialization
             yield return new WaitForSeconds(fadeWaitTime);
-            
+
             // load objects state from file, that was saved in the end of previous scene
             saving.Load();
 
@@ -64,7 +64,7 @@ namespace RPG.SceneManagement
             saving.Save();
 
             yield return fader.FadeIn(timeToFadeIn);
-            
+
             Destroy(gameObject);
         }
 
@@ -81,10 +81,11 @@ namespace RPG.SceneManagement
             {
                 if (portal == this) continue;
                 if (destinationPortal != portal.destinationPortal) continue;
-                
+
                 return portal;
             }
+
             return null;
         }
-    }   
+    }
 }

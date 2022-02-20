@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace RPG.Combat
 {
-    [RequireComponent(typeof(ActionScheduler), typeof(Animator))]
+    [RequireComponent(typeof(ActionScheduler), typeof(Animator), typeof(Mover))]
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField]
@@ -91,7 +91,7 @@ namespace RPG.Combat
             {
                 return false;
             }
-            
+
             return !healthComponent.IsDead;
         }
 

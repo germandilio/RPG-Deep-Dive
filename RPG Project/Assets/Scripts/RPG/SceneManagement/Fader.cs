@@ -7,7 +7,7 @@ using UnityEngine;
 public class Fader : MonoBehaviour
 {
     private CanvasGroup _canvasGroup;
-    
+
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();

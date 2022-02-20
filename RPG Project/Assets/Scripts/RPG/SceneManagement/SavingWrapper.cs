@@ -12,7 +12,7 @@ namespace RPG.SceneManagement
     {
         [SerializeField]
         private float timeToFadeIn = 1f;
-        
+
         private const string DefaultSaveFileName = "saving";
         private SavingSystem _savingSystem;
 
@@ -26,20 +26,20 @@ namespace RPG.SceneManagement
             // hide all the initializations when loaded scene state from file
             Fader fader = FindObjectOfType<Fader>();
             fader.FadeOutImmediately();
-            
+
             yield return _savingSystem.LoadLastScene(DefaultSaveFileName);
 
             yield return fader.FadeIn(timeToFadeIn);
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Load();
             }
-            
+
             if (Input.GetKeyDown(KeyCode.S))
             {
                 Save();

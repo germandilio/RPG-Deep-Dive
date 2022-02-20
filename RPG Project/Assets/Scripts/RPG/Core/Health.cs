@@ -36,10 +36,10 @@ namespace RPG.Core
         private void Die()
         {
             if (IsDead) return;
-            
+
             _animator.SetTrigger(DeadId);
             IsDead = true;
-            
+
             // TODO set enable to false on enemy capsule collider
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<CapsuleCollider>().enabled = false;
@@ -59,7 +59,7 @@ namespace RPG.Core
                 print("restore health");
                 _currentHealthPoints = savedHealthPoints;
             }
-            
+
             if (_currentHealthPoints == 0)
                 Die();
         }

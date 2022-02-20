@@ -9,11 +9,11 @@ namespace RPG.Core
         private GameObject persistentObjectPrefab;
 
         private static bool _wasSpawned;
-        
+
         private void Awake()
         {
             if (_wasSpawned) return;
-            
+
             SpawnObject();
             _wasSpawned = true;
         }

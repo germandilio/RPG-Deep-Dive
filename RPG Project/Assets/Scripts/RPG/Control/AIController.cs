@@ -17,8 +17,10 @@ namespace RPG.Control
         [Range(0, 1)]
         [Tooltip("Character speed will be multiplied by this factor, when enemy patrolling.")]
         private float patrolSpeedFactor = 0.2f;
+
         [SerializeField]
         private float chaseDistance = 5f;
+
         [SerializeField]
         private float waypointTolerance = 0.5f;
 
@@ -27,10 +29,11 @@ namespace RPG.Control
         [SerializeField]
         [Tooltip("Max time to wait after player go out chase distance, before move to guard place")]
         private float suspicionTime = 4f;
+
         [SerializeField]
         [Tooltip("Time when enemy stops on every waypoint")]
         private float dwellTime = 5f;
-        
+
         private float _timeSinceLastSawPlayer = Mathf.Infinity;
         private float _timeOnCurrentWaypoint = Mathf.Infinity;
 
@@ -38,25 +41,25 @@ namespace RPG.Control
         private Health _healthSystem;
         private Mover _moverSystem;
         private ActionScheduler _actionScheduler;
-        
+
         private GameObject _player;
 
         private void Awake()
         {
             _guardPosition = transform.position;
-            
+
             _fighterSystem = GetComponent<Fighter>();
             _healthSystem = GetComponent<Health>();
             _moverSystem = GetComponent<Mover>();
             _actionScheduler = GetComponent<ActionScheduler>();
-            
+
             _player = GameObject.FindWithTag("Player");
         }
 
         private void Update()
         {
             if (_healthSystem.IsDead) return;
-            
+
             if (InAttackRange() && _fighterSystem.CanAttack(_player))
                 AttackBehaviour();
             else if (_timeSinceLastSawPlayer < suspicionTime)
@@ -85,7 +88,7 @@ namespace RPG.Control
                     patrolPath.CycleWaypoint();
                     _timeOnCurrentWaypoint = 0f;
                 }
-                
+
                 nextPosition = patrolPath.GetCurrentWaypoint();
             }
 

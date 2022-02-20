@@ -17,8 +17,9 @@ namespace Saving
             int buildIndex = SceneManager.GetActiveScene().buildIndex;
             if (state.ContainsKey("lastSceneBuildIndex"))
             {
-                buildIndex = (int)state["lastSceneBuildIndex"];
+                buildIndex = (int) state["lastSceneBuildIndex"];
             }
+
             yield return SceneManager.LoadSceneAsync(buildIndex);
             RestoreState(state);
         }
@@ -47,10 +48,11 @@ namespace Saving
             {
                 return new Dictionary<string, object>();
             }
+
             using (FileStream stream = File.Open(path, FileMode.Open))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                return (Dictionary<string, object>)formatter.Deserialize(stream);
+                return (Dictionary<string, object>) formatter.Deserialize(stream);
             }
         }
 

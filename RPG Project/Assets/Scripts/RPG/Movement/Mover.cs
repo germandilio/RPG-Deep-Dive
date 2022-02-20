@@ -15,7 +15,7 @@ namespace RPG.Movement
     {
         [SerializeField]
         private float maxSpeed = 6f;
-        
+
         private NavMeshAgent _navMeshAgent;
         private ActionScheduler _actionScheduler;
         private Health _healthSystem;
@@ -37,7 +37,7 @@ namespace RPG.Movement
         {
             // disable navMeshAgent after death
             _navMeshAgent.enabled = !_healthSystem.IsDead;
-            
+
             UpdateAnimator();
         }
 
@@ -53,13 +53,13 @@ namespace RPG.Movement
             _navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFactor);
             _navMeshAgent.isStopped = false;
         }
-        
+
         private void UpdateAnimator()
         {
             Vector3 localVelocity = transform.InverseTransformDirection(_navMeshAgent.velocity);
             _animator.SetFloat(ForwardSpeedId, localVelocity.z);
         }
-        
+
         public void Cancel()
         {
             _navMeshAgent.isStopped = true;

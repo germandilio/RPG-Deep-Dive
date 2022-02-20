@@ -6,13 +6,13 @@ using RPG.Core;
 
 namespace RPG.Control
 {
-    [RequireComponent(typeof(Fighter), typeof(Health))]
+    [RequireComponent(typeof(Fighter), typeof(Health), typeof(Mover))]
     public class PlayerController : MonoBehaviour
     {
         private Fighter _fighterSystem;
         private Mover _mover;
         private Health _healthSystem;
-        
+
         private void Awake()
         {
             _mover = GetComponent<Mover>();
@@ -23,7 +23,7 @@ namespace RPG.Control
         private void Update()
         {
             if (_healthSystem.IsDead) return;
-            
+
             if (InteractWithCombat()) return;
 
             if (InteractWithMovement()) return;
@@ -45,12 +45,14 @@ namespace RPG.Control
                 {
                     _fighterSystem.Attack(target.gameObject);
                 }
+
                 return true;
             }
+
             // hits array doesn't contains any combat targets
             return false;
         }
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -64,6 +66,7 @@ namespace RPG.Control
                 {
                     _mover.StartMoveAction(hit.point);
                 }
+
                 // there is object to interact with
                 return true;
             }

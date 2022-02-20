@@ -5,7 +5,7 @@ namespace Saving
     [System.Serializable]
     public class SerializableVector3
     {
-        float x, y, z;
+        private float x, y, z;
 
         public SerializableVector3(Vector3 vector)
         {

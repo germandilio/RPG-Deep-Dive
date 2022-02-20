@@ -11,16 +11,16 @@ namespace RPG.Cinematics
     public class PlayCutsceneTriggerController : MonoBehaviour, ISaveable
     {
         private bool _wasTriggered;
-        
+
         private void OnTriggerEnter(Collider other)
         {
             if (_wasTriggered) return;
-            
+
             if (other.gameObject.CompareTag("Player"))
             {
                 GetComponent<PlayableDirector>().Play();
                 _wasTriggered = true;
-            }    
+            }
         }
 
         public object CaptureState()
