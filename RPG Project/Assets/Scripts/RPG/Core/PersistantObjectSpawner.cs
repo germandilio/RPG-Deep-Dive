@@ -8,13 +8,14 @@ namespace RPG.Core
         [SerializeField]
         private GameObject persistentObjectPrefab;
 
-        private bool wasSpawned;
+        private static bool _wasSpawned;
+        
         private void Awake()
         {
-            if (wasSpawned) return;
+            if (_wasSpawned) return;
             
             SpawnObject();
-            wasSpawned = true;
+            _wasSpawned = true;
         }
 
         private void SpawnObject()

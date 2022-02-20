@@ -14,7 +14,7 @@ namespace RPG.SceneManagement
 
         [SerializeField]
         [Tooltip("Time in seconds to wait after scene loaded before fade in")]
-        private float fadeWaitTime = 1f;
+        private float fadeWaitTime = 0.3f;
         
         [SerializeField]
         private Scenes destinationScene;
@@ -43,13 +43,26 @@ namespace RPG.SceneManagement
             Fader fader = FindObjectOfType<Fader>();
             yield return fader.FadeOut(timeToFadeOut);
             
+            // save current scene before transition
+            SavingWrapper saving = FindObjectOfType<SavingWrapper>();
+            saving.Save();
+            
+            // load next scene
             yield return SceneManager.LoadSceneAsync((int)destinationScene);
-
-            Portal anotherPortal = GetDestinationPortal();
-            UpdatePlayer(anotherPortal);
 
             // TODO find different way to stabilize the object initialization
             yield return new WaitForSeconds(fadeWaitTime);
+            
+            // load objects state from file, that was saved in the end of previous scene
+            saving.Load();
+
+            // (transition) update player location to portal in new scene
+            Portal anotherPortal = GetDestinationPortal();
+            UpdatePlayer(anotherPortal);
+
+            // save the current state (used like latest checkpoint when restarted game)
+            saving.Save();
+
             yield return fader.FadeIn(timeToFadeIn);
             
             Destroy(gameObject);

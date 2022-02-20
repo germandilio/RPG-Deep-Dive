@@ -40,4 +40,9 @@ public class Fader : MonoBehaviour
             yield return null;
         }
     }
+
+    public void FadeOutImmediately()
+    {
+        _canvasGroup.alpha = 1;
+    }
 }
