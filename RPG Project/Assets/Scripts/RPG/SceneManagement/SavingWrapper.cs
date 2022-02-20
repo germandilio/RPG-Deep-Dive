@@ -7,10 +7,10 @@ using UnityEngine.Advertisements;
 
 namespace RPG.SceneManagement
 {
- 
+    [RequireComponent(typeof(SavingSystem))]
     public class SavingWrapper : MonoBehaviour
     {
-        private const string defaultSaveFileName = "saving";
+        private const string DefaultSaveFileName = "saving";
         private SavingSystem _savingSystem;
 
         private void Awake()
@@ -24,7 +24,9 @@ namespace RPG.SceneManagement
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Load();
-            } else if (Input.GetKeyDown(KeyCode.S))
+            }
+            
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 Save();
             }
@@ -32,12 +34,12 @@ namespace RPG.SceneManagement
 
         private void Save()
         {
-            _savingSystem.Save(defaultSaveFileName);
+            _savingSystem.Save(DefaultSaveFileName);
         }
 
         private void Load()
         {
-            _savingSystem.Load(defaultSaveFileName);
+            _savingSystem.Load(DefaultSaveFileName);
         }
     }
 }

@@ -1,10 +1,12 @@
 using System;
 using RPG.Core;
+using Saving;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace RPG.Core
 {
-    public class Health : MonoBehaviour
+    [RequireComponent(typeof(ActionScheduler), typeof(Rigidbody), typeof(CapsuleCollider))]
+    public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField]
         private float initialHealthPoints = 100f;
@@ -39,7 +41,27 @@ namespace RPG.Combat
             IsDead = true;
             
             // TODO set enable to false on enemy capsule collider
+            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
+
+        public object CaptureState()
+        {
+            return _currentHealthPoints;
+        }
+
+        public void RestoreState(object state)
+        {
+            if (state is float savedHealthPoints)
+            {
+                // TODO debug
+                print("restore health");
+                _currentHealthPoints = savedHealthPoints;
+            }
+            
+            if (_currentHealthPoints == 0)
+                Die();
         }
     }
 }
