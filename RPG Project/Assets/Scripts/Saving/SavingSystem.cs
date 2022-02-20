@@ -11,13 +11,16 @@ namespace Saving
 {
     public class SavingSystem : MonoBehaviour
     {
+        private const string ScenePropertyName = "lastSceneBuildIndex";
+        private const string SavingFileExtension = ".sav";
+
         public IEnumerator LoadLastScene(string saveFile)
         {
             Dictionary<string, object> state = LoadFile(saveFile);
             int buildIndex = SceneManager.GetActiveScene().buildIndex;
-            if (state.ContainsKey("lastSceneBuildIndex"))
+            if (state.ContainsKey(ScenePropertyName))
             {
-                buildIndex = (int) state["lastSceneBuildIndex"];
+                buildIndex = (int) state[ScenePropertyName];
             }
 
             yield return SceneManager.LoadSceneAsync(buildIndex);
@@ -74,7 +77,7 @@ namespace Saving
                 state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
             }
 
-            state["lastSceneBuildIndex"] = SceneManager.GetActiveScene().buildIndex;
+            state[ScenePropertyName] = SceneManager.GetActiveScene().buildIndex;
         }
 
         private void RestoreState(Dictionary<string, object> state)
@@ -91,7 +94,7 @@ namespace Saving
 
         private string GetPathFromSaveFile(string saveFile)
         {
-            return Path.Combine(Application.persistentDataPath, saveFile + ".sav");
+            return Path.Combine(Application.persistentDataPath, saveFile + SavingFileExtension);
         }
     }
 }

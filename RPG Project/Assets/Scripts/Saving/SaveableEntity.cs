@@ -16,7 +16,7 @@ namespace Saving
 
         public string GetUniqueIdentifier()
         {
-            return uniqueIdentifier;
+            return uniqueIdentifier; 
         }
 
         public object CaptureState()

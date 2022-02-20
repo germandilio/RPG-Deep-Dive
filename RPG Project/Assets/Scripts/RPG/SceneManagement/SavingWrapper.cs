@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using Saving;
 using UnityEngine;
-using UnityEngine.Advertisements;
 
 namespace RPG.SceneManagement
 {
@@ -48,7 +48,9 @@ namespace RPG.SceneManagement
 
         public void Save()
         {
-            _savingSystem.Save(DefaultSaveFileName);
+            var playerHealth = GameObject.FindWithTag("Player")?.GetComponent<Health>();
+            if (playerHealth != null && !playerHealth.IsDead)
+                _savingSystem.Save(DefaultSaveFileName);
         }
 
         public void Load()
