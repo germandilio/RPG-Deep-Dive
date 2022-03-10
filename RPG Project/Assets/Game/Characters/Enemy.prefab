@@ -61,6 +61,24 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 75a95c1a6b684504c93637e35347c475, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &2665411557963962270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2665411557964300434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2665411557963904924 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2665411557964300434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2665411557963964120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 482890, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2665411557964300434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8739608985402960643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82,6 +100,33 @@ PrefabInstance:
       propertyPath: initialHealthPoints
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 26ca0af22fbe0471eb239a034dd47170,
+        type: 2}
+    - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: leftHand
+      value: 
+      objectReference: {fileID: 2665411557963962270}
+    - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 2665411557963904924}
+    - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 26ca0af22fbe0471eb239a034dd47170,
+        type: 2}
+    - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: weaponSpawnPoint
+      value: 
+      objectReference: {fileID: 2665411557963964120}
     - target: {fileID: 4720340884800213691, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: maxSpeed
