@@ -15,15 +15,16 @@ namespace RPG.Combat
 
         [SerializeField]
         private Weapon defaultWeapon;
+
         private Weapon _currentWeapon = null;
-        
+
         private Health _target;
 
         private float _timeSinceLastAttack = Mathf.Infinity;
 
         private Mover _movementSystem;
         private ActionScheduler _actionScheduler;
-        
+
         private Animator _animator;
         private static readonly int AttackId = Animator.StringToHash("Attack");
         private static readonly int StopAttackingId = Animator.StringToHash("StopAttacking");
@@ -57,7 +58,7 @@ namespace RPG.Combat
         public void EquipWeapon(Weapon weapon)
         {
             if (weapon == null) return;
-            
+
             _currentWeapon = weapon;
             weapon.CreateWeapon(leftHand, rightHand, _animator);
         }
@@ -116,10 +117,12 @@ namespace RPG.Combat
         /// </summary>
         private void OnHit()
         {
-            // Apply damage
-            if (_target == null) return;
-            ;
-            if (!_target.IsDead)
+            if (_target == null || _target.IsDead) return;
+
+            if (_currentWeapon.HasProjectile)
+                _currentWeapon.LaunchProjectile(leftHand, rightHand, _target);
+            else
+                // Apply damage for non projectile weapons
                 _target.TakeDamage(_currentWeapon.WeaponDamage);
         }
     }
