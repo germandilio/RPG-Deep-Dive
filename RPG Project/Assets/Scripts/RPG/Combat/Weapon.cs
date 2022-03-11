@@ -14,7 +14,7 @@ namespace RPG.Combat
         private AnimatorOverrideController animatorController;
 
         [SerializeField]
-        private GameObject projectilePrefab = null;
+        private GameObject projectilePrefab;
 
         [SerializeField]
         private WeaponType weaponType;

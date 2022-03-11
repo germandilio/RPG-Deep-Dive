@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33439128244052482}
   - component: {fileID: 23611415075500588}
   m_Layer: 0
-  m_Name: Simple Bow
+  m_Name: Simple Bow Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
