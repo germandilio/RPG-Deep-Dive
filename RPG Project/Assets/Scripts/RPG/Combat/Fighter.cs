@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Core;
 using RPG.Movement;
+using Saving;
 using UnityEngine;
 
 namespace RPG.Combat
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Animator), typeof(Mover))]
-    public class Fighter : MonoBehaviour, IAction
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField]
         private Transform rightHand, leftHand;
@@ -16,7 +17,7 @@ namespace RPG.Combat
         [SerializeField]
         private Weapon defaultWeapon;
 
-        private Weapon _currentWeapon = null;
+        private Weapon _currentWeapon;
 
         private Health _target;
 
@@ -38,7 +39,9 @@ namespace RPG.Combat
 
         private void Start()
         {
-            EquipWeapon(defaultWeapon);
+            // restore default weapon
+            if (_currentWeapon == null)
+                EquipWeapon(defaultWeapon);
         }
 
         private void Update()
@@ -124,6 +127,18 @@ namespace RPG.Combat
             else
                 // Apply damage for non projectile weapons
                 _target.TakeDamage(_currentWeapon.WeaponDamage);
+        }
+
+        public object CaptureState()
+        {
+            return _currentWeapon.name;
+        }
+
+        public void RestoreState(object state)
+        {
+            if (!(state is String weaponName)) return;
+            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
         }
     }
 }

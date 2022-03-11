@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 33439128244052482}
   - component: {fileID: 23611415075500588}
   m_Layer: 0
-  m_Name: Simple Bow Pickup
+  m_Name: Simple Bow
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563655986059756}
-  m_LocalRotation: {x: 0.066062875, y: -0.7240644, z: 0.68320274, w: 0.06782624}
-  m_LocalPosition: {x: 0.51868796, y: -0.6154651, z: 0.7293082}
+  m_LocalRotation: {x: 0.00072092755, y: -0.73634994, z: 0.6762255, w: -0.022525428}
+  m_LocalPosition: {x: 0.359, y: -0.093, z: 0.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 86.686, y: -172.094, z: -2.964}
+  m_LocalEulerAnglesHint: {x: 84.775, y: -202.023, z: -20.254}
 --- !u!33 &33439128244052482
 MeshFilter:
   m_ObjectHideFlags: 0

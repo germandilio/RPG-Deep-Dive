@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16b332d5a62048b4832411ff91bc6fc3, type: 3}
-  m_Name: Sword Scriptable Object
+  m_Name: Fireball Scriptable Object
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 5825387962244292582, guid: 5a22e49a32bdd41f89752c5b0dd49977,
+  weaponPrefab: {fileID: 0}
+  projectilePrefab: {fileID: 5578374591664930097, guid: 8fce7a091c1ad4f8ea92362904d54af0,
     type: 3}
-  animatorController: {fileID: 22100000, guid: 2bec9d3fb655b48e4846dac2d6cdc87a, type: 2}
-  weaponType: 1
-  weaponRange: 3
-  weaponDamage: 50
+  animatorOverrideController: {fileID: 22100000, guid: 3fb56d1b8e64e4232854b4187ad5575e,
+    type: 2}
+  weaponType: 0
+  weaponRange: 10
+  weaponDamage: 25
   timeBetweenAttacks: 2

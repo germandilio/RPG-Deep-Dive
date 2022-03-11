@@ -72,7 +72,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.1
+  m_Time: 0.045
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -185,7 +185,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  maxLifeTime: 5
+  lifeAfterHit: 0.1
   homing: 0
+  destroyOnHit:
+  - {fileID: 234673866598034175}
+  impactEffect: {fileID: 3378312010013682950, guid: b08b07c8876034a559b7e9d8146e436a,
+    type: 3}
 --- !u!65 &8388266841048590119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -256,6 +262,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+--- !u!1 &234673866598034175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 235418547846016257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &240027054440740277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0,

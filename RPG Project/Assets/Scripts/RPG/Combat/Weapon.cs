@@ -1,4 +1,3 @@
-using Newtonsoft.Json.Schema;
 using RPG.Core;
 using UnityEngine;
 
@@ -8,13 +7,16 @@ namespace RPG.Combat
     public class Weapon : ScriptableObject
     {
         [SerializeField]
+        [Tooltip(
+            "Keep it none if this weapon is invisible (ex. fireball weapon have only projectiles, without visible weapon)")]
         private GameObject weaponPrefab;
 
         [SerializeField]
-        private AnimatorOverrideController animatorController;
+        [Tooltip("Keep it none if this weapon doesn't have projectiles")]
+        private GameObject projectilePrefab;
 
         [SerializeField]
-        private GameObject projectilePrefab;
+        private AnimatorOverrideController animatorOverrideController;
 
         [SerializeField]
         private WeaponType weaponType;
@@ -31,7 +33,8 @@ namespace RPG.Combat
         [Tooltip("Time in seconds between player attacks")]
         private float timeBetweenAttacks = 2f;
 
-        private const string WeaponName = "$$$Weapon$$$";
+        private const string WeaponName = "$$$Current Weapon$$$";
+        private const string DestroyingWeaponName = "$$$destroying$$$";
 
         public bool HasProjectile => projectilePrefab != null;
 
@@ -49,8 +52,30 @@ namespace RPG.Combat
             Transform armedHand = DefineHand(leftHand, rightHand);
 
             GameObject weaponInstance = Instantiate(weaponPrefab, armedHand);
-            characterAnimator.runtimeAnimatorController = animatorController;
+            SetAnimatorController(characterAnimator);
+
             weaponInstance.name = WeaponName;
+        }
+
+        /// <summary>
+        /// Overriding animation controller buy animatorOverrideController.
+        /// If animatorOverrideController is null (there is no overriding), it will reset controller to default state.
+        /// </summary>
+        /// <param name="characterAnimator">Character animator.</param>
+        private void SetAnimatorController(Animator characterAnimator)
+        {
+            if (animatorOverrideController != null)
+            {
+                // overriding by animatorOverrideController 
+                characterAnimator.runtimeAnimatorController = animatorOverrideController;
+            }
+            // set default state of animator controller if current controller was overriden and want to be overriden by null 
+            else if (characterAnimator.runtimeAnimatorController is AnimatorOverrideController)
+            {
+                // parent controller (default state)
+                var parentController = animatorOverrideController.runtimeAnimatorController;
+                characterAnimator.runtimeAnimatorController = parentController;
+            }
         }
 
         private void DestroyOldWeapon(Transform left, Transform right)
@@ -60,13 +85,13 @@ namespace RPG.Combat
 
             if (oldLeftWeapon != null)
             {
-                oldLeftWeapon.name = "$$$destroying$$$";
+                oldLeftWeapon.name = DestroyingWeaponName;
                 Destroy(oldLeftWeapon.gameObject);
             }
 
             if (oldRightWeapon != null)
             {
-                oldRightWeapon.name = "$$$destroying$$$";
+                oldRightWeapon.name = DestroyingWeaponName;
                 Destroy(oldRightWeapon.gameObject);
             }
         }
@@ -82,6 +107,8 @@ namespace RPG.Combat
 
         public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target)
         {
+            if (projectilePrefab == null) return;
+
             // TODO: Исправить метоположение лука в руке, чтобы стрелы не ищезали при попадании в самого игрока
             Transform handSpawn = DefineHand(leftHand, rightHand);
             GameObject projectileInstance = Instantiate(projectilePrefab, handSpawn.position, Quaternion.identity);
