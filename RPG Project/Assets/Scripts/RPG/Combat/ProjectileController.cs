@@ -9,6 +9,9 @@ namespace RPG.Combat
         [SerializeField]
         private float speed = 10f;
 
+        [SerializeField]
+        private bool homing = false;
+        
         private Health target = null;
         private float _damage;
 
@@ -16,7 +19,8 @@ namespace RPG.Combat
         {
             if (target == null) return;
 
-            transform.LookAt(GetDestinationPoint());
+            if (homing && !target.IsDead) transform.LookAt(GetDestinationPoint());
+            
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
@@ -35,6 +39,8 @@ namespace RPG.Combat
         {
             target = healthTarget;
             _damage = weaponDamage;
+            // aim to target
+            transform.LookAt(GetDestinationPoint());
         }
 
         private void OnTriggerEnter(Collider other)
