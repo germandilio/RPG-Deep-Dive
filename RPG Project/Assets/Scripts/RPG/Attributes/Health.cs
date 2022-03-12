@@ -1,16 +1,14 @@
 using System;
 using RPG.Core;
+using RPG.Stats;
 using Saving;
 using UnityEngine;
 
-namespace RPG.Core
+namespace RPG.Attributes
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Rigidbody), typeof(CapsuleCollider))]
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField]
-        private float initialHealthPoints = 100f;
-
         public bool IsDead { get; private set; }
         private float _currentHealthPoints;
 
@@ -19,8 +17,8 @@ namespace RPG.Core
 
         private void Awake()
         {
-            _currentHealthPoints = initialHealthPoints;
             _animator = GetComponent<Animator>();
+            _currentHealthPoints = GetComponent<BaseStats>().Health;
         }
 
         public void TakeDamage(float damage)

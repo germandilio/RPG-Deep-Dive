@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4350995718020239909, guid: e357b0ccb8e9e4b49b77cc5e69167abb,
+        type: 3}
+      propertyPath: characterClass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6624626090418336356, guid: e357b0ccb8e9e4b49b77cc5e69167abb,
         type: 3}
       propertyPath: defaultWeapon
