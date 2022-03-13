@@ -16,6 +16,8 @@ namespace RPG.Attributes
 
         private Animator _animator;
         private static readonly int DeadId = Animator.StringToHash("Dead");
+
+        private GameObject _instigator = null;
         
         public bool IsDead { get; private set; }
 
@@ -23,22 +25,35 @@ namespace RPG.Attributes
         {
             _animator = GetComponent<Animator>();
             _baseStats = GetComponent<BaseStats>();
-            _currentHealthPoints = _baseStats.Health;
+            _currentHealthPoints = _baseStats.GetStat(Stats.Stats.Health);
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(float damage, GameObject instigator)
         {
+            _instigator = instigator;
+            
             _currentHealthPoints = Math.Max(_currentHealthPoints - damage, 0);
             // Debug.Log(_currentHealthPoints);
             if (_currentHealthPoints == 0)
             {
                 Die();
+                AwardXpToInstigator();
             }
+        }
+
+        private void AwardXpToInstigator()
+        {
+            if (_instigator == null) return;
+         
+            // award XP to instigator
+            float pointToAdd = _baseStats.GetStat(Stats.Stats.ExperienceRewards);
+            _instigator.GetComponent<Experience>()?.AwardXp(pointToAdd);
+
         }
 
         public int GetHealthPercentage()
         {
-            return Mathf.RoundToInt(_currentHealthPoints / _baseStats.Health * 100);
+            return Mathf.RoundToInt(_currentHealthPoints / _baseStats.GetStat(Stats.Stats.Health) * 100);
         }
 
         private void Die()

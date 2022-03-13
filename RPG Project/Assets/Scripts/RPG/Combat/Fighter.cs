@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using RPG.Core;
 using RPG.Attributes;
 using RPG.Movement;
 using Saving;
-using UnityEngine;
 
 namespace RPG.Combat
 {
@@ -30,6 +30,8 @@ namespace RPG.Combat
         private Animator _animator;
         private static readonly int AttackId = Animator.StringToHash("Attack");
         private static readonly int StopAttackingId = Animator.StringToHash("StopAttacking");
+        
+        public Health CombatTarget => _target;
 
         private void Awake()
         {
@@ -124,10 +126,10 @@ namespace RPG.Combat
             if (_target == null || _target.IsDead) return;
 
             if (_currentWeapon.HasProjectile)
-                _currentWeapon.LaunchProjectile(leftHand, rightHand, _target);
+                _currentWeapon.LaunchProjectile(leftHand, rightHand, _target, gameObject);
             else
                 // Apply damage for non projectile weapons
-                _target.TakeDamage(_currentWeapon.WeaponDamage);
+                _target.TakeDamage(_currentWeapon.WeaponDamage, gameObject);
         }
 
         public object CaptureState()

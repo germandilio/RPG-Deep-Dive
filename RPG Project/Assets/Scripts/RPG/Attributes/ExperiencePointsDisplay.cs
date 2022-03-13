@@ -1,28 +1,26 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace RPG.Attributes
 {
     [RequireComponent(typeof(Text))]
-    public class HealthDisplay : MonoBehaviour
+    public class ExperiencePointsDisplay : MonoBehaviour
     {
-        private Health _health;
-
         private Text _displayText;
+        private Experience _playerExperience;
         
         private void Awake()
         {
-            _health = GameObject.FindWithTag("Player")?.GetComponent<Health>();
+            _playerExperience = GameObject.FindWithTag("Player")?.GetComponent<Experience>();
             _displayText = GetComponent<Text>();
         }
 
         private void Update()
         {
-            if (_health == null)
+            if (_playerExperience == null)
                 _displayText.text = "N/A";
             else
-                _displayText.text = $"{_health.GetHealthPercentage()}%";
+                _displayText.text = $"{_playerExperience.ExperiencePoints} points";
         }
     }
 }

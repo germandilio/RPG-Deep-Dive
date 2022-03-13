@@ -1,28 +1,28 @@
 using System;
+using RPG.Combat;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace RPG.Attributes
 {
     [RequireComponent(typeof(Text))]
-    public class HealthDisplay : MonoBehaviour
+    public class EnemyHealthDisplay : MonoBehaviour
     {
-        private Health _health;
-
+        private Fighter _fighter;
         private Text _displayText;
         
         private void Awake()
         {
-            _health = GameObject.FindWithTag("Player")?.GetComponent<Health>();
+            _fighter = GameObject.FindWithTag("Player")?.GetComponent<Fighter>();
             _displayText = GetComponent<Text>();
         }
 
         private void Update()
         {
-            if (_health == null)
+            if (_fighter.CombatTarget == null)
                 _displayText.text = "N/A";
             else
-                _displayText.text = $"{_health.GetHealthPercentage()}%";
+                _displayText.text = $"{_fighter.CombatTarget.GetHealthPercentage()}%";
         }
     }
 }

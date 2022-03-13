@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using RPG.Stats.Exceptions;
 using UnityEngine;
 
 namespace RPG.Stats
@@ -7,9 +8,6 @@ namespace RPG.Stats
     [CreateAssetMenu(fileName = "Progression", menuName = "Stats/New Progression", order = 0)]
     public class Progression : ScriptableObject
     {
-        [SerializeField]
-        private CharacterProgressionClass[] characterProgressions = null;
-
         [Serializable]
         class CharacterProgressionClass
         {
@@ -17,16 +15,35 @@ namespace RPG.Stats
             internal CharacterClass characterClass;
 
             [SerializeField]
-            internal float[] health;
+            internal ProgressionStats[] stats;
         }
 
-        public float GetHealth(CharacterClass characterClass, int level)
+        [Serializable]
+        class ProgressionStats
         {
-            var result = characterProgressions.FirstOrDefault(progression => progression.characterClass == characterClass);
-            if (result == null)
-                return 0;
+            [SerializeField]
+            internal Stats statsType;
 
-            return result.health[level - 1];
+            [SerializeField]
+            internal float[] valuesOnLevels;
+        }
+        
+        [SerializeField]
+        private CharacterProgressionClass[] characterProgressions = null;
+
+        public float GetStat(Stats statsType, CharacterClass characterClass, int level)
+        {
+            try
+            {
+                var statsByCharacter = characterProgressions
+                    .First(progression => progression.characterClass == characterClass).stats;
+                var statHealth = statsByCharacter.First(progressionStats => progressionStats.statsType == statsType);
+                return statHealth.valuesOnLevels[level - 1];
+            }
+            catch (Exception ex)
+            {
+                throw new ProgressionStatException($"Can't get stat for: statsType={statsType}, characterClass={characterClass}, level={level}", ex);
+            }
         }
     }
 }

@@ -25,6 +25,7 @@ namespace RPG.Combat
         [SerializeField]
         private GameObject impactEffect;
 
+        private GameObject _instigator;
         private Health target = null;
         private float _damage;
 
@@ -48,10 +49,12 @@ namespace RPG.Combat
             return target.transform.position + (Vector3.up * targetCollider.height / 2);
         }
 
-        public void SetTarget(Health healthTarget, float weaponDamage)
+        public void SetTarget(Health healthTarget, float weaponDamage, GameObject instigator)
         {
             target = healthTarget;
             _damage = weaponDamage;
+            _instigator = instigator;
+            
             // aim to target
             transform.LookAt(GetDestinationPoint());
 
@@ -62,7 +65,7 @@ namespace RPG.Combat
         {
             if (other.GetComponent<Health>() == target)
             {
-                target.TakeDamage(_damage);
+                target.TakeDamage(_damage, _instigator);
                 // for smoothly disappearing tail
                 speed = 0;
                 // apply impact effect
