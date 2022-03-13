@@ -5,11 +5,13 @@ using UnityEngine;
 using RPG.Core;
 using RPG.Attributes;
 using RPG.Movement;
+using RPG.Stats;
 using Saving;
 
 namespace RPG.Combat
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Animator), typeof(Mover))]
+    [RequireComponent(typeof(BaseStats))]
     public class Fighter : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField]
@@ -23,6 +25,8 @@ namespace RPG.Combat
         private Health _target;
 
         private float _timeSinceLastAttack = Mathf.Infinity;
+
+        private BaseStats _baseStats;
 
         private Mover _movementSystem;
         private ActionScheduler _actionScheduler;
@@ -38,6 +42,7 @@ namespace RPG.Combat
             _movementSystem = GetComponent<Mover>();
             _actionScheduler = GetComponent<ActionScheduler>();
             _animator = GetComponent<Animator>();
+            _baseStats = GetComponent<BaseStats>();
         }
 
         private void Start()
@@ -125,11 +130,13 @@ namespace RPG.Combat
         {
             if (_target == null || _target.IsDead) return;
 
+            float damage = _baseStats.GetStat(Stats.Stats.Damage);
+            // TODO damage weapon
             if (_currentWeapon.HasProjectile)
-                _currentWeapon.LaunchProjectile(leftHand, rightHand, _target, gameObject);
+                _currentWeapon.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);
             else
                 // Apply damage for non projectile weapons
-                _target.TakeDamage(_currentWeapon.WeaponDamage, gameObject);
+                _target.TakeDamage(damage, gameObject);
         }
 
         public object CaptureState()

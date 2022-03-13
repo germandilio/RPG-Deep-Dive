@@ -105,7 +105,7 @@ namespace RPG.Combat
             return null;
         }
 
-        public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target, GameObject instigator)
+        public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target, GameObject instigator, float calculatedDamage)
         {
             if (projectilePrefab == null) return;
 
@@ -113,7 +113,7 @@ namespace RPG.Combat
             Transform handSpawn = DefineHand(leftHand, rightHand);
             GameObject projectileInstance = Instantiate(projectilePrefab, handSpawn.position, Quaternion.identity);
 
-            projectileInstance.GetComponent<ProjectileController>()?.SetTarget(target, weaponDamage, instigator);
+            projectileInstance.GetComponent<ProjectileController>()?.SetTarget(target, calculatedDamage, instigator);
         }
     }
 }

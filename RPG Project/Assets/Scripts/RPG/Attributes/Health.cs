@@ -41,6 +41,16 @@ namespace RPG.Attributes
             _baseStats.OnLevelUp -= NormalizeHealthPercentage;
         }
 
+        public float GetCurrentHealth()
+        {
+            return _currentHealthPoints;
+        }
+        
+        public float GetMaxHealth()
+        {
+            return _baseStats.GetStat(Stats.Stats.Health);
+        }
+        
         private void NormalizeHealthPercentage()
         {
             _currentHealthPoints = _baseStats.GetStat(Stats.Stats.Health) * (levelUpHealthPercentage / 100);
@@ -67,11 +77,6 @@ namespace RPG.Attributes
             float pointToAdd = _baseStats.GetStat(Stats.Stats.ExperienceRewards);
             _instigator.GetComponent<Experience>()?.AwardXp(pointToAdd);
 
-        }
-
-        public int GetHealthPercentage()
-        {
-            return Mathf.RoundToInt(_currentHealthPoints / _baseStats.GetStat(Stats.Stats.Health) * 100);
         }
 
         private void Die()

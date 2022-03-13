@@ -21,6 +21,13 @@ MonoBehaviour:
     - statsType: 1
       valuesOnLevels:
       - 10
+    - statsType: 3
+      valuesOnLevels:
+      - 10
+      - 10
+      - 20
+      - 20
+      - 20
   - characterClass: 0
     stats:
     - statsType: 0
@@ -37,6 +44,13 @@ MonoBehaviour:
       - 50
       - 80
       - 100
+    - statsType: 3
+      valuesOnLevels:
+      - 10
+      - 15
+      - 20
+      - 25
+      - 30
   - characterClass: 3
     stats:
     - statsType: 0
@@ -44,4 +58,11 @@ MonoBehaviour:
       - 75
     - statsType: 1
       valuesOnLevels:
+      - 20
+    - statsType: 3
+      valuesOnLevels:
+      - 10
+      - 10
+      - 10
+      - 20
       - 20

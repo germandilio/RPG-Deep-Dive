@@ -22,7 +22,7 @@ namespace RPG.Attributes
             if (_fighter.CombatTarget == null)
                 _displayText.text = "N/A";
             else
-                _displayText.text = $"{_fighter.CombatTarget.GetHealthPercentage()}%";
+                _displayText.text = $"{_fighter.CombatTarget.GetCurrentHealth():0}/{_fighter.CombatTarget.GetMaxHealth():0}";
         }
     }
 }
