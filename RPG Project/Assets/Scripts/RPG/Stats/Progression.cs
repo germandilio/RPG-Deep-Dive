@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 namespace RPG.Stats
@@ -21,14 +22,11 @@ namespace RPG.Stats
 
         public float GetHealth(CharacterClass characterClass, int level)
         {
-            foreach (var progression in characterProgressions)
-            {
-                if (progression.characterClass == characterClass)
-                {
-                    return progression.health[level - 1];
-                }
-            }
-            return 0;
+            var result = characterProgressions.FirstOrDefault(progression => progression.characterClass == characterClass);
+            if (result == null)
+                return 0;
+
+            return result.health[level - 1];
         }
     }
 }

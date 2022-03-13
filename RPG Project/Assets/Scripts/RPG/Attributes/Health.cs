@@ -7,18 +7,23 @@ using UnityEngine;
 namespace RPG.Attributes
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Rigidbody), typeof(CapsuleCollider))]
+    [RequireComponent(typeof(BaseStats))]
     public class Health : MonoBehaviour, ISaveable
     {
-        public bool IsDead { get; private set; }
+        private BaseStats _baseStats;
+        
         private float _currentHealthPoints;
 
         private Animator _animator;
         private static readonly int DeadId = Animator.StringToHash("Dead");
+        
+        public bool IsDead { get; private set; }
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            _currentHealthPoints = GetComponent<BaseStats>().Health;
+            _baseStats = GetComponent<BaseStats>();
+            _currentHealthPoints = _baseStats.Health;
         }
 
         public void TakeDamage(float damage)
@@ -29,6 +34,11 @@ namespace RPG.Attributes
             {
                 Die();
             }
+        }
+
+        public int GetHealthPercentage()
+        {
+            return Mathf.RoundToInt(_currentHealthPoints / _baseStats.Health * 100);
         }
 
         private void Die()
