@@ -10,6 +10,9 @@ namespace RPG.Attributes
     [RequireComponent(typeof(BaseStats))]
     public class Health : MonoBehaviour, ISaveable
     {
+        [SerializeField]
+        private float levelUpHealthPercentage = 70;
+        
         private BaseStats _baseStats;
         
         private float _currentHealthPoints;
@@ -26,6 +29,21 @@ namespace RPG.Attributes
             _animator = GetComponent<Animator>();
             _baseStats = GetComponent<BaseStats>();
             _currentHealthPoints = _baseStats.GetStat(Stats.Stats.Health);
+        }
+
+        private void OnEnable()
+        {
+            _baseStats.OnLevelUp += NormalizeHealthPercentage;
+        }
+
+        private void OnDisable()
+        {
+            _baseStats.OnLevelUp -= NormalizeHealthPercentage;
+        }
+
+        private void NormalizeHealthPercentage()
+        {
+            _currentHealthPoints = _baseStats.GetStat(Stats.Stats.Health) * (levelUpHealthPercentage / 100);
         }
 
         public void TakeDamage(float damage, GameObject instigator)

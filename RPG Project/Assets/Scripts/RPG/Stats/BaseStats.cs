@@ -15,10 +15,15 @@ namespace RPG.Stats
         [SerializeField]
         private Progression progression = null;
 
+        [SerializeField]
+        private GameObject levelUpEffect;
+
         // null if it is not a Player
         private Experience _experience;
         private int _currentLevel;
 
+        public event Action OnLevelUp;
+        
         private void Awake()
         {
             _experience = GetComponent<Experience>();
@@ -43,8 +48,15 @@ namespace RPG.Stats
             if (newLevel > _currentLevel)
             {
                 _currentLevel = newLevel;
-                Debug.Log($"Level Up, level={_currentLevel}");
+                ShowLevelUpAffect();
+
+                OnLevelUp?.Invoke();
             }
+        }
+
+        private void ShowLevelUpAffect()
+        {
+            Instantiate(levelUpEffect, transform);
         }
 
         public float GetStat(Stats statsType)
