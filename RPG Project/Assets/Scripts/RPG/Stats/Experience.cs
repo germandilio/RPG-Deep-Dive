@@ -1,10 +1,13 @@
+using System;
 using Saving;
 using UnityEngine;
 
-namespace RPG.Attributes
+namespace RPG.Stats
 {
     public class Experience : MonoBehaviour, ISaveable
     {
+        public event Action ExperienceGained;
+        
         private float _experiencePoints = 0;
 
         public float ExperiencePoints => _experiencePoints;
@@ -12,6 +15,7 @@ namespace RPG.Attributes
         public void AwardXp(float pointsToAdd)
         {
             _experiencePoints += pointsToAdd;
+            ExperienceGained?.Invoke();
         }
 
         public object CaptureState()
@@ -21,8 +25,11 @@ namespace RPG.Attributes
 
         public void RestoreState(object state)
         {
-            if (state is float savedPoints) 
+            if (state is float savedPoints)
+            {
                 _experiencePoints = savedPoints;
+                ExperienceGained?.Invoke();
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using RPG.Attributes;
 using Saving;
 using UnityEngine;
 
-namespace RPG.SceneManagement
+namespace Saving
 {
     [RequireComponent(typeof(SavingSystem))]
     public class SavingWrapper : MonoBehaviour
@@ -36,14 +36,11 @@ namespace RPG.SceneManagement
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.L))
-            {
                 Load();
-            }
-
-            if (Input.GetKeyDown(KeyCode.S))
-            {
+            else if (Input.GetKeyDown(KeyCode.S)) 
                 Save();
-            }
+            else if (Input.GetKeyDown(KeyCode.D))
+                Delete();
         }
 
         public void Save()
@@ -56,6 +53,11 @@ namespace RPG.SceneManagement
         public void Load()
         {
             _savingSystem.Load(DefaultSaveFileName);
+        }
+
+        public void Delete()
+        {
+            _savingSystem.Delete(DefaultSaveFileName);
         }
     }
 }

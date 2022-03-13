@@ -68,5 +68,20 @@ namespace RPG.Stats
                 throw new ProgressionStatException($"Can't get stat for: statsType={statsType}, characterClass={characterClass}, level={level}", ex);
             }
         }
+
+        public int GetNumberOfLevels(Stats statsType, CharacterClass characterClass)
+        {
+            if (_lookupStats == null)
+                _lookupStats = BuildLookup();
+            
+            try
+            {
+                return _lookupStats[characterClass][statsType].Length;
+            }
+            catch (Exception ex)
+            {
+                throw new ProgressionStatException($"Can't get stat for: statsType={statsType}, characterClass={characterClass}", ex);
+            }
+        }
     }
 }
