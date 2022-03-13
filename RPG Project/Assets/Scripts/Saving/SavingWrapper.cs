@@ -19,9 +19,10 @@ namespace Saving
         private void Awake()
         {
             _savingSystem = GetComponent<SavingSystem>();
+            StartCoroutine(LoadLastScene());
         }
 
-        private IEnumerator Start()
+        private IEnumerator LoadLastScene()
         {
             // hide all the initializations when loaded scene state from file
             Fader fader = FindObjectOfType<Fader>();
