@@ -1,5 +1,5 @@
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using RPG.Stats.Exceptions;
 using UnityEngine;
 
@@ -31,14 +31,37 @@ namespace RPG.Stats
         [SerializeField]
         private CharacterProgressionClass[] characterProgressions = null;
 
+        private Dictionary<CharacterClass, Dictionary<Stats, float[]>> _lookupStats = null;
+
+        private Dictionary<CharacterClass, Dictionary<Stats, float[]>> BuildLookup()
+        {
+            var lookup = new Dictionary<CharacterClass, Dictionary<Stats, float[]>>();
+
+            foreach (var progression in characterProgressions)
+            {
+                // create inner dictionary for type of stats and values on levels
+                var stats = new Dictionary<Stats, float[]>();
+
+                foreach (ProgressionStats progressionStat in progression.stats)
+                {
+                    stats[progressionStat.statsType] = progressionStat.valuesOnLevels;
+                }
+                
+                // link inner dictionary by characterClass key
+                lookup[progression.characterClass] = stats;
+            }
+
+            return lookup;
+        }
+
         public float GetStat(Stats statsType, CharacterClass characterClass, int level)
         {
+            if (_lookupStats == null)
+                _lookupStats = BuildLookup();
+            
             try
             {
-                var statsByCharacter = characterProgressions
-                    .First(progression => progression.characterClass == characterClass).stats;
-                var statHealth = statsByCharacter.First(progressionStats => progressionStats.statsType == statsType);
-                return statHealth.valuesOnLevels[level - 1];
+                return _lookupStats[characterClass][statsType][level - 1];
             }
             catch (Exception ex)
             {
