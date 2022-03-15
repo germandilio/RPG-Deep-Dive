@@ -8,7 +8,7 @@ using UnityEngine.Playables;
 namespace RPG.Cinematics
 {
     [RequireComponent(typeof(PlayableDirector))]
-    public class PlayCutsceneTriggerController : MonoBehaviour, ISaveable
+    public class PlayCutsceneTriggerController : MonoBehaviour, ISavable
     {
         private bool _wasTriggered;
 

@@ -19,9 +19,11 @@ namespace Saving
         private void Awake()
         {
             _savingSystem = GetComponent<SavingSystem>();
+            // loading of last scene should be before any start event happened,
+            // because in start methods we restore stats based on saved information 
             StartCoroutine(LoadLastScene());
         }
-
+        
         private IEnumerator LoadLastScene()
         {
             // hide all the initializations when loaded scene state from file

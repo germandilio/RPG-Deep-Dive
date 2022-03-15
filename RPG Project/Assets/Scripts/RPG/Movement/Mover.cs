@@ -11,7 +11,7 @@ namespace RPG.Movement
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ActionScheduler))]
     [RequireComponent(typeof(Health))]
-    public class Mover : MonoBehaviour, IAction, ISaveable
+    public class Mover : MonoBehaviour, IAction, ISavable
     {
         [SerializeField]
         private float maxSpeed = 6f;

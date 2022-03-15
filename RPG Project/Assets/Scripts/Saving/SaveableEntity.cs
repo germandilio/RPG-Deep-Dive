@@ -22,7 +22,7 @@ namespace Saving
         public object CaptureState()
         {
             Dictionary<string, object> state = new Dictionary<string, object>();
-            foreach (ISaveable saveableComponent in GetComponents<ISaveable>())
+            foreach (ISavable saveableComponent in GetComponents<ISavable>())
             {
                 state[saveableComponent.GetType().ToString()] = saveableComponent.CaptureState();
             }
@@ -39,7 +39,7 @@ namespace Saving
                 return;
             }
 
-            foreach (ISaveable saveableComponent in GetComponents<ISaveable>())
+            foreach (ISavable saveableComponent in GetComponents<ISavable>())
             {
                 string typeString = saveableComponent.GetType().ToString();
                 if (stateDictionary.ContainsKey(typeString))

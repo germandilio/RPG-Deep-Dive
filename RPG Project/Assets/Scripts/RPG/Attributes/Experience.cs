@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class Experience : MonoBehaviour, ISaveable
+    public class Experience : MonoBehaviour, ISavable
     {
         public event Action ExperienceGained;
         

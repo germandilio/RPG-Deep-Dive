@@ -21,6 +21,12 @@ namespace RPG.Cinematics
             _playableDirector.played += OnDisablePlayerControl;
             _playableDirector.stopped += OnEnablePlayerControl;
         }
+        
+        private void OnDisable()
+        {
+            _playableDirector.played -= OnDisablePlayerControl;
+            _playableDirector.stopped -= OnEnablePlayerControl;
+        }
 
         private void OnDisablePlayerControl(PlayableDirector playableDirector)
         {
@@ -37,12 +43,6 @@ namespace RPG.Cinematics
             if (player == null) return;
 
             player.GetComponent<PlayerController>().enabled = true;
-        }
-
-        private void OnDisable()
-        {
-            _playableDirector.played -= OnDisablePlayerControl;
-            _playableDirector.stopped -= OnEnablePlayerControl;
         }
     }
 }

@@ -3,19 +3,20 @@ using RPG.Core;
 using RPG.Stats;
 using Saving;
 using UnityEngine;
+using Utils;
 
 namespace RPG.Attributes
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Rigidbody), typeof(CapsuleCollider))]
     [RequireComponent(typeof(BaseStats))]
-    public class Health : MonoBehaviour, ISaveable
+    public class Health : MonoBehaviour, ISavable
     {
         [SerializeField]
         private float levelUpHealthPercentage = 70;
         
         private BaseStats _baseStats;
         
-        private float _currentHealthPoints;
+        private LazyValue<float> _currentHealthPoints;
 
         private Animator _animator;
         private static readonly int DeadId = Animator.StringToHash("Dead");
@@ -28,8 +29,16 @@ namespace RPG.Attributes
         {
             _animator = GetComponent<Animator>();
             _baseStats = GetComponent<BaseStats>();
-            _currentHealthPoints = _baseStats.GetStat(Stats.Stats.Health);
+
+            _currentHealthPoints = new LazyValue<float>(InitializeHealthPoints);
         }
+
+        private void Start()
+        {
+            _currentHealthPoints.ForceInit();
+        }
+
+        private float InitializeHealthPoints() => _baseStats.GetStat(Stats.Stats.Health);
 
         private void OnEnable()
         {
@@ -43,7 +52,7 @@ namespace RPG.Attributes
 
         public float GetCurrentHealth()
         {
-            return _currentHealthPoints;
+            return _currentHealthPoints.Value;
         }
         
         public float GetMaxHealth()
@@ -53,16 +62,18 @@ namespace RPG.Attributes
         
         private void NormalizeHealthPercentage()
         {
-            _currentHealthPoints = _baseStats.GetStat(Stats.Stats.Health) * (levelUpHealthPercentage / 100);
+            _currentHealthPoints.Value = _baseStats.GetStat(Stats.Stats.Health) * (levelUpHealthPercentage / 100);
         }
 
         public void TakeDamage(float damage, GameObject instigator)
         {
+            // TODO убрать
+            Debug.Log($"{gameObject} took damage: {damage}");
+
             _instigator = instigator;
             
-            _currentHealthPoints = Math.Max(_currentHealthPoints - damage, 0);
-            // Debug.Log(_currentHealthPoints);
-            if (_currentHealthPoints == 0)
+            _currentHealthPoints.Value = Math.Max(_currentHealthPoints.Value - damage, 0);
+            if (_currentHealthPoints.Value == 0)
             {
                 Die();
                 AwardXpToInstigator();
@@ -103,10 +114,10 @@ namespace RPG.Attributes
             {
                 // TODO debug
                 print("restore health");
-                _currentHealthPoints = savedHealthPoints;
+                _currentHealthPoints.Value = savedHealthPoints;
             }
 
-            if (_currentHealthPoints == 0)
+            if (_currentHealthPoints.Value == 0)
                 Die();
         }
     }

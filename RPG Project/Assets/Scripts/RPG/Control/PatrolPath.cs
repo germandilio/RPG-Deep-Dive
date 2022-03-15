@@ -28,7 +28,6 @@ namespace RPG.Control
         private int NextIndex(int index) => (index + 1) % transform.childCount;
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="index">Index of child in path</param>
         /// <returns>Position of waypoint in world space coordinates</returns>

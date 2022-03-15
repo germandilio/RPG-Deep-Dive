@@ -7,12 +7,13 @@ using RPG.Attributes;
 using RPG.Movement;
 using RPG.Stats;
 using Saving;
+using Utils;
 
 namespace RPG.Combat
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Animator), typeof(Mover))]
     [RequireComponent(typeof(BaseStats))]
-    public class Fighter : MonoBehaviour, IAction, ISaveable
+    public class Fighter : MonoBehaviour, IAction, ISavable, IModifyProvider
     {
         [SerializeField]
         private Transform rightHand, leftHand;
@@ -20,7 +21,7 @@ namespace RPG.Combat
         [SerializeField]
         private Weapon defaultWeapon;
 
-        private Weapon _currentWeapon;
+        private LazyValue<Weapon> _currentWeapon;
 
         private Health _target;
 
@@ -43,13 +44,14 @@ namespace RPG.Combat
             _actionScheduler = GetComponent<ActionScheduler>();
             _animator = GetComponent<Animator>();
             _baseStats = GetComponent<BaseStats>();
+
+            _currentWeapon = new LazyValue<Weapon>(EquipDefaultWeapon);
         }
 
         private void Start()
         {
             // restore default weapon
-            if (_currentWeapon == null)
-                EquipWeapon(defaultWeapon);
+            _currentWeapon.ForceInit();
         }
 
         private void Update()
@@ -57,7 +59,7 @@ namespace RPG.Combat
             _timeSinceLastAttack += Time.deltaTime;
             if (_target == null) return;
 
-            if (Vector3.Distance(transform.position, _target.transform.position) >= _currentWeapon.WeaponRange)
+            if (Vector3.Distance(transform.position, _target.transform.position) >= _currentWeapon.Value.WeaponRange)
                 _movementSystem.MoveTo(_target.transform.position);
             else
             {
@@ -66,12 +68,23 @@ namespace RPG.Combat
             }
         }
 
+        private Weapon EquipDefaultWeapon()
+        {
+            AttachWeapon(defaultWeapon);
+            return defaultWeapon;
+        }
+        
         public void EquipWeapon(Weapon weapon)
         {
-            if (weapon == null) return;
+            AttachWeapon(weapon);
+            _currentWeapon.Value = weapon;
+        }
 
-            _currentWeapon = weapon;
-            weapon.CreateWeapon(leftHand, rightHand, _animator);
+        private void AttachWeapon(Weapon weapon)
+        {
+            if (weapon == null) return;
+            
+            weapon.CreateWeapon(leftHand, rightHand, _animator); 
         }
 
         private void AttackBehaviour()
@@ -79,7 +92,7 @@ namespace RPG.Combat
             if (!CanAttack(_target.gameObject)) return;
 
             transform.LookAt(_target.transform);
-            if (_timeSinceLastAttack >= _currentWeapon.TimeBetweenAttacks)
+            if (_timeSinceLastAttack >= _currentWeapon.Value.TimeBetweenAttacks)
             {
                 ResetTriggerAttack();
                 _animator.SetTrigger(AttackId);
@@ -130,10 +143,10 @@ namespace RPG.Combat
         {
             if (_target == null || _target.IsDead) return;
 
-            float damage = _baseStats.GetStat(Stats.Stats.Damage);
+            float damage = _baseStats.GetStat(Stats.Stats.Damage); 
             // TODO damage weapon
-            if (_currentWeapon.HasProjectile)
-                _currentWeapon.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);
+            if (_currentWeapon.Value.HasProjectile)
+                _currentWeapon.Value.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);
             else
                 // Apply damage for non projectile weapons
                 _target.TakeDamage(damage, gameObject);
@@ -141,7 +154,7 @@ namespace RPG.Combat
 
         public object CaptureState()
         {
-            return _currentWeapon.name;
+            return _currentWeapon.Value.name;
         }
 
         public void RestoreState(object state)
@@ -149,6 +162,22 @@ namespace RPG.Combat
             if (!(state is String weaponName)) return;
             Weapon weapon = Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
+        }
+
+        public IEnumerable<float> GetAdditiveModifier(Stats.Stats stats)
+        {
+            if (stats == Stats.Stats.Damage)
+            {
+                yield return _currentWeapon.Value.WeaponDamage;
+            }
+        }
+
+        public IEnumerable<float> GetPercentageModifier(Stats.Stats stats)
+        {
+            if (stats == Stats.Stats.Damage)
+            {
+                yield return _currentWeapon.Value.PercentageBonus;
+            }
         }
     }
 }

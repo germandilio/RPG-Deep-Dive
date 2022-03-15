@@ -28,6 +28,10 @@ namespace RPG.Combat
         [SerializeField]
         [Tooltip("Damage, which player apply to Combat target")]
         private float weaponDamage = 25f;
+        
+        [Range(0, 100)]
+        [SerializeField]
+        private float percentageBonus = 0f;
 
         [SerializeField]
         [Tooltip("Time in seconds between player attacks")]
@@ -39,16 +43,25 @@ namespace RPG.Combat
         public bool HasProjectile => projectilePrefab != null;
 
         public float WeaponRange => weaponRange;
+        
         public float WeaponDamage => weaponDamage;
+
+        public float PercentageBonus => percentageBonus; 
+            
         public float TimeBetweenAttacks => timeBetweenAttacks;
 
+        /// <summary>
+        /// Instantiate weapon in hand based on weaponType.
+        /// </summary>
+        /// <param name="leftHand">Left hand spawn point.</param>
+        /// <param name="rightHand">Right hand spawn point.</param>
+        /// <param name="characterAnimator">Character overriding animator controller.</param>
         public void CreateWeapon(Transform leftHand, Transform rightHand, Animator characterAnimator)
         {
-            // unarmed state
-            if (weaponPrefab == null) return;
-
             DestroyOldWeapon(leftHand, rightHand);
 
+            if (weaponPrefab == null) return;
+            
             Transform armedHand = DefineHand(leftHand, rightHand);
 
             GameObject weaponInstance = Instantiate(weaponPrefab, armedHand);
@@ -105,6 +118,14 @@ namespace RPG.Combat
             return null;
         }
 
+        /// <summary>
+        /// Instantiate projectile of type projectilePrefab in hand based on weaponType.
+        /// </summary>
+        /// <param name="leftHand">Left hand spawn point.</param>
+        /// <param name="rightHand">Right hand spawn point.</param>
+        /// <param name="target">Target to launch projectile.</param>
+        /// <param name="instigator">Who is shooting from this weapon.</param>
+        /// <param name="calculatedDamage">Damage to apply for target.</param>
         public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target, GameObject instigator, float calculatedDamage)
         {
             if (projectilePrefab == null) return;

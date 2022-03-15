@@ -18,6 +18,7 @@ MonoBehaviour:
     - statsType: 0
       valuesOnLevels:
       - 50
+      - 100
     - statsType: 1
       valuesOnLevels:
       - 10

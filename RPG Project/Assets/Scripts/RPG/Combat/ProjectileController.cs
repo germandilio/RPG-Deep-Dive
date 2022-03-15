@@ -16,7 +16,7 @@ namespace RPG.Combat
         private float lifeAfterHit = 0.2f;
 
         [SerializeField]
-        private bool homing = false;
+        private bool homing;
 
         [SerializeField]
         [Tooltip("Objects to immediately destroying when projectile collides with something")]
@@ -26,8 +26,14 @@ namespace RPG.Combat
         private GameObject impactEffect;
 
         private GameObject _instigator;
-        private Health target = null;
+        private Health target;
         private float _damage;
+        
+        private void Start()
+        {
+            // aim to target
+            transform.LookAt(GetDestinationPoint());
+        }
 
         private void Update()
         {
@@ -54,9 +60,6 @@ namespace RPG.Combat
             target = healthTarget;
             _damage = weaponDamage;
             _instigator = instigator;
-            
-            // aim to target
-            transform.LookAt(GetDestinationPoint());
 
             Destroy(gameObject, maxLifeTime);
         }

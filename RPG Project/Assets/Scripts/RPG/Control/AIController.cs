@@ -4,6 +4,7 @@ using RPG.Core;
 using RPG.Attributes;
 using RPG.Movement;
 using UnityEngine;
+using Utils;
 
 namespace RPG.Control
 {
@@ -25,7 +26,7 @@ namespace RPG.Control
         [SerializeField]
         private float waypointTolerance = 0.5f;
 
-        private Vector3 _guardPosition;
+        private LazyValue<Vector3> _guardPosition;
 
         [SerializeField]
         [Tooltip("Max time to wait after player go out chase distance, before move to guard place")]
@@ -47,15 +48,22 @@ namespace RPG.Control
 
         private void Awake()
         {
-            _guardPosition = transform.position;
-
             _fighterSystem = GetComponent<Fighter>();
             _healthSystem = GetComponent<Health>();
             _moverSystem = GetComponent<Mover>();
             _actionScheduler = GetComponent<ActionScheduler>();
 
             _player = GameObject.FindWithTag("Player");
+            
+            _guardPosition = new LazyValue<Vector3>(InitializeGuardPosition);
         }
+
+        private void Start()
+        {
+            _guardPosition.ForceInit();
+        }
+
+        private Vector3 InitializeGuardPosition() => transform.position;
 
         private void Update()
         {
@@ -81,7 +89,7 @@ namespace RPG.Control
         {
             _fighterSystem.Cancel();
 
-            Vector3 nextPosition = _guardPosition;
+            Vector3 nextPosition = _guardPosition.Value;
             if (patrolPath != null)
             {
                 if (AtWaypoint())
