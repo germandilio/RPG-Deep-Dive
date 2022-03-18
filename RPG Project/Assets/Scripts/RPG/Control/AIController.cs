@@ -25,9 +25,7 @@ namespace RPG.Control
 
         [SerializeField]
         private float waypointTolerance = 0.5f;
-
-        private LazyValue<Vector3> _guardPosition;
-
+        
         [SerializeField]
         [Tooltip("Max time to wait after player go out chase distance, before move to guard place")]
         private float suspicionTime = 4f;
@@ -38,6 +36,8 @@ namespace RPG.Control
 
         private float _timeSinceLastSawPlayer = Mathf.Infinity;
         private float _timeOnCurrentWaypoint = Mathf.Infinity;
+
+        private LazyValue<Vector3> _guardPosition;
 
         private Fighter _fighterSystem;
         private Health _healthSystem;

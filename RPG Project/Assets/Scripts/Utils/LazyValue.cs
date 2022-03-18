@@ -53,7 +53,7 @@
         {
             if (!_initialized)
             {
-                _value = _initializer();
+                _value = _initializer.Invoke();
                 _initialized = true;
             }
         }

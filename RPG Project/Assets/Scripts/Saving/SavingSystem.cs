@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -62,7 +61,9 @@ namespace Saving
         private void SaveFile(string saveFile, object state)
         {
             string path = GetPathFromSaveFile(saveFile);
+            // TODO убрать
             print("Saving to " + path);
+            
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
@@ -82,12 +83,12 @@ namespace Saving
 
         private void RestoreState(Dictionary<string, object> state)
         {
-            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+            foreach (SaveableEntity savable in FindObjectsOfType<SaveableEntity>())
             {
-                string id = saveable.GetUniqueIdentifier();
-                if (state.ContainsKey(id))
+                string guid = savable.GetUniqueIdentifier();
+                if (state.ContainsKey(guid))
                 {
-                    saveable.RestoreState(state[id]);
+                    savable.RestoreState(state[guid]);
                 }
             }
         }
