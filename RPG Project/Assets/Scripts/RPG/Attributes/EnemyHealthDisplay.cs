@@ -10,7 +10,7 @@ namespace RPG.Attributes
     {
         private Fighter _fighter;
         private Text _displayText;
-        
+
         private void Awake()
         {
             _fighter = GameObject.FindWithTag("Player")?.GetComponent<Fighter>();
@@ -22,7 +22,8 @@ namespace RPG.Attributes
             if (_fighter.CombatTarget == null)
                 _displayText.text = "N/A";
             else
-                _displayText.text = $"{_fighter.CombatTarget.GetCurrentHealth():0}/{_fighter.CombatTarget.GetMaxHealth():0}";
+                _displayText.text =
+                    $"{_fighter.CombatTarget.GetCurrentHealth():0}/{_fighter.CombatTarget.GetMaxHealth():0}";
         }
     }
 }

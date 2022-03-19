@@ -17,16 +17,16 @@ namespace RPG.Attributes
 
         [SerializeField]
         private UnityEvent takeDamage;
-        
+
         private BaseStats _baseStats;
-        
+
         private LazyValue<float> _currentHealthPoints;
 
         private Animator _animator;
         private static readonly int DeadId = Animator.StringToHash("Dead");
 
         private GameObject _instigator = null;
-        
+
         public bool IsDead { get; private set; }
 
         private void Awake()
@@ -58,12 +58,12 @@ namespace RPG.Attributes
         {
             return _currentHealthPoints.Value;
         }
-        
+
         public float GetMaxHealth()
         {
             return _baseStats.GetStat(Stats.Stats.Health);
         }
-        
+
         private void NormalizeHealthPercentage()
         {
             _currentHealthPoints.Value = _baseStats.GetStat(Stats.Stats.Health) * (levelUpHealthPercentage / 100);
@@ -86,11 +86,10 @@ namespace RPG.Attributes
         private void AwardXpToInstigator()
         {
             if (_instigator == null) return;
-         
+
             // award XP to instigator
             float pointToAdd = _baseStats.GetStat(Stats.Stats.ExperienceRewards);
             _instigator.GetComponent<Experience>()?.AwardXp(pointToAdd);
-
         }
 
         private void Die()

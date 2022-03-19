@@ -27,7 +27,7 @@ namespace RPG.Stats
             [SerializeField]
             internal float[] valuesOnLevels;
         }
-        
+
         [SerializeField]
         private CharacterProgressionClass[] characterProgressions = null;
 
@@ -46,7 +46,7 @@ namespace RPG.Stats
                 {
                     stats[progressionStat.statsType] = progressionStat.valuesOnLevels;
                 }
-                
+
                 // link inner dictionary by characterClass key
                 lookup[progression.characterClass] = stats;
             }
@@ -58,14 +58,15 @@ namespace RPG.Stats
         {
             if (_lookupStats == null)
                 _lookupStats = BuildLookup();
-            
+
             try
             {
                 return _lookupStats[characterClass][statsType][level - 1];
             }
             catch (Exception ex)
             {
-                throw new ProgressionStatException($"Can't get stat for: statsType={statsType}, characterClass={characterClass}, level={level}", ex);
+                throw new ProgressionStatException(
+                    $"Can't get stat for: statsType={statsType}, characterClass={characterClass}, level={level}", ex);
             }
         }
 
@@ -73,14 +74,15 @@ namespace RPG.Stats
         {
             if (_lookupStats == null)
                 _lookupStats = BuildLookup();
-            
+
             try
             {
                 return _lookupStats[characterClass][statsType].Length;
             }
             catch (Exception ex)
             {
-                throw new ProgressionStatException($"Can't get stat for: statsType={statsType}, characterClass={characterClass}", ex);
+                throw new ProgressionStatException(
+                    $"Can't get stat for: statsType={statsType}, characterClass={characterClass}", ex);
             }
         }
     }

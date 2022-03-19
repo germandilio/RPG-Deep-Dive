@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Utils
 {
-    public class RaycastUtils
+    public static class RaycastUtils
     {
         /// <summary>
         /// Convert mouse position to ray from camera to object under mouse pointer

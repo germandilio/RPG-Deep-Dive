@@ -13,19 +13,19 @@ namespace RPG.Combat
 
         [SerializeField]
         private float seconds = 5f;
-        
+
         //TODO fix the bug with double pickup and moving to pickup
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Player")) return;
-            
+
             PickUp(other.GetComponent<Fighter>());
         }
 
         private void PickUp(Fighter fighter)
         {
             fighter.EquipWeapon(weaponType);
-            
+
             StartCoroutine(HidePickupForSeconds(seconds));
         }
 

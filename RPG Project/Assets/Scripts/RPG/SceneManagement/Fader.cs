@@ -3,46 +3,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CanvasGroup))]
-public class Fader : MonoBehaviour
+namespace RPG.SceneManagement
 {
-    private CanvasGroup _canvasGroup;
-
-    private void Awake()
+    [RequireComponent(typeof(CanvasGroup))]
+    public class Fader : MonoBehaviour
     {
-        _canvasGroup = GetComponent<CanvasGroup>();
-    }
+        private CanvasGroup _canvasGroup;
 
-    /// <summary>
-    /// Fade in screen to scene view.
-    /// </summary>
-    /// <param name="time">Time to fade in.</param>
-    /// <returns></returns>
-    public IEnumerator FadeIn(float time)
-    {
-        while (_canvasGroup.alpha > 0)
+        private void Awake()
         {
-            _canvasGroup.alpha -= Time.deltaTime / time;
-            yield return null;
+            _canvasGroup = GetComponent<CanvasGroup>();
         }
-    }
 
-    /// <summary>
-    /// Fade out screen to color of "Fader.Image" component.
-    /// </summary>
-    /// <param name="time">Time to fade out.</param>
-    /// <returns></returns>
-    public IEnumerator FadeOut(float time)
-    {
-        while (_canvasGroup.alpha < 1)
+        /// <summary>
+        /// Fade in screen to scene view.
+        /// </summary>
+        /// <param name="time">Time to fade in.</param>
+        /// <returns></returns>
+        public IEnumerator FadeIn(float time)
         {
-            _canvasGroup.alpha += Time.deltaTime / time;
-            yield return null;
+            while (_canvasGroup.alpha > 0)
+            {
+                _canvasGroup.alpha -= Time.deltaTime / time;
+                yield return null;
+            }
         }
-    }
 
-    public void FadeOutImmediately()
-    {
-        _canvasGroup.alpha = 1;
+        /// <summary>
+        /// Fade out screen to color of "Fader.Image" component.
+        /// </summary>
+        /// <param name="time">Time to fade out.</param>
+        /// <returns></returns>
+        public IEnumerator FadeOut(float time)
+        {
+            while (_canvasGroup.alpha < 1)
+            {
+                _canvasGroup.alpha += Time.deltaTime / time;
+                yield return null;
+            }
+        }
+
+        public void FadeOutImmediately()
+        {
+            _canvasGroup.alpha = 1;
+        }
     }
 }

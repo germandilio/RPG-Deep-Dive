@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 namespace Utils
 {
-    public class NavMeshExtensions
+    public static class NavMeshExtensions
     {
         public static float CalculateLength(NavMeshPath path)
         {

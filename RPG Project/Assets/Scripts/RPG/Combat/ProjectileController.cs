@@ -28,7 +28,7 @@ namespace RPG.Combat
         private GameObject _instigator;
         private Health target;
         private float _damage;
-        
+
         private void Start()
         {
             // aim to target

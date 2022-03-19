@@ -35,7 +35,7 @@ namespace RPG.Combat
         private Animator _animator;
         private static readonly int AttackId = Animator.StringToHash("Attack");
         private static readonly int StopAttackingId = Animator.StringToHash("StopAttacking");
-        
+
         public Health CombatTarget => _target;
 
         private void Awake()
@@ -73,7 +73,7 @@ namespace RPG.Combat
             AttachWeapon(defaultWeapon);
             return defaultWeapon;
         }
-        
+
         public void EquipWeapon(Weapon weapon)
         {
             AttachWeapon(weapon);
@@ -83,8 +83,8 @@ namespace RPG.Combat
         private void AttachWeapon(Weapon weapon)
         {
             if (weapon == null) return;
-            
-            weapon.CreateWeapon(leftHand, rightHand, _animator); 
+
+            weapon.CreateWeapon(leftHand, rightHand, _animator);
         }
 
         private void AttackBehaviour()
@@ -143,7 +143,7 @@ namespace RPG.Combat
         {
             if (_target == null || _target.IsDead) return;
 
-            float damage = _baseStats.GetStat(Stats.Stats.Damage); 
+            float damage = _baseStats.GetStat(Stats.Stats.Damage);
             // TODO damage weapon
             if (_currentWeapon.Value.HasProjectile)
                 _currentWeapon.Value.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);

@@ -2,16 +2,16 @@ using System;
 using Saving;
 using UnityEngine;
 
-namespace RPG.Stats
+namespace RPG.Attributes
 {
     public class Experience : MonoBehaviour, ISavable
     {
         public event Action ExperienceGained;
-        
+
         private float _experiencePoints = 0;
 
         public float ExperiencePoints => _experiencePoints;
-        
+
         public void AwardXp(float pointsToAdd)
         {
             _experiencePoints += pointsToAdd;

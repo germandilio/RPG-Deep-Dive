@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RPG.Stats
+namespace RPG.Attributes
 {
     [RequireComponent(typeof(Text))]
     public class ExperiencePointsDisplay : MonoBehaviour
     {
         private Text _displayText;
         private Experience _playerExperience;
-        
+
         private void Awake()
         {
             _playerExperience = GameObject.FindWithTag("Player")?.GetComponent<Experience>();

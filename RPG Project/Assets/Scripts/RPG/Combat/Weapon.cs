@@ -28,7 +28,7 @@ namespace RPG.Combat
         [SerializeField]
         [Tooltip("Damage, which player apply to Combat target")]
         private float weaponDamage = 25f;
-        
+
         [Range(0, 100)]
         [SerializeField]
         private float percentageBonus = 0f;
@@ -43,11 +43,11 @@ namespace RPG.Combat
         public bool HasProjectile => projectilePrefab != null;
 
         public float WeaponRange => weaponRange;
-        
+
         public float WeaponDamage => weaponDamage;
 
-        public float PercentageBonus => percentageBonus; 
-            
+        public float PercentageBonus => percentageBonus;
+
         public float TimeBetweenAttacks => timeBetweenAttacks;
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace RPG.Combat
             DestroyOldWeapon(leftHand, rightHand);
 
             if (weaponPrefab == null) return;
-            
+
             Transform armedHand = DefineHand(leftHand, rightHand);
 
             GameObject weaponInstance = Instantiate(weaponPrefab, armedHand);
@@ -126,7 +126,8 @@ namespace RPG.Combat
         /// <param name="target">Target to launch projectile.</param>
         /// <param name="instigator">Who is shooting from this weapon.</param>
         /// <param name="calculatedDamage">Damage to apply for target.</param>
-        public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target, GameObject instigator, float calculatedDamage)
+        public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target, GameObject instigator,
+            float calculatedDamage)
         {
             if (projectilePrefab == null) return;
 

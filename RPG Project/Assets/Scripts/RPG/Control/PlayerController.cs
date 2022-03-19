@@ -21,7 +21,7 @@ namespace RPG.Control
             public Texture2D texture;
             public Vector2 hotspot;
         }
-        
+
         [SerializeField]
         private CursorEntity[] cursors;
 
@@ -30,7 +30,7 @@ namespace RPG.Control
 
         [SerializeField]
         private float maxNavPathLength = 35f;
-        
+
         private Mover _mover;
         private Health _healthSystem;
 
@@ -46,13 +46,13 @@ namespace RPG.Control
 
             if (_healthSystem.IsDead)
             {
-                SetCursor(CursorType.Default);    
+                SetCursor(CursorType.Default);
                 return;
             }
 
             if (InteractWithInGameComponents()) return;
             if (InteractWithMovement()) return;
-            
+
             SetCursor(CursorType.Default);
         }
 
@@ -84,7 +84,7 @@ namespace RPG.Control
                 if (hit1.distance < hit2.distance) return -1;
                 return 0;
             });
-            
+
             return hits;
         }
 
@@ -124,21 +124,23 @@ namespace RPG.Control
         private bool RaycastNavMesh(out Vector3 targetPosition)
         {
             targetPosition = new Vector3();
-            
+
             bool hasHit = Physics.Raycast(RaycastUtils.GetMouseRay(), out RaycastHit hit);
             if (!hasHit) return false;
 
-            bool hasCastToNavMesh = NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, maxDeviationFromRaycastToNavMesh,
+            bool hasCastToNavMesh = NavMesh.SamplePosition(hit.point, out NavMeshHit navHit,
+                maxDeviationFromRaycastToNavMesh,
                 NavMesh.AllAreas);
-            
+
             if (!hasCastToNavMesh) return false;
             targetPosition = navHit.position;
 
             var path = new NavMeshPath();
-            bool hasPath = NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, new NavMeshPath());
+            bool hasPath =
+                NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, new NavMeshPath());
             if (!hasPath && path.status != NavMeshPathStatus.PathComplete) return false;
             if (NavMeshExtensions.CalculateLength(path) > maxNavPathLength) return false;
-            
+
             return true;
         }
 

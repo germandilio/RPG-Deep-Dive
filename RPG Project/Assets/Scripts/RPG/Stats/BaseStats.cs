@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using JetBrains.Annotations;
+using RPG.Attributes;
 using UnityEngine;
 using Utils;
 
@@ -22,7 +23,8 @@ namespace RPG.Stats
         private GameObject levelUpEffect;
 
         [SerializeField]
-        [Tooltip("Using additional modifiers for components (ex. if false, stats will be only loaded from Progression Scriptable object, without any additional modifiers)")]
+        [Tooltip(
+            "Using additional modifiers for components (ex. if false, stats will be only loaded from Progression Scriptable object, without any additional modifiers)")]
         private bool shouldUseModifiers = false;
 
         // null if it is not a Player
@@ -30,7 +32,7 @@ namespace RPG.Stats
         private LazyValue<int> _currentLevel;
 
         public event Action OnLevelUp;
-        
+
         private void Awake()
         {
             _experience = GetComponent<Experience>();
@@ -74,13 +76,14 @@ namespace RPG.Stats
 
         public float GetStat(Stats statsType)
         {
-            return (GetBaseStat(statsType) + GetAdditiveModifier(statsType)) * (1 + GetPercentageModifier(statsType) / 100);
+            return (GetBaseStat(statsType) + GetAdditiveModifier(statsType)) *
+                   (1 + GetPercentageModifier(statsType) / 100);
         }
 
         private float GetPercentageModifier(Stats statsType)
         {
             if (!shouldUseModifiers) return 0f;
-            
+
             float percentage = 0f;
             foreach (var modifyProvider in GetComponents<IModifyProvider>())
             {
@@ -116,7 +119,7 @@ namespace RPG.Stats
         private int CalculateLevel()
         {
             if (!gameObject.CompareTag("Player")) return progressLevel;
-            
+
             float currentXp = _experience.ExperiencePoints;
             int penultimateLevel = progression.GetNumberOfLevels(Stats.ExperienceToLevelUp, characterClass);
 
@@ -126,6 +129,7 @@ namespace RPG.Stats
                 if (currentXp < pointsToLevelUp)
                     return level;
             }
+
             return penultimateLevel + 1;
         }
     }

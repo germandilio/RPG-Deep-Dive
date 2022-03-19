@@ -17,7 +17,7 @@ namespace RPG.Combat
             {
                 fighterSystem.Attack(gameObject);
             }
-            
+
             return true;
         }
 

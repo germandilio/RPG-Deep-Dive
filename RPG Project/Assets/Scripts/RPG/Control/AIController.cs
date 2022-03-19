@@ -25,7 +25,7 @@ namespace RPG.Control
 
         [SerializeField]
         private float waypointTolerance = 0.5f;
-        
+
         [SerializeField]
         [Tooltip("Max time to wait after player go out chase distance, before move to guard place")]
         private float suspicionTime = 4f;
@@ -54,7 +54,7 @@ namespace RPG.Control
             _actionScheduler = GetComponent<ActionScheduler>();
 
             _player = GameObject.FindWithTag("Player");
-            
+
             _guardPosition = new LazyValue<Vector3>(InitializeGuardPosition);
         }
 

@@ -21,7 +21,7 @@ namespace RPG.Cinematics
             _playableDirector.played += OnDisablePlayerControl;
             _playableDirector.stopped += OnEnablePlayerControl;
         }
-        
+
         private void OnDisable()
         {
             _playableDirector.played -= OnDisablePlayerControl;
