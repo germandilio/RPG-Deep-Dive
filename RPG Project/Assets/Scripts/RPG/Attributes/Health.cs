@@ -3,6 +3,7 @@ using RPG.Core;
 using RPG.Stats;
 using Saving;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace RPG.Attributes
@@ -13,6 +14,9 @@ namespace RPG.Attributes
     {
         [SerializeField]
         private float levelUpHealthPercentage = 70;
+
+        [SerializeField]
+        private UnityEvent takeDamage;
         
         private BaseStats _baseStats;
         
@@ -67,12 +71,11 @@ namespace RPG.Attributes
 
         public void TakeDamage(float damage, GameObject instigator)
         {
-            // TODO убрать
-            Debug.Log($"{gameObject} took damage: {damage}");
-
             _instigator = instigator;
-            
+
             _currentHealthPoints.Value = Math.Max(_currentHealthPoints.Value - damage, 0);
+            takeDamage?.Invoke();
+
             if (_currentHealthPoints.Value == 0)
             {
                 Die();

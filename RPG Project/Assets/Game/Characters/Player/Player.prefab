@@ -88,6 +88,11 @@ PrefabInstance:
       propertyPath: timeBetweenAttacks
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: 4301148793687692726, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4983377697298643238, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: levelUpEffect
@@ -229,6 +234,8 @@ MonoBehaviour:
   - type: 4
     texture: {fileID: 2800000, guid: f8c873f1e53e83f4aabf342d6be1dfc3, type: 3}
     hotspot: {x: 0, y: 0}
+  maxDeviationFromRaycastToNavMesh: 1
+  maxNavPathLength: 35
 --- !u!1001 &2669362155555264324
 PrefabInstance:
   m_ObjectHideFlags: 0

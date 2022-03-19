@@ -1,10 +1,11 @@
 using System;
+using RPG.Core;
 using UnityEngine;
 
 namespace RPG.Combat
 {
     [RequireComponent(typeof(ParticleSystem))]
-    public class DestroyAfterPlay : MonoBehaviour
+    public class DestroyAfterPlay : MonoBehaviour, IDestroyer
     {
         [SerializeField]
         private GameObject targetToDestroy;
@@ -20,11 +21,13 @@ namespace RPG.Combat
         {
             if (!_effectSystem.IsAlive())
             {
-                if (targetToDestroy != null)
-                    Destroy(targetToDestroy);
-                else
-                    Destroy(gameObject);
+                DestroyTarget();
             }
+        }
+
+        public void DestroyTarget()
+        {
+            Destroy(targetToDestroy != null ? targetToDestroy : gameObject);
         }
     }
 }
