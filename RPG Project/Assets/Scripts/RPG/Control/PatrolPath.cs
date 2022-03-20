@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Control
@@ -10,7 +7,7 @@ namespace RPG.Control
         [SerializeField]
         private float waypointGizmoRadius = 0.5f;
 
-        private int _currentIndex = 0;
+        private int _currentIndex;
 
         private void OnDrawGizmos()
         {

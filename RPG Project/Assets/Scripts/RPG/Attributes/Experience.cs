@@ -8,7 +8,7 @@ namespace RPG.Attributes
     {
         public event Action ExperienceGained;
 
-        private float _experiencePoints = 0;
+        private float _experiencePoints;
 
         public float ExperiencePoints => _experiencePoints;
 

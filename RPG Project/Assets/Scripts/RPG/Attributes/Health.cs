@@ -15,8 +15,13 @@ namespace RPG.Attributes
         [SerializeField]
         private float levelUpHealthPercentage = 70;
 
+        [Serializable]
+        public class TakeDamageEvent : UnityEvent<float>
+        {
+        }
+
         [SerializeField]
-        private UnityEvent takeDamage;
+        private TakeDamageEvent takeDamage;
 
         private BaseStats _baseStats;
 
@@ -25,7 +30,7 @@ namespace RPG.Attributes
         private Animator _animator;
         private static readonly int DeadId = Animator.StringToHash("Dead");
 
-        private GameObject _instigator = null;
+        private GameObject _instigator;
 
         public bool IsDead { get; private set; }
 
@@ -74,7 +79,7 @@ namespace RPG.Attributes
             _instigator = instigator;
 
             _currentHealthPoints.Value = Math.Max(_currentHealthPoints.Value - damage, 0);
-            takeDamage?.Invoke();
+            takeDamage?.Invoke(damage);
 
             if (_currentHealthPoints.Value == 0)
             {
@@ -107,7 +112,7 @@ namespace RPG.Attributes
 
         public object CaptureState()
         {
-            return _currentHealthPoints;
+            return _currentHealthPoints.Value;
         }
 
         public void RestoreState(object state)

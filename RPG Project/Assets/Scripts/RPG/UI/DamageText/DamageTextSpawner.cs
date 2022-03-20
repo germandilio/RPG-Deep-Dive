@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RPG.UI.DamageText
@@ -11,8 +9,8 @@ namespace RPG.UI.DamageText
 
         public void Spawn(float damage)
         {
-            var text = Instantiate<DamageText>(damageTextPrefab, transform);
-            //text.SetText(damage);
+            var text = Instantiate(damageTextPrefab, transform);
+            text.SetText(damage);
         }
     }
 }

@@ -29,9 +29,9 @@ namespace RPG.Stats
         }
 
         [SerializeField]
-        private CharacterProgressionClass[] characterProgressions = null;
+        private CharacterProgressionClass[] characterProgressions;
 
-        private Dictionary<CharacterClass, Dictionary<Stats, float[]>> _lookupStats = null;
+        private Dictionary<CharacterClass, Dictionary<Stats, float[]>> _lookupStats;
 
         private Dictionary<CharacterClass, Dictionary<Stats, float[]>> BuildLookup()
         {

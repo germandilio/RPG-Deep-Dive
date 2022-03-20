@@ -1,6 +1,3 @@
-using System;
-using UnityEngine;
-
 namespace RPG.Core
 {
     public interface IDestroyer

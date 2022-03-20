@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.SceneManagement
@@ -9,7 +7,9 @@ namespace RPG.SceneManagement
     public class Fader : MonoBehaviour
     {
         private CanvasGroup _canvasGroup;
-
+        
+        private Coroutine _activeFadeRoutine;
+        
         private void Awake()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
@@ -20,32 +20,36 @@ namespace RPG.SceneManagement
         /// </summary>
         /// <param name="time">Time to fade in.</param>
         /// <returns></returns>
-        public IEnumerator FadeIn(float time)
-        {
-            while (_canvasGroup.alpha > 0)
-            {
-                _canvasGroup.alpha -= Time.deltaTime / time;
-                yield return null;
-            }
-        }
+        public Coroutine FadeIn(float time) => Fade(0f, time);
 
         /// <summary>
         /// Fade out screen to color of "Fader.Image" component.
         /// </summary>
         /// <param name="time">Time to fade out.</param>
         /// <returns></returns>
-        public IEnumerator FadeOut(float time)
-        {
-            while (_canvasGroup.alpha < 1)
-            {
-                _canvasGroup.alpha += Time.deltaTime / time;
-                yield return null;
-            }
-        }
+        public Coroutine FadeOut(float time) => Fade(1f, time);
 
         public void FadeOutImmediately()
         {
             _canvasGroup.alpha = 1;
+        }
+
+        private Coroutine Fade(float target, float time)
+        {
+            if (_activeFadeRoutine != null)
+                StopCoroutine(_activeFadeRoutine);
+
+            _activeFadeRoutine = StartCoroutine(FadeRoutine(target, time));
+            return _activeFadeRoutine;
+        }
+
+        private IEnumerator FadeRoutine(float target, float time)
+        {
+            while (!Mathf.Approximately(_canvasGroup.alpha, target))
+            {
+                _canvasGroup.alpha = Mathf.MoveTowards(_canvasGroup.alpha, target, Time.deltaTime / time);
+                yield return null;
+            } 
         }
     }
 }

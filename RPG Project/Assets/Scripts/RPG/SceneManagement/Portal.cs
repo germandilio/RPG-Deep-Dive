@@ -1,6 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using RPG.Control;
 using Saving;
 using UnityEngine;
 using UnityEngine.AI;
@@ -37,19 +36,39 @@ namespace RPG.SceneManagement
         private IEnumerator SceneTransition()
         {
             if (destinationScene == Scenes.None)
+            {
+                Debug.LogError("There is no scene to load");
                 yield break;
-
+            }
+            
             DontDestroyOnLoad(gameObject);
+            var fader = FindObjectOfType<Fader>();
+            var saving = FindObjectOfType<SavingWrapper>();
+            
+            yield return BeforeLoadingNewScene(fader, saving);
+            
+            // load new scene
+            yield return SceneManager.LoadSceneAsync((int) destinationScene);
 
-            Fader fader = FindObjectOfType<Fader>();
+            yield return AfterLoadingNewScene(saving, fader);
+            Destroy(gameObject);
+        }
+
+        private IEnumerator BeforeLoadingNewScene(Fader fader, SavingWrapper saving)
+        {
+            // remove player control
+            ControlRemover.DisablePlayerControl();
+
             yield return fader.FadeOut(timeToFadeOut);
 
             // save current scene before transition
-            SavingWrapper saving = FindObjectOfType<SavingWrapper>();
             saving.Save();
-
-            // load next scene
-            yield return SceneManager.LoadSceneAsync((int) destinationScene);
+        }
+        
+        private IEnumerator AfterLoadingNewScene(SavingWrapper saving, Fader fader)
+        {
+            // remove new player control
+            ControlRemover.DisablePlayerControl();
 
             // TODO find different way to stabilize the object initialization
             yield return new WaitForSeconds(fadeWaitTime);
@@ -64,9 +83,10 @@ namespace RPG.SceneManagement
             // save the current state (used like latest checkpoint when restarted game)
             saving.Save();
 
-            yield return fader.FadeIn(timeToFadeIn);
+            fader.FadeIn(timeToFadeIn);
 
-            Destroy(gameObject);
+            // restore control
+            ControlRemover.EnablePlayerControl();
         }
 
         private void UpdatePlayer(Portal anotherPortal)

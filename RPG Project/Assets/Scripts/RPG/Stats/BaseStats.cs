@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using JetBrains.Annotations;
 using RPG.Attributes;
 using UnityEngine;
 using Utils;
@@ -17,7 +16,7 @@ namespace RPG.Stats
         private CharacterClass characterClass;
 
         [SerializeField]
-        private Progression progression = null;
+        private Progression progression;
 
         [SerializeField]
         private GameObject levelUpEffect;
@@ -25,7 +24,7 @@ namespace RPG.Stats
         [SerializeField]
         [Tooltip(
             "Using additional modifiers for components (ex. if false, stats will be only loaded from Progression Scriptable object, without any additional modifiers)")]
-        private bool shouldUseModifiers = false;
+        private bool shouldUseModifiers;
 
         // null if it is not a Player
         private Experience _experience;
