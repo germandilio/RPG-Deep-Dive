@@ -4,7 +4,7 @@ namespace RPG.UI
 {
     public class UICameraFacing : MonoBehaviour
     {
-        private void Update()
+        private void LateUpdate()
         {
             if (Camera.main == null) return;
 

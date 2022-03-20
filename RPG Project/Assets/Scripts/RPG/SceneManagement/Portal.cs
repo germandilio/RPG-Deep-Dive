@@ -36,10 +36,7 @@ namespace RPG.SceneManagement
         private IEnumerator SceneTransition()
         {
             if (destinationScene == Scenes.None)
-            {
-                Debug.LogError("There is no scene to load");
                 yield break;
-            }
             
             DontDestroyOnLoad(gameObject);
             var fader = FindObjectOfType<Fader>();

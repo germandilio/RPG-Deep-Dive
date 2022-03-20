@@ -23,6 +23,9 @@ namespace RPG.Attributes
         [SerializeField]
         private TakeDamageEvent takeDamage;
 
+        [SerializeField]
+        private UnityEvent die;
+
         private BaseStats _baseStats;
 
         private LazyValue<float> _currentHealthPoints;
@@ -103,6 +106,9 @@ namespace RPG.Attributes
 
             _animator.SetTrigger(DeadId);
             IsDead = true;
+            
+            //play die effect
+            die?.Invoke();
 
             // TODO set enable to false on enemy capsule collider
             GetComponent<Rigidbody>().isKinematic = true;

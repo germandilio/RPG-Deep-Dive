@@ -1,5 +1,6 @@
 using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Combat
 {
@@ -24,6 +25,9 @@ namespace RPG.Combat
         [SerializeField]
         private GameObject impactEffect;
 
+        [SerializeField]
+        private UnityEvent hit;
+        
         private GameObject _instigator;
         private Health target;
         private float _damage;
@@ -68,6 +72,9 @@ namespace RPG.Combat
             if (other.GetComponent<Health>() == target)
             {
                 target.TakeDamage(_damage, _instigator);
+                // play hit sound
+                hit?.Invoke();
+                
                 // for smoothly disappearing tail
                 speed = 0;
                 // apply impact effect

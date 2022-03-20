@@ -5323,6 +5323,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8032920899888558570, guid: a0e7506016feb4ca29fcecde04ff0e5d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8729845320596091487, guid: a0e7506016feb4ca29fcecde04ff0e5d,
         type: 3}
       propertyPath: maxNavPathLength
