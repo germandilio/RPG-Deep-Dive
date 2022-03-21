@@ -27,7 +27,7 @@ namespace RPG.Combat
 
         [SerializeField]
         private UnityEvent hit;
-        
+
         private GameObject _instigator;
         private Health target;
         private float _damage;
@@ -74,7 +74,7 @@ namespace RPG.Combat
                 target.TakeDamage(_damage, _instigator);
                 // play hit sound
                 hit?.Invoke();
-                
+
                 // for smoothly disappearing tail
                 speed = 0;
                 // apply impact effect
@@ -82,6 +82,7 @@ namespace RPG.Combat
                     Instantiate(impactEffect, GetDestinationPoint(), transform.rotation);
             }
 
+            // TODO add colliders to buildings
             foreach (GameObject destroyingObject in destroyOnHit)
             {
                 Destroy(destroyingObject);

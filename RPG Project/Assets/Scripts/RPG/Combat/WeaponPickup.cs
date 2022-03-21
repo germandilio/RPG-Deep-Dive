@@ -13,7 +13,7 @@ namespace RPG.Combat
 
         [SerializeField]
         private float healthPointsToRestore = 0f;
-        
+
         [SerializeField]
         private float seconds = 5f;
 
@@ -32,7 +32,7 @@ namespace RPG.Combat
 
             if (healthPointsToRestore > 0)
                 player.GetComponent<Health>()?.Heal(healthPointsToRestore);
-
+            
             StartCoroutine(HidePickupForSeconds(seconds));
         }
 
@@ -56,10 +56,7 @@ namespace RPG.Combat
         public bool HandleRaycast(PlayerController interactController)
         {
             if (Input.GetMouseButtonDown(0))
-            {
                 PickUp(interactController.gameObject);
-            }
-
             return true;
         }
 

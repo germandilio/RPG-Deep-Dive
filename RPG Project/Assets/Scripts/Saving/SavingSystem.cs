@@ -62,7 +62,7 @@ namespace Saving
             string path = GetPathFromSaveFile(saveFile);
             // TODO убрать
             print("Saving to " + path);
-            
+
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
                 BinaryFormatter formatter = new BinaryFormatter();

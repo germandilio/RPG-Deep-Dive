@@ -7,9 +7,9 @@ namespace RPG.SceneManagement
     public class Fader : MonoBehaviour
     {
         private CanvasGroup _canvasGroup;
-        
+
         private Coroutine _activeFadeRoutine;
-        
+
         private void Awake()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
@@ -49,7 +49,7 @@ namespace RPG.SceneManagement
             {
                 _canvasGroup.alpha = Mathf.MoveTowards(_canvasGroup.alpha, target, Time.deltaTime / time);
                 yield return null;
-            } 
+            }
         }
     }
 }

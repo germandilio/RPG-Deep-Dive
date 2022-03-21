@@ -58,7 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9ce8876423400e9f1da3606b555aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponConfigType: {fileID: 11400000, guid: 8f338a0f92c6e4d94b15c3299f4f4886, type: 2}
+  weaponConfig: {fileID: 11400000, guid: 8f338a0f92c6e4d94b15c3299f4f4886, type: 2}
+  healthPointsToRestore: 0
   seconds: 5
 --- !u!1 &2480746525802846653
 GameObject:

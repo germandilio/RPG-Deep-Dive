@@ -7,7 +7,7 @@ namespace Saving
         /// </summary>
         /// <returns>Object to serialize.</returns>
         object CaptureState();
-        
+
         /// <summary>
         /// Restoring data. To avoid unboxing errors provide exactly the same type as it was in CaptureState.
         /// </summary>

@@ -6,7 +6,7 @@ namespace RPG.Control
     public static class ControlRemover
     {
         private const string PlayerTag = "Player";
-        
+
         public static void DisablePlayerControl()
         {
             GameObject player = GameObject.FindWithTag(PlayerTag);

@@ -37,13 +37,13 @@ namespace RPG.SceneManagement
         {
             if (destinationScene == Scenes.None)
                 yield break;
-            
+
             DontDestroyOnLoad(gameObject);
             var fader = FindObjectOfType<Fader>();
             var saving = FindObjectOfType<SavingWrapper>();
-            
+
             yield return BeforeLoadingNewScene(fader, saving);
-            
+
             // load new scene
             yield return SceneManager.LoadSceneAsync((int) destinationScene);
 
@@ -61,7 +61,7 @@ namespace RPG.SceneManagement
             // save current scene before transition
             saving.Save();
         }
-        
+
         private IEnumerator AfterLoadingNewScene(SavingWrapper saving, Fader fader)
         {
             // remove new player control

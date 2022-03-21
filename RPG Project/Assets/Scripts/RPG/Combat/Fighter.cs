@@ -122,10 +122,9 @@ namespace RPG.Combat
         {
             Health healthComponent;
             if (target == null || (healthComponent = target.GetComponent<Health>()) == null)
-            {
                 return false;
-            }
 
+            if (!_movementSystem.CanMoveTo(target.transform.position)) return false;
             return !healthComponent.IsDead;
         }
 
@@ -147,7 +146,7 @@ namespace RPG.Combat
 
             if (_currentWeapon.Value != null)
                 _currentWeapon.Value.OnHit();
-                
+
             if (_currentWeaponConfig.HasProjectile)
                 _currentWeaponConfig.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);
             else

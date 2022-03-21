@@ -21,7 +21,7 @@ namespace Saving
             // because in start methods we restore stats based on saved information 
             StartCoroutine(LoadLastScene());
         }
-        
+
         private IEnumerator LoadLastScene()
         {
             // hide all the initializations when loaded scene state from file
@@ -38,7 +38,7 @@ namespace Saving
         {
             if (Input.GetKeyDown(KeyCode.L))
                 Load();
-            else if (Input.GetKeyDown(KeyCode.S)) 
+            else if (Input.GetKeyDown(KeyCode.S))
                 Save();
             else if (Input.GetKeyDown(KeyCode.D))
                 Delete();

@@ -33,8 +33,15 @@ namespace RPG.Control
         [Tooltip("Time when enemy stops on every waypoint")]
         private float dwellTime = 5f;
 
+        [SerializeField]
+        private float aggravatedTime = 5f;
+
+        [SerializeField]
+        private float shoutDistance = 5f;
+        
         private float _timeSinceLastSawPlayer = Mathf.Infinity;
         private float _timeOnCurrentWaypoint = Mathf.Infinity;
+        private float _timeSinceAggravated = Mathf.Infinity;
 
         private LazyValue<Vector3> _guardPosition;
 
@@ -68,7 +75,7 @@ namespace RPG.Control
         {
             if (_healthSystem.IsDead) return;
 
-            if (InAttackRange() && _fighterSystem.CanAttack(_player))
+            if (IsAggravated() && _fighterSystem.CanAttack(_player))
                 AttackBehaviour();
             else if (_timeSinceLastSawPlayer < suspicionTime)
                 SuspicionBehaviour();
@@ -82,6 +89,7 @@ namespace RPG.Control
         {
             _timeSinceLastSawPlayer += Time.deltaTime;
             _timeOnCurrentWaypoint += Time.deltaTime;
+            _timeSinceAggravated += Time.deltaTime;
         }
 
         private void PatrolBehaviour()
@@ -122,12 +130,28 @@ namespace RPG.Control
         {
             _timeSinceLastSawPlayer = 0f;
             _fighterSystem.Attack(_player);
+
+            AggravateNearbyEnemies();
         }
 
-        private bool InAttackRange()
+        private void AggravateNearbyEnemies()
         {
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0.5f);
+            foreach (RaycastHit hit in hits)
+            {
+                var aiController = hit.transform.GetComponent<AIController>();
+                if (aiController != null)
+                    aiController.Aggravate();
+            }
+        }
+
+        private bool IsAggravated()
+        {
+            if (_timeSinceAggravated < aggravatedTime) return true;
             return Vector3.Distance(transform.position, _player.transform.position) <= chaseDistance;
         }
+
+        public void Aggravate() => _timeSinceAggravated = 0f;
 
         /// <summary>
         /// Draw enemy chasing sphere 

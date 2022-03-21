@@ -10,7 +10,7 @@ namespace Utils
         {
             if (path == null)
                 throw new ArgumentNullException(nameof(path));
-            
+
             float length = 0f;
             if (path.corners.Length < 2) return length;
 

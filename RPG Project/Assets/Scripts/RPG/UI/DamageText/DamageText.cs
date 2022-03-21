@@ -7,7 +7,7 @@ namespace RPG.UI.DamageText
     {
         [SerializeField]
         private Text textComponent;
-        
+
         public void SetText(float damage)
         {
             textComponent.text = $"{damage:0}";

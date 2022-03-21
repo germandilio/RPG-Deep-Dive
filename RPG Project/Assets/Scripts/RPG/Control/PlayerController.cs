@@ -27,8 +27,8 @@ namespace RPG.Control
         private float maxDeviationFromRaycastToNavMesh = 1f;
 
         [SerializeField]
-        private float maxNavPathLength = 35f;
-
+        private float raycastInfelicity = 0.2f;
+        
         private Mover _mover;
         private Health _healthSystem;
 
@@ -75,7 +75,8 @@ namespace RPG.Control
 
         private RaycastHit[] RaycastAllSorted()
         {
-            var hits = Physics.RaycastAll(RaycastUtils.GetMouseRay());
+            //TODO fix bug with pickups raycasting
+            var hits = Physics.SphereCastAll(RaycastUtils.GetMouseRay(), raycastInfelicity);
             Array.Sort(hits, (hit1, hit2) =>
             {
                 if (hit1.distance > hit2.distance) return 1;
@@ -106,6 +107,7 @@ namespace RPG.Control
             bool hasHit = RaycastNavMesh(out Vector3 pointToMove);
             if (hasHit)
             {
+                if (!_mover.CanMoveTo(pointToMove)) return false;
                 if (Input.GetMouseButton(0))
                 {
                     _mover.StartMoveAction(pointToMove);
@@ -132,12 +134,6 @@ namespace RPG.Control
 
             if (!hasCastToNavMesh) return false;
             targetPosition = navHit.position;
-
-            var path = new NavMeshPath();
-            bool hasPath =
-                NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, new NavMeshPath());
-            if (!hasPath && path.status != NavMeshPathStatus.PathComplete) return false;
-            if (NavMeshExtensions.CalculateLength(path) > maxNavPathLength) return false;
 
             return true;
         }

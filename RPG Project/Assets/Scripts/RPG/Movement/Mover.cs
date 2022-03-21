@@ -1,8 +1,10 @@
-﻿using RPG.Core;
+﻿using System;
+using RPG.Core;
 using RPG.Attributes;
 using UnityEngine;
 using UnityEngine.AI;
 using Saving;
+using Utils;
 
 namespace RPG.Movement
 {
@@ -12,6 +14,9 @@ namespace RPG.Movement
     {
         [SerializeField]
         private float maxSpeed = 6f;
+
+        [SerializeField]
+        private float maxNavPathLength = 35f;
 
         private NavMeshAgent _navMeshAgent;
         private ActionScheduler _actionScheduler;
@@ -49,6 +54,17 @@ namespace RPG.Movement
             _navMeshAgent.SetDestination(destination);
             _navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFactor);
             _navMeshAgent.isStopped = false;
+        }
+
+        public bool CanMoveTo(Vector3 targetPosition)
+        {
+            var path = new NavMeshPath();
+            bool hasPath =
+                NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, new NavMeshPath());
+            if (!hasPath && path.status != NavMeshPathStatus.PathComplete) return false;
+            if (NavMeshExtensions.CalculateLength(path) > maxNavPathLength) return false;
+
+            return true;
         }
 
         private void UpdateAnimator()
