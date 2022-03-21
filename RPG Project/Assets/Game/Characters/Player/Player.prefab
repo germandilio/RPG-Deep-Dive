@@ -88,10 +88,16 @@ PrefabInstance:
       propertyPath: timeBetweenAttacks
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: defaultWeaponConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 26ca0af22fbe0471eb239a034dd47170,
+        type: 2}
     - target: {fileID: 4301148793687692726, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4983377697298643238, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}

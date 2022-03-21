@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
@@ -18,8 +17,9 @@ namespace RPG.Combat
         private Transform rightHand, leftHand;
 
         [SerializeField]
-        private Weapon defaultWeapon;
+        private WeaponConfig defaultWeaponConfig;
 
+        private WeaponConfig _currentWeaponConfig;
         private LazyValue<Weapon> _currentWeapon;
 
         private Health _target;
@@ -44,6 +44,7 @@ namespace RPG.Combat
             _animator = GetComponent<Animator>();
             _baseStats = GetComponent<BaseStats>();
 
+            _currentWeaponConfig = defaultWeaponConfig;
             _currentWeapon = new LazyValue<Weapon>(EquipDefaultWeapon);
         }
 
@@ -58,7 +59,7 @@ namespace RPG.Combat
             _timeSinceLastAttack += Time.deltaTime;
             if (_target == null) return;
 
-            if (Vector3.Distance(transform.position, _target.transform.position) >= _currentWeapon.Value.WeaponRange)
+            if (Vector3.Distance(transform.position, _target.transform.position) >= _currentWeaponConfig.WeaponRange)
                 _movementSystem.MoveTo(_target.transform.position);
             else
             {
@@ -69,21 +70,21 @@ namespace RPG.Combat
 
         private Weapon EquipDefaultWeapon()
         {
-            AttachWeapon(defaultWeapon);
-            return defaultWeapon;
+            _currentWeaponConfig = defaultWeaponConfig;
+            return AttachWeapon(defaultWeaponConfig);
         }
 
-        public void EquipWeapon(Weapon weapon)
+        public void EquipWeapon(WeaponConfig weaponConfig)
         {
-            AttachWeapon(weapon);
-            _currentWeapon.Value = weapon;
+            _currentWeaponConfig = weaponConfig;
+            _currentWeapon.Value = AttachWeapon(weaponConfig);
         }
 
-        private void AttachWeapon(Weapon weapon)
+        private Weapon AttachWeapon(WeaponConfig weaponConfig)
         {
-            if (weapon == null) return;
+            if (weaponConfig == null) return null;
 
-            weapon.CreateWeapon(leftHand, rightHand, _animator);
+            return weaponConfig.CreateWeapon(leftHand, rightHand, _animator);
         }
 
         private void AttackBehaviour()
@@ -91,7 +92,7 @@ namespace RPG.Combat
             if (!CanAttack(_target.gameObject)) return;
 
             transform.LookAt(_target.transform);
-            if (_timeSinceLastAttack >= _currentWeapon.Value.TimeBetweenAttacks)
+            if (_timeSinceLastAttack >= _currentWeaponConfig.TimeBetweenAttacks)
             {
                 ResetTriggerAttack();
                 _animator.SetTrigger(AttackId);
@@ -143,9 +144,12 @@ namespace RPG.Combat
             if (_target == null || _target.IsDead) return;
 
             float damage = _baseStats.GetStat(Stats.Stats.Damage);
-            // TODO damage weapon
-            if (_currentWeapon.Value.HasProjectile)
-                _currentWeapon.Value.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);
+
+            if (_currentWeapon.Value != null)
+                _currentWeapon.Value.OnHit();
+                
+            if (_currentWeaponConfig.HasProjectile)
+                _currentWeaponConfig.LaunchProjectile(leftHand, rightHand, _target, gameObject, damage);
             else
                 // Apply damage for non projectile weapons
                 _target.TakeDamage(damage, gameObject);
@@ -153,21 +157,21 @@ namespace RPG.Combat
 
         public object CaptureState()
         {
-            return _currentWeapon.Value.name;
+            return _currentWeaponConfig.name;
         }
 
         public void RestoreState(object state)
         {
-            if (!(state is String weaponName)) return;
-            Weapon weapon = Resources.Load<Weapon>(weaponName);
-            EquipWeapon(weapon);
+            if (!(state is string weaponName)) return;
+            WeaponConfig weaponConfig = Resources.Load<WeaponConfig>(weaponName);
+            EquipWeapon(weaponConfig);
         }
 
         public IEnumerable<float> GetAdditiveModifier(Stats.Stats stats)
         {
             if (stats == Stats.Stats.Damage)
             {
-                yield return _currentWeapon.Value.WeaponDamage;
+                yield return _currentWeaponConfig.WeaponDamage;
             }
         }
 
@@ -175,7 +179,7 @@ namespace RPG.Combat
         {
             if (stats == Stats.Stats.Damage)
             {
-                yield return _currentWeapon.Value.PercentageBonus;
+                yield return _currentWeaponConfig.PercentageBonus;
             }
         }
     }

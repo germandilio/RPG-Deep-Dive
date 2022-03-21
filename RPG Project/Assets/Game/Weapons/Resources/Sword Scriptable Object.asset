@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b332d5a62048b4832411ff91bc6fc3, type: 3}
   m_Name: Sword Scriptable Object
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 5825387962244292582, guid: 5a22e49a32bdd41f89752c5b0dd49977,
+  weaponPrefab: {fileID: 930132910650163077, guid: 5a22e49a32bdd41f89752c5b0dd49977,
     type: 3}
   projectilePrefab: {fileID: 0}
   animatorOverrideController: {fileID: 22100000, guid: 2bec9d3fb655b48e4846dac2d6cdc87a,
@@ -20,4 +20,5 @@ MonoBehaviour:
   weaponType: 1
   weaponRange: 3
   weaponDamage: 50
+  percentageBonus: 0
   timeBetweenAttacks: 2
