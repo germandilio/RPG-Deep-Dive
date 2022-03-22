@@ -28,7 +28,7 @@ namespace RPG.Control
 
         [SerializeField]
         private float raycastInfelicity = 0.2f;
-        
+
         private Mover _mover;
         private Health _healthSystem;
 

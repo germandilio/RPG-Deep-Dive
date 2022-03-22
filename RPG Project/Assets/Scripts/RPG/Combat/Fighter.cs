@@ -131,7 +131,7 @@ namespace RPG.Combat
         private bool InAttackRange(Transform target)
         {
             if (target == null) return false;
-            
+
             return Vector3.Distance(transform.position, target.position) < _currentWeaponConfig.WeaponRange;
         }
 

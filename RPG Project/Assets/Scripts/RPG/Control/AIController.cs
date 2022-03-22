@@ -38,7 +38,7 @@ namespace RPG.Control
 
         [SerializeField]
         private float shoutDistance = 5f;
-        
+
         private float _timeSinceLastSawPlayer = Mathf.Infinity;
         private float _timeOnCurrentWaypoint = Mathf.Infinity;
         private float _timeSinceAggravated = Mathf.Infinity;

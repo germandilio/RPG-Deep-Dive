@@ -32,7 +32,7 @@ namespace RPG.Combat
 
             if (healthPointsToRestore > 0)
                 player.GetComponent<Health>()?.Heal(healthPointsToRestore);
-            
+
             StartCoroutine(HidePickupForSeconds(seconds));
         }
 

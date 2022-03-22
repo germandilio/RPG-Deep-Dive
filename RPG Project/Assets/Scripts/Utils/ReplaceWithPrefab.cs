@@ -16,10 +16,12 @@ namespace Utils
 
         private void OnGUI()
         {
-            prefabToReplace = (GameObject)EditorGUILayout.ObjectField("Prefab", prefabToReplace, typeof(GameObject), false);
+            prefabToReplace =
+                (GameObject) EditorGUILayout.ObjectField("Prefab", prefabToReplace, typeof(GameObject), false);
 
             if (!GUILayout.Button("Replace")) return;
-                Replace();
+
+            Replace();
 
             GUI.enabled = false;
             EditorGUILayout.LabelField("Selection count: " + Selection.objects.Length);
@@ -29,16 +31,14 @@ namespace Utils
         {
             var selection = Selection.gameObjects;
 
-            for (var i = selection.Length - 1; i >= 0; --i)
+            for (int i = 0; i < selection.Length; i++)
             {
                 var selected = selection[i];
                 var prefabType = PrefabUtility.GetPrefabAssetType(prefabToReplace);
                 GameObject newObject;
 
                 if (prefabType != PrefabAssetType.NotAPrefab)
-                {
                     newObject = (GameObject) PrefabUtility.InstantiatePrefab(prefabToReplace);
-                }
                 else
                 {
                     newObject = Instantiate(prefabToReplace);
@@ -52,13 +52,18 @@ namespace Utils
                 }
 
                 Undo.RegisterCreatedObjectUndo(newObject, "Replace With Prefabs");
-                newObject.transform.parent = selected.transform.parent;
-                newObject.transform.localPosition = selected.transform.localPosition;
-                newObject.transform.localRotation = selected.transform.localRotation;
-                newObject.transform.localScale = selected.transform.localScale;
-                newObject.transform.SetSiblingIndex(selected.transform.GetSiblingIndex());
+                CopyTransform(newObject, selected);
                 Undo.DestroyObjectImmediate(selected);
             }
+        }
+
+        private static void CopyTransform(GameObject newObject, GameObject selected)
+        {
+            newObject.transform.parent = selected.transform.parent;
+            newObject.transform.localPosition = selected.transform.localPosition;
+            newObject.transform.localRotation = selected.transform.localRotation;
+            newObject.transform.localScale = selected.transform.localScale;
+            newObject.transform.SetSiblingIndex(selected.transform.GetSiblingIndex());
         }
     }
 }
