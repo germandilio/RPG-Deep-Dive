@@ -59,7 +59,7 @@ namespace RPG.Combat
             _timeSinceLastAttack += Time.deltaTime;
             if (_target == null) return;
 
-            if (Vector3.Distance(transform.position, _target.transform.position) >= _currentWeaponConfig.WeaponRange)
+            if (!InAttackRange(_target.transform))
                 _movementSystem.MoveTo(_target.transform.position);
             else
             {
@@ -124,8 +124,15 @@ namespace RPG.Combat
             if (target == null || (healthComponent = target.GetComponent<Health>()) == null)
                 return false;
 
-            if (!_movementSystem.CanMoveTo(target.transform.position)) return false;
+            if (!_movementSystem.CanMoveTo(target.transform.position) && !InAttackRange(target.transform)) return false;
             return !healthComponent.IsDead;
+        }
+
+        private bool InAttackRange(Transform target)
+        {
+            if (target == null) return false;
+            
+            return Vector3.Distance(transform.position, target.position) < _currentWeaponConfig.WeaponRange;
         }
 
         public void Cancel()
