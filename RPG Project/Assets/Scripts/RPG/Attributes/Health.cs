@@ -4,6 +4,7 @@ using RPG.Stats;
 using Saving;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using Utils;
 
 namespace RPG.Attributes
@@ -21,10 +22,10 @@ namespace RPG.Attributes
         }
 
         [SerializeField]
-        private TakeDamageEvent takeDamage;
+        private TakeDamageEvent onTakeDamage;
 
         [SerializeField]
-        private UnityEvent die;
+        private UnityEvent onDie;
 
         private BaseStats _baseStats;
 
@@ -82,7 +83,7 @@ namespace RPG.Attributes
             _instigator = instigator;
 
             _currentHealthPoints.Value = Math.Max(_currentHealthPoints.Value - damage, 0);
-            takeDamage?.Invoke(damage);
+            onTakeDamage?.Invoke(damage);
 
             if (_currentHealthPoints.Value == 0)
             {
@@ -108,7 +109,7 @@ namespace RPG.Attributes
             IsDead = true;
 
             //play die effect
-            die?.Invoke();
+            onDie?.Invoke();
 
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<CapsuleCollider>().enabled = false;

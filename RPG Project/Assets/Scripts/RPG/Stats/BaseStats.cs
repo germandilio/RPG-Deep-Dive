@@ -47,13 +47,13 @@ namespace RPG.Stats
         private void OnEnable()
         {
             if (_experience != null)
-                _experience.ExperienceGained += UpdateLevel;
+                _experience.OnExperienceGained += UpdateLevel;
         }
 
         private void OnDisable()
         {
             if (_experience != null)
-                _experience.ExperienceGained -= UpdateLevel;
+                _experience.OnExperienceGained -= UpdateLevel;
         }
 
         private void UpdateLevel()

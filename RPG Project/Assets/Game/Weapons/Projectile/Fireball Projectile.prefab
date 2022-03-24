@@ -5233,7 +5233,7 @@ MonoBehaviour:
   - {fileID: 3046455831242271960}
   impactEffect: {fileID: 2302457091093092515, guid: 69d1b1037536b504884c93bb73d662db,
     type: 3}
-  hit:
+  onHit:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 746588747114774572}

@@ -1,6 +1,7 @@
 using RPG.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace RPG.Combat
 {
@@ -26,7 +27,7 @@ namespace RPG.Combat
         private GameObject impactEffect;
 
         [SerializeField]
-        private UnityEvent hit;
+        private UnityEvent onHit;
 
         private GameObject _instigator;
         private Health target;
@@ -73,7 +74,7 @@ namespace RPG.Combat
             {
                 target.TakeDamage(_damage, _instigator);
                 // play hit sound
-                hit?.Invoke();
+                onHit?.Invoke();
 
                 // for smoothly disappearing tail
                 speed = 0;

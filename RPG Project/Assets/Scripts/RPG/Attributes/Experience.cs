@@ -6,7 +6,7 @@ namespace RPG.Attributes
 {
     public class Experience : MonoBehaviour, ISavable
     {
-        public event Action ExperienceGained;
+        public event Action OnExperienceGained;
 
         private float _experiencePoints;
 
@@ -15,7 +15,7 @@ namespace RPG.Attributes
         public void AwardXp(float pointsToAdd)
         {
             _experiencePoints += pointsToAdd;
-            ExperienceGained?.Invoke();
+            OnExperienceGained?.Invoke();
         }
 
         public object CaptureState()
@@ -28,7 +28,7 @@ namespace RPG.Attributes
             if (state is float savedPoints)
             {
                 _experiencePoints = savedPoints;
-                ExperienceGained?.Invoke();
+                OnExperienceGained?.Invoke();
             }
         }
     }
