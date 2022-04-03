@@ -13,7 +13,10 @@ namespace RPG.Control
             if (player == null) return;
 
             player.GetComponent<ActionScheduler>().CancelCurrentAction();
-            player.GetComponent<PlayerController>().enabled = false;
+            var controller = player.GetComponent<PlayerController>();
+            controller.enabled = false;
+
+            Cursor.visible = false;
         }
 
         public static void EnablePlayerControl()
@@ -22,6 +25,8 @@ namespace RPG.Control
             if (player == null) return;
 
             player.GetComponent<PlayerController>().enabled = true;
+
+            Cursor.visible = true;
         }
     }
 }

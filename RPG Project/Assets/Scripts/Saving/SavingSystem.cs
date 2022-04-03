@@ -72,9 +72,9 @@ namespace Saving
 
         private void CaptureState(Dictionary<string, object> state)
         {
-            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
+            foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
             {
-                state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
+                state[savable.GetUniqueIdentifier()] = savable.CaptureState();
             }
 
             state[ScenePropertyName] = SceneManager.GetActiveScene().buildIndex;
@@ -82,7 +82,7 @@ namespace Saving
 
         private void RestoreState(Dictionary<string, object> state)
         {
-            foreach (SaveableEntity savable in FindObjectsOfType<SaveableEntity>())
+            foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
             {
                 string guid = savable.GetUniqueIdentifier();
                 if (state.ContainsKey(guid))

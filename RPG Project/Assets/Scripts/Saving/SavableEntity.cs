@@ -6,13 +6,13 @@ using UnityEngine;
 namespace Saving
 {
     [ExecuteAlways]
-    public class SaveableEntity : MonoBehaviour
+    public class SavableEntity : MonoBehaviour
     {
         [SerializeField]
         private string uniqueIdentifier = "";
 
-        private static readonly Dictionary<string, SaveableEntity> GlobalLookup =
-            new Dictionary<string, SaveableEntity>();
+        private static readonly Dictionary<string, SavableEntity> GlobalLookup =
+            new Dictionary<string, SavableEntity>();
 
         public string GetUniqueIdentifier()
         {
@@ -22,9 +22,10 @@ namespace Saving
         public object CaptureState()
         {
             Dictionary<string, object> state = new Dictionary<string, object>();
-            foreach (ISavable saveableComponent in GetComponents<ISavable>())
+            foreach (ISavable savableComponent in GetComponents<ISavable>())
             {
-                state[saveableComponent.GetType().ToString()] = saveableComponent.CaptureState();
+                Debug.Log(savableComponent.GetType().ToString());
+                state[savableComponent.GetType().ToString()] = savableComponent.CaptureState();
             }
 
             return state;
@@ -39,12 +40,12 @@ namespace Saving
                 return;
             }
 
-            foreach (ISavable saveableComponent in GetComponents<ISavable>())
+            foreach (ISavable savableComponent in GetComponents<ISavable>())
             {
-                string typeString = saveableComponent.GetType().ToString();
+                string typeString = savableComponent.GetType().ToString();
                 if (stateDictionary.ContainsKey(typeString))
                 {
-                    saveableComponent.RestoreState(stateDictionary[typeString]);
+                    savableComponent.RestoreState(stateDictionary[typeString]);
                 }
             }
         }

@@ -650,6 +650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &144859664 stripped
@@ -1169,6 +1174,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &201607906 stripped
@@ -1310,6 +1320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -1460,6 +1475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -1820,6 +1840,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &219345821 stripped
@@ -2041,6 +2066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -2415,6 +2445,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &292992117 stripped
@@ -2489,6 +2524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -2707,6 +2747,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &324590151 stripped
@@ -2781,6 +2826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -3246,6 +3296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
@@ -3875,6 +3930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
@@ -4571,7 +4631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422068, guid: 9ad607532c614c54ebd43e913aaf8857, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2655506
+      value: 6.435
       objectReference: {fileID: 0}
     - target: {fileID: 422068, guid: 9ad607532c614c54ebd43e913aaf8857, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4956,6 +5016,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &554966969 stripped
@@ -5307,6 +5372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &578754260 stripped
@@ -5502,6 +5572,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1467340435}
     m_Modifications:
+    - target: {fileID: 1197409956108335715, guid: a0e7506016feb4ca29fcecde04ff0e5d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6514922550692331347, guid: a0e7506016feb4ca29fcecde04ff0e5d,
         type: 3}
       propertyPath: m_Name
@@ -5647,6 +5722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &594636829 stripped
@@ -5721,6 +5801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -5797,6 +5882,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &630347688 stripped
@@ -5872,6 +5962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &632309089 stripped
@@ -5946,6 +6041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -6171,6 +6271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -7182,6 +7287,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &856290474 stripped
@@ -7331,6 +7441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -7986,6 +8101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &905301469 stripped
@@ -8576,6 +8696,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1066544477 stripped
@@ -8609,7 +8734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422068, guid: 9ad607532c614c54ebd43e913aaf8857, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2782164
+      value: 6.396
       objectReference: {fileID: 0}
     - target: {fileID: 422068, guid: 9ad607532c614c54ebd43e913aaf8857, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8791,6 +8916,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1092057812 stripped
@@ -8865,6 +8995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -9015,6 +9150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -9241,6 +9381,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1167455657 stripped
@@ -9391,6 +9536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1180565409 stripped
@@ -9465,6 +9615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -10072,6 +10227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1308153930 stripped
@@ -10147,6 +10307,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1313212158 stripped
@@ -10221,6 +10386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -11494,6 +11664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &1510485321 stripped
@@ -11792,6 +11967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1524219620 stripped
@@ -11941,6 +12121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -12096,7 +12281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489180, guid: 626f1b816ba1ee64a9f7cea6ceb529cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.204934
+      value: 6.369
       objectReference: {fileID: 0}
     - target: {fileID: 489180, guid: 626f1b816ba1ee64a9f7cea6ceb529cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12279,6 +12464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -12504,6 +12694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
@@ -12955,6 +13150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1712851263 stripped
@@ -13079,6 +13279,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
 --- !u!4 &1730343896 stripped
@@ -13153,6 +13358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -13520,6 +13730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
@@ -14126,6 +14341,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -14144,7 +14367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.043379
+      value: 6.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14331,6 +14554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -14622,6 +14850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1876493770 stripped
@@ -14696,6 +14929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -14852,6 +15090,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -15137,6 +15380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1906425750 stripped
@@ -15413,6 +15661,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &1949661711 stripped
@@ -15487,6 +15740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -15641,6 +15899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_010 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}
@@ -16831,6 +17094,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
 --- !u!4 &2110319709 stripped
@@ -17372,7 +17640,7 @@ PrefabInstance:
     - target: {fileID: 3410843127977703572, guid: f298befa1fe4242da92d837d0ba40e88,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.007542053
+      value: 0.0075420514
       objectReference: {fileID: 0}
     - target: {fileID: 3410843127977703572, guid: f298befa1fe4242da92d837d0ba40e88,
         type: 3}
@@ -17382,7 +17650,7 @@ PrefabInstance:
     - target: {fileID: 3410843127977703572, guid: f298befa1fe4242da92d837d0ba40e88,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.035193183
+      value: 0.03519318
       objectReference: {fileID: 0}
     - target: {fileID: 3410843127977703575, guid: f298befa1fe4242da92d837d0ba40e88,
         type: 3}
@@ -17680,6 +17948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_03 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161554794280741280, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5af83a3c3e94b2d91a2a3419fd26d7, type: 3}
@@ -17984,7 +18257,7 @@ PrefabInstance:
     - target: {fileID: 6392378941416508776, guid: 1ff8fcd4a62064b67a8e77288f1485b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2049346
+      value: 6.344
       objectReference: {fileID: 0}
     - target: {fileID: 6392378941416508776, guid: 1ff8fcd4a62064b67a8e77288f1485b1,
         type: 3}
@@ -18237,6 +18510,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_010 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810907461899528510, guid: 34fe46585746642709610943e5317fe2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fe46585746642709610943e5317fe2, type: 3}

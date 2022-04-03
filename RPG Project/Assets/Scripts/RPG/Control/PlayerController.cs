@@ -53,6 +53,12 @@ namespace RPG.Control
 
             SetCursor(CursorType.Default);
         }
+        
+        private void SetCursor(CursorType type)
+        {
+            CursorEntity cursor = GetCursorMapping(type);
+            Cursor.SetCursor(cursor.texture, cursor.hotspot, CursorMode.Auto);
+        }
 
         private bool InteractWithInGameComponents()
         {
@@ -136,12 +142,6 @@ namespace RPG.Control
             targetPosition = navHit.position;
 
             return true;
-        }
-
-        private void SetCursor(CursorType type)
-        {
-            CursorEntity cursor = GetCursorMapping(type);
-            Cursor.SetCursor(cursor.texture, cursor.hotspot, CursorMode.Auto);
         }
 
         private CursorEntity GetCursorMapping(CursorType type)
