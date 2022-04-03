@@ -60,8 +60,8 @@ namespace RPG.Movement
         {
             var path = new NavMeshPath();
             bool hasPath =
-                NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, new NavMeshPath());
-            if (!hasPath && path.status != NavMeshPathStatus.PathComplete) return false;
+                NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
+            if (!hasPath || path.status != NavMeshPathStatus.PathComplete) return false;
             if (NavMeshExtensions.CalculateLength(path) > maxNavPathLength) return false;
 
             return true;

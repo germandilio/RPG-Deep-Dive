@@ -111,7 +111,6 @@ namespace RPG.Attributes
             //play die effect
             onDie?.Invoke();
 
-            GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<ActionScheduler>().CancelCurrentAction();
         }
