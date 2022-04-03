@@ -12,7 +12,7 @@ namespace RPG.Combat
             var fighterSystem = interactController.GetComponent<Fighter>();
 
             if (!fighterSystem.CanAttack(gameObject)) return false;
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(1))
             {
                 fighterSystem.Attack(gameObject);
             }

@@ -4,7 +4,6 @@ using RPG.Stats;
 using Saving;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using Utils;
 
 namespace RPG.Attributes

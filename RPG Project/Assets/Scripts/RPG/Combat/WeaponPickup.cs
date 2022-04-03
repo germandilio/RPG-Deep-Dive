@@ -15,6 +15,9 @@ namespace RPG.Combat
         private float healthPointsToRestore = 0f;
 
         [SerializeField]
+        private GameObject effectOnPickUp;
+
+        [SerializeField]
         private float seconds = 5f;
 
         //TODO fix the bug with double pickup and moving to pickup
@@ -32,6 +35,9 @@ namespace RPG.Combat
 
             if (healthPointsToRestore > 0)
                 player.GetComponent<Health>()?.Heal(healthPointsToRestore);
+
+            if (effectOnPickUp != null)
+                Instantiate(effectOnPickUp, player.transform);
 
             StartCoroutine(HidePickupForSeconds(seconds));
         }

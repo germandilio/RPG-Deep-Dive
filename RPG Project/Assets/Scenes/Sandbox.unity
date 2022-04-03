@@ -11182,6 +11182,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1359607253472284655, guid: 958ebde6c95334915a8c14d149f89d74,
+        type: 3}
+      propertyPath: effectOnPickUp
+      value: 
+      objectReference: {fileID: 4457794563333857998, guid: 56db831bfe7a4496382a5091b505dc49,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 958ebde6c95334915a8c14d149f89d74, type: 3}
 --- !u!4 &1408599162 stripped
