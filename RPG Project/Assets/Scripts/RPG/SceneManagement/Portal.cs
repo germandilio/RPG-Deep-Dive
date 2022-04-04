@@ -47,7 +47,7 @@ namespace RPG.SceneManagement
             // load new scene
             yield return SceneManager.LoadSceneAsync((int) destinationScene);
 
-            yield return AfterLoadingNewScene(saving, fader);
+            yield return AfterLoadingNewScene(fader, saving);
             Destroy(gameObject);
         }
 
@@ -62,7 +62,7 @@ namespace RPG.SceneManagement
             saving.Save();
         }
 
-        private IEnumerator AfterLoadingNewScene(SavingWrapper saving, Fader fader)
+        private IEnumerator AfterLoadingNewScene(Fader fader, SavingWrapper saving)
         {
             // remove new player control
             ControlRemover.DisablePlayerControl();
