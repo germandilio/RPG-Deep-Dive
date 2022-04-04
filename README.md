@@ -8,7 +8,7 @@ Controls: Mouse + Keyboard
 
 Thematic Setting: Middle Ages West Europe (Knights, Solders and etc)
 
-Tech Stack: Unity 2020.3 LTS, C# .Net, Unity collaborates, Asset store
+Tech Stack: Unity 2020.3 LTS, C# .Net platform, GitHub, Unity Dashboard Services, Asset store
 
 Platform(s): PC (Mac, Linux and Windows)
 
@@ -34,4 +34,6 @@ Feature Development Priorities:
 
 Reference Games: Ember, BattleHeart: Legacy, Diablo, Torchlights
 
-Anticipated Steam Early Access Launch date: 31 February 2022
+Pre-alpha Proof-of-concept date: 25 March 2022.
+Pre-alpha Additional mechanics test: 5 May 2022.
+Alpha test. Level design and first level testing: 10 May 2022
