@@ -11,9 +11,10 @@ namespace RPG.InventorySystem.UI.Inventories
     {
         [SerializeField]
         private TextMeshProUGUI titleText;
+
         [SerializeField]
         private TextMeshProUGUI bodyText;
-        
+
         public void Setup(InventoryItem item)
         {
             titleText.text = item.DisplayName;

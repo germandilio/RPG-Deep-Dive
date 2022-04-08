@@ -32,13 +32,13 @@ namespace RPG.GameplayCore.Control
         private Mover _mover;
         private Health _healthSystem;
 
-        
+
         public void SetCursor(CursorType type)
         {
             CursorEntity cursor = GetCursorMapping(type);
             Cursor.SetCursor(cursor.texture, cursor.hotspot, CursorMode.Auto);
         }
-        
+
         private void Awake()
         {
             _mover = GetComponent<Mover>();

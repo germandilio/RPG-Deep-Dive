@@ -12,7 +12,7 @@ namespace RPG.InventorySystem.InventoriesModel.Pickups
     {
         [SerializeField]
         private InventoryItem item;
-        
+
         [SerializeField]
         private int number = 1;
 
@@ -26,19 +26,19 @@ namespace RPG.InventorySystem.InventoriesModel.Pickups
         /// Returns the pickup spawned by this class if it exists.
         /// </summary>
         /// <returns>Returns null if the pickup has been collected.</returns>
-        public Pickup GetPickup() 
-        { 
+        public Pickup GetPickup()
+        {
             return GetComponentInChildren<Pickup>();
         }
 
         /// <summary>
         /// True if the pickup was collected.
         /// </summary>
-        public bool isCollected() 
-        { 
+        public bool isCollected()
+        {
             return GetPickup() == null;
         }
-        
+
         private void SpawnPickup()
         {
             var spawnedPickup = item.SpawnPickup(transform.position, number);
@@ -60,7 +60,7 @@ namespace RPG.InventorySystem.InventoriesModel.Pickups
 
         void ISavable.RestoreState(object state)
         {
-            bool shouldBeCollected = (bool)state;
+            bool shouldBeCollected = (bool) state;
 
             if (shouldBeCollected && !isCollected())
             {

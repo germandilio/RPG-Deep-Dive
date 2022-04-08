@@ -36,7 +36,7 @@ namespace Utils.UI.Dragging
         {
             _startPosition = transform.position;
             _originalParent = transform.parent;
-            
+
             // Else won't get the drop event.
             GetComponent<CanvasGroup>().blocksRaycasts = false;
             transform.SetParent(_parentCanvas.transform, true);
@@ -67,10 +67,8 @@ namespace Utils.UI.Dragging
             {
                 DropItemIntoContainer(container);
             }
-
-
         }
-        
+
         private IDragDestination<T> GetContainer(PointerEventData eventData)
         {
             if (eventData.pointerEnter)
@@ -79,6 +77,7 @@ namespace Utils.UI.Dragging
 
                 return container;
             }
+
             return null;
         }
 
@@ -113,7 +112,8 @@ namespace Utils.UI.Dragging
             destination.RemoveItems(removedDestinationNumber);
 
             var sourceTakeBackNumber = CalculateTakeBack(removedSourceItem, removedSourceNumber, source, destination);
-            var destinationTakeBackNumber = CalculateTakeBack(removedDestinationItem, removedDestinationNumber, destination, source);
+            var destinationTakeBackNumber =
+                CalculateTakeBack(removedDestinationItem, removedDestinationNumber, destination, source);
 
             // Do take backs (if needed)
             if (sourceTakeBackNumber > 0)
@@ -121,6 +121,7 @@ namespace Utils.UI.Dragging
                 source.AddItems(removedSourceItem, sourceTakeBackNumber);
                 removedSourceNumber -= sourceTakeBackNumber;
             }
+
             if (destinationTakeBackNumber > 0)
             {
                 destination.AddItems(removedDestinationItem, destinationTakeBackNumber);
@@ -136,10 +137,12 @@ namespace Utils.UI.Dragging
                 {
                     destination.AddItems(removedDestinationItem, removedDestinationNumber);
                 }
+
                 if (removedSourceNumber > 0)
                 {
                     source.AddItems(removedSourceItem, removedSourceNumber);
                 }
+
                 return;
             }
 
@@ -148,6 +151,7 @@ namespace Utils.UI.Dragging
             {
                 source.AddItems(removedDestinationItem, removedDestinationNumber);
             }
+
             if (removedSourceNumber > 0)
             {
                 destination.AddItems(removedSourceItem, removedSourceNumber);
@@ -172,7 +176,8 @@ namespace Utils.UI.Dragging
             return true;
         }
 
-        private int CalculateTakeBack(T removedItem, int removedNumber, IDragContainer<T> removeSource, IDragContainer<T> destination)
+        private int CalculateTakeBack(T removedItem, int removedNumber, IDragContainer<T> removeSource,
+            IDragContainer<T> destination)
         {
             var takeBackNumber = 0;
             var destinationMaxAcceptable = destination.MaxAcceptable(removedItem);
@@ -189,6 +194,7 @@ namespace Utils.UI.Dragging
                     return 0;
                 }
             }
+
             return takeBackNumber;
         }
     }

@@ -13,7 +13,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
     public class Inventory : MonoBehaviour, ISavable
     {
         public event Action OnInventoryUpdated;
-        
+
         [Header("Inventory Configuration")]
         [Tooltip("Allowed size")]
         [SerializeField]
@@ -34,7 +34,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             var player = GameObject.FindWithTag("Player");
             return player.GetComponent<Inventory>();
         }
-        
+
         public bool HasSpaceFor(InventoryItem item)
         {
             return FindSlot(item) >= 0;
@@ -57,7 +57,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
 
             _slots[i].item = item;
             _slots[i].number += number;
-            
+
             OnInventoryUpdated?.Invoke();
             return true;
         }
@@ -74,6 +74,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -92,7 +93,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         {
             return _slots[slot].number;
         }
-        
+
         public void RemoveFromSlot(int slot, int number)
         {
             _slots[slot].number -= number;
@@ -101,7 +102,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                 _slots[slot].number = 0;
                 _slots[slot].item = null;
             }
-            
+
             OnInventoryUpdated?.Invoke();
         }
 
@@ -118,7 +119,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         {
             if (_slots[slot].item != null)
             {
-                return AddToFirstEmptySlot(item, number); ;
+                return AddToFirstEmptySlot(item, number);
+                ;
             }
 
             var i = FindStack(item);
@@ -132,8 +134,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             OnInventoryUpdated?.Invoke();
             return true;
         }
-        
-        
+
+
         private void Awake()
         {
             _slots = new InventorySlot[inventorySize];
@@ -150,6 +152,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             {
                 i = FindEmptySlot();
             }
+
             return i;
         }
 
@@ -166,6 +169,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                     return i;
                 }
             }
+
             return -1;
         }
 
@@ -183,6 +187,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                 if (object.ReferenceEquals(_slots[i].item, item))
                     return i;
             }
+
             return -1;
         }
 
@@ -192,7 +197,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             public string itemID;
             public int number;
         }
-    
+
         object ISavable.CaptureState()
         {
             var slotStrings = new InventorySlotRecord[inventorySize];
@@ -204,17 +209,19 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                     slotStrings[i].number = _slots[i].number;
                 }
             }
+
             return slotStrings;
         }
 
         void ISavable.RestoreState(object state)
         {
-            var slotStrings = (InventorySlotRecord[])state;
+            var slotStrings = (InventorySlotRecord[]) state;
             for (int i = 0; i < inventorySize && i < slotStrings.Length; i++)
             {
                 _slots[i].item = InventoryItem.GetFromID(slotStrings[i].itemID);
                 _slots[i].number = slotStrings[i].number;
             }
+
             OnInventoryUpdated?.Invoke();
         }
     }

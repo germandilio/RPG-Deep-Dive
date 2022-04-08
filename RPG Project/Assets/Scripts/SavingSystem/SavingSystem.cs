@@ -25,9 +25,9 @@ namespace SavingSystem
             int buildIndex = SceneManager.GetActiveScene().buildIndex;
             if (state.ContainsKey(ScenePropertyName))
             {
-                buildIndex = (int)state[ScenePropertyName];
+                buildIndex = (int) state[ScenePropertyName];
             }
-            
+
             yield return SceneManager.LoadSceneAsync(buildIndex);
             RestoreState(state);
         }
@@ -49,7 +49,7 @@ namespace SavingSystem
         {
             File.Delete(GetPathFromSaveFile(saveFile));
         }
-        
+
         public void Load(string saveFile)
         {
             RestoreState(LoadFile(saveFile));
@@ -62,10 +62,11 @@ namespace SavingSystem
             {
                 return new Dictionary<string, object>();
             }
+
             using (FileStream stream = File.Open(path, FileMode.Open))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                return (Dictionary<string, object>)formatter.Deserialize(stream);
+                return (Dictionary<string, object>) formatter.Deserialize(stream);
             }
         }
 

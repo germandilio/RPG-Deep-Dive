@@ -98,7 +98,7 @@ namespace RPG.GameplayCore.Combat
         public void EquipWeapon(WeaponConfig weaponConfig)
         {
             if (weaponConfig == null) return;
-            
+
             _currentWeaponConfig = weaponConfig;
             _currentWeapon.Value = AttachWeapon(weaponConfig);
         }

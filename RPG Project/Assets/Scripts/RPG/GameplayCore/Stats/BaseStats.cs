@@ -30,6 +30,7 @@ namespace RPG.GameplayCore.Stats
         /// Null if it is not a Player 
         /// </summary>
         private Experience _experience;
+
         private LazyValue<int> _currentLevel;
 
         public event Action OnLevelUp;

@@ -13,26 +13,26 @@ namespace RPG.InventorySystem.UI.Inventories
     {
         [SerializeField]
         private InventoryItemIcon icon;
-        
-        [SerializeField] 
+
+        [SerializeField]
         private EquipLocation equipLocation = EquipLocation.Weapon;
-        
+
         private Equipment _playerEquipment;
 
-       
-        private void Awake() 
+
+        private void Awake()
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             _playerEquipment = player.GetComponent<Equipment>();
             _playerEquipment.OnEquipmentUpdated += RedrawUI;
         }
 
-        private void Start() 
+        private void Start()
         {
             RedrawUI();
         }
-        
-        
+
+
         public int MaxAcceptable(InventoryItem item)
         {
             EquippableItem equippableItem = item as EquippableItem;
@@ -57,7 +57,7 @@ namespace RPG.InventorySystem.UI.Inventories
         {
             if (GetItem() != null)
                 return 1;
-            
+
             return 0;
         }
 

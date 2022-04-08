@@ -11,7 +11,7 @@ namespace RPG.InventorySystem.UI.Inventories
 
         private int _index;
         private Inventory _inventory;
-        
+
 
         public void Setup(Inventory inventory, int index)
         {
@@ -26,6 +26,7 @@ namespace RPG.InventorySystem.UI.Inventories
             {
                 return int.MaxValue;
             }
+
             return 0;
         }
 

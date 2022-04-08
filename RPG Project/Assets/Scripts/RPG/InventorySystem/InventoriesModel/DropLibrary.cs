@@ -17,9 +17,10 @@ namespace RPG.InventorySystem.InventoriesModel
         [Range(0, 100)]
         [SerializeField]
         private int[] dropsChancePercentage;
-        
+
         [SerializeField]
         private int[] minDropsNumber;
+
         [SerializeField]
         private int[] maxDropsNumber;
 
@@ -31,10 +32,11 @@ namespace RPG.InventorySystem.InventoriesModel
         {
             [Header("Drop Item Config")]
             public InventoryItem dropItem;
-            
+
             [Header("Properties By Level")]
-            [Tooltip("Chance of dropping relating to other drops. (ex. Item1 with relativeChance = 1, Item2 with relativeChance = 3." +
-                     " Probabilities of dropping will be: for Item1 - 1/4 (25%), for Item2 - 3/4 (75%).)")]
+            [Tooltip(
+                "Chance of dropping relating to other drops. (ex. Item1 with relativeChance = 1, Item2 with relativeChance = 3." +
+                " Probabilities of dropping will be: for Item1 - 1/4 (25%), for Item2 - 3/4 (75%).)")]
             [Range(0, 100)]
             public float[] relativeChance;
 
@@ -65,13 +67,12 @@ namespace RPG.InventorySystem.InventoriesModel
             {
                 var randomDrop = GetRandomItem(level);
                 if (randomDrop == null) continue;
-                
+
                 yield return new DroppedSlot
                 {
                     item = randomDrop.dropItem,
                     number = randomDrop.GetRandomNumber(level)
                 };
-
             }
         }
 
@@ -84,7 +85,7 @@ namespace RPG.InventorySystem.InventoriesModel
         {
             int min = GetByLevel(minDropsNumber, level);
             int max = GetByLevel(maxDropsNumber, level);
-            
+
             return Random.Range(min, max + 1);
         }
 
@@ -97,7 +98,7 @@ namespace RPG.InventorySystem.InventoriesModel
         {
             float totalChance = GetTotalChance(level);
             float randomRoll = Random.Range(0, totalChance);
-            
+
             float chanceTotal = 0f;
             foreach (var dropConfig in dropsLibrary)
             {
@@ -107,6 +108,7 @@ namespace RPG.InventorySystem.InventoriesModel
                     return dropConfig;
                 }
             }
+
             return null;
         }
 

@@ -31,7 +31,7 @@ namespace RPG.InventorySystem.InventoriesModel.Pickups
             _item = item;
             if (!item.IsStackable)
                 number = 1;
-            
+
             _number = number;
         }
 

@@ -6,7 +6,7 @@ namespace RPG.InventorySystem.UI
     {
         [SerializeField]
         private KeyCode toggleKey = KeyCode.Escape;
-        
+
         [SerializeField]
         private GameObject uiContainer;
 

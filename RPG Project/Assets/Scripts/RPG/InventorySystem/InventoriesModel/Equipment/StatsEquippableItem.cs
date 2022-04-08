@@ -6,7 +6,8 @@ using UnityEngine;
 
 namespace RPG.InventorySystem.InventoriesModel.Equipment
 {
-    [CreateAssetMenu(menuName = "RPG Project/Inventory/New StatsEquippableItem", fileName = "New StatsEquippableItem", order = 1)]
+    [CreateAssetMenu(menuName = "RPG Project/Inventory/New StatsEquippableItem", fileName = "New StatsEquippableItem",
+        order = 1)]
     public class StatsEquippableItem : EquippableItem, IModifyProvider
     {
         [Header("Stats Modifiers")]
@@ -15,7 +16,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
 
         [SerializeField]
         private Modifier[] percentageModifiers;
-        
+
         [Serializable]
         private struct Modifier
         {
@@ -32,7 +33,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
         {
             return GetModifiersOfType(percentageModifiers, statsType);
         }
-        
+
         private IEnumerable<float> GetModifiersOfType(Modifier[] modifiers, Stats statsType)
         {
             return modifiers

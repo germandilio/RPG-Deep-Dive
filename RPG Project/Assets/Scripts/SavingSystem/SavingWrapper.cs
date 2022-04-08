@@ -53,7 +53,7 @@ namespace SavingSystem
 
         public void Load()
         {
-            _savingSystem.Load(DefaultSaveFileName); 
+            _savingSystem.Load(DefaultSaveFileName);
         }
 
         public void Delete()

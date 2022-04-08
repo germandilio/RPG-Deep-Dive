@@ -31,7 +31,7 @@ namespace RPG.GameplayCore.Cinematics
             var player = GameObject.FindGameObjectWithTag("Player");
             var controller = player.GetComponent<PlayerController>();
             controller.SetCursor(CursorType.OnUI);
-            
+
             ControlRemover.DisablePlayerControl();
         }
 

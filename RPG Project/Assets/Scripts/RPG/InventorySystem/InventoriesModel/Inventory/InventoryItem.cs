@@ -18,31 +18,31 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField]
         private string displayName;
-        
+
         [Tooltip("Item description to be displayed in UI.")]
         [TextArea]
         [SerializeField]
         private string description;
-        
+
         [Header("Inventory Configuration")]
         [Tooltip("The UI icon to represent this item in the inventory.")]
         [SerializeField]
         private Sprite icon;
-        
+
         [Tooltip("The prefab that should be spawned when this item is dropped.")]
         [SerializeField]
         private Pickup pickup;
-        
+
         [Tooltip("If true, multiple items of this type can be stacked in the same inventory slot.")]
         [SerializeField]
         private bool stackable;
 
         private static Dictionary<string, InventoryItem> _itemLookupCache;
-        
+
         public Sprite Icon => icon;
-        
+
         public string ItemID => itemID;
-        
+
         public bool IsStackable => stackable;
 
         public string DisplayName => displayName;
@@ -81,8 +81,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             pickup.Setup(this, number);
             return pickup;
         }
-        
-        
+
+
         private static void BuildLookup()
         {
             _itemLookupCache = new Dictionary<string, InventoryItem>();
@@ -91,14 +91,15 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             {
                 if (_itemLookupCache.ContainsKey(item.itemID))
                 {
-                    Debug.LogError($"Looks like there's a duplicate InventorySystem ID for objects: {_itemLookupCache[item.itemID]} and {item}");
+                    Debug.LogError(
+                        $"Looks like there's a duplicate InventorySystem ID for objects: {_itemLookupCache[item.itemID]} and {item}");
                     continue;
                 }
 
                 _itemLookupCache[item.itemID] = item;
             }
         }
-        
+
         void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
             // Generate and save a new GUID if this is blank.

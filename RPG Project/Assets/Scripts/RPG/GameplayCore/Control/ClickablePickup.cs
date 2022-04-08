@@ -27,7 +27,7 @@ namespace RPG.GameplayCore.Control
         {
             if (_pickup.CanBePickedUp())
                 return CursorType.Pickup;
-            
+
             return CursorType.FullInventory;
         }
     }

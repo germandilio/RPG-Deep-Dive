@@ -17,7 +17,7 @@ namespace Utils.UI.Tooltips
         private GameObject tooltipPrefab;
 
         private GameObject _tooltip;
-        
+
         /// <summary>
         /// Called when it is time to update the information on the tooltip
         /// prefab.
@@ -26,13 +26,13 @@ namespace Utils.UI.Tooltips
         /// The spawned tooltip prefab for updating.
         /// </param>
         public abstract void UpdateTooltip(GameObject tooltip);
-        
+
         /// <summary>
         /// Return true when the tooltip spawner should be allowed to create a tooltip.
         /// </summary>
         public abstract bool CanCreateTooltip();
-        
-        
+
+
         private void OnDestroy()
         {
             ClearTooltip();
@@ -80,7 +80,8 @@ namespace Utils.UI.Tooltips
             int slotCorner = GetCornerIndex(below, right);
             int tooltipCorner = GetCornerIndex(!below, !right);
 
-            _tooltip.transform.position = slotCorners[slotCorner] - tooltipCorners[tooltipCorner] + _tooltip.transform.position;
+            _tooltip.transform.position =
+                slotCorners[slotCorner] - tooltipCorners[tooltipCorner] + _tooltip.transform.position;
         }
 
         private int GetCornerIndex(bool below, bool right)

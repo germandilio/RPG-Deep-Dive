@@ -12,21 +12,21 @@ namespace RPG.InventorySystem.UI.Inventories
     {
         [SerializeField]
         private InventoryItemIcon icon;
-        
+
         [SerializeField]
         private int index;
 
         private ActionStore _actionStore;
-        
+
 
         private void Awake()
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             _actionStore = player.GetComponent<ActionStore>();
-            _actionStore.OnStoreUpdated += UpdateIcon;   
+            _actionStore.OnStoreUpdated += UpdateIcon;
         }
-        
-        
+
+
         public void AddItems(InventoryItem item, int number)
         {
             _actionStore.AddAction(item, index, number);
@@ -51,7 +51,7 @@ namespace RPG.InventorySystem.UI.Inventories
         {
             _actionStore.RemoveItems(index, number);
         }
-        
+
 
         void UpdateIcon()
         {

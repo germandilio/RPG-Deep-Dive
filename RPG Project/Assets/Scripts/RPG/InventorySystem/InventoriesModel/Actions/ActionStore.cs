@@ -15,15 +15,15 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
     public class ActionStore : MonoBehaviour, ISavable
     {
         public event Action OnStoreUpdated;
-        
+
         private readonly Dictionary<int, DockedItemSlot> _dockedItems = new Dictionary<int, DockedItemSlot>();
-        
-        private class DockedItemSlot 
+
+        private class DockedItemSlot
         {
             public ActionItem item;
             public int number;
         }
-        
+
         /// <summary>
         /// Get the action at the given index.
         /// </summary>
@@ -33,6 +33,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             {
                 return _dockedItems[index].item;
             }
+
             return null;
         }
 
@@ -49,6 +50,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             {
                 return _dockedItems[index].number;
             }
+
             return 0;
         }
 
@@ -61,7 +63,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         public void AddAction(InventoryItem item, int index, int number)
         {
             if (_dockedItems.ContainsKey(index))
-            {  
+            {
                 if (object.ReferenceEquals(item, _dockedItems[index].item))
                     _dockedItems[index].number += number;
             }
@@ -72,7 +74,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
                 slot.number = number;
                 _dockedItems[index] = slot;
             }
-            
+
             OnStoreUpdated?.Invoke();
         }
 
@@ -85,11 +87,11 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         public bool Use(int index, GameObject user)
         {
             if (!_dockedItems.ContainsKey(index)) return false;
-            
+
             _dockedItems[index].item.Use(user);
             if (_dockedItems[index].item.IsConsumable)
                 RemoveItems(index, 1);
-            
+
             return true;
         }
 
@@ -99,11 +101,11 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         public void RemoveItems(int index, int number)
         {
             if (!_dockedItems.ContainsKey(index)) return;
-            
+
             _dockedItems[index].number -= number;
             if (_dockedItems[index].number <= 0)
                 _dockedItems.Remove(index);
-                
+
             OnStoreUpdated?.Invoke();
         }
 
@@ -118,16 +120,16 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
 
             if (_dockedItems.ContainsKey(index) && !object.ReferenceEquals(item, _dockedItems[index].item))
                 return 0;
-            
+
             if (actionItem.IsConsumable)
                 return int.MaxValue;
-            
+
             if (_dockedItems.ContainsKey(index))
                 return 0;
 
             return 1;
         }
-        
+
         [Serializable]
         private struct DockedItemRecord
         {
@@ -145,12 +147,13 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
                 record.number = pair.Value.number;
                 state[pair.Key] = record;
             }
+
             return state;
         }
 
         void ISavable.RestoreState(object state)
         {
-            var stateDict = (Dictionary<int, DockedItemRecord>)state;
+            var stateDict = (Dictionary<int, DockedItemRecord>) state;
             foreach (var pair in stateDict)
             {
                 AddAction(InventoryItem.GetFromID(pair.Value.itemID), pair.Key, pair.Value.number);

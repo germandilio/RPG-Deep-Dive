@@ -17,10 +17,10 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         [Tooltip("Does an instance of this item get consumed every time it's used.")]
         [SerializeField]
         private bool consumable;
-        
+
         public bool IsConsumable => consumable;
-        
-        
+
+
         /// <summary>
         /// Trigger the use of this item.
         /// </summary>

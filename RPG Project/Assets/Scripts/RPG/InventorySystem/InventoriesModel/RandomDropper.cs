@@ -13,9 +13,10 @@ namespace RPG.InventorySystem.InventoriesModel
 
         [SerializeField]
         private DropLibrary dropsLibrary;
-        
-        
+
+
         private const int Attempts = 10;
+
         protected override Vector3 GetLocationToDrop()
         {
             for (int i = 0; i < Attempts; i++)
@@ -28,7 +29,7 @@ namespace RPG.InventorySystem.InventoriesModel
                     return hit.position;
                 }
             }
-            
+
             return transform.position;
         }
 
@@ -49,7 +50,7 @@ namespace RPG.InventorySystem.InventoriesModel
             int level = GetComponent<BaseStats>().GetLevel();
             foreach (var droppedSlot in dropsLibrary.GetRandomDrops(level))
             {
-                DropItem(droppedSlot.item, droppedSlot.number);      
+                DropItem(droppedSlot.item, droppedSlot.number);
             }
         }
     }

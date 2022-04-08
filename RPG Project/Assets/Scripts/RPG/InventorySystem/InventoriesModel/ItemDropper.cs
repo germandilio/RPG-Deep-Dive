@@ -37,12 +37,12 @@ namespace RPG.InventorySystem.InventoriesModel
         {
             DropItem(item, 1);
         }
-        
+
         protected virtual Vector3 GetLocationToDrop()
         {
             return transform.position;
         }
-        
+
         private void SpawnPickup(InventoryItem item, Vector3 spawnLocation, int number)
         {
             var pickup = item.SpawnPickup(spawnLocation, number);
@@ -63,19 +63,20 @@ namespace RPG.InventorySystem.InventoriesModel
         {
             RemoveDestroyedDrops();
             int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
-            
+
             var droppedItemsList = new List<DropRecord>();
-            foreach(var pickup in _droppedItems)
+            foreach (var pickup in _droppedItems)
             {
                 var droppedItem = new DropRecord
                 {
                     itemID = pickup.Item.ItemID,
                     position = new SerializableVector3(pickup.transform.position),
                     number = pickup.Number,
-                    sceneBuildIndex = currentBuildIndex 
+                    sceneBuildIndex = currentBuildIndex
                 };
                 droppedItemsList.Add(droppedItem);
             }
+
             droppedItemsList.AddRange(_droppedItemsInOtherScenes);
             return droppedItemsList;
         }
@@ -83,9 +84,9 @@ namespace RPG.InventorySystem.InventoriesModel
         void ISavable.RestoreState(object state)
         {
             int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
-            
+
             _droppedItemsInOtherScenes.Clear();
-            var droppedItemsList = (List<DropRecord>)state;
+            var droppedItemsList = (List<DropRecord>) state;
             foreach (var item in droppedItemsList)
             {
                 if (item.sceneBuildIndex != currentBuildIndex)
@@ -97,7 +98,7 @@ namespace RPG.InventorySystem.InventoriesModel
                     var pickupItem = InventoryItem.GetFromID(item.itemID);
                     Vector3 position = item.position.ToVector();
                     int number = item.number;
-                    
+
                     SpawnPickup(pickupItem, position, number);
                 }
             }

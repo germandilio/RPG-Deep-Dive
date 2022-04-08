@@ -10,7 +10,7 @@ namespace RPG.InventorySystem
     {
         private GameObject _player;
         private ActionStore _actionbar;
-        
+
         private void Awake()
         {
             _player = GameObject.FindGameObjectWithTag("Player");

@@ -14,10 +14,10 @@ namespace RPG.InventorySystem.UI.Inventories
     {
         [SerializeField]
         private GameObject textContainer;
-        
+
         [SerializeField]
         private TextMeshProUGUI itemNumber;
-        
+
 
         public void SetItem(InventoryItem item)
         {
@@ -29,7 +29,7 @@ namespace RPG.InventorySystem.UI.Inventories
             var iconImage = GetComponent<Image>();
             if (item == null)
                 iconImage.enabled = false;
-            else 
+            else
             {
                 iconImage.enabled = true;
                 iconImage.sprite = item.Icon;
