@@ -20,28 +20,26 @@ namespace Utils.UI.Dragging
     public class DragItem<T> : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
         where T : class
     {
-        // PRIVATE STATE
-        Vector3 startPosition;
-        Transform originalParent;
-        IDragSource<T> source;
+        private Vector3 _startPosition;
+        private Transform _originalParent;
+        private IDragSource<T> _source;
 
-        // CACHED REFERENCES
-        Canvas parentCanvas;
+        private Canvas _parentCanvas;
 
-        // LIFECYCLE METHODS
         private void Awake()
         {
-            parentCanvas = GetComponentInParent<Canvas>();
-            source = GetComponentInParent<IDragSource<T>>();
+            _parentCanvas = GetComponentInParent<Canvas>();
+            _source = GetComponentInParent<IDragSource<T>>();
         }
 
         public virtual void OnBeginDrag(PointerEventData eventData)
         {
-            startPosition = transform.position;
-            originalParent = transform.parent;
+            _startPosition = transform.position;
+            _originalParent = transform.parent;
+            
             // Else won't get the drop event.
             GetComponent<CanvasGroup>().blocksRaycasts = false;
-            transform.SetParent(parentCanvas.transform, true);
+            transform.SetParent(_parentCanvas.transform, true);
         }
 
         public virtual void OnDrag(PointerEventData eventData)
@@ -51,14 +49,14 @@ namespace Utils.UI.Dragging
 
         public virtual void OnEndDrag(PointerEventData eventData)
         {
-            transform.position = startPosition;
+            transform.position = _startPosition;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
-            transform.SetParent(originalParent, true);
+            transform.SetParent(_originalParent, true);
 
             IDragDestination<T> container;
             if (!EventSystem.current.IsPointerOverGameObject())
             {
-                container = parentCanvas.GetComponent<IDragDestination<T>>();
+                container = _parentCanvas.GetComponent<IDragDestination<T>>();
             }
             else
             {
@@ -73,7 +71,6 @@ namespace Utils.UI.Dragging
 
         }
         
-        // PRIVATE
         private IDragDestination<T> GetContainer(PointerEventData eventData)
         {
             if (eventData.pointerEnter)
@@ -87,10 +84,10 @@ namespace Utils.UI.Dragging
 
         private void DropItemIntoContainer(IDragDestination<T> destination)
         {
-            if (object.ReferenceEquals(destination, source)) return;
+            if (object.ReferenceEquals(destination, _source)) return;
 
             var destinationContainer = destination as IDragContainer<T>;
-            var sourceContainer = source as IDragContainer<T>;
+            var sourceContainer = _source as IDragContainer<T>;
 
             // Swap won't be possible
             if (destinationContainer == null || sourceContainer == null ||
@@ -159,15 +156,15 @@ namespace Utils.UI.Dragging
 
         private bool AttemptSimpleTransfer(IDragDestination<T> destination)
         {
-            var draggingItem = source.GetItem();
-            var draggingNumber = source.GetNumber();
+            var draggingItem = _source.GetItem();
+            var draggingNumber = _source.GetNumber();
 
             var acceptable = destination.MaxAcceptable(draggingItem);
             var toTransfer = Mathf.Min(acceptable, draggingNumber);
 
             if (toTransfer > 0)
             {
-                source.RemoveItems(toTransfer);
+                _source.RemoveItems(toTransfer);
                 destination.AddItems(draggingItem, toTransfer);
                 return false;
             }

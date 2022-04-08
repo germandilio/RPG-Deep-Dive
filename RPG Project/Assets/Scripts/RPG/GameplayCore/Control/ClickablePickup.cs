@@ -1,5 +1,4 @@
-using System;
-using RPG.InventorySystem.InventoriesModel;
+using RPG.InventorySystem.InventoriesModel.Pickups;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Control

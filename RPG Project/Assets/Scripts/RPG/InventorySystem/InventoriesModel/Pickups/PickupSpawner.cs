@@ -1,7 +1,8 @@
-﻿using SavingSystem;
+﻿using RPG.InventorySystem.InventoriesModel.Inventory;
+using SavingSystem;
 using UnityEngine;
 
-namespace RPG.InventorySystem.InventoriesModel
+namespace RPG.InventorySystem.InventoriesModel.Pickups
 {
     /// <summary>
     /// Spawns pickups that should exist on first load in a level. This
@@ -9,18 +10,17 @@ namespace RPG.InventorySystem.InventoriesModel
     /// </summary>
     public class PickupSpawner : MonoBehaviour, ISavable
     {
-        // CONFIG DATA
-        [SerializeField] InventoryItem item = null;
-        [SerializeField] int number = 1;
+        [SerializeField]
+        private InventoryItem item;
+        
+        [SerializeField]
+        private int number = 1;
 
-        // LIFECYCLE METHODS
         private void Awake()
         {
-            // Spawn in Awake so can be destroyed by save system after.
             SpawnPickup();
         }
 
-        // PUBLIC
 
         /// <summary>
         /// Returns the pickup spawned by this class if it exists.
@@ -38,9 +38,7 @@ namespace RPG.InventorySystem.InventoriesModel
         { 
             return GetPickup() == null;
         }
-
-        //PRIVATE
-
+        
         private void SpawnPickup()
         {
             var spawnedPickup = item.SpawnPickup(transform.position, number);

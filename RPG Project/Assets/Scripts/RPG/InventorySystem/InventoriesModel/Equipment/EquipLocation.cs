@@ -1,4 +1,4 @@
-namespace RPG.InventorySystem.InventoriesModel
+namespace RPG.InventorySystem.InventoriesModel.Equipment
 {
     /// <summary>
     /// Locations on the players body where items can be equipped.

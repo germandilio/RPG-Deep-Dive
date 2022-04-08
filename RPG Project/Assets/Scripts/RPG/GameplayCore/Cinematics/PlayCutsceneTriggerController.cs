@@ -15,7 +15,8 @@ namespace RPG.GameplayCore.Cinematics
 
             if (other.gameObject.CompareTag("Player"))
             {
-                GetComponent<PlayableDirector>().Play();
+                var playableDirector = GetComponent<PlayableDirector>();
+                playableDirector.Play();
                 _wasTriggered = true;
             }
         }
@@ -29,8 +30,6 @@ namespace RPG.GameplayCore.Cinematics
         {
             if (state is bool savedState)
             {
-                // TODO debug
-                print("restore cutscene trigger");
                 _wasTriggered = savedState;
             }
         }

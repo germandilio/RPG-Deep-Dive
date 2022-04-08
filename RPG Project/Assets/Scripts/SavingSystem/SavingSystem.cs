@@ -50,7 +50,7 @@ namespace SavingSystem
             File.Delete(GetPathFromSaveFile(saveFile));
         }
         
-        private void Load(string saveFile)
+        public void Load(string saveFile)
         {
             RestoreState(LoadFile(saveFile));
         }

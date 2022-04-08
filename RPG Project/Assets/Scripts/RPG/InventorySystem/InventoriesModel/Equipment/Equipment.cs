@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 using SavingSystem;
 
-namespace RPG.InventorySystem.InventoriesModel
+namespace RPG.InventorySystem.InventoriesModel.Equipment
 {
     /// <summary>
     /// Provides a store for the items equipped to a player. Items are stored by
@@ -13,43 +14,34 @@ namespace RPG.InventorySystem.InventoriesModel
     /// </summary>
     public class Equipment : MonoBehaviour, ISavable
     {
-        // STATE
-        Dictionary<EquipLocation, EquipableItem> equippedItems = new Dictionary<EquipLocation, EquipableItem>();
-
-        // PUBLIC
-
-        /// <summary>
-        /// Broadcasts when the items in the slots are added/removed.
-        /// </summary>
-        public event Action equipmentUpdated;
+        public event Action OnEquipmentUpdated;
+        
+        private readonly Dictionary<EquipLocation, EquippableItem> _equippedItems = new Dictionary<EquipLocation, EquippableItem>();
 
         /// <summary>
         /// Return the item in the given equip location.
         /// </summary>
-        public EquipableItem GetItemInSlot(EquipLocation equipLocation)
+        public EquippableItem GetItemInSlot(EquipLocation equipLocation)
         {
-            if (!equippedItems.ContainsKey(equipLocation))
+            if (!_equippedItems.ContainsKey(equipLocation))
             {
                 return null;
             }
 
-            return equippedItems[equipLocation];
+            return _equippedItems[equipLocation];
         }
 
         /// <summary>
         /// Add an item to the given equip location. Do not attempt to equip to
         /// an incompatible slot.
         /// </summary>
-        public void AddItem(EquipLocation slot, EquipableItem item)
+        public void AddItem(EquipLocation slot, EquippableItem item)
         {
-            Debug.Assert(item.GetAllowedEquipLocation() == slot);
+            Debug.Assert(item.AllowedEquipLocation == slot);
 
-            equippedItems[slot] = item;
+            _equippedItems[slot] = item;
 
-            if (equipmentUpdated != null)
-            {
-                equipmentUpdated();
-            }
+           OnEquipmentUpdated?.Invoke();
         }
 
         /// <summary>
@@ -57,45 +49,40 @@ namespace RPG.InventorySystem.InventoriesModel
         /// </summary>
         public void RemoveItem(EquipLocation slot)
         {
-            equippedItems.Remove(slot);
-            if (equipmentUpdated != null)
-            {
-                equipmentUpdated();
-            }
+            _equippedItems.Remove(slot);
+            OnEquipmentUpdated?.Invoke();
         }
-
+        
         /// <summary>
         /// Enumerate through all the slots that currently contain items.
         /// </summary>
-        public IEnumerable<EquipLocation> GetAllPopulatedSlots()
+        public IEnumerable<EquipLocation> GetAllEquipLocations()
         {
-            return equippedItems.Keys;
+            return _equippedItems.Keys;
         }
-
-        // PRIVATE
-
+        
+        
         object ISavable.CaptureState()
         {
             var equippedItemsForSerialization = new Dictionary<EquipLocation, string>();
-            foreach (var pair in equippedItems)
+            foreach (var pair in _equippedItems)
             {
-                equippedItemsForSerialization[pair.Key] = pair.Value.GetItemID();
+                equippedItemsForSerialization[pair.Key] = pair.Value.ItemID;
             }
             return equippedItemsForSerialization;
         }
 
         void ISavable.RestoreState(object state)
         {
-            equippedItems = new Dictionary<EquipLocation, EquipableItem>();
-
+            _equippedItems.Clear();
             var equippedItemsForSerialization = (Dictionary<EquipLocation, string>)state;
 
             foreach (var pair in equippedItemsForSerialization)
             {
-                var item = (EquipableItem)InventoryItem.GetFromID(pair.Value);
+                var item = (EquippableItem)InventoryItem.GetFromID(pair.Value);
                 if (item != null)
                 {
-                    equippedItems[pair.Key] = item;
+                    _equippedItems[pair.Key] = item;
                 }
             }
         }

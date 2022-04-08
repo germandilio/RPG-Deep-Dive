@@ -5,6 +5,6 @@ namespace RPG.GameplayCore.Stats
         Health,
         ExperienceRewards,
         ExperienceToLevelUp,
-        Damage
+        Damage,
     }
 }

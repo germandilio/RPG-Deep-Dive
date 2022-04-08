@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RPG.GameplayCore.Stats
 {
-    [CreateAssetMenu(fileName = "Progression", menuName = "Stats/New Progression", order = 0)]
+    [CreateAssetMenu(fileName = "Progression", menuName = "RPG Project/Stats/New Progression", order = 0)]
     public class Progression : ScriptableObject
     {
         [Serializable]
@@ -24,6 +24,7 @@ namespace RPG.GameplayCore.Stats
             [SerializeField]
             internal Stats statsType;
 
+            [Header("Properties By Level")]
             [SerializeField]
             internal float[] valuesOnLevels;
         }

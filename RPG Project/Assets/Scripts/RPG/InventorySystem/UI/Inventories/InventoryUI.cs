@@ -1,4 +1,4 @@
-﻿using RPG.InventorySystem.InventoriesModel;
+﻿using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 
 namespace RPG.InventorySystem.UI.Inventories
@@ -9,18 +9,16 @@ namespace RPG.InventorySystem.UI.Inventories
     /// </summary>
     public class InventoryUI : MonoBehaviour
     {
-        // CONFIG DATA
-        [SerializeField] InventorySlotUI InventoryItemPrefab = null;
+        [SerializeField]
+        private InventorySlotUI inventoryItemPrefab;
 
-        // CACHE
-        Inventory playerInventory;
-
-        // LIFECYCLE METHODS
-
-        private void Awake() 
+        private Inventory _playerInventory;
+        
+        
+        private void Awake()
         {
-            playerInventory = Inventory.GetPlayerInventory();
-            playerInventory.inventoryUpdated += Redraw;
+            _playerInventory = Inventory.GetPlayerInventory();
+            _playerInventory.OnInventoryUpdated += Redraw;
         }
 
         private void Start()
@@ -28,7 +26,6 @@ namespace RPG.InventorySystem.UI.Inventories
             Redraw();
         }
 
-        // PRIVATE
 
         private void Redraw()
         {
@@ -37,10 +34,10 @@ namespace RPG.InventorySystem.UI.Inventories
                 Destroy(child.gameObject);
             }
 
-            for (int i = 0; i < playerInventory.GetSize(); i++)
+            for (int i = 0; i < _playerInventory.Size; i++)
             {
-                var itemUI = Instantiate(InventoryItemPrefab, transform);
-                itemUI.Setup(playerInventory, i);
+                var itemUI = Instantiate(inventoryItemPrefab, transform);
+                itemUI.Setup(_playerInventory, i);
             }
         }
     }

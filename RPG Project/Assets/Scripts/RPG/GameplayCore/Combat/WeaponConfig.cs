@@ -1,19 +1,20 @@
 using RPG.GameplayCore.Attributes;
-using RPG.InventorySystem.InventoriesModel;
+using RPG.InventorySystem.InventoriesModel.Equipment;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Combat
 {
     [CreateAssetMenu(fileName = "new weapon", menuName = "RPG Project/Weapons/New Weapon", order = 0)]
-    public class WeaponConfig : EquipableItem
+    public class WeaponConfig : StatsEquippableItem
     {
-        [SerializeField]
+        [Header("Weapon Configuration")]
         [Tooltip(
             "Keep it none if this weapon is invisible (ex. fireball weapon have only projectiles, without visible weapon)")]
+        [SerializeField]
         private Weapon weaponPrefab;
 
-        [SerializeField]
         [Tooltip("Keep it none if this weapon doesn't have projectiles")]
+        [SerializeField]
         private GameObject projectilePrefab;
 
         [SerializeField]
@@ -22,20 +23,12 @@ namespace RPG.GameplayCore.Combat
         [SerializeField]
         private WeaponType weaponType;
 
-        [SerializeField]
         [Tooltip("Distance to enemy, where player should stop when attacking")]
+        [SerializeField]
         private float weaponRange = 2f;
 
-        [SerializeField]
-        [Tooltip("Damage, which player apply to Combat target")]
-        private float weaponDamage = 25f;
-
-        [Range(0, 100)]
-        [SerializeField]
-        private float percentageBonus;
-
-        [SerializeField]
         [Tooltip("Time in seconds between player attacks")]
+        [SerializeField]
         private float timeBetweenAttacks = 2f;
 
         private const string WeaponName = "$$$Current Weapon$$$";
@@ -44,10 +37,6 @@ namespace RPG.GameplayCore.Combat
         public bool HasProjectile => projectilePrefab != null;
 
         public float WeaponRange => weaponRange;
-
-        public float WeaponDamage => weaponDamage;
-
-        public float PercentageBonus => percentageBonus;
 
         public float TimeBetweenAttacks => timeBetweenAttacks;
 
@@ -78,17 +67,17 @@ namespace RPG.GameplayCore.Combat
         /// <param name="characterAnimator">Character animator.</param>
         private void SetAnimatorController(Animator characterAnimator)
         {
+            var overrideController = characterAnimator.runtimeAnimatorController as AnimatorOverrideController;
             if (animatorOverrideController != null)
             {
                 // overriding by animatorOverrideController 
                 characterAnimator.runtimeAnimatorController = animatorOverrideController;
             }
             // set default state of animator controller if current controller was overriden and want to be overriden by null 
-            else if (characterAnimator.runtimeAnimatorController is AnimatorOverrideController)
+            else if (overrideController != null)
             {
                 // parent controller (default state)
-                var parentController = animatorOverrideController.runtimeAnimatorController;
-                characterAnimator.runtimeAnimatorController = parentController;
+                characterAnimator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
             }
         }
 
@@ -132,7 +121,6 @@ namespace RPG.GameplayCore.Combat
         {
             if (projectilePrefab == null) return;
 
-            // TODO: Исправить метоположение лука в руке, чтобы стрелы не ищезали при попадании в самого игрока
             Transform handSpawn = DefineHand(leftHand, rightHand);
             GameObject projectileInstance = Instantiate(projectilePrefab, handSpawn.position, Quaternion.identity);
 

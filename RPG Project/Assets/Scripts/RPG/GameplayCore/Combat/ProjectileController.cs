@@ -83,7 +83,6 @@ namespace RPG.GameplayCore.Combat
                     Instantiate(impactEffect, GetDestinationPoint(), transform.rotation);
             }
 
-            // TODO add colliders to buildings
             foreach (GameObject destroyingObject in destroyOnHit)
             {
                 Destroy(destroyingObject);

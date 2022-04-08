@@ -1,4 +1,5 @@
-﻿using RPG.InventorySystem.InventoriesModel;
+﻿using RPG.InventorySystem.InventoriesModel.Actions;
+using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 using Utils.UI.Dragging;
 
@@ -9,48 +10,48 @@ namespace RPG.InventorySystem.UI.Inventories
     /// </summary>
     public class ActionSlotUI : MonoBehaviour, IItemHolder, IDragContainer<InventoryItem>
     {
-        // CONFIG DATA
-        [SerializeField] InventoryItemIcon icon = null;
-        [SerializeField] int index = 0;
+        [SerializeField]
+        private InventoryItemIcon icon;
+        
+        [SerializeField]
+        private int index;
 
-        // CACHE
-        ActionStore store;
+        private ActionStore _actionStore;
+        
 
-        // LIFECYCLE METHODS
         private void Awake()
         {
-            store = GameObject.FindGameObjectWithTag("Player").GetComponent<ActionStore>();
-            store.storeUpdated += UpdateIcon;
+            var player = GameObject.FindGameObjectWithTag("Player");
+            _actionStore = player.GetComponent<ActionStore>();
+            _actionStore.OnStoreUpdated += UpdateIcon;   
         }
-
-        // PUBLIC
-
+        
+        
         public void AddItems(InventoryItem item, int number)
         {
-            store.AddAction(item, index, number);
+            _actionStore.AddAction(item, index, number);
         }
 
         public InventoryItem GetItem()
         {
-            return store.GetAction(index);
+            return _actionStore.GetAction(index);
         }
 
         public int GetNumber()
         {
-            return store.GetNumber(index);
+            return _actionStore.GetNumber(index);
         }
 
         public int MaxAcceptable(InventoryItem item)
         {
-            return store.MaxAcceptable(item, index);
+            return _actionStore.MaxAcceptable(item, index);
         }
 
         public void RemoveItems(int number)
         {
-            store.RemoveItems(index, number);
+            _actionStore.RemoveItems(index, number);
         }
-
-        // PRIVATE
+        
 
         void UpdateIcon()
         {

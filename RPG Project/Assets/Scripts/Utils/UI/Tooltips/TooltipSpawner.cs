@@ -12,13 +12,12 @@ namespace Utils.UI.Tooltips
     /// </summary>
     public abstract class TooltipSpawner : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        // CONFIG DATA
         [Tooltip("The prefab of the tooltip to spawn.")]
-        [SerializeField] GameObject tooltipPrefab = null;
+        [SerializeField]
+        private GameObject tooltipPrefab;
 
-        // PRIVATE STATE
-        GameObject tooltip = null;
-
+        private GameObject _tooltip;
+        
         /// <summary>
         /// Called when it is time to update the information on the tooltip
         /// prefab.
@@ -32,9 +31,8 @@ namespace Utils.UI.Tooltips
         /// Return true when the tooltip spawner should be allowed to create a tooltip.
         /// </summary>
         public abstract bool CanCreateTooltip();
-
-        // PRIVATE
-
+        
+        
         private void OnDestroy()
         {
             ClearTooltip();
@@ -49,19 +47,19 @@ namespace Utils.UI.Tooltips
         {
             var parentCanvas = GetComponentInParent<Canvas>();
 
-            if (tooltip && !CanCreateTooltip())
+            if (_tooltip && !CanCreateTooltip())
             {
                 ClearTooltip();
             }
 
-            if (!tooltip && CanCreateTooltip())
+            if (!_tooltip && CanCreateTooltip())
             {
-                tooltip = Instantiate(tooltipPrefab, parentCanvas.transform);
+                _tooltip = Instantiate(tooltipPrefab, parentCanvas.transform);
             }
 
-            if (tooltip)
+            if (_tooltip)
             {
-                UpdateTooltip(tooltip);
+                UpdateTooltip(_tooltip);
                 PositionTooltip();
             }
         }
@@ -72,7 +70,7 @@ namespace Utils.UI.Tooltips
             Canvas.ForceUpdateCanvases();
 
             var tooltipCorners = new Vector3[4];
-            tooltip.GetComponent<RectTransform>().GetWorldCorners(tooltipCorners);
+            _tooltip.GetComponent<RectTransform>().GetWorldCorners(tooltipCorners);
             var slotCorners = new Vector3[4];
             GetComponent<RectTransform>().GetWorldCorners(slotCorners);
 
@@ -82,16 +80,15 @@ namespace Utils.UI.Tooltips
             int slotCorner = GetCornerIndex(below, right);
             int tooltipCorner = GetCornerIndex(!below, !right);
 
-            tooltip.transform.position = slotCorners[slotCorner] - tooltipCorners[tooltipCorner] + tooltip.transform.position;
+            _tooltip.transform.position = slotCorners[slotCorner] - tooltipCorners[tooltipCorner] + _tooltip.transform.position;
         }
 
         private int GetCornerIndex(bool below, bool right)
         {
             if (below && !right) return 0;
-            else if (!below && !right) return 1;
-            else if (!below && right) return 2;
-            else return 3;
-
+            if (!below && !right) return 1;
+            if (!below && right) return 2;
+            return 3;
         }
 
         void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
@@ -101,9 +98,9 @@ namespace Utils.UI.Tooltips
 
         private void ClearTooltip()
         {
-            if (tooltip)
+            if (_tooltip)
             {
-                Destroy(tooltip.gameObject);
+                Destroy(_tooltip.gameObject);
             }
         }
     }

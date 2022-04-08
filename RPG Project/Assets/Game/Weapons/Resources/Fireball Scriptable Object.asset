@@ -19,6 +19,10 @@ MonoBehaviour:
   pickup: {fileID: 4240050018417406139, guid: 2d2cd5a2cf1904265acc588dcf395273, type: 3}
   stackable: 0
   allowedEquipLocation: 5
+  additiveModifiers:
+  - stat: 3
+    value: 25
+  percentageModifiers: []
   weaponPrefab: {fileID: 0}
   projectilePrefab: {fileID: 5578374591664930097, guid: 8fce7a091c1ad4f8ea92362904d54af0,
     type: 3}

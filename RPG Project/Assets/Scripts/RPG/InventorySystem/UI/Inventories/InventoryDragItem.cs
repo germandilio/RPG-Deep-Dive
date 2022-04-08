@@ -1,14 +1,12 @@
 ﻿using RPG.GameplayCore.Control;
-using RPG.InventorySystem.InventoriesModel;
-using UnityEngine;
+using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine.EventSystems;
 using Utils.UI.Dragging;
 
 namespace RPG.InventorySystem.UI.Inventories
 {
     /// <summary>
-    /// To be placed on icons representing the item in a slot. Allows the item
-    /// to be dragged into other slots.
+    /// Allows the item to be dragged into other slots.
     /// </summary>
     public class InventoryDragItem : DragItem<InventoryItem>
     {

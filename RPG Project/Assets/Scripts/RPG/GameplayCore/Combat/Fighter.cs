@@ -4,6 +4,7 @@ using RPG.GameplayCore.Attributes;
 using RPG.GameplayCore.Core;
 using RPG.GameplayCore.Movement;
 using RPG.GameplayCore.Stats;
+using RPG.InventorySystem.InventoriesModel.Equipment;
 using SavingSystem;
 using Utils;
 
@@ -11,7 +12,7 @@ namespace RPG.GameplayCore.Combat
 {
     [RequireComponent(typeof(ActionScheduler), typeof(Animator), typeof(Mover))]
     [RequireComponent(typeof(BaseStats))]
-    public class Fighter : MonoBehaviour, IAction, ISavable, IModifyProvider
+    public class Fighter : MonoBehaviour, IAction, ISavable
     {
         [SerializeField]
         private Transform rightHand, leftHand;
@@ -23,6 +24,7 @@ namespace RPG.GameplayCore.Combat
         private LazyValue<Weapon> _currentWeapon;
 
         private Health _target;
+        private Equipment _equipment;
 
         private float _timeSinceLastAttack = Mathf.Infinity;
 
@@ -46,6 +48,25 @@ namespace RPG.GameplayCore.Combat
 
             _currentWeaponConfig = defaultWeaponConfig;
             _currentWeapon = new LazyValue<Weapon>(EquipDefaultWeapon);
+
+            _equipment = GetComponent<Equipment>();
+            if (_equipment != null)
+            {
+                _equipment.OnEquipmentUpdated += UpdateWeapon;
+            }
+        }
+
+        private void UpdateWeapon()
+        {
+            var currentEquipWeapon = _equipment.GetItemInSlot(EquipLocation.Weapon) as WeaponConfig;
+            if (currentEquipWeapon != null)
+            {
+                EquipWeapon(currentEquipWeapon);
+            }
+            else
+            {
+                EquipDefaultWeapon();
+            }
         }
 
         private void Start()
@@ -76,6 +97,8 @@ namespace RPG.GameplayCore.Combat
 
         public void EquipWeapon(WeaponConfig weaponConfig)
         {
+            if (weaponConfig == null) return;
+            
             _currentWeaponConfig = weaponConfig;
             _currentWeapon.Value = AttachWeapon(weaponConfig);
         }
@@ -111,8 +134,6 @@ namespace RPG.GameplayCore.Combat
 
         public void Attack(GameObject combatTarget)
         {
-            //TODO убрать
-            Debug.Log("you're attacking");
             _target = combatTarget.GetComponent<Health>();
 
             _actionScheduler.StartAction(this);
@@ -171,22 +192,6 @@ namespace RPG.GameplayCore.Combat
             if (!(state is string weaponName)) return;
             WeaponConfig weaponConfig = Resources.Load<WeaponConfig>(weaponName);
             EquipWeapon(weaponConfig);
-        }
-
-        public IEnumerable<float> GetAdditiveModifier(Stats.Stats stats)
-        {
-            if (stats == Stats.Stats.Damage)
-            {
-                yield return _currentWeaponConfig.WeaponDamage;
-            }
-        }
-
-        public IEnumerable<float> GetPercentageModifier(Stats.Stats stats)
-        {
-            if (stats == Stats.Stats.Damage)
-            {
-                yield return _currentWeaponConfig.PercentageBonus;
-            }
         }
     }
 }

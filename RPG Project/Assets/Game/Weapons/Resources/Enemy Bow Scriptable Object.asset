@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b332d5a62048b4832411ff91bc6fc3, type: 3}
   m_Name: Enemy Bow Scriptable Object
   m_EditorClassIdentifier: 
+  itemID: d4478e4e-a02a-4815-ba5d-69852782a0d4
+  displayName: 
+  description: 
+  icon: {fileID: 21300000, guid: f8078c2bb5ee88d4a9472f76e501e0f3, type: 3}
+  pickup: {fileID: 3946488469255852960, guid: 31fa4aa06dd924ca791942bd190cde20, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  additiveModifiers:
+  - stat: 3
+    value: 15
+  percentageModifiers: []
   weaponPrefab: {fileID: 8563421568223617974, guid: 7f105c0c272e6c146b4b41cdc53ea356,
     type: 3}
   projectilePrefab: {fileID: 4085885830373257377, guid: 4d820f6e41d5244168209041732bf863,
@@ -20,6 +31,4 @@ MonoBehaviour:
     type: 2}
   weaponType: 0
   weaponRange: 12
-  weaponDamage: 12
-  percentageBonus: 0
   timeBetweenAttacks: 2.8

@@ -28,13 +28,15 @@ namespace RPG.GameplayCore.Cinematics
 
         private void OnDisablePlayerControl(PlayableDirector playableDirector)
         {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            var controller = player.GetComponent<PlayerController>();
+            controller.SetCursor(CursorType.OnUI);
+            
             ControlRemover.DisablePlayerControl();
-            Cursor.visible = false;
         }
 
         private void OnEnablePlayerControl(PlayableDirector playableDirector)
         {
-            Cursor.visible = true;
             ControlRemover.EnablePlayerControl();
         }
     }

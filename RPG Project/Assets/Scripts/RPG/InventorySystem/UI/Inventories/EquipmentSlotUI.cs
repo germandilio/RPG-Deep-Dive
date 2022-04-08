@@ -1,4 +1,6 @@
 ﻿using RPG.InventorySystem.InventoriesModel;
+using RPG.InventorySystem.InventoriesModel.Equipment;
+using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 using Utils.UI.Dragging;
 
@@ -9,35 +11,33 @@ namespace RPG.InventorySystem.UI.Inventories
     /// </summary>
     public class EquipmentSlotUI : MonoBehaviour, IItemHolder, IDragContainer<InventoryItem>
     {
-        // CONFIG DATA
+        [SerializeField]
+        private InventoryItemIcon icon;
+        
+        [SerializeField] 
+        private EquipLocation equipLocation = EquipLocation.Weapon;
+        
+        private Equipment _playerEquipment;
 
-        [SerializeField] InventoryItemIcon icon = null;
-        [SerializeField] EquipLocation equipLocation = EquipLocation.Weapon;
-
-        // CACHE
-        Equipment playerEquipment;
-
-        // LIFECYCLE METHODS
        
         private void Awake() 
         {
             var player = GameObject.FindGameObjectWithTag("Player");
-            playerEquipment = player.GetComponent<Equipment>();
-            playerEquipment.equipmentUpdated += RedrawUI;
+            _playerEquipment = player.GetComponent<Equipment>();
+            _playerEquipment.OnEquipmentUpdated += RedrawUI;
         }
 
         private void Start() 
         {
             RedrawUI();
         }
-
-        // PUBLIC
-
+        
+        
         public int MaxAcceptable(InventoryItem item)
         {
-            EquipableItem equipableItem = item as EquipableItem;
-            if (equipableItem == null) return 0;
-            if (equipableItem.GetAllowedEquipLocation() != equipLocation) return 0;
+            EquippableItem equippableItem = item as EquippableItem;
+            if (equippableItem == null) return 0;
+            if (equippableItem.AllowedEquipLocation != equipLocation) return 0;
             if (GetItem() != null) return 0;
 
             return 1;
@@ -45,36 +45,31 @@ namespace RPG.InventorySystem.UI.Inventories
 
         public void AddItems(InventoryItem item, int number)
         {
-            playerEquipment.AddItem(equipLocation, (EquipableItem) item);
+            _playerEquipment.AddItem(equipLocation, (EquippableItem) item);
         }
 
         public InventoryItem GetItem()
         {
-            return playerEquipment.GetItemInSlot(equipLocation);
+            return _playerEquipment.GetItemInSlot(equipLocation);
         }
 
         public int GetNumber()
         {
             if (GetItem() != null)
-            {
                 return 1;
-            }
-            else
-            {
-                return 0;
-            }
+            
+            return 0;
         }
 
         public void RemoveItems(int number)
         {
-            playerEquipment.RemoveItem(equipLocation);
+            _playerEquipment.RemoveItem(equipLocation);
         }
 
-        // PRIVATE
 
         void RedrawUI()
         {
-            icon.SetItem(playerEquipment.GetItemInSlot(equipLocation));
+            icon.SetItem(_playerEquipment.GetItemInSlot(equipLocation));
         }
     }
 }

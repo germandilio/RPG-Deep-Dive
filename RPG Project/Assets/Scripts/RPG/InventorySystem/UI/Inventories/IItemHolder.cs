@@ -1,4 +1,5 @@
 ﻿using RPG.InventorySystem.InventoriesModel;
+using RPG.InventorySystem.InventoriesModel.Inventory;
 
 namespace RPG.InventorySystem.UI.Inventories
 {

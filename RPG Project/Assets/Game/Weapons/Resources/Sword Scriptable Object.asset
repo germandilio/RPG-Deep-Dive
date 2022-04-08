@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b332d5a62048b4832411ff91bc6fc3, type: 3}
   m_Name: Sword Scriptable Object
   m_EditorClassIdentifier: 
+  itemID: 565238ee-e4e8-47b1-ac40-1ce07cab9dab
+  displayName: 
+  description: 
+  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  pickup: {fileID: 9056094213391728538, guid: 20473e599b1334a9880760e638710a56, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  additiveModifiers:
+  - stat: 3
+    value: 40
+  percentageModifiers: []
   weaponPrefab: {fileID: 930132910650163077, guid: 5a22e49a32bdd41f89752c5b0dd49977,
     type: 3}
   projectilePrefab: {fileID: 0}
@@ -19,6 +30,4 @@ MonoBehaviour:
     type: 2}
   weaponType: 1
   weaponRange: 3
-  weaponDamage: 50
-  percentageBonus: 0
   timeBetweenAttacks: 2

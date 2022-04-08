@@ -123,8 +123,6 @@ namespace RPG.GameplayCore.Attributes
         {
             if (state is float savedHealthPoints)
             {
-                // TODO debug
-                print("restore health");
                 _currentHealthPoints.Value = savedHealthPoints;
             }
 

@@ -53,7 +53,7 @@ namespace SavingSystem
 
         public void Load()
         {
-            StartCoroutine(_savingSystem.LoadLastScene(DefaultSaveFileName));
+            _savingSystem.Load(DefaultSaveFileName); 
         }
 
         public void Delete()

@@ -32,6 +32,13 @@ namespace RPG.GameplayCore.Control
         private Mover _mover;
         private Health _healthSystem;
 
+        
+        public void SetCursor(CursorType type)
+        {
+            CursorEntity cursor = GetCursorMapping(type);
+            Cursor.SetCursor(cursor.texture, cursor.hotspot, CursorMode.Auto);
+        }
+        
         private void Awake()
         {
             _mover = GetComponent<Mover>();
@@ -52,12 +59,6 @@ namespace RPG.GameplayCore.Control
             if (InteractWithMovement()) return;
 
             SetCursor(CursorType.Default);
-        }
-        
-        private void SetCursor(CursorType type)
-        {
-            CursorEntity cursor = GetCursorMapping(type);
-            Cursor.SetCursor(cursor.texture, cursor.hotspot, CursorMode.Auto);
         }
 
         private bool InteractWithInGameComponents()
@@ -81,7 +82,6 @@ namespace RPG.GameplayCore.Control
 
         private RaycastHit[] RaycastAllSorted()
         {
-            //TODO fix bug with pickups raycasting
             var hits = Physics.SphereCastAll(RaycastUtils.GetMouseRay(), raycastInfelicity);
             Array.Sort(hits, (hit1, hit2) =>
             {

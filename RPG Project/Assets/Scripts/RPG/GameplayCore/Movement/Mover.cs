@@ -86,8 +86,6 @@ namespace RPG.GameplayCore.Movement
         {
             if (state is SerializableVector3 savedPosition)
             {
-                // TODO debug
-                print("restore position");
                 _navMeshAgent.Warp(savedPosition.ToVector());
             }
         }

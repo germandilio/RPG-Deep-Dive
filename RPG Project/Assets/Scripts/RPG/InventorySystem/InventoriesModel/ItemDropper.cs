@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
+using RPG.InventorySystem.InventoriesModel.Inventory;
+using RPG.InventorySystem.InventoriesModel.Pickups;
 using UnityEngine;
 using SavingSystem;
+using UnityEngine.SceneManagement;
 
 namespace RPG.InventorySystem.InventoriesModel
 {
     /// <summary>
     /// To be placed on anything that wishes to drop pickups into the world.
-    /// Tracks the drops for saving and restoring.
+    /// Component tracks the drops for saving and restoring.
     /// </summary>
     public class ItemDropper : MonoBehaviour, ISavable
     {
-        // STATE
-        private List<Pickup> droppedItems = new List<Pickup>();
-
-        // PUBLIC
+        private readonly List<Pickup> _droppedItems = new List<Pickup>();
+        private readonly List<DropRecord> _droppedItemsInOtherScenes = new List<DropRecord>();
 
         /// <summary>
         /// Create a pickup at the current position.
@@ -25,7 +26,7 @@ namespace RPG.InventorySystem.InventoriesModel
         /// </param>
         public void DropItem(InventoryItem item, int number)
         {
-            SpawnPickup(item, GetDropLocation(), number);
+            SpawnPickup(item, GetLocationToDrop(), number);
         }
 
         /// <summary>
@@ -34,26 +35,18 @@ namespace RPG.InventorySystem.InventoriesModel
         /// <param name="item">The item type for the pickup.</param>
         public void DropItem(InventoryItem item)
         {
-            SpawnPickup(item, GetDropLocation(), 1);
+            DropItem(item, 1);
         }
-
-        // PROTECTED
-
-        /// <summary>
-        /// Override to set a custom method for locating a drop.
-        /// </summary>
-        /// <returns>The location the drop should be spawned.</returns>
-        protected virtual Vector3 GetDropLocation()
+        
+        protected virtual Vector3 GetLocationToDrop()
         {
             return transform.position;
         }
-
-        // PRIVATE
-
-        public void SpawnPickup(InventoryItem item, Vector3 spawnLocation, int number)
+        
+        private void SpawnPickup(InventoryItem item, Vector3 spawnLocation, int number)
         {
             var pickup = item.SpawnPickup(spawnLocation, number);
-            droppedItems.Add(pickup);
+            _droppedItems.Add(pickup);
         }
 
         [System.Serializable]
@@ -62,47 +55,67 @@ namespace RPG.InventorySystem.InventoriesModel
             public string itemID;
             public SerializableVector3 position;
             public int number;
+
+            public int sceneBuildIndex;
         }
 
         object ISavable.CaptureState()
         {
             RemoveDestroyedDrops();
-            var droppedItemsList = new DropRecord[droppedItems.Count];
-            for (int i = 0; i < droppedItemsList.Length; i++)
+            int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+            
+            var droppedItemsList = new List<DropRecord>();
+            foreach(var pickup in _droppedItems)
             {
-                droppedItemsList[i].itemID = droppedItems[i].GetItem().GetItemID();
-                droppedItemsList[i].position = new SerializableVector3(droppedItems[i].transform.position);
-                droppedItemsList[i].number = droppedItems[i].GetNumber();
+                var droppedItem = new DropRecord
+                {
+                    itemID = pickup.Item.ItemID,
+                    position = new SerializableVector3(pickup.transform.position),
+                    number = pickup.Number,
+                    sceneBuildIndex = currentBuildIndex 
+                };
+                droppedItemsList.Add(droppedItem);
             }
+            droppedItemsList.AddRange(_droppedItemsInOtherScenes);
             return droppedItemsList;
         }
 
         void ISavable.RestoreState(object state)
         {
-            var droppedItemsList = (DropRecord[])state;
+            int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
+            
+            _droppedItemsInOtherScenes.Clear();
+            var droppedItemsList = (List<DropRecord>)state;
             foreach (var item in droppedItemsList)
             {
-                var pickupItem = InventoryItem.GetFromID(item.itemID);
-                Vector3 position = item.position.ToVector();
-                int number = item.number;
-                SpawnPickup(pickupItem, position, number);
+                if (item.sceneBuildIndex != currentBuildIndex)
+                {
+                    _droppedItemsInOtherScenes.Add(item);
+                }
+                else
+                {
+                    var pickupItem = InventoryItem.GetFromID(item.itemID);
+                    Vector3 position = item.position.ToVector();
+                    int number = item.number;
+                    
+                    SpawnPickup(pickupItem, position, number);
+                }
             }
         }
 
         /// <summary>
-        /// Remove any drops in the world that have subsequently been picked up.
+        /// Remove any drops in the world that have been picked up.
         /// </summary>
         private void RemoveDestroyedDrops()
         {
-            var newList = new List<Pickup>();
-            foreach (var item in droppedItems)
+            _droppedItems.Clear();
+            foreach (var item in _droppedItems)
             {
                 if (item != null)
                 {
-                    newList.Add(item);
+                    _droppedItems.Add(item);
                 }
             }
-            droppedItems = newList;
         }
     }
 }

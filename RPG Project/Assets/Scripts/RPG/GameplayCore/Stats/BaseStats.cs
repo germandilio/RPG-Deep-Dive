@@ -26,7 +26,9 @@ namespace RPG.GameplayCore.Stats
             "Using additional modifiers for components (ex. if false, stats will be only loaded from Progression Scriptable object, without any additional modifiers)")]
         private bool shouldUseModifiers;
 
-        // null if it is not a Player
+        /// <summary>
+        /// Null if it is not a Player 
+        /// </summary>
         private Experience _experience;
         private LazyValue<int> _currentLevel;
 
