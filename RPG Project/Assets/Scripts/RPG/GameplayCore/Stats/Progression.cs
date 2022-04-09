@@ -62,6 +62,7 @@ namespace RPG.GameplayCore.Stats
 
             try
             {
+                // TODO fix bug when player dies
                 return _lookupStats[characterClass][statsType][level - 1];
             }
             catch (Exception ex)

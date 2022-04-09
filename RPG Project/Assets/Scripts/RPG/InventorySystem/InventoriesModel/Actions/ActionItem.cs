@@ -25,9 +25,10 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         /// Trigger the use of this item.
         /// </summary>
         /// <param name="user">The character that is using this action.</param>
-        public virtual void Use(GameObject user)
+        public virtual bool Use(GameObject user)
         {
             Debug.Log("Use subclasses with overriding \'Use\' method instead." + "Using action: " + this);
+            return default;
         }
     }
 }

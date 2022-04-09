@@ -30,7 +30,7 @@ namespace RPG.GameplayCore.Combat
         private UnityEvent onHit;
 
         private GameObject _instigator;
-        private Health target;
+        private Health _target;
         private float _damage;
 
         private void Start()
@@ -41,27 +41,27 @@ namespace RPG.GameplayCore.Combat
 
         private void Update()
         {
-            if (target == null) return;
+            if (_target == null) return;
 
-            if (homing && !target.IsDead) transform.LookAt(GetDestinationPoint());
+            if (homing && !_target.IsDead) transform.LookAt(GetDestinationPoint());
 
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
         private Vector3 GetDestinationPoint()
         {
-            var targetCollider = target.GetComponent<CapsuleCollider>();
+            var targetCollider = _target.GetComponent<CapsuleCollider>();
             if (targetCollider == null)
             {
-                return target.transform.position;
+                return _target.transform.position;
             }
 
-            return target.transform.position + (Vector3.up * targetCollider.height / 2);
+            return _target.transform.position + (Vector3.up * targetCollider.height / 2);
         }
 
         public void SetTarget(Health healthTarget, float weaponDamage, GameObject instigator)
         {
-            target = healthTarget;
+            _target = healthTarget;
             _damage = weaponDamage;
             _instigator = instigator;
 
@@ -70,9 +70,9 @@ namespace RPG.GameplayCore.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<Health>() == target)
+            if (other.GetComponent<Health>() == _target)
             {
-                target.TakeDamage(_damage, _instigator);
+                _target.TakeDamage(_damage, _instigator);
                 // play hit sound
                 onHit?.Invoke();
 

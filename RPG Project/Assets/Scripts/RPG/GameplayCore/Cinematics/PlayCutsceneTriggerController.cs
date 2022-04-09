@@ -4,7 +4,7 @@ using UnityEngine.Playables;
 
 namespace RPG.GameplayCore.Cinematics
 {
-    [RequireComponent(typeof(PlayableDirector))]
+    [RequireComponent(typeof(PlayableDirector), typeof(Collider))]
     public class PlayCutsceneTriggerController : MonoBehaviour, ISavable
     {
         private bool _wasTriggered;
@@ -18,6 +18,7 @@ namespace RPG.GameplayCore.Cinematics
                 var playableDirector = GetComponent<PlayableDirector>();
                 playableDirector.Play();
                 _wasTriggered = true;
+                GetComponent<Collider>().enabled = false;
             }
         }
 
@@ -31,6 +32,7 @@ namespace RPG.GameplayCore.Cinematics
             if (state is bool savedState)
             {
                 _wasTriggered = savedState;
+                GetComponent<Collider>().enabled = !_wasTriggered;
             }
         }
     }

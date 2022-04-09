@@ -114,7 +114,7 @@ namespace RPG.GameplayCore.Control
             if (hasHit)
             {
                 if (!_mover.CanMoveTo(pointToMove)) return false;
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButtonDown(0))
                 {
                     _mover.StartMoveAction(pointToMove);
                 }

@@ -93,7 +93,7 @@ namespace RPG.GameplayCore.Attributes
 
         private void AwardXpToInstigator()
         {
-            if (_instigator == null) return;
+            if (_instigator == null || !_instigator.CompareTag("Player")) return;
 
             // award XP to instigator
             float pointToAdd = _baseStats.GetStat(Stats.Stats.ExperienceRewards);
@@ -130,9 +130,21 @@ namespace RPG.GameplayCore.Attributes
                 Die();
         }
 
-        public void Heal(float healthPointsToRestore)
+        /// <summary>
+        /// Heals player.
+        /// </summary>
+        /// <param name="healthPointsToRestore"></param>
+        /// <returns>False if not used (health was full), otherwise true.</returns>
+        public bool Heal(float healthPointsToRestore)
         {
-            _currentHealthPoints.Value = Mathf.Min(_currentHealthPoints.Value + healthPointsToRestore, GetMaxHealth());
+            float maxHealth = GetMaxHealth();
+            if (Mathf.Approximately(_currentHealthPoints.Value , maxHealth))
+            {
+                return false;
+            }
+
+            _currentHealthPoints.Value = Mathf.Min(_currentHealthPoints.Value + healthPointsToRestore, maxHealth);
+            return true;
         }
     }
 }

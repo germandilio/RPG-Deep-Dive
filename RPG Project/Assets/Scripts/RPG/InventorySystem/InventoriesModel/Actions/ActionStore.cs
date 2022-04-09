@@ -88,11 +88,14 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         {
             if (!_dockedItems.ContainsKey(index)) return false;
 
-            _dockedItems[index].item.Use(user);
-            if (_dockedItems[index].item.IsConsumable)
-                RemoveItems(index, 1);
+            bool isPerformed = _dockedItems[index].item.Use(user);
+            if (isPerformed)
+            {
+                if (_dockedItems[index].item.IsConsumable)
+                    RemoveItems(index, 1);   
+            }
 
-            return true;
+            return isPerformed;
         }
 
         /// <summary>

@@ -19,7 +19,6 @@ namespace RPG.GameplayCore.Movement
 
         private NavMeshAgent _navMeshAgent;
         private ActionScheduler _actionScheduler;
-        private Health _healthSystem;
 
         private Animator _animator;
         private static readonly int ForwardSpeedId = Animator.StringToHash("ForwardSpeed");
@@ -29,16 +28,12 @@ namespace RPG.GameplayCore.Movement
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
             _actionScheduler = GetComponent<ActionScheduler>();
-            _healthSystem = GetComponent<Health>();
 
             _navMeshAgent.speed = maxSpeed;
         }
 
         private void Update()
         {
-            // disable navMeshAgent after death
-            _navMeshAgent.enabled = !_healthSystem.IsDead;
-
             UpdateAnimator();
         }
 
@@ -74,7 +69,19 @@ namespace RPG.GameplayCore.Movement
 
         public void Cancel()
         {
-            _navMeshAgent.isStopped = true;
+            if (_navMeshAgent.isActiveAndEnabled)
+                _navMeshAgent.isStopped = true;
+        }
+
+        /// <summary>
+        /// Disable navMeshAgent after death.
+        /// </summary>
+        /// <remarks>
+        /// Event function.
+        /// </remarks>
+        public void DisableOnDeath()
+        {
+            _navMeshAgent.enabled = false;
         }
 
         public object CaptureState()

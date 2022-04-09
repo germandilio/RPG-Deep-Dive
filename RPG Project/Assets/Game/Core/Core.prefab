@@ -300,11 +300,6 @@ PrefabInstance:
       propertyPath: spawnDistance
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5170826903765890771, guid: a0e7506016feb4ca29fcecde04ff0e5d,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6514922550692331347, guid: a0e7506016feb4ca29fcecde04ff0e5d,
         type: 3}
       propertyPath: m_Name
