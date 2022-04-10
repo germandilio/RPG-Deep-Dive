@@ -6,11 +6,21 @@ namespace RPG.InventorySystem.UI
     [RequireComponent(typeof(Scrollbar))]
     public class ScrollButtonsController : MonoBehaviour
     {
+        [Tooltip("1 - opening on the inventory top, 0 - on the bottom")]
+        [Range(0, 1)]
+        [SerializeField]
+        private float initScrollbarPosition = 1f;
+        
         private Scrollbar _scrollBar;
 
         private void Awake()
         {
             _scrollBar = GetComponent<Scrollbar>();
+        }
+
+        private void Start()
+        {
+            _scrollBar.value = initScrollbarPosition;
         }
 
         public void ScrollUp()
