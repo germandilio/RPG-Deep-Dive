@@ -14,6 +14,8 @@ namespace RPG.InventorySystem.InventoriesModel
         [SerializeField]
         private DropLibrary dropsLibrary;
 
+        [SerializeField]
+        private float spawningDelay = 0.4f;
 
         private const int Attempts = 10;
 
@@ -46,7 +48,12 @@ namespace RPG.InventorySystem.InventoriesModel
                 Debug.LogError("Drops Library is not set");
                 return;
             }
+            
+            Invoke(nameof(Drop), spawningDelay);
+        }
 
+        private void Drop()
+        {
             int level = GetComponent<BaseStats>().GetLevel();
             foreach (var droppedSlot in dropsLibrary.GetRandomDrops(level))
             {

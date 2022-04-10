@@ -86,6 +86,8 @@ namespace RPG.InventorySystem.InventoriesModel
             int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
 
             _droppedItemsInOtherScenes.Clear();
+            _droppedItems.Clear();
+            
             var droppedItemsList = (List<DropRecord>) state;
             foreach (var item in droppedItemsList)
             {
@@ -109,14 +111,7 @@ namespace RPG.InventorySystem.InventoriesModel
         /// </summary>
         private void RemoveDestroyedDrops()
         {
-            _droppedItems.Clear();
-            foreach (var item in _droppedItems)
-            {
-                if (item != null)
-                {
-                    _droppedItems.Add(item);
-                }
-            }
+            _droppedItems.RemoveAll(item => item == null);
         }
     }
 }

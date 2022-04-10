@@ -69,7 +69,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         {
             for (int i = 0; i < _slots.Length; i++)
             {
-                if (object.ReferenceEquals(_slots[i].item, item))
+                if (ReferenceEquals(_slots[i].item, item))
                 {
                     return true;
                 }
@@ -184,7 +184,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
 
             for (int i = 0; i < _slots.Length; i++)
             {
-                if (object.ReferenceEquals(_slots[i].item, item))
+                if (ReferenceEquals(_slots[i].item, item))
                     return i;
             }
 

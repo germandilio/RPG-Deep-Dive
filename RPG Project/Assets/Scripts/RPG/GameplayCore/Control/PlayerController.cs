@@ -32,6 +32,8 @@ namespace RPG.GameplayCore.Control
         private Mover _mover;
         private Health _healthSystem;
 
+        private bool _interactingWithUI = false;
+
 
         public void SetCursor(CursorType type)
         {
@@ -95,13 +97,19 @@ namespace RPG.GameplayCore.Control
 
         private bool InteractWithUI()
         {
-            bool onUI = EventSystem.current.IsPointerOverGameObject();
-            if (onUI)
+            if (Input.GetMouseButtonUp(0))
+                _interactingWithUI = false;
+            
+            if (EventSystem.current.IsPointerOverGameObject())
             {
+                if (Input.GetMouseButtonDown(0))
+                    _interactingWithUI = true;
+                
                 SetCursor(CursorType.OnUI);
+                return true;
             }
 
-            return onUI;
+            return _interactingWithUI;
         }
 
         /// <summary>
@@ -114,7 +122,7 @@ namespace RPG.GameplayCore.Control
             if (hasHit)
             {
                 if (!_mover.CanMoveTo(pointToMove)) return false;
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     _mover.StartMoveAction(pointToMove);
                 }

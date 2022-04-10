@@ -24,8 +24,12 @@ namespace RPG.GameplayCore.Attributes
         private TakeDamageEvent onTakeDamage;
 
         [SerializeField]
+        [InspectorName("Die event (without sound)")]
         private UnityEvent onDie;
 
+        [SerializeField]
+        private AudioSource dieSound;
+        
         private BaseStats _baseStats;
 
         private LazyValue<float> _currentHealthPoints;
@@ -86,7 +90,7 @@ namespace RPG.GameplayCore.Attributes
 
             if (_currentHealthPoints.Value == 0)
             {
-                Die();
+                Die(true);
                 AwardXpToInstigator();
             }
         }
@@ -100,7 +104,7 @@ namespace RPG.GameplayCore.Attributes
             _instigator.GetComponent<Experience>()?.AwardXp(pointToAdd);
         }
 
-        private void Die()
+        private void Die(bool withSound)
         {
             if (IsDead) return;
 
@@ -109,6 +113,9 @@ namespace RPG.GameplayCore.Attributes
 
             //play die effect
             onDie?.Invoke();
+            
+            if (withSound)
+                dieSound.Play();
 
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<ActionScheduler>().CancelCurrentAction();
@@ -127,7 +134,7 @@ namespace RPG.GameplayCore.Attributes
             }
 
             if (_currentHealthPoints.Value == 0)
-                Die();
+                Die(false);
         }
 
         /// <summary>

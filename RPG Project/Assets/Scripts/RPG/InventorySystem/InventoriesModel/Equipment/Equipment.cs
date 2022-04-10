@@ -81,12 +81,14 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
 
             foreach (var pair in equippedItemsForSerialization)
             {
-                var item = (EquippableItem) InventoryItem.GetFromID(pair.Value);
+                var item = InventoryItem.GetFromID(pair.Value) as EquippableItem;
                 if (item != null)
                 {
                     _equippedItems[pair.Key] = item;
                 }
             }
+            
+            OnEquipmentUpdated?.Invoke();
         }
     }
 }

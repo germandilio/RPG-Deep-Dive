@@ -95,8 +95,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83069f538d9e0604a8bed52715d594c0, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1012f58a33331d24882571b8b0c4af2a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -116,6 +116,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InventoryItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 919244863525494543, guid: 1973af7fc3e1d2b428983f58906580be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1479817b46f87f9428532d529bce2a3e,
+        type: 3}
+    - target: {fileID: 919244863525494543, guid: 1973af7fc3e1d2b428983f58906580be,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919244863525494543, guid: 1973af7fc3e1d2b428983f58906580be,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1847210799765944866, guid: 1973af7fc3e1d2b428983f58906580be,
         type: 3}
@@ -224,6 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178997106646080975, guid: 1973af7fc3e1d2b428983f58906580be,
         type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178997106646080975, guid: 1973af7fc3e1d2b428983f58906580be,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
@@ -231,6 +252,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178997106646080975, guid: 1973af7fc3e1d2b428983f58906580be,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1973af7fc3e1d2b428983f58906580be, type: 3}

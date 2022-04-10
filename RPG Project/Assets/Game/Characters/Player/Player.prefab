@@ -228,6 +228,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19ff972ec6859b48870488d7b1e81b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2517780494083737203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514922550692331347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde8f7d98b9d46d384d07234094e0635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDistance: 1.5
+  dropsLibrary: {fileID: 0}
+  spawningDelay: 0
 --- !u!114 &6033717484151990859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,19 +301,6 @@ MonoBehaviour:
     hotspot: {x: 0, y: 0}
   maxDeviationFromRaycastToNavMesh: 1
   raycastInfelicity: 0.3
---- !u!114 &2517780494083737203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6514922550692331347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cde8f7d98b9d46d384d07234094e0635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnDistance: 1.5
 --- !u!1001 &2669362155555264324
 PrefabInstance:
   m_ObjectHideFlags: 0

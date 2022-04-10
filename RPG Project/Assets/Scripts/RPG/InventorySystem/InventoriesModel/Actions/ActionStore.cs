@@ -64,7 +64,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
         {
             if (_dockedItems.ContainsKey(index))
             {
-                if (object.ReferenceEquals(item, _dockedItems[index].item))
+                if (ReferenceEquals(item, _dockedItems[index].item))
                     _dockedItems[index].number += number;
             }
             else
@@ -121,7 +121,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             var actionItem = item as ActionItem;
             if (!actionItem) return 0;
 
-            if (_dockedItems.ContainsKey(index) && !object.ReferenceEquals(item, _dockedItems[index].item))
+            if (_dockedItems.ContainsKey(index) && !ReferenceEquals(item, _dockedItems[index].item))
                 return 0;
 
             if (actionItem.IsConsumable)

@@ -6,12 +6,15 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
     public enum EquipLocation
     {
         Helmet,
+        Shoulders,
+        Bracers,
+        Pants,
         Necklace,
-        Body,
-        Trousers,
+        Chest,
+        Gloves,
         Boots,
         Weapon,
         Shield,
-        Gloves,
+        Trinket
     }
 }

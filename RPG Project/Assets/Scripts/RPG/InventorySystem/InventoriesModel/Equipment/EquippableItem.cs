@@ -14,7 +14,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
         [InspectorName("Allowed Equipment Slot")]
         [Tooltip("Where are we allowed to put this item.")]
         [SerializeField]
-        private EquipLocation allowedEquipLocation = EquipLocation.Weapon;
+        private EquipLocation allowedEquipLocation;
 
         public EquipLocation AllowedEquipLocation => allowedEquipLocation;
     }
