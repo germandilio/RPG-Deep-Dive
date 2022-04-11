@@ -31,8 +31,8 @@ namespace RPG.GameplayCore.Control
 
         private Mover _mover;
         private Health _healthSystem;
-
-        private bool _interactingWithUI = false;
+        
+        private bool _interactingWithUI;
 
 
         public void SetCursor(CursorType type)

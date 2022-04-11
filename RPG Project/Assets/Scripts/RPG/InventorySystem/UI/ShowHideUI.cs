@@ -17,7 +17,10 @@ namespace RPG.InventorySystem.UI
 
         void Update()
         {
-            if (Input.GetKeyDown(toggleKey) || Input.GetKeyDown(KeyCode.Escape))
+            if (uiContainer.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+                uiContainer.SetActive(false);
+            
+            if (Input.GetKeyDown(toggleKey))
                 uiContainer.SetActive(!uiContainer.activeSelf);
         }
     }
