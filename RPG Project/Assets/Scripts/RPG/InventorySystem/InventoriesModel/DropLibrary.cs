@@ -112,10 +112,10 @@ namespace RPG.InventorySystem.InventoriesModel
             return null;
         }
 
-        private static T GetByLevel<T>(T[] values, int level)
+        private static T GetByLevel<T>(IReadOnlyList<T> values, int level)
         {
-            if (values.Length == 0 || level <= 0) return default;
-            if (level > values.Length) return values[values.Length - 1];
+            if (values.Count == 0 || level <= 0) return default;
+            if (level > values.Count) return values[values.Count - 1];
             return values[level];
         }
     }

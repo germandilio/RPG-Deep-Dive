@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
@@ -228,7 +228,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 4092453846218209720}
+      objectReference: {fileID: 481305633108868979}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: DisableOnDeath
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
@@ -279,6 +279,11 @@ PrefabInstance:
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2074114066537885967}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -322,12 +327,32 @@ PrefabInstance:
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: RPG.GameplayCore.Movement.Mover, Assembly-CSharp
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4092453846218209720}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisableOnDeath
       objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
@@ -338,6 +363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.GameplayCore.Movement.Mover, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
@@ -357,6 +387,11 @@ PrefabInstance:
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: onRestoreStateWhenDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
@@ -510,6 +545,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89becfb712bc92440b14f98c069a05d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &481305633108868979 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9215672144092484720, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8739608985402960643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2074114066537885967
 MonoBehaviour:
   m_ObjectHideFlags: 0

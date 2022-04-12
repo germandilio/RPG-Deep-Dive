@@ -15,7 +15,7 @@ namespace RPG.GameplayCore.Control
 
         public bool HandleRaycast(PlayerController interactController)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && _pickup.CanBePickedUp())
             {
                 _pickup.PickupItem();
             }

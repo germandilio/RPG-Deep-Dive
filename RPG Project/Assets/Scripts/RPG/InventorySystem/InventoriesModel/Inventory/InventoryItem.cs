@@ -76,10 +76,10 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         /// <returns>Reference to the pickup object spawned.</returns>
         public Pickup SpawnPickup(Vector3 position, int number)
         {
-            var pickup = Instantiate(this.pickup);
-            pickup.transform.position = position;
-            pickup.Setup(this, number);
-            return pickup;
+            var newPickup = Instantiate(this.pickup);
+            newPickup.transform.position = position;
+            newPickup.Setup(this, number);
+            return newPickup;
         }
 
 

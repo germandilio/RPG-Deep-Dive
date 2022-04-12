@@ -24,7 +24,6 @@ namespace SavingSystem
             Dictionary<string, object> state = new Dictionary<string, object>();
             foreach (ISavable savableComponent in GetComponents<ISavable>())
             {
-                Debug.Log(savableComponent.GetType().ToString());
                 state[savableComponent.GetType().ToString()] = savableComponent.CaptureState();
             }
 

@@ -27,9 +27,10 @@ namespace RPG.GameplayCore.Attributes
         [InspectorName("Die event (without sound)")]
         private UnityEvent onDie;
 
+        [Tooltip("This event will be called when restoring state if character health = 0")]
         [SerializeField]
-        private AudioSource dieSound;
-        
+        private UnityEvent onRestoreStateWhenDeath;
+
         private BaseStats _baseStats;
 
         private LazyValue<float> _currentHealthPoints;
@@ -90,7 +91,7 @@ namespace RPG.GameplayCore.Attributes
 
             if (_currentHealthPoints.Value == 0)
             {
-                Die(true);
+                Die(false);
                 AwardXpToInstigator();
             }
         }
@@ -104,18 +105,20 @@ namespace RPG.GameplayCore.Attributes
             _instigator.GetComponent<Experience>()?.AwardXp(pointToAdd);
         }
 
-        private void Die(bool withSound)
+        /// <summary>
+        /// </summary>
+        /// <param name="restoringMode">True - if death event called to restore death state, otherwise false</param>
+        private void Die(bool restoringMode)
         {
             if (IsDead) return;
 
             _animator.SetTrigger(DeadId);
             IsDead = true;
 
-            //play die effect
-            onDie?.Invoke();
-            
-            if (withSound)
-                dieSound.Play();
+            if (!restoringMode)
+                onDie?.Invoke();
+            else
+                onRestoreStateWhenDeath?.Invoke();
 
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<ActionScheduler>().CancelCurrentAction();
@@ -134,7 +137,7 @@ namespace RPG.GameplayCore.Attributes
             }
 
             if (_currentHealthPoints.Value == 0)
-                Die(false);
+                Die(true);
         }
 
         /// <summary>

@@ -47,7 +47,7 @@ namespace RPG.InventorySystem.InventoriesModel.Pickups
 
         private void DestroyPickup()
         {
-            if (GetPickup())
+            if (GetPickup() != null)
             {
                 Destroy(GetPickup().gameObject);
             }
