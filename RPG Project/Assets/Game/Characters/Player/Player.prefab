@@ -73,6 +73,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
+      propertyPath: healEffect
+      value: 
+      objectReference: {fileID: 4457794563333857998, guid: 56db831bfe7a4496382a5091b505dc49,
+        type: 3}
+    - target: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}

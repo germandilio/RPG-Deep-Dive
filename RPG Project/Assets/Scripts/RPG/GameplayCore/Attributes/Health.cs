@@ -31,6 +31,9 @@ namespace RPG.GameplayCore.Attributes
         [SerializeField]
         private UnityEvent onRestoreStateWhenDeath;
 
+        [SerializeField]
+        private GameObject healEffect;
+
         private BaseStats _baseStats;
 
         private LazyValue<float> _currentHealthPoints;
@@ -155,6 +158,11 @@ namespace RPG.GameplayCore.Attributes
 
             _currentHealthPoints.Value = Mathf.Min(_currentHealthPoints.Value + healthPointsToRestore, maxHealth);
             return true;
+        }
+
+        public void ShowHealEffect()
+        {
+            Instantiate(healEffect, transform);
         }
     }
 }

@@ -15,7 +15,12 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             if (user == null) return false;
             
             Health health = user.GetComponent<Health>();
-            return health.Heal(healthPointsToRestore);
+            bool wasHealed = health.Heal(healthPointsToRestore);
+            
+            if (wasHealed)
+                health.ShowHealEffect();
+            
+            return wasHealed;
         }
     }
 }

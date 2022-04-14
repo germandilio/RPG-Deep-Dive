@@ -108,7 +108,7 @@ MonoBehaviour:
     - statsType: 2
       valuesOnLevels:
       - 200
-      - 500
+      - 450
       - 700
       - 7000
       - 9000
