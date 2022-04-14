@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace RPG.GameplayCore.Attributes
 {
-    public class HealthBar : MonoBehaviour
+    public class InGameHealthBar : MonoBehaviour
     {
         [SerializeField]
         private RectTransform barTransform;

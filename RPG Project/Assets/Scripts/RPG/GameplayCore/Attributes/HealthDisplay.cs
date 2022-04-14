@@ -1,27 +1,17 @@
-using UnityEngine;
-using UnityEngine.UI;
+using Utils.UI;
 
 namespace RPG.GameplayCore.Attributes
 {
-    [RequireComponent(typeof(Text))]
-    public class HealthDisplay : MonoBehaviour
+    public class HealthDisplay : DisplayBar<Health>
     {
-        private Health _health;
-
-        private Text _displayText;
-
-        private void Awake()
+        protected override float GetCurrentValue()
         {
-            _health = GameObject.FindWithTag("Player")?.GetComponent<Health>();
-            _displayText = GetComponent<Text>();
+            return playerStatComponent.GetCurrentHealth();
         }
 
-        private void Update()
+        protected override float GetMaxValue()
         {
-            if (_health == null)
-                _displayText.text = "N/A";
-            else
-                _displayText.text = $"{_health.GetCurrentHealth():0}/{_health.GetMaxHealth():0}";
+            return playerStatComponent.GetMaxHealth();
         }
     }
 }

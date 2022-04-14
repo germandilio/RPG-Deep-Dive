@@ -1,19 +1,19 @@
 using RPG.GameplayCore.Stats;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace RPG.GameplayCore.Attributes
 {
-    [RequireComponent(typeof(Text))]
+    [RequireComponent(typeof(TextMeshProUGUI))]
     public class LevelDisplay : MonoBehaviour
     {
         private BaseStats _playerBaseStats;
-        private Text _displayText;
+        private TextMeshProUGUI _displayText;
 
         private void Awake()
         {
             _playerBaseStats = GameObject.FindWithTag("Player")?.GetComponent<BaseStats>();
-            _displayText = GetComponent<Text>();
+            _displayText = GetComponent<TextMeshProUGUI>();
         }
 
         private void Update()
