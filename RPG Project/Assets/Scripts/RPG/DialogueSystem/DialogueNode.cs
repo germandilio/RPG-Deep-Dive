@@ -10,10 +10,10 @@ namespace RPG.DialogueSystem
         [Header("Internal properties:")]
         [SerializeField]
         private string id;
-        
+
         [SerializeField]
         private Rect rect;
-        
+
         [Header("Dialog Properties:")]
         [TextArea]
         [SerializeField]
@@ -21,13 +21,13 @@ namespace RPG.DialogueSystem
 
         [SerializeField]
         private List<string> childNodes;
-        
+
         public string Text
         {
             get => text;
             set => text = value;
         }
-        
+
         public string ID
         {
             get => id;

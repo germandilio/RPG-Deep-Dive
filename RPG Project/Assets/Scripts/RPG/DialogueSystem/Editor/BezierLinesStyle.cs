@@ -5,7 +5,7 @@ namespace RPG.DialogueSystem.Editor
     public class BezierLinesStyle
     {
         private float _coefficientOfBezierCurvature = 0.6f;
-        
+
         public float Width { get; } = 3.5f;
 
         public Color Color { get; } = new Color(245, 251, 239);
@@ -39,7 +39,7 @@ namespace RPG.DialogueSystem.Editor
             bezierOffset.x *= _coefficientOfBezierCurvature;
 
             if (startPos.x > endPos.x)
-                return  endPos + bezierOffset;
+                return endPos + bezierOffset;
             else
                 return endPos - bezierOffset;
         }

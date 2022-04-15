@@ -12,7 +12,7 @@ namespace RPG.DialogueSystem
         private readonly Dictionary<string, DialogueNode> _nodeLookup = new Dictionary<string, DialogueNode>();
 
         public IReadOnlyList<DialogueNode> Nodes => nodes;
-        
+
 #if UNITY_EDITOR
         private void Awake()
         {
@@ -32,6 +32,7 @@ namespace RPG.DialogueSystem
                 {
                     Debug.LogError("Node IDs should be unique");
                 }
+
                 _nodeLookup[dialogueNode.ID] = dialogueNode;
             }
         }
@@ -40,8 +41,8 @@ namespace RPG.DialogueSystem
         {
             foreach (string childNodeID in parent.ChildNodes)
             {
-                if (_nodeLookup.ContainsKey(childNodeID)) 
-                    yield return _nodeLookup[childNodeID]; 
+                if (_nodeLookup.ContainsKey(childNodeID))
+                    yield return _nodeLookup[childNodeID];
             }
         }
     }

@@ -7,14 +7,14 @@ namespace RPG.DialogueSystem.Editor
     public class DialogueEditor : EditorWindow
     {
         private BezierLinesStyle _linesStyle;
-        
+
         private Dialogue _selectedDialogue;
 
         private GUIStyle _nodeStyle;
 
         private DialogueNode _draggingNode;
         private Vector2 _positionOffset;
-        
+
         [MenuItem("Window/Dialogue Editor")]
         private static void ShowWindow()
         {
@@ -33,23 +33,27 @@ namespace RPG.DialogueSystem.Editor
 
             ProcessEvents();
 
-            EditorGUILayout.LabelField($"Dialogue name: {_selectedDialogue.name}");
+            EditorGUILayout.LabelField($"Dialogue file: {_selectedDialogue.name}");
+            foreach (var dialogueNode in _selectedDialogue.Nodes)
+            {
+                DrawConnections(dialogueNode);
+            }
+
             foreach (var dialogueNode in _selectedDialogue.Nodes)
             {
                 OnGUINode(dialogueNode);
-                DrawConnections(dialogueNode);
             }
         }
 
         private void DrawConnections(DialogueNode node)
         {
             Vector3 startPos = _linesStyle.GetStartPos(node.Rect);
-            
+
             foreach (var childNode in _selectedDialogue.GetAllChildNodes(node))
             {
                 Vector3 endPos = _linesStyle.GetEndPos(childNode.Rect);
 
-                Handles.DrawBezier(startPos, endPos, 
+                Handles.DrawBezier(startPos, endPos,
                     _linesStyle.GetStartTangent(startPos, endPos), _linesStyle.GetEndTangent(startPos, endPos),
                     _linesStyle.Color, null, _linesStyle.Width);
             }
@@ -65,13 +69,14 @@ namespace RPG.DialogueSystem.Editor
             }
             else if (Event.current.type == EventType.MouseUp && _draggingNode != null)
             {
-                _draggingNode = null; 
-            } else if (Event.current.type == EventType.MouseDrag && _draggingNode != null)
+                _draggingNode = null;
+            }
+            else if (Event.current.type == EventType.MouseDrag && _draggingNode != null)
             {
                 Undo.RecordObject(_selectedDialogue, "Update nodes position");
 
                 var newRect = new Rect(Event.current.mousePosition - _positionOffset, _draggingNode.Rect.size);
-                _draggingNode.Rect = newRect; 
+                _draggingNode.Rect = newRect;
                 Repaint();
             }
         }
@@ -79,16 +84,16 @@ namespace RPG.DialogueSystem.Editor
         private DialogueNode GetNodeUnderCursor(Vector2 cursorPosition)
         {
             DialogueNode topFoundNode = null;
-            foreach (var dialogueNode in _selectedDialogue.Nodes) 
+            foreach (var dialogueNode in _selectedDialogue.Nodes)
             {
                 if (dialogueNode.Rect.Contains(cursorPosition))
                 {
                     topFoundNode = dialogueNode;
                 }
             }
-            
+
             return topFoundNode;
-        } 
+        }
 
         private void OnGUINode(DialogueNode dialogueNode)
         {
@@ -108,19 +113,13 @@ namespace RPG.DialogueSystem.Editor
                 dialogueNode.ID = newID;
             }
 
-
-            foreach (var childNode in _selectedDialogue.GetAllChildNodes(dialogueNode))
-            {
-                EditorGUILayout.LabelField(childNode.ID);
-            }
-            
             GUILayout.EndArea();
         }
 
         private void OnSelectionChange()
         {
             var dialog = Selection.activeObject as Dialogue;
-            
+
             // allow switching only between Dialog ScriptableObjects
             if (dialog != null)
             {

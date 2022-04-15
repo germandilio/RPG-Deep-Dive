@@ -93,7 +93,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             if (isPerformed)
             {
                 if (_dockedItems[index].item.IsConsumable)
-                    RemoveItems(index, 1);   
+                    RemoveItems(index, 1);
             }
 
             return isPerformed;
