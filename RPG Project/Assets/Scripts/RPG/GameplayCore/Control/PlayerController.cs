@@ -31,7 +31,7 @@ namespace RPG.GameplayCore.Control
 
         private Mover _mover;
         private Health _healthSystem;
-        
+
         private bool _interactingWithUI;
 
 
@@ -99,12 +99,12 @@ namespace RPG.GameplayCore.Control
         {
             if (Input.GetMouseButtonUp(0))
                 _interactingWithUI = false;
-            
+
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 if (Input.GetMouseButtonDown(0))
                     _interactingWithUI = true;
-                
+
                 SetCursor(CursorType.OnUI);
                 return true;
             }

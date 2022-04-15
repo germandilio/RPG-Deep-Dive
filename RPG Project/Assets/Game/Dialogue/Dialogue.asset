@@ -14,20 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - id: erwrw
-    text: 111111
-    childNodes: []
-    position:
+    rect:
       serializedVersion: 2
-      x: 10
-      y: 20
+      x: 135
+      y: 134
       width: 200
-      height: 130
+      height: 120
+    text: 111111
+    childNodes:
+    - dwed
   - id: dwed
+    rect:
+      serializedVersion: 2
+      x: 481
+      y: 329
+      width: 200
+      height: 120
     text: text
     childNodes: []
-    position:
-      serializedVersion: 2
-      x: 10
-      y: 220
-      width: 200
-      height: 130

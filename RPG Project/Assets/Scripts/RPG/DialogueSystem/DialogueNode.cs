@@ -7,19 +7,20 @@ namespace RPG.DialogueSystem
     [Serializable]
     public class DialogueNode
     {
+        [Header("Internal properties:")]
         [SerializeField]
         private string id;
         
-        [Header("Configuration:")]
+        [SerializeField]
+        private Rect rect;
+        
+        [Header("Dialog Properties:")]
         [TextArea]
         [SerializeField]
         private string text;
 
         [SerializeField]
-        private List<DialogueNode> childNodes;
-
-        [SerializeField]
-        private Rect position;
+        private List<string> childNodes;
         
         public string Text
         {
@@ -33,18 +34,20 @@ namespace RPG.DialogueSystem
             set => id = value;
         }
 
-        public Rect Position
+        public Rect Rect
         {
-            get => position;
-            set => position = value;
+            get => rect;
+            set => rect = value;
         }
+
+        public IEnumerable<string> ChildNodes => childNodes;
 
         public DialogueNode()
         {
             text = String.Empty;
             id = String.Empty;
 
-            position = new Rect(0, 0, 200, 200);
+            rect = new Rect(0, 0, 200, 120);
         }
     }
 }

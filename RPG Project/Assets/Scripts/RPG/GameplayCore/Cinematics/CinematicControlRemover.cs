@@ -11,7 +11,7 @@ namespace RPG.GameplayCore.Cinematics
     {
         [SerializeField]
         private KeyCode keyToPause = KeyCode.End;
-        
+
         private PlayableDirector _playableDirector;
         private LazyValue<bool> _isPlaying;
 
@@ -30,7 +30,6 @@ namespace RPG.GameplayCore.Cinematics
         {
             _playableDirector.played += OnDisablePlayerControl;
             _playableDirector.stopped += OnStopCutscene;
-
         }
 
         private void OnDisable()

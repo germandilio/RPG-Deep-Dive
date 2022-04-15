@@ -10,7 +10,7 @@ namespace RPG.InventorySystem.UI
         [Range(0, 1)]
         [SerializeField]
         private float initScrollbarPosition = 1f;
-        
+
         private Scrollbar _scrollBar;
 
         private void Awake()

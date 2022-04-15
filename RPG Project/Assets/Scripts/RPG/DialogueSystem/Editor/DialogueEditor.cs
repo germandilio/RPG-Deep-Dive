@@ -1,4 +1,3 @@
-using System;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
@@ -7,9 +6,14 @@ namespace RPG.DialogueSystem.Editor
 {
     public class DialogueEditor : EditorWindow
     {
+        private BezierLinesStyle _linesStyle;
+        
         private Dialogue _selectedDialogue;
 
         private GUIStyle _nodeStyle;
+
+        private DialogueNode _draggingNode;
+        private Vector2 _positionOffset;
         
         [MenuItem("Window/Dialogue Editor")]
         private static void ShowWindow()
@@ -27,17 +31,68 @@ namespace RPG.DialogueSystem.Editor
                 return;
             }
 
+            ProcessEvents();
+
             EditorGUILayout.LabelField($"Dialogue name: {_selectedDialogue.name}");
-            
             foreach (var dialogueNode in _selectedDialogue.Nodes)
             {
                 OnGUINode(dialogueNode);
+                DrawConnections(dialogueNode);
             }
         }
 
+        private void DrawConnections(DialogueNode node)
+        {
+            Vector3 startPos = _linesStyle.GetStartPos(node.Rect);
+            
+            foreach (var childNode in _selectedDialogue.GetAllChildNodes(node))
+            {
+                Vector3 endPos = _linesStyle.GetEndPos(childNode.Rect);
+
+                Handles.DrawBezier(startPos, endPos, 
+                    _linesStyle.GetStartTangent(startPos, endPos), _linesStyle.GetEndTangent(startPos, endPos),
+                    _linesStyle.Color, null, _linesStyle.Width);
+            }
+        }
+
+        private void ProcessEvents()
+        {
+            if (Event.current.type == EventType.MouseDown && _draggingNode == null)
+            {
+                _draggingNode = GetNodeUnderCursor(Event.current.mousePosition);
+                if (_draggingNode != null)
+                    _positionOffset = Event.current.mousePosition - _draggingNode.Rect.position;
+            }
+            else if (Event.current.type == EventType.MouseUp && _draggingNode != null)
+            {
+                _draggingNode = null; 
+            } else if (Event.current.type == EventType.MouseDrag && _draggingNode != null)
+            {
+                Undo.RecordObject(_selectedDialogue, "Update nodes position");
+
+                var newRect = new Rect(Event.current.mousePosition - _positionOffset, _draggingNode.Rect.size);
+                _draggingNode.Rect = newRect; 
+                Repaint();
+            }
+        }
+
+        private DialogueNode GetNodeUnderCursor(Vector2 cursorPosition)
+        {
+            DialogueNode topFoundNode = null;
+            foreach (var dialogueNode in _selectedDialogue.Nodes) 
+            {
+                if (dialogueNode.Rect.Contains(cursorPosition))
+                {
+                    topFoundNode = dialogueNode;
+                }
+            }
+            
+            return topFoundNode;
+        } 
+
         private void OnGUINode(DialogueNode dialogueNode)
         {
-            GUILayout.BeginArea(dialogueNode.Position, _nodeStyle);
+            GUILayout.BeginArea(dialogueNode.Rect, _nodeStyle);
             EditorGUI.BeginChangeCheck();
 
             EditorGUILayout.LabelField("ID:", EditorStyles.whiteLabel);
@@ -52,6 +107,12 @@ namespace RPG.DialogueSystem.Editor
                 dialogueNode.Text = newText;
                 dialogueNode.ID = newID;
             }
+
+
+            foreach (var childNode in _selectedDialogue.GetAllChildNodes(dialogueNode))
+            {
+                EditorGUILayout.LabelField(childNode.ID);
+            }
             
             GUILayout.EndArea();
         }
@@ -59,6 +120,7 @@ namespace RPG.DialogueSystem.Editor
         private void OnSelectionChange()
         {
             var dialog = Selection.activeObject as Dialogue;
+            
             // allow switching only between Dialog ScriptableObjects
             if (dialog != null)
             {
@@ -78,6 +140,8 @@ namespace RPG.DialogueSystem.Editor
                 padding = new RectOffset(15, 15, 15, 15),
                 border = new RectOffset(10, 10, 10, 10),
             };
+
+            _linesStyle = new BezierLinesStyle();
         }
 
         [OnOpenAsset]

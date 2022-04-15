@@ -48,7 +48,7 @@ namespace RPG.InventorySystem.InventoriesModel
                 Debug.LogError("Drops Library is not set");
                 return;
             }
-            
+
             Invoke(nameof(Drop), spawningDelay);
         }
 

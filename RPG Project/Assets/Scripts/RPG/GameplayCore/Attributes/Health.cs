@@ -151,7 +151,7 @@ namespace RPG.GameplayCore.Attributes
         public bool Heal(float healthPointsToRestore)
         {
             float maxHealth = GetMaxHealth();
-            if (Mathf.Approximately(_currentHealthPoints.Value , maxHealth))
+            if (Mathf.Approximately(_currentHealthPoints.Value, maxHealth))
             {
                 return false;
             }

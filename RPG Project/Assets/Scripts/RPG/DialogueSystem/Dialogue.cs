@@ -8,6 +8,10 @@ namespace RPG.DialogueSystem
     {
         [SerializeField]
         private List<DialogueNode> nodes = new List<DialogueNode>();
+
+        private readonly Dictionary<string, DialogueNode> _nodeLookup = new Dictionary<string, DialogueNode>();
+
+        public IReadOnlyList<DialogueNode> Nodes => nodes;
         
 #if UNITY_EDITOR
         private void Awake()
@@ -19,6 +23,26 @@ namespace RPG.DialogueSystem
         }
 #endif
 
-        public IReadOnlyCollection<DialogueNode> Nodes => nodes;
+        private void OnValidate()
+        {
+            _nodeLookup.Clear();
+            foreach (var dialogueNode in nodes)
+            {
+                if (_nodeLookup.ContainsKey(dialogueNode.ID))
+                {
+                    Debug.LogError("Node IDs should be unique");
+                }
+                _nodeLookup[dialogueNode.ID] = dialogueNode;
+            }
+        }
+
+        public IEnumerable<DialogueNode> GetAllChildNodes(DialogueNode parent)
+        {
+            foreach (string childNodeID in parent.ChildNodes)
+            {
+                if (_nodeLookup.ContainsKey(childNodeID)) 
+                    yield return _nodeLookup[childNodeID]; 
+            }
+        }
     }
 }

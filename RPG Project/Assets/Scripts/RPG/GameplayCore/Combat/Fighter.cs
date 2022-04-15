@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using JetBrains.Annotations;
 using UnityEngine;
 using RPG.GameplayCore.Attributes;
 using RPG.GameplayCore.Core;
@@ -162,7 +163,7 @@ namespace RPG.GameplayCore.Combat
             _animator.SetTrigger(StopAttackingId);
             _target = null;
         }
-
+        
         /// <summary>
         /// Animation event to apply damage
         /// </summary>

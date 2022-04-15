@@ -11,7 +11,7 @@ namespace Utils.UI
     public abstract class DisplayBar<T> : MonoBehaviour where T : MonoBehaviour
     {
         private Slider _displayBar;
-        
+
         protected T playerStatComponent;
 
         private void Awake()

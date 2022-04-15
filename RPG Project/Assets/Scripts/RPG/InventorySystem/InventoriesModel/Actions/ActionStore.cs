@@ -16,6 +16,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
     {
         public event Action OnStoreUpdated;
 
+        // TODO replace with different types of actions and portions
         private readonly Dictionary<int, DockedItemSlot> _dockedItems = new Dictionary<int, DockedItemSlot>();
 
         private class DockedItemSlot
