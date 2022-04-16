@@ -1,16 +1,13 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace RPG.DialogueSystem
 {
-    [Serializable]
-    public class DialogueNode
+    public class DialogueNode : ScriptableObject
     {
         [Header("Internal properties:")]
-        [SerializeField]
-        private string id;
-
         [SerializeField]
         private Rect rect;
 
@@ -20,34 +17,62 @@ namespace RPG.DialogueSystem
         private string text;
 
         [SerializeField]
-        private List<string> childNodes;
+        private List<string> childNodes = new List<string>();
+
+        public IReadOnlyList<string> ChildNodes => childNodes;
+
+        /// <summary>
+        /// DialogueNode unique identifier.
+        /// </summary>
+        public string ID => name;
 
         public string Text
         {
             get => text;
-            set => text = value;
+            set
+            {
+                Undo.RecordObject(this, "Modify text of dialogue node");
+                text = value;
+            }
         }
 
-        public string ID
-        {
-            get => id;
-            set => id = value;
-        }
-
-        public Rect Rect
-        {
-            get => rect;
-            set => rect = value;
-        }
-
-        public IEnumerable<string> ChildNodes => childNodes;
+        public Rect Rect => rect;
 
         public DialogueNode()
         {
             text = String.Empty;
-            id = String.Empty;
+            rect = new Rect(20, 20 , 250, 120);
+        }
 
-            rect = new Rect(0, 0, 200, 120);
+        public void SetPosition(Vector2 newPosition)
+        {
+            Undo.RecordObject(this, "Update node position");
+            
+            if (newPosition.x >= 0f && newPosition.y >= 0f)
+                rect.position = newPosition;
+        }
+        
+        public void AddChild(string childID)
+        {
+            if (childID != name && !childNodes.Contains(childID))
+                childNodes.Add(childID);
+        }
+
+        public void RemoveChild(string removeID)
+        {
+            childNodes.Remove(removeID);
+        }
+
+        public bool IsParentFor(string childID)
+        {
+            if (childID == null) return false;
+            
+            return childNodes.Contains(childID);
+        }
+        
+        private void OnEnable()
+        {
+            name = Guid.NewGuid().ToString();
         }
     }
 }
