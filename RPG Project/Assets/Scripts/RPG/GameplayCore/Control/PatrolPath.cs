@@ -9,6 +9,7 @@ namespace RPG.GameplayCore.Control
 
         private int _currentIndex;
 
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             for (int i = 0; i < transform.childCount; i++)
@@ -18,7 +19,8 @@ namespace RPG.GameplayCore.Control
                 int nextIndex = NextIndex(i);
                 Gizmos.DrawLine(GetWaypoint(i), GetWaypoint(nextIndex));
             }
-        }
+        }  
+#endif
 
         public Vector3 GetCurrentWaypoint() => GetWaypoint(_currentIndex);
 

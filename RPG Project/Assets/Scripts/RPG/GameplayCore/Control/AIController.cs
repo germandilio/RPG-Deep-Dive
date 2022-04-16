@@ -153,6 +153,7 @@ namespace RPG.GameplayCore.Control
 
         public void Aggravate() => _timeSinceAggravated = 0f;
 
+#if UNITY_EDITOR
         /// <summary>
         /// Draw enemy chasing sphere 
         /// </summary>
@@ -160,6 +161,7 @@ namespace RPG.GameplayCore.Control
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, chaseDistance);
-        }
+        }  
+#endif
     }
 }
