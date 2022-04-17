@@ -34,12 +34,6 @@ namespace RPG.InventorySystem
                 UseInActionSlot(4);
             else if (Input.GetKeyDown(KeyCode.Alpha6))
                 UseInActionSlot(5);
-            else if (Input.GetKeyDown(KeyCode.Alpha7))
-                UseInActionSlot(6);
-            else if (Input.GetKeyDown(KeyCode.Alpha8))
-                UseInActionSlot(7);
-            else if (Input.GetKeyDown(KeyCode.Alpha9))
-                UseInActionSlot(8);
         }
 
         /// <summary>

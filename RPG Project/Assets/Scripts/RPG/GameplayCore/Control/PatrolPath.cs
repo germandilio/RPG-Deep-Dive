@@ -19,7 +19,7 @@ namespace RPG.GameplayCore.Control
                 int nextIndex = NextIndex(i);
                 Gizmos.DrawLine(GetWaypoint(i), GetWaypoint(nextIndex));
             }
-        }  
+        }
 #endif
 
         public Vector3 GetCurrentWaypoint() => GetWaypoint(_currentIndex);

@@ -18,9 +18,6 @@ namespace RPG.DialogueSystem.Editor
         private Dialogue selectedDialogue;
 
         [NonSerialized]
-        private readonly Vector2 _offsetForNewNode = new Vector2(350, 50);
-
-        [NonSerialized]
         private Vector2 _scrollPosition;
 
         [NonSerialized]
@@ -30,7 +27,10 @@ namespace RPG.DialogueSystem.Editor
         private BezierLinesStyle _linesStyle;
 
         [NonSerialized]
-        private GUIStyle _nodeStyle;
+        private GUIStyle _enemyNodeStyle;
+
+        [NonSerialized]
+        private GUIStyle _playerNodeStyle;
 
         [NonSerialized]
         private DialogueNode _draggingNode;
@@ -73,26 +73,15 @@ namespace RPG.DialogueSystem.Editor
         {
             if (selectedDialogue == null)
             {
-                var style = EditorStyles.centeredGreyMiniLabel;
-                style.alignment = TextAnchor.MiddleCenter;
-                style.fontSize = 12;
-                style.margin = new RectOffset(10, 10, 30, 10);
-                
-                EditorGUILayout.LabelField(NoDialogueSelected, style);
+                CreateNoDialogueLabel();
                 return;
             }
 
             ProcessEvents();
 
             EditorGUILayout.LabelField(FileNameLabel + selectedDialogue.name, EditorStyles.whiteLargeLabel);
-
             _scrollPosition = GUILayout.BeginScrollView(_scrollPosition);
-
-            var canvas = GUILayoutUtility.GetRect(_viewportSize.x, _viewportSize.y);
-            var texCoords = new Rect(0f, 0f, _viewportSize.x / BackgroundImageSize,
-                _viewportSize.y / BackgroundImageSize);
-
-            GUI.DrawTextureWithTexCoords(canvas, _background, texCoords);
+            SetBackground();
 
             foreach (var dialogueNode in selectedDialogue.Nodes)
             {
@@ -106,19 +95,44 @@ namespace RPG.DialogueSystem.Editor
 
             EditorGUILayout.EndScrollView();
 
-            if (_parentForCreatingNode != null)
-            {
-                var newNode = selectedDialogue.CreateNode(_parentForCreatingNode);
+            HandleCreateNode();
+            HandleDeleteNode();
+        }
 
-                newNode.SetPosition(_parentForCreatingNode.Rect.position + _offsetForNewNode);
-                _parentForCreatingNode = null;
-            }
+        private void SetBackground()
+        {
+            var canvas = GUILayoutUtility.GetRect(_viewportSize.x, _viewportSize.y);
+            var texCoords = new Rect(0f, 0f, _viewportSize.x / BackgroundImageSize,
+                _viewportSize.y / BackgroundImageSize);
+            GUI.DrawTextureWithTexCoords(canvas, _background, texCoords);
+        }
 
+        private void HandleDeleteNode()
+        {
             if (_deletingNode != null)
             {
                 selectedDialogue.DeleteNode(_deletingNode);
                 _deletingNode = null;
             }
+        }
+
+        private void HandleCreateNode()
+        {
+            if (_parentForCreatingNode != null)
+            {
+                selectedDialogue.AddNode(_parentForCreatingNode);
+                _parentForCreatingNode = null;
+            }
+        }
+
+        private static void CreateNoDialogueLabel()
+        {
+            var style = EditorStyles.centeredGreyMiniLabel;
+            style.alignment = TextAnchor.MiddleCenter;
+            style.fontSize = 12;
+            style.margin = new RectOffset(10, 10, 30, 10);
+
+            EditorGUILayout.LabelField(NoDialogueSelected, style);
         }
 
         private void DrawConnections(DialogueNode node)
@@ -167,6 +181,9 @@ namespace RPG.DialogueSystem.Editor
             }
         }
 
+        /// <summary>
+        /// Scroll canvas when node's rectangle reaches the end of the scrollView.
+        /// </summary>
         private void ScrollCanvasOnDraggingNode()
         {
             if (_draggingNode == null || OutOfCanvas(_draggingNode)) return;
@@ -221,18 +238,19 @@ namespace RPG.DialogueSystem.Editor
 
         private void OnGUINode(DialogueNode dialogueNode)
         {
-            GUILayout.BeginArea(dialogueNode.Rect, _nodeStyle);
+            GUIStyle style = GetStyle(dialogueNode.Speaker);
+            GUILayout.BeginArea(dialogueNode.Rect, style);
 
-            EditorGUI.BeginChangeCheck();
+            EditorGUILayout.LabelField("Text", EditorStyles.whiteLabel);
+            // TODO scrollable text area
+            //pos = GUILayout.BeginScrollView(pos, GUILayout.Height(50));
+            //dialogueNode.Text = EditorGUILayout.TextArea(dialogueNode.Text, EditorStyles.textArea,
+            //        GUILayout.ExpandHeight(true));
+            //GUILayout.EndScrollView();
 
-            EditorGUILayout.LabelField("Text:", EditorStyles.whiteLabel);
-            var newText = EditorGUILayout.TextArea(dialogueNode.Text, EditorStyles.textArea);
-
-            if (EditorGUI.EndChangeCheck())
-            {
-                dialogueNode.Text = newText;
-            }
-
+            dialogueNode.Text = EditorGUILayout.TextArea(dialogueNode.Text, EditorStyles.textArea,
+                GUILayout.Height(50), GUILayout.ExpandHeight(false));
+            dialogueNode.Speaker = (Speaker) EditorGUILayout.EnumPopup("Speaker", dialogueNode.Speaker);
             GUILayout.Space(15);
 
             GUILayout.BeginHorizontal();
@@ -247,6 +265,15 @@ namespace RPG.DialogueSystem.Editor
 
             GUILayout.EndHorizontal();
             GUILayout.EndArea();
+        }
+
+        private GUIStyle GetStyle(Speaker dialogueSpeaker)
+        {
+            if (dialogueSpeaker == Speaker.Player)
+                return _playerNodeStyle;
+            if (dialogueSpeaker == Speaker.Enemy)
+                return _enemyNodeStyle;
+            return null;
         }
 
         private void OnGUILinkingButtons(DialogueNode dialogueNode)
@@ -302,11 +329,21 @@ namespace RPG.DialogueSystem.Editor
 
         private void OnEnable()
         {
-            _nodeStyle = new GUIStyle
+            _enemyNodeStyle = new GUIStyle
             {
                 normal =
                 {
                     background = EditorGUIUtility.Load("node0") as Texture2D
+                },
+                padding = new RectOffset(15, 15, 15, 15),
+                border = new RectOffset(10, 10, 10, 10),
+            };
+
+            _playerNodeStyle = new GUIStyle
+            {
+                normal =
+                {
+                    background = EditorGUIUtility.Load("node5") as Texture2D
                 },
                 padding = new RectOffset(15, 15, 15, 15),
                 border = new RectOffset(10, 10, 10, 10),

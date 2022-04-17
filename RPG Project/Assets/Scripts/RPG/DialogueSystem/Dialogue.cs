@@ -12,13 +12,10 @@ namespace RPG.DialogueSystem
         private List<DialogueNode> nodes = new List<DialogueNode>();
 
         private readonly Dictionary<string, DialogueNode> _nodeLookup = new Dictionary<string, DialogueNode>();
- 
-        public IReadOnlyList<DialogueNode> Nodes => nodes;
 
-        private void OnValidate()
-        {
-            UpdateLookup();
-        }
+        private Vector2 _offsetForNewNode = new Vector2(350, 50);
+
+        public IReadOnlyList<DialogueNode> Nodes => nodes;
 
         public IEnumerable<DialogueNode> GetAllChildNodes(DialogueNode parent)
         {
@@ -29,19 +26,20 @@ namespace RPG.DialogueSystem
             }
         }
 
-        public DialogueNode CreateNode(DialogueNode parentNode)
+        #region Editor code
+
+#if UNITY_EDITOR
+        private void OnValidate()
         {
-            var newNode = CreateInstance<DialogueNode>();
-            Undo.RegisterCreatedObjectUndo(newNode, "Create new node");
-            
-            if (parentNode != null)
-                parentNode.AddChild(newNode.ID);
-            
-            Undo.RecordObject(this, "Added dialog node");
-            nodes.Add(newNode);
             UpdateLookup();
-            
-            return newNode;
+        }
+
+        public void AddNode(DialogueNode parentNode)
+        {
+            var newNode = CreateNode(parentNode);
+            Undo.RegisterCreatedObjectUndo(newNode, "Create new node");
+            Undo.RecordObject(this, "Added dialog node");
+            AddToDialogue(newNode);
         }
 
         public void DeleteNode(DialogueNode node)
@@ -52,10 +50,36 @@ namespace RPG.DialogueSystem
 
             foreach (var dialogueNode in nodes)
             {
-                dialogueNode.RemoveChild(node.ID); 
+                dialogueNode.RemoveChild(node.ID);
             }
-            
+
             Undo.DestroyObjectImmediate(node);
+        }
+
+        private DialogueNode CreateNode(DialogueNode parentNode)
+        {
+            var newNode = CreateInstance<DialogueNode>();
+
+            newNode.name = $"Node {nodes.Count}";
+            if (parentNode != null)
+            {
+                parentNode.AddChild(newNode.ID);
+                newNode.SetPosition(parentNode.Rect.position + _offsetForNewNode);
+                _offsetForNewNode += new Vector2(0, 10);
+                newNode.SetAlternativeSpeaker(parentNode.Speaker);
+            }
+            else
+            {
+                newNode.SetDefaultSpeaker();
+            }
+
+            return newNode;
+        }
+
+        private void AddToDialogue(DialogueNode newNode)
+        {
+            nodes.Add(newNode);
+            UpdateLookup();
         }
 
         private void UpdateLookup()
@@ -71,13 +95,17 @@ namespace RPG.DialogueSystem
                 _nodeLookup[dialogueNode.ID] = dialogueNode;
             }
         }
+#endif
 
-        public void OnBeforeSerialize()
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
         {
 #if UNITY_EDITOR
             if (nodes.Count == 0)
-                CreateNode(null);
-            
+            {
+                var newNode = CreateNode(null);
+                AddToDialogue(newNode);
+            }
+
             if (AssetDatabase.GetAssetPath(this) != String.Empty)
             {
                 foreach (var node in nodes)
@@ -87,12 +115,14 @@ namespace RPG.DialogueSystem
                         AssetDatabase.AddObjectToAsset(node, this);
                     }
                 }
-            }      
+            }
 #endif
         }
 
-        public void OnAfterDeserialize()
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
         {
         }
+
+        #endregion
     }
 }

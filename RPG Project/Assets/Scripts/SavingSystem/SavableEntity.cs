@@ -49,6 +49,8 @@ namespace SavingSystem
             }
         }
 
+        #region Editor code
+
 #if UNITY_EDITOR
         private void Update()
         {
@@ -67,6 +69,8 @@ namespace SavingSystem
             GlobalLookup[property.stringValue] = this;
         }
 #endif
+
+        #endregion
 
         private bool IsUnique(string candidate)
         {
