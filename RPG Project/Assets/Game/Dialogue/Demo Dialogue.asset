@@ -15,14 +15,13 @@ MonoBehaviour:
   id: 68bedca8-1c15-49c8-9388-66f2cbc1f6e2
   rect:
     serializedVersion: 2
-    x: 1077.9072
-    y: 551
+    x: 1071.8295
+    y: 565.3704
     width: 250
     height: 150
   speaker: 1
-  text: "\u0417\u0430\u043F\u043B\u0430\u0442\u0438\u0438\u0438\u0438\u0442\u0435
-    \u0432\u0435\u0434\u044C\u043C\u0430\u043A\u0443 \u0447\u0435\u043A\u0430\u0430\u0430\u0430\u043D\u043E\u0439
-    \u043C\u043E\u043D\u0435\u0435\u0435\u0435\u0442\u043E\u0439..."
+  text: "\u0412\u0435\u0434\u044C\u043C\u0430\u043A\u0443\u0443\u0443\u0443 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u0435
+    \u0447\u0435\u043A\u0430\u0430\u0430\u0430\u043D\u043E\u0439 \u043C\u043E\u043D\u0435\u0435\u0435\u0435\u0442\u043E\u0439..."
   childNodes: []
 --- !u!114 &-7365640140073944848
 MonoBehaviour:
@@ -85,7 +84,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 720
-    y: 638
+    y: 643
     width: 250
     height: 160
   speaker: 1
@@ -197,8 +196,8 @@ MonoBehaviour:
   id: 4889d15c-6ed1-45bd-92da-eeb37a15737e
   rect:
     serializedVersion: 2
-    x: 1076
-    y: 402
+    x: 1075
+    y: 409
     width: 250
     height: 150
   speaker: 0
@@ -220,8 +219,8 @@ MonoBehaviour:
   id: 48f02023-902f-4ea2-b2d7-13c87a1ee4db
   rect:
     serializedVersion: 2
-    x: 377
-    y: 64
+    x: 384
+    y: 91
     width: 250
     height: 160
   speaker: 0
@@ -272,8 +271,8 @@ MonoBehaviour:
   id: 9a61abac-1442-4422-b7d0-936cae852ad3
   rect:
     serializedVersion: 2
-    x: 54
-    y: 100
+    x: 38
+    y: 160
     width: 250
     height: 160
   speaker: 1

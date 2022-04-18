@@ -32,20 +32,33 @@ namespace RPG.DialogueSystem
         /// </summary>
         public string ID => id;
 
+        public Rect Rect => rect;
+        
+        /// <summary>
+        /// Speaker for this phrase.
+        /// </summary>
+        /// <remarks>Readonly in game mode</remarks>
         public Speaker Speaker
         {
             get => speaker;
+#if UNITY_EDITOR
             set
             {
                 Undo.RecordObject(this, "Modify text of dialogue node");
                 speaker = value;
                 EditorUtility.SetDirty(this);
-            }
+            }      
+#endif
         }
 
+        /// <summary>
+        /// Text of dialogue phrase.
+        /// </summary>
+        /// <remarks>Readonly in game mode</remarks>
         public string Text
         {
             get => text;
+#if UNITY_EDITOR
             set
             {
                 if (value != text)
@@ -54,10 +67,9 @@ namespace RPG.DialogueSystem
                     text = value;
                     EditorUtility.SetDirty(this);
                 }
-            }
+            }      
+#endif
         }
-
-        public Rect Rect => rect;
 
         public DialogueNode()
         {
@@ -75,7 +87,7 @@ namespace RPG.DialogueSystem
         }
 
         #region Editor code
-
+        
 #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)
         {

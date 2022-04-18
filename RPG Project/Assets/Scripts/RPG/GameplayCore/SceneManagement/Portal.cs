@@ -20,7 +20,7 @@ namespace RPG.GameplayCore.SceneManagement
         private Scenes destinationScene;
 
         [SerializeField]
-        private DestinationPortal destinationPortal;
+        private PortalLocation portalLocation;
 
         [SerializeField]
         private Transform spawnPoint;
@@ -101,7 +101,7 @@ namespace RPG.GameplayCore.SceneManagement
             foreach (Portal portal in FindObjectsOfType<Portal>())
             {
                 if (portal == this) continue;
-                if (destinationPortal != portal.destinationPortal) continue;
+                if (portalLocation != portal.portalLocation) continue;
 
                 return portal;
             }
