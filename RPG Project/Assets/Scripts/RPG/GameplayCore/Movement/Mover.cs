@@ -8,7 +8,6 @@ using Utils;
 namespace RPG.GameplayCore.Movement
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ActionScheduler))]
-    [RequireComponent(typeof(Health))]
     public class Mover : MonoBehaviour, IAction, ISavable
     {
         [SerializeField]

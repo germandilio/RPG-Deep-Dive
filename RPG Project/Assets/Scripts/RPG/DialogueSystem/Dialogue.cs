@@ -17,11 +17,49 @@ namespace RPG.DialogueSystem
 
         public IReadOnlyList<DialogueNode> Nodes => nodes;
 
+        public DialogueNode RootNode
+        {
+            get
+            {
+                if (nodes.Count > 0)
+                    return nodes[0];
+
+                return null;
+            }
+        }
+
         public IEnumerable<DialogueNode> GetAllChildNodes(DialogueNode parent)
         {
+            if (parent == null)
+                yield break;
+
             foreach (string childNodeID in parent.ChildNodes)
             {
                 if (_nodeLookup.ContainsKey(childNodeID))
+                    yield return _nodeLookup[childNodeID];
+            }
+        }
+
+        public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode parent)
+        {
+            if (parent == null)
+                yield break;
+
+            foreach (string childNodeID in parent.ChildNodes)
+            {
+                if (_nodeLookup.ContainsKey(childNodeID) && _nodeLookup[childNodeID].Speaker == Speaker.Player)
+                    yield return _nodeLookup[childNodeID];
+            }
+        }
+
+        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode parent)
+        {
+            if (parent == null)
+                yield break;
+
+            foreach (string childNodeID in parent.ChildNodes)
+            {
+                if (_nodeLookup.ContainsKey(childNodeID) && _nodeLookup[childNodeID].Speaker != Speaker.Player)
                     yield return _nodeLookup[childNodeID];
             }
         }

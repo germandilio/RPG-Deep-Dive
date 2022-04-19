@@ -15,13 +15,16 @@ MonoBehaviour:
   id: 68bedca8-1c15-49c8-9388-66f2cbc1f6e2
   rect:
     serializedVersion: 2
-    x: 1071.8295
-    y: 565.3704
+    x: 1809.8295
+    y: 577.3704
     width: 250
     height: 150
   speaker: 1
+  speakerName: 
   text: "\u0412\u0435\u0434\u044C\u043C\u0430\u043A\u0443\u0443\u0443\u0443 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u0435
     \u0447\u0435\u043A\u0430\u0430\u0430\u0430\u043D\u043E\u0439 \u043C\u043E\u043D\u0435\u0435\u0435\u0435\u0442\u043E\u0439..."
+  onEnterActions: []
+  onExitActions: []
   childNodes: []
 --- !u!114 &-7365640140073944848
 MonoBehaviour:
@@ -38,58 +41,17 @@ MonoBehaviour:
   id: f480a20e-a29a-4b09-a382-ad15b77bf02a
   rect:
     serializedVersion: 2
-    x: 1074
-    y: 101
+    x: 1007
+    y: 258
     width: 250
     height: 150
   speaker: 0
+  speakerName: 
   text: "\u0414\u0430\u0430\u0430, \u043F\u044B\u043B\u044C\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0451\u043D\u043A\u0430"
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 9194f235-67ba-4d12-838b-32e86083204c
---- !u!114 &-4637617475370216939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
-  m_Name: Node 5
-  m_EditorClassIdentifier: 
-  id: 9e61c76f-6793-4811-a0aa-9a2a4d8c5634
-  rect:
-    serializedVersion: 2
-    x: 719
-    y: 483
-    width: 250
-    height: 160
-  speaker: 1
-  text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 4"
-  childNodes: []
---- !u!114 &-3416918402855954251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
-  m_Name: Node 9
-  m_EditorClassIdentifier: 
-  id: 6cec5a0c-d019-4eb5-86e4-7a5624896c1b
-  rect:
-    serializedVersion: 2
-    x: 720
-    y: 643
-    width: 250
-    height: 160
-  speaker: 1
-  text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 5"
-  childNodes: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,12 +70,11 @@ MonoBehaviour:
   - {fileID: 2018774330367523571}
   - {fileID: -7365640140073944848}
   - {fileID: 2846200931413356861}
-  - {fileID: -4637617475370216939}
   - {fileID: 4560760311032441766}
-  - {fileID: -3416918402855954251}
   - {fileID: 7248760130416672034}
   - {fileID: 5658341694996171819}
   - {fileID: -8487202470693263154}
+  - {fileID: 7840527093401819938}
 --- !u!114 &2018774330367523571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +95,10 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
+  speakerName: 
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 2"
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - f480a20e-a29a-4b09-a382-ad15b77bf02a
 --- !u!114 &2846200931413356861
@@ -157,7 +121,10 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
+  speakerName: 
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 3"
+  onEnterActions: []
+  onExitActions: []
   childNodes: []
 --- !u!114 &4560760311032441766
 MonoBehaviour:
@@ -179,8 +146,12 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
+  speakerName: 
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 1"
-  childNodes: []
+  onEnterActions: []
+  onExitActions: []
+  childNodes:
+  - 1fe1bd9a-3aaf-470d-8492-b55ffbefb9bf
 --- !u!114 &5658341694996171819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,12 +167,15 @@ MonoBehaviour:
   id: 4889d15c-6ed1-45bd-92da-eeb37a15737e
   rect:
     serializedVersion: 2
-    x: 1075
-    y: 409
+    x: 1537
+    y: 481
     width: 250
     height: 150
   speaker: 0
+  speakerName: 
   text: "\u0422\u0430\u043A \u0442\u044B \u043C\u043D\u0435 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C?"
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 68bedca8-1c15-49c8-9388-66f2cbc1f6e2
 --- !u!114 &6615174966176282685
@@ -220,17 +194,19 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 384
-    y: 91
+    y: 90
     width: 250
     height: 160
   speaker: 0
+  speakerName: 
   text: "\u041D\u0443 \u0434\u0430\u0432\u0430\u0439)"
+  onEnterActions: []
+  onExitActions:
+  - "Exit \u043D\u0443 \u0434\u0430\u0432\u0430\u0439"
   childNodes:
   - f2c6da31-d8ed-45b1-a9be-09247d615924
   - b53e012a-870c-45ec-b24f-58e44361f91e
-  - 9e61c76f-6793-4811-a0aa-9a2a4d8c5634
   - 0f557358-2dc7-48bc-90ad-1a339d4e45aa
-  - 6cec5a0c-d019-4eb5-86e4-7a5624896c1b
 --- !u!114 &7248760130416672034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,16 +222,46 @@ MonoBehaviour:
   id: 9194f235-67ba-4d12-838b-32e86083204c
   rect:
     serializedVersion: 2
-    x: 1074.44
-    y: 255
+    x: 1272.44
+    y: 385
     width: 250
     height: 150
   speaker: 1
+  speakerName: 
   text: "\u0410 \u0442\u044B \u0447\u0442\u043E \u0434\u0443\u043C\u0430\u043B, \u044F
     \u0442\u0435\u0431\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A
     \u0434\u0430\u043C \u0442\u044B\u0441\u044F\u0447\u0443 \u043C\u043E\u043D\u0435\u0442?"
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 4889d15c-6ed1-45bd-92da-eeb37a15737e
+--- !u!114 &7840527093401819938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 11
+  m_EditorClassIdentifier: 
+  id: 1fe1bd9a-3aaf-470d-8492-b55ffbefb9bf
+  rect:
+    serializedVersion: 2
+    x: 1069
+    y: 68
+    width: 250
+    height: 150
+  speaker: 0
+  speakerName: 
+  text: "\u041D\u0435\u0435... \u043A\u0430\u043A\u043E\u0435-\u0442\u043E \u0441\u043A\u0443\u0447\u043D\u043E\u0435
+    \u0443 \u0442\u0435\u0431\u044F \u0437\u0430\u0434\u0430\u043D\u0438\u0435. \u041D\u0435
+    \u0445\u043E\u0447\u0443 \u044F \u0435\u0433\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C."
+  onEnterActions: []
+  onExitActions: []
+  childNodes: []
 --- !u!114 &8716335305229306952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +282,11 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
+  speakerName: 
   text: "\u0423 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
     \u0435\u0441\u0442\u044C \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
+  onEnterActions:
+  - Welcoming
+  onExitActions: []
   childNodes:
   - 48f02023-902f-4ea2-b2d7-13c87a1ee4db

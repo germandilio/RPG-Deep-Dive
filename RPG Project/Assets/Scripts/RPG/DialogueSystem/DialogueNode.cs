@@ -18,14 +18,29 @@ namespace RPG.DialogueSystem
         [SerializeField]
         private Speaker speaker;
 
+        [SerializeField]
+        private string speakerName;
+
         [TextArea]
         [SerializeField]
         private string text;
 
         [SerializeField]
+        private List<string> onEnterActions;
+
+        [SerializeField]
+        private List<string> onExitActions;
+
+        [SerializeField]
         private List<string> childNodes = new List<string>();
 
         public IReadOnlyList<string> ChildNodes => childNodes;
+
+        public IReadOnlyList<string> OnEnterActions => onEnterActions;
+
+        public IReadOnlyList<string> OnExitActions => onExitActions;
+
+        public bool HasChildren => childNodes.Count > 0;
 
         /// <summary>
         /// DialogueNode unique identifier.
@@ -33,7 +48,7 @@ namespace RPG.DialogueSystem
         public string ID => id;
 
         public Rect Rect => rect;
-        
+
         /// <summary>
         /// Speaker for this phrase.
         /// </summary>
@@ -47,9 +62,11 @@ namespace RPG.DialogueSystem
                 Undo.RecordObject(this, "Modify text of dialogue node");
                 speaker = value;
                 EditorUtility.SetDirty(this);
-            }      
+            }
 #endif
         }
+
+        public string SpeakerName => speakerName;
 
         /// <summary>
         /// Text of dialogue phrase.
@@ -67,7 +84,7 @@ namespace RPG.DialogueSystem
                     text = value;
                     EditorUtility.SetDirty(this);
                 }
-            }      
+            }
 #endif
         }
 
@@ -87,7 +104,7 @@ namespace RPG.DialogueSystem
         }
 
         #region Editor code
-        
+
 #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)
         {
