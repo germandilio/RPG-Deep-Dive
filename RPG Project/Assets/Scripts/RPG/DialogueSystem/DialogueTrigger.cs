@@ -6,17 +6,15 @@ namespace RPG.DialogueSystem
     public class DialogueTrigger : MonoBehaviour
     {
         [SerializeField]
-        private string action;
+        private DialogueAction action;
 
         [SerializeField]
-        private UnityEvent onTrigger;
+        private UnityEvent triggered;
 
-        public void Trigger(string actionToTrigger)
+        public void Trigger(DialogueAction actionToTrigger)
         {
-            if (actionToTrigger == null) return;
-
             if (actionToTrigger == action)
-                onTrigger?.Invoke();
+                triggered?.Invoke();
         }
     }
 }

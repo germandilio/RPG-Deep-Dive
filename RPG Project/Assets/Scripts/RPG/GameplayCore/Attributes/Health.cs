@@ -21,15 +21,15 @@ namespace RPG.GameplayCore.Attributes
         }
 
         [SerializeField]
-        private TakeDamageEvent onTakeDamage;
+        private TakeDamageEvent tookDamage;
 
         [SerializeField]
         [InspectorName("Die event (without sound)")]
-        private UnityEvent onDie;
+        private UnityEvent died;
 
         [Tooltip("This event will be called when restoring state if character health = 0")]
         [SerializeField]
-        private UnityEvent onRestoreStateWhenDeath;
+        private UnityEvent restoringDeath;
 
         [SerializeField]
         private GameObject healEffect;
@@ -62,12 +62,12 @@ namespace RPG.GameplayCore.Attributes
 
         private void OnEnable()
         {
-            _baseStats.OnLevelUp += NormalizeHealthPercentage;
+            _baseStats.LevelUp += NormalizeHealthPercentage;
         }
 
         private void OnDisable()
         {
-            _baseStats.OnLevelUp -= NormalizeHealthPercentage;
+            _baseStats.LevelUp -= NormalizeHealthPercentage;
         }
 
         public float GetCurrentHealth()
@@ -90,7 +90,7 @@ namespace RPG.GameplayCore.Attributes
             _instigator = instigator;
 
             _currentHealthPoints.Value = Math.Max(_currentHealthPoints.Value - damage, 0);
-            onTakeDamage?.Invoke(damage);
+            tookDamage?.Invoke(damage);
 
             if (_currentHealthPoints.Value == 0)
             {
@@ -119,9 +119,9 @@ namespace RPG.GameplayCore.Attributes
             IsDead = true;
 
             if (!restoringMode)
-                onDie?.Invoke();
+                died?.Invoke();
             else
-                onRestoreStateWhenDeath?.Invoke();
+                restoringDeath?.Invoke();
 
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<ActionScheduler>().CancelCurrentAction();

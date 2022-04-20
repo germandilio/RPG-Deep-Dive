@@ -23,7 +23,7 @@ namespace RPG.InventorySystem.UI.Inventories
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             _actionStore = player.GetComponent<ActionStore>();
-            _actionStore.OnStoreUpdated += UpdateIcon;
+            _actionStore.StoreUpdated += UpdateIcon;
         }
 
 

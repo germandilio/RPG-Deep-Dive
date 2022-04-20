@@ -18,7 +18,7 @@ namespace RPG.InventorySystem.UI.Inventories
         private void Awake()
         {
             _playerInventory = Inventory.GetPlayerInventory();
-            _playerInventory.OnInventoryUpdated += Redraw;
+            _playerInventory.InventoryUpdated += Redraw;
         }
 
         private void Start()

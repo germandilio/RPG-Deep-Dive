@@ -20,11 +20,10 @@ MonoBehaviour:
     width: 250
     height: 150
   speaker: 1
-  speakerName: 
   text: "\u0412\u0435\u0434\u044C\u043C\u0430\u043A\u0443\u0443\u0443\u0443 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u0435
     \u0447\u0435\u043A\u0430\u0430\u0430\u0430\u043D\u043E\u0439 \u043C\u043E\u043D\u0435\u0435\u0435\u0435\u0442\u043E\u0439..."
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes: []
 --- !u!114 &-7365640140073944848
 MonoBehaviour:
@@ -46,10 +45,9 @@ MonoBehaviour:
     width: 250
     height: 150
   speaker: 0
-  speakerName: 
   text: "\u0414\u0430\u0430\u0430, \u043F\u044B\u043B\u044C\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0451\u043D\u043A\u0430"
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - 9194f235-67ba-4d12-838b-32e86083204c
 --- !u!114 &11400000
@@ -75,6 +73,7 @@ MonoBehaviour:
   - {fileID: 5658341694996171819}
   - {fileID: -8487202470693263154}
   - {fileID: 7840527093401819938}
+  - {fileID: 8229078965513226623}
 --- !u!114 &2018774330367523571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,10 +94,9 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  speakerName: 
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 2"
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - f480a20e-a29a-4b09-a382-ad15b77bf02a
 --- !u!114 &2846200931413356861
@@ -121,10 +119,9 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  speakerName: 
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 3"
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes: []
 --- !u!114 &4560760311032441766
 MonoBehaviour:
@@ -146,10 +143,9 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  speakerName: 
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 1"
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - 1fe1bd9a-3aaf-470d-8492-b55ffbefb9bf
 --- !u!114 &5658341694996171819
@@ -172,10 +168,9 @@ MonoBehaviour:
     width: 250
     height: 150
   speaker: 0
-  speakerName: 
   text: "\u0422\u0430\u043A \u0442\u044B \u043C\u043D\u0435 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C?"
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - 68bedca8-1c15-49c8-9388-66f2cbc1f6e2
 --- !u!114 &6615174966176282685
@@ -198,11 +193,9 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 0
-  speakerName: 
   text: "\u041D\u0443 \u0434\u0430\u0432\u0430\u0439)"
-  onEnterActions: []
-  onExitActions:
-  - "Exit \u043D\u0443 \u0434\u0430\u0432\u0430\u0439"
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - f2c6da31-d8ed-45b1-a9be-09247d615924
   - b53e012a-870c-45ec-b24f-58e44361f91e
@@ -227,12 +220,11 @@ MonoBehaviour:
     width: 250
     height: 150
   speaker: 1
-  speakerName: 
   text: "\u0410 \u0442\u044B \u0447\u0442\u043E \u0434\u0443\u043C\u0430\u043B, \u044F
     \u0442\u0435\u0431\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A
     \u0434\u0430\u043C \u0442\u044B\u0441\u044F\u0447\u0443 \u043C\u043E\u043D\u0435\u0442?"
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - 4889d15c-6ed1-45bd-92da-eeb37a15737e
 --- !u!114 &7840527093401819938
@@ -255,12 +247,37 @@ MonoBehaviour:
     width: 250
     height: 150
   speaker: 0
-  speakerName: 
   text: "\u041D\u0435\u0435... \u043A\u0430\u043A\u043E\u0435-\u0442\u043E \u0441\u043A\u0443\u0447\u043D\u043E\u0435
     \u0443 \u0442\u0435\u0431\u044F \u0437\u0430\u0434\u0430\u043D\u0438\u0435. \u041D\u0435
     \u0445\u043E\u0447\u0443 \u044F \u0435\u0433\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C."
-  onEnterActions: []
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 00000000
+  childNodes:
+  - 1a04cf2d-4710-4cbf-87d9-c6c2b9a4ef3b
+--- !u!114 &8229078965513226623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 10
+  m_EditorClassIdentifier: 
+  id: 1a04cf2d-4710-4cbf-87d9-c6c2b9a4ef3b
+  rect:
+    serializedVersion: 2
+    x: 1419
+    y: 118
+    width: 250
+    height: 150
+  speaker: 1
+  text: "\u0422\u044B \u043C\u0435\u043D\u044F \u0440\u0430\u0437\u043E\u0437\u043B\u0438\u0442
+    \u0438 \u0442\u044B \u0437\u0430 \u044D\u0442\u043E \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C!"
+  onEnterActions: 
+  onExitActions: 
   childNodes: []
 --- !u!114 &8716335305229306952
 MonoBehaviour:
@@ -282,11 +299,9 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  speakerName: 
   text: "\u0423 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
     \u0435\u0441\u0442\u044C \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
-  onEnterActions:
-  - Welcoming
-  onExitActions: []
+  onEnterActions: 
+  onExitActions: 
   childNodes:
   - 48f02023-902f-4ea2-b2d7-13c87a1ee4db

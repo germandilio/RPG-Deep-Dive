@@ -8,9 +8,14 @@ namespace RPG.DialogueSystem
         [SerializeField]
         private Dialogue dialogue;
 
+        [SerializeField]
+        private string speakerName;
+
+        public string SpeakerName => speakerName;
+
         public bool HandleRaycast(PlayerController interactController)
         {
-            if (dialogue == null) return false;
+            if (dialogue == null || !enabled) return false;
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -28,7 +33,7 @@ namespace RPG.DialogueSystem
             return CursorType.Dialogue;
         }
 
-        public void TriggerActions(string actionToTrigger)
+        public void TriggerActions(DialogueAction actionToTrigger)
         {
             var triggers = FindObjectsOfType<DialogueTrigger>();
 

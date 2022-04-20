@@ -53,7 +53,7 @@ namespace RPG.GameplayCore.Combat
             _equipment = GetComponent<Equipment>();
             if (_equipment != null)
             {
-                _equipment.OnEquipmentUpdated += UpdateWeapon;
+                _equipment.EquipmentUpdated += UpdateWeapon;
             }
         }
 

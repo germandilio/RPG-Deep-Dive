@@ -14,7 +14,7 @@ namespace RPG.DialogueSystem
         private DialogueNode _currentNode;
         private bool _isChoiceState;
 
-        public event Action OnDialogueStateUpdated;
+        public event Action DialogueStateUpdated;
 
         public string Text
         {
@@ -31,12 +31,13 @@ namespace RPG.DialogueSystem
         {
             get
             {
-                if (_currentNode == null)
+                if (_currentAiSpeaker == null)
                     return String.Empty;
 
-                if (string.IsNullOrWhiteSpace(_currentNode.SpeakerName))
-                    return _currentNode.Speaker.ToString();
-                return _currentNode.SpeakerName;
+                if (string.IsNullOrWhiteSpace(_currentAiSpeaker.SpeakerName))
+                    return String.Empty;
+
+                return _currentAiSpeaker.SpeakerName;
             }
         }
 
@@ -55,7 +56,7 @@ namespace RPG.DialogueSystem
             {
                 _isChoiceState = true;
                 TriggerExitActions();
-                OnDialogueStateUpdated?.Invoke();
+                DialogueStateUpdated?.Invoke();
                 return;
             }
 
@@ -65,7 +66,7 @@ namespace RPG.DialogueSystem
             int randomResponseIndex = Random.Range(0, children.Length);
 
             _currentNode = children[randomResponseIndex];
-            OnDialogueStateUpdated?.Invoke();
+            DialogueStateUpdated?.Invoke();
 
             TriggerEnterActions();
         }
@@ -75,8 +76,11 @@ namespace RPG.DialogueSystem
             _currentNode = choiceNode;
             _isChoiceState = false;
 
-            TriggerEnterActions();
-            Next();
+            if (HasNext)
+            {
+                TriggerEnterActions();
+                Next();
+            }
         }
 
         public void StartDialogue(DialogueAISpeaker speaker, Dialogue dialogue)
@@ -84,7 +88,7 @@ namespace RPG.DialogueSystem
             _currentDialogue = dialogue;
             _currentAiSpeaker = speaker;
             _currentNode = _currentDialogue.RootNode;
-            OnDialogueStateUpdated?.Invoke();
+            DialogueStateUpdated?.Invoke();
             TriggerEnterActions();
         }
 
@@ -97,7 +101,7 @@ namespace RPG.DialogueSystem
             _currentNode = null;
             _isChoiceState = false;
 
-            OnDialogueStateUpdated?.Invoke();
+            DialogueStateUpdated?.Invoke();
         }
 
         private void TriggerEnterActions()
@@ -114,14 +118,11 @@ namespace RPG.DialogueSystem
             TriggerActions(_currentNode.OnExitActions);
         }
 
-        private void TriggerActions(IEnumerable<string> actionsList)
+        private void TriggerActions(IEnumerable<DialogueAction> actionsList)
         {
             foreach (var action in actionsList)
             {
-                if (!string.IsNullOrWhiteSpace(action))
-                {
-                    _currentAiSpeaker.TriggerActions(action);
-                }
+                _currentAiSpeaker.TriggerActions(action);
             }
         }
     }

@@ -39,20 +39,20 @@ namespace RPG.DialogueSystem.UI
 
         private void Start()
         {
-            UpdateUI();
+            OnDialogueUpdated();
         }
 
         private void OnEnable()
         {
-            _playerDialogue.OnDialogueStateUpdated += UpdateUI;
+            _playerDialogue.DialogueStateUpdated += OnDialogueUpdated;
         }
 
         private void OnDisable()
         {
-            _playerDialogue.OnDialogueStateUpdated -= UpdateUI;
+            _playerDialogue.DialogueStateUpdated -= OnDialogueUpdated;
         }
 
-        private void UpdateUI()
+        private void OnDialogueUpdated()
         {
             uiBodyContainer.SetActive(_playerDialogue.Active);
             if (!_playerDialogue.Active)

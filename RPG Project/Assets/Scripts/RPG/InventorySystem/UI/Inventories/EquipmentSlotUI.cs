@@ -24,7 +24,7 @@ namespace RPG.InventorySystem.UI.Inventories
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             _playerEquipment = player.GetComponent<Equipment>();
-            _playerEquipment.OnEquipmentUpdated += RedrawUI;
+            _playerEquipment.EquipmentUpdated += RedrawUI;
         }
 
         private void Start()

@@ -18,27 +18,24 @@ namespace RPG.DialogueSystem
         [SerializeField]
         private Speaker speaker;
 
-        [SerializeField]
-        private string speakerName;
-
         [TextArea]
         [SerializeField]
         private string text;
 
         [SerializeField]
-        private List<string> onEnterActions;
+        private List<DialogueAction> onEnterActions;
 
         [SerializeField]
-        private List<string> onExitActions;
+        private List<DialogueAction> onExitActions;
 
         [SerializeField]
         private List<string> childNodes = new List<string>();
 
         public IReadOnlyList<string> ChildNodes => childNodes;
 
-        public IReadOnlyList<string> OnEnterActions => onEnterActions;
+        public IReadOnlyList<DialogueAction> OnEnterActions => onEnterActions;
 
-        public IReadOnlyList<string> OnExitActions => onExitActions;
+        public IReadOnlyList<DialogueAction> OnExitActions => onExitActions;
 
         public bool HasChildren => childNodes.Count > 0;
 
@@ -65,8 +62,6 @@ namespace RPG.DialogueSystem
             }
 #endif
         }
-
-        public string SpeakerName => speakerName;
 
         /// <summary>
         /// Text of dialogue phrase.

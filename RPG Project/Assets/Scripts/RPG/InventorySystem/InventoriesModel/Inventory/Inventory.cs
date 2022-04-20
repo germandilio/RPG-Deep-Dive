@@ -12,7 +12,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
     /// </summary>
     public class Inventory : MonoBehaviour, ISavable
     {
-        public event Action OnInventoryUpdated;
+        public event Action InventoryUpdated;
 
         [Header("Inventory Configuration")]
         [Tooltip("Allowed size")]
@@ -58,7 +58,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             _slots[i].item = item;
             _slots[i].number += number;
 
-            OnInventoryUpdated?.Invoke();
+            InventoryUpdated?.Invoke();
             return true;
         }
 
@@ -103,7 +103,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                 _slots[slot].item = null;
             }
 
-            OnInventoryUpdated?.Invoke();
+            InventoryUpdated?.Invoke();
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
 
             _slots[slot].item = item;
             _slots[slot].number += number;
-            OnInventoryUpdated?.Invoke();
+            InventoryUpdated?.Invoke();
             return true;
         }
 
@@ -222,7 +222,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
                 _slots[i].number = slotStrings[i].number;
             }
 
-            OnInventoryUpdated?.Invoke();
+            InventoryUpdated?.Invoke();
         }
     }
 }

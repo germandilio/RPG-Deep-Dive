@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using JetBrains.Annotations;
 using RPG.GameplayCore.Attributes;
 using UnityEngine;
 using Utils;
@@ -33,7 +34,7 @@ namespace RPG.GameplayCore.Stats
 
         private LazyValue<int> _currentLevel;
 
-        public event Action OnLevelUp;
+        public event Action LevelUp;
 
         private void Awake()
         {
@@ -67,7 +68,7 @@ namespace RPG.GameplayCore.Stats
                 _currentLevel.Value = newLevel;
                 ShowLevelUpAffect();
 
-                OnLevelUp?.Invoke();
+                LevelUp?.Invoke();
             }
         }
 

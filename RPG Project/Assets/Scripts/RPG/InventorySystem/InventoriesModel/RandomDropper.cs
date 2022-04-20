@@ -41,7 +41,7 @@ namespace RPG.InventorySystem.InventoriesModel
         /// <remarks>
         /// Event function.
         /// </remarks>
-        public void RandomDrop()
+        public void OnRandomDrop()
         {
             if (dropsLibrary == null)
             {

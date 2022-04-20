@@ -78,7 +78,7 @@ namespace RPG.GameplayCore.Movement
         /// <remarks>
         /// Event function.
         /// </remarks>
-        public void DisableOnDeath()
+        public void OnDeathDisable()
         {
             _navMeshAgent.enabled = false;
         }
