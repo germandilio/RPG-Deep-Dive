@@ -52,7 +52,7 @@ namespace RPG.DialogueSystem.UI
             _playerDialogue.DialogueStateUpdated -= OnDialogueUpdated;
         }
 
-        private void OnDialogueUpdated()
+        protected virtual void OnDialogueUpdated()
         {
             uiBodyContainer.SetActive(_playerDialogue.Active);
             if (!_playerDialogue.Active)

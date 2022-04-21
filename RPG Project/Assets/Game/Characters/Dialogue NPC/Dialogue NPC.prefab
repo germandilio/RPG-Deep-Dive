@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 0de7a8e8847814427a91758bd98d0ff7, type: 2}
+  speakerName: 
 --- !u!114 &5190346510217832253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +186,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dfd64f09ff43b18d897044245ec7e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4441463410222646118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788206368550225562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02019617af74a43bb4e56180fac3ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questToGive: {fileID: 11400000, guid: ec814b661871445b494e555704b9c009, type: 2}
+--- !u!114 &1183093109252752397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788206368550225562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e916fc274844e288278dc597dac8cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 6
+  triggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4441463410222646118}
+        m_TargetAssemblyTypeName: RPG.GameplayCore.Quests.QuestGiver, Assembly-CSharp
+        m_MethodName: GiveQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &5880311151703162142
 PrefabInstance:
   m_ObjectHideFlags: 0

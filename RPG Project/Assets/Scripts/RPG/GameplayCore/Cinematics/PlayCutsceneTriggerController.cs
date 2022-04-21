@@ -1,12 +1,18 @@
 using SavingSystem;
 using UnityEngine;
 using UnityEngine.Playables;
+using Utils.UI.Hint;
 
 namespace RPG.GameplayCore.Cinematics
 {
     [RequireComponent(typeof(PlayableDirector), typeof(Collider))]
     public class PlayCutsceneTriggerController : MonoBehaviour, ISavable
     {
+        [Header("UI Settings")]
+        [Tooltip("Hint to display on cutscene start")]
+        [SerializeField]
+        private string hint;
+
         private bool _wasTriggered;
 
         private void OnTriggerEnter(Collider other)
@@ -17,6 +23,9 @@ namespace RPG.GameplayCore.Cinematics
             {
                 var playableDirector = GetComponent<PlayableDirector>();
                 playableDirector.Play();
+
+                HintSpawner.Spawn(hint);
+
                 _wasTriggered = true;
                 GetComponent<Collider>().enabled = false;
             }

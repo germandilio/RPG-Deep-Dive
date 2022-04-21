@@ -7,8 +7,8 @@ namespace RPG.DialogueSystem
         GiftInventoryItem,
         GiftEquipmentItem,
         GiftStatEquipmentItem,
-
-        GiftActionItem
+        GiftActionItem,
+        GiveQuest
         // TODO add with quests modifications
     }
 }

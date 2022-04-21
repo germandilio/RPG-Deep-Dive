@@ -96,7 +96,7 @@ MonoBehaviour:
   speaker: 1
   text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 2"
   onEnterActions: 
-  onExitActions: 
+  onExitActions: 06000000
   childNodes:
   - f480a20e-a29a-4b09-a382-ad15b77bf02a
 --- !u!114 &2846200931413356861
@@ -115,7 +115,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 719
-    y: 328
+    y: 340
     width: 250
     height: 160
   speaker: 1
