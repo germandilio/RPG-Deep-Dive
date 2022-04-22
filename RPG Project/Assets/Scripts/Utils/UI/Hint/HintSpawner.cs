@@ -37,6 +37,7 @@ namespace Utils.UI.Hint
         /// <param name="text">Text to display</param>
         public static void Spawn(string text)
         {
+            // TODO spawn with stack up to 4 hints
             if (string.IsNullOrWhiteSpace(text)) return;
 
             _spawnerInstance.SetupHint(text);

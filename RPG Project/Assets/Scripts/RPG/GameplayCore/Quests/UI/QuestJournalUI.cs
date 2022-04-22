@@ -1,3 +1,4 @@
+using System.Text;
 using RPG.GameplayCore.Quests.QuestsModel;
 using TMPro;
 using UnityEngine;
@@ -20,6 +21,9 @@ namespace RPG.GameplayCore.Quests.UI
         private TextMeshProUGUI rewardsTitle;
 
         [SerializeField]
+        private string noRewardsTitle;
+
+        [SerializeField]
         private Transform objectiveContainer;
 
         [SerializeField]
@@ -35,15 +39,13 @@ namespace RPG.GameplayCore.Quests.UI
 
         private void Start()
         {
-            if (questsDescriptionPanel != null)
-                questsDescriptionPanel.SetActive(false);
-
-            OnQuestJournalUpdated();
+            HideDescription();
         }
 
         private void OnEnable()
         {
             _questsJournal.QuestJournalUpdated += OnQuestJournalUpdated;
+            OnQuestJournalUpdated();
         }
 
         private void OnDisable()
@@ -53,12 +55,12 @@ namespace RPG.GameplayCore.Quests.UI
 
         protected virtual void OnQuestJournalUpdated()
         {
-            // foreach (Transform child in transform)
-            // {
-            //     Destroy(child.gameObject);
-            // }
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
             
-            transform.DetachChildren();
+            HideDescription();
 
             foreach (var questStatus in _questsJournal.QuestsStatuses)
             {
@@ -70,13 +72,43 @@ namespace RPG.GameplayCore.Quests.UI
 
         protected virtual void OnQuestOpening(QuestStatus questStatus)
         {
-            if (questStatus == null || AlreadyShown(questStatus.Quest)) return;
-
             questsDescriptionPanel.SetActive(true);
 
+            if (questStatus == null) return;
+            
             header.text = questStatus.Quest.Title;
-            rewardsTitle.text = questStatus.Quest.RewardTitle;
 
+            SetupObjectives(questStatus);
+            SetupRewards(questStatus);
+        }
+
+        private void SetupRewards(QuestStatus questStatus)
+        {
+            StringBuilder rewards = new StringBuilder();
+            foreach (var reward in questStatus.Rewards)
+            {
+                rewards.Append(reward.DisplayTitle);
+
+                if (reward.number > 1)
+                {
+                    rewards.Append(" (");
+                    rewards.Append(reward.number);
+                    rewards.Append(" шт.)");
+                }
+                
+                if (rewards.Length > 0)
+                    rewards.Append(",\n");
+                
+            }
+
+            if (rewards.Length == 0)
+                rewardsTitle.text = noRewardsTitle;
+            else
+                rewardsTitle.text = rewards.ToString();
+        }
+
+        private void SetupObjectives(QuestStatus questStatus)
+        {
             foreach (Transform objective in objectiveContainer)
             {
                 Destroy(objective.gameObject);
@@ -85,13 +117,16 @@ namespace RPG.GameplayCore.Quests.UI
             foreach (var objective in questStatus.Quest.Objectives)
             {
                 var newObjective = Instantiate(objectivePrefab, objectiveContainer);
-                newObjective.Setup(objective, questStatus.IsObjectiveCompleted(objective));
+
+                bool isCompleted = questStatus.IsObjectiveCompleted(objective.reference);
+                newObjective.Setup(objective.description, isCompleted);
             }
         }
 
-        private bool AlreadyShown(Quest quest)
+        private void HideDescription()
         {
-            return quest.Title == header.text && quest.RewardTitle == rewardsTitle.text;
+            if (questsDescriptionPanel != null)
+                questsDescriptionPanel.SetActive(false);
         }
     }
 }

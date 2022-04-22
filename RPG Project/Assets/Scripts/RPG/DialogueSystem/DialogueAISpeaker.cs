@@ -33,9 +33,11 @@ namespace RPG.DialogueSystem
             return CursorType.Dialogue;
         }
 
-        public void TriggerActions(DialogueAction actionToTrigger)
+        public void TriggerActions(string actionToTrigger)
         {
-            var triggers = FindObjectsOfType<DialogueTrigger>();
+            if (string.IsNullOrEmpty(actionToTrigger)) return;
+            
+            var triggers = GetComponents<DialogueTrigger>();
 
             foreach (var trigger in triggers)
             {

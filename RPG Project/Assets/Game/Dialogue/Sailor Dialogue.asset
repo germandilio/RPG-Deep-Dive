@@ -22,9 +22,42 @@ MonoBehaviour:
   speaker: 1
   text: "\u0412\u0435\u0434\u044C\u043C\u0430\u043A\u0443\u0443\u0443\u0443 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u0435
     \u0447\u0435\u043A\u0430\u0430\u0430\u0430\u043D\u043E\u0439 \u043C\u043E\u043D\u0435\u0435\u0435\u0435\u0442\u043E\u0439..."
-  onEnterActions: 
-  onExitActions: 
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes: []
+--- !u!114 &-8086770803334625278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 11
+  m_EditorClassIdentifier: 
+  id: 4961df55-979e-469c-bebd-eed03c83b385
+  rect:
+    serializedVersion: 2
+    x: 297
+    y: 419
+    width: 250
+    height: 150
+  speaker: 1
+  text: "\u0412\u0438\u0436\u0443 \u0442\u044B \u043F\u0440\u0438\u043D\u0451\u0441
+    \u043C\u043D\u0435 \u0437\u0430\u043F\u0447\u0430\u0441\u0442\u044C."
+  condition:
+    predicate: HasQuest
+    parameters:
+    - New Quest
+  onEnterActions: []
+  onExitActions: []
+  childNodes:
+  - 14fb7f97-d333-4fc3-98ff-dd234a092f31
 --- !u!114 &-7365640140073944848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,10 +79,42 @@ MonoBehaviour:
     height: 150
   speaker: 0
   text: "\u0414\u0430\u0430\u0430, \u043F\u044B\u043B\u044C\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0451\u043D\u043A\u0430"
-  onEnterActions: 
-  onExitActions: 
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 9194f235-67ba-4d12-838b-32e86083204c
+--- !u!114 &-2720904071295874537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 10
+  m_EditorClassIdentifier: 
+  id: 923a0dda-a25c-4699-afe6-4bfb2b3c63bd
+  rect:
+    serializedVersion: 2
+    x: 297
+    y: 260
+    width: 250
+    height: 150
+  speaker: 1
+  text: "\u0423 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
+    \u0435\u0441\u0442\u044C \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
+  childNodes:
+  - 48f02023-902f-4ea2-b2d7-13c87a1ee4db
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,20 +125,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d00ce1cd2ac54083bff09b777bce6659, type: 3}
-  m_Name: Demo Dialogue
+  m_Name: Sailor Dialogue
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 8716335305229306952}
   - {fileID: 6615174966176282685}
   - {fileID: 2018774330367523571}
   - {fileID: -7365640140073944848}
-  - {fileID: 2846200931413356861}
   - {fileID: 4560760311032441766}
   - {fileID: 7248760130416672034}
   - {fileID: 5658341694996171819}
   - {fileID: -8487202470693263154}
   - {fileID: 7840527093401819938}
   - {fileID: 8229078965513226623}
+  - {fileID: -2720904071295874537}
+  - {fileID: -8086770803334625278}
+  - {fileID: 8229864689254198915}
 --- !u!114 &2018774330367523571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,35 +161,16 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 2"
-  onEnterActions: 
-  onExitActions: 06000000
+  text: "\u041F\u043E\u043C\u043E\u0433\u0438 \u043C\u043D\u0435 \u043D\u0430\u0439\u0442\u0438
+    \u0437\u0430\u043F\u0447\u0430\u0441\u0442\u0438 \u0434\u043B\u044F \u043B\u043E\u0434\u043A\u0438"
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions:
+  - "\u0414\u0430\u0442\u044C \u043A\u0432\u0435\u0441\u0442"
   childNodes:
   - f480a20e-a29a-4b09-a382-ad15b77bf02a
---- !u!114 &2846200931413356861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
-  m_Name: Node 4
-  m_EditorClassIdentifier: 
-  id: b53e012a-870c-45ec-b24f-58e44361f91e
-  rect:
-    serializedVersion: 2
-    x: 719
-    y: 340
-    width: 250
-    height: 160
-  speaker: 1
-  text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 3"
-  onEnterActions: 
-  onExitActions: 
-  childNodes: []
 --- !u!114 &4560760311032441766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,9 +191,16 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 1"
-  onEnterActions: 
-  onExitActions: 
+  text: "\u041F\u043E\u0435\u0434\u0435\u0448\u044C \u0441\u043E \u043C\u043D\u043E\u0439
+    \u043D\u0430 \u0440\u044B\u0431\u0430\u043B\u043A\u0443, \u0441\u0435\u0439\u0447\u0430\u0441
+    \u0440\u044B\u0431\u044B \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E
+    \u043C\u043D\u043E\u0433\u043E, \u0447\u0442\u043E \u044F \u043E\u0434\u0438\u043D
+    \u043D\u0435 \u0441\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0441\u044C"
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 1fe1bd9a-3aaf-470d-8492-b55ffbefb9bf
 --- !u!114 &5658341694996171819
@@ -169,8 +224,11 @@ MonoBehaviour:
     height: 150
   speaker: 0
   text: "\u0422\u0430\u043A \u0442\u044B \u043C\u043D\u0435 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C?"
-  onEnterActions: 
-  onExitActions: 
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 68bedca8-1c15-49c8-9388-66f2cbc1f6e2
 --- !u!114 &6615174966176282685
@@ -193,12 +251,14 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 0
-  text: "\u041D\u0443 \u0434\u0430\u0432\u0430\u0439)"
-  onEnterActions: 
-  onExitActions: 
+  text: "\u041D\u0443 \u0434\u0430\u0432\u0430\u0439"
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - f2c6da31-d8ed-45b1-a9be-09247d615924
-  - b53e012a-870c-45ec-b24f-58e44361f91e
   - 0f557358-2dc7-48bc-90ad-1a339d4e45aa
 --- !u!114 &7248760130416672034
 MonoBehaviour:
@@ -222,9 +282,12 @@ MonoBehaviour:
   speaker: 1
   text: "\u0410 \u0442\u044B \u0447\u0442\u043E \u0434\u0443\u043C\u0430\u043B, \u044F
     \u0442\u0435\u0431\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A
-    \u0434\u0430\u043C \u0442\u044B\u0441\u044F\u0447\u0443 \u043C\u043E\u043D\u0435\u0442?"
-  onEnterActions: 
-  onExitActions: 
+    \u0434\u0430\u043C 200 \u043C\u043E\u043D\u0435\u0442?"
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes:
   - 4889d15c-6ed1-45bd-92da-eeb37a15737e
 --- !u!114 &7840527093401819938
@@ -242,7 +305,7 @@ MonoBehaviour:
   id: 1fe1bd9a-3aaf-470d-8492-b55ffbefb9bf
   rect:
     serializedVersion: 2
-    x: 1069
+    x: 1068
     y: 68
     width: 250
     height: 150
@@ -250,8 +313,12 @@ MonoBehaviour:
   text: "\u041D\u0435\u0435... \u043A\u0430\u043A\u043E\u0435-\u0442\u043E \u0441\u043A\u0443\u0447\u043D\u043E\u0435
     \u0443 \u0442\u0435\u0431\u044F \u0437\u0430\u0434\u0430\u043D\u0438\u0435. \u041D\u0435
     \u0445\u043E\u0447\u0443 \u044F \u0435\u0433\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C."
-  onEnterActions: 
-  onExitActions: 00000000
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions:
+  - "\u0410\u0442\u0430\u043A\u0430 \u0440\u044B\u0431\u0430\u043A\u0430"
   childNodes:
   - 1a04cf2d-4710-4cbf-87d9-c6c2b9a4ef3b
 --- !u!114 &8229078965513226623
@@ -276,8 +343,39 @@ MonoBehaviour:
   speaker: 1
   text: "\u0422\u044B \u043C\u0435\u043D\u044F \u0440\u0430\u0437\u043E\u0437\u043B\u0438\u0442
     \u0438 \u0442\u044B \u0437\u0430 \u044D\u0442\u043E \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C!"
-  onEnterActions: 
-  onExitActions: 
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
+  childNodes: []
+--- !u!114 &8229864689254198915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 12
+  m_EditorClassIdentifier: 
+  id: 14fb7f97-d333-4fc3-98ff-dd234a092f31
+  rect:
+    serializedVersion: 2
+    x: 600
+    y: 487
+    width: 250
+    height: 150
+  speaker: 1
+  text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u0412\u043E\u0442 \u0442\u0432\u043E\u0438
+    200 \u043C\u043E\u043D\u0435\u0442."
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes: []
 --- !u!114 &8716335305229306952
 MonoBehaviour:
@@ -294,14 +392,17 @@ MonoBehaviour:
   id: 9a61abac-1442-4422-b7d0-936cae852ad3
   rect:
     serializedVersion: 2
-    x: 38
-    y: 160
+    x: 5
+    y: 218
     width: 250
     height: 160
   speaker: 1
-  text: "\u0423 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
-    \u0435\u0441\u0442\u044C \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
-  onEnterActions: 
-  onExitActions: 
+  text: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E \u0442\u0435\u0431\u044F!"
+  condition:
+    predicate: 
+    parameters: []
+  onEnterActions: []
+  onExitActions: []
   childNodes:
-  - 48f02023-902f-4ea2-b2d7-13c87a1ee4db
+  - 923a0dda-a25c-4699-afe6-4bfb2b3c63bd
+  - 4961df55-979e-469c-bebd-eed03c83b385

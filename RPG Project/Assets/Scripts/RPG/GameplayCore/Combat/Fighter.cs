@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-using JetBrains.Annotations;
 using UnityEngine;
 using RPG.GameplayCore.Attributes;
 using RPG.GameplayCore.Core;
@@ -96,7 +94,7 @@ namespace RPG.GameplayCore.Combat
             return AttachWeapon(defaultWeaponConfig);
         }
 
-        public void EquipWeapon(WeaponConfig weaponConfig)
+        private void EquipWeapon(WeaponConfig weaponConfig)
         {
             if (weaponConfig == null) return;
 

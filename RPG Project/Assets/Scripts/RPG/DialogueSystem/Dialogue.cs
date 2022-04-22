@@ -64,6 +64,25 @@ namespace RPG.DialogueSystem
             }
         }
 
+        private void Awake()
+        {
+            UpdateLookup();
+        }
+        
+        private void UpdateLookup()
+        {
+            _nodeLookup.Clear();
+            foreach (var dialogueNode in nodes)
+            {
+                if (_nodeLookup.ContainsKey(dialogueNode.ID))
+                {
+                    Debug.LogError("Node IDs should be unique");
+                }
+
+                _nodeLookup[dialogueNode.ID] = dialogueNode;
+            }
+        }
+
         #region Editor code
 
 #if UNITY_EDITOR
@@ -118,20 +137,6 @@ namespace RPG.DialogueSystem
         {
             nodes.Add(newNode);
             UpdateLookup();
-        }
-
-        private void UpdateLookup()
-        {
-            _nodeLookup.Clear();
-            foreach (var dialogueNode in nodes)
-            {
-                if (_nodeLookup.ContainsKey(dialogueNode.ID))
-                {
-                    Debug.LogError("Node IDs should be unique");
-                }
-
-                _nodeLookup[dialogueNode.ID] = dialogueNode;
-            }
         }
 #endif
 

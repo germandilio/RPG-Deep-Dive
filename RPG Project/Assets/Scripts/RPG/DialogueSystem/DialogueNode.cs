@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RPG.GameplayCore.Core;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,19 +24,22 @@ namespace RPG.DialogueSystem
         private string text;
 
         [SerializeField]
-        private List<DialogueAction> onEnterActions;
+        private Condition condition;
 
         [SerializeField]
-        private List<DialogueAction> onExitActions;
+        private List<string> onEnterActions;
+
+        [SerializeField]
+        private List<string> onExitActions;
 
         [SerializeField]
         private List<string> childNodes = new List<string>();
 
         public IReadOnlyList<string> ChildNodes => childNodes;
 
-        public IReadOnlyList<DialogueAction> OnEnterActions => onEnterActions;
+        public IReadOnlyList<string> OnEnterActions => onEnterActions;
 
-        public IReadOnlyList<DialogueAction> OnExitActions => onExitActions;
+        public IReadOnlyList<string> OnExitActions => onExitActions;
 
         public bool HasChildren => childNodes.Count > 0;
 
@@ -96,6 +100,11 @@ namespace RPG.DialogueSystem
             if (childID == null) return false;
 
             return childNodes.Contains(childID);
+        }
+
+        public bool Match(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
         }
 
         #region Editor code

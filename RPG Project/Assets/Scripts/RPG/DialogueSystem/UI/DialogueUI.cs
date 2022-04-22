@@ -33,18 +33,12 @@ namespace RPG.DialogueSystem.UI
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             _playerDialogue = player.GetComponent<PlayerDialogueAPI>();
-
-            nextButton.onClick.AddListener(OnNextButtonClick);
-        }
-
-        private void Start()
-        {
-            OnDialogueUpdated();
         }
 
         private void OnEnable()
         {
             _playerDialogue.DialogueStateUpdated += OnDialogueUpdated;
+            OnDialogueUpdated();
         }
 
         private void OnDisable()
@@ -102,7 +96,7 @@ namespace RPG.DialogueSystem.UI
             }
         }
 
-        private void OnNextButtonClick()
+        public void OnNextButtonClick()
         {
             _playerDialogue.Next();
         }
