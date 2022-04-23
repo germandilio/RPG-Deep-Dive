@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using RPG.GameplayCore.Core;
+using RPG.GameplayCore.Core.Conditions;
 using UnityEditor;
 using UnityEngine;
 

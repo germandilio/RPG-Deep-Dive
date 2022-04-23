@@ -15,16 +15,15 @@ MonoBehaviour:
   id: 68bedca8-1c15-49c8-9388-66f2cbc1f6e2
   rect:
     serializedVersion: 2
-    x: 1809.8295
-    y: 577.3704
+    x: 2229.8296
+    y: 718.3704
     width: 250
     height: 150
   speaker: 1
   text: "\u0412\u0435\u0434\u044C\u043C\u0430\u043A\u0443\u0443\u0443\u0443 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u0435
     \u0447\u0435\u043A\u0430\u0430\u0430\u0430\u043D\u043E\u0439 \u043C\u043E\u043D\u0435\u0435\u0435\u0435\u0442\u043E\u0439..."
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes: []
@@ -44,18 +43,27 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 297
-    y: 419
+    y: 572
     width: 250
     height: 150
   speaker: 1
   text: "\u0412\u0438\u0436\u0443 \u0442\u044B \u043F\u0440\u0438\u043D\u0451\u0441
     \u043C\u043D\u0435 \u0437\u0430\u043F\u0447\u0430\u0441\u0442\u044C."
   condition:
-    predicate: HasQuest
-    parameters:
-    - New Quest
+    conjunctionSet:
+    - disjunctionSet:
+      - predicate: 0
+        negate: 0
+        parameters:
+        - '#1 Help sailor repair the boot'
+    - disjunctionSet:
+      - predicate: 2
+        negate: 0
+        parameters:
+        - 61d956f0-7d37-46f7-af33-0195354b3dde
   onEnterActions: []
-  onExitActions: []
+  onExitActions:
+  - "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0442\u0430\u043B\u0438"
   childNodes:
   - 14fb7f97-d333-4fc3-98ff-dd234a092f31
 --- !u!114 &-7365640140073944848
@@ -73,15 +81,14 @@ MonoBehaviour:
   id: f480a20e-a29a-4b09-a382-ad15b77bf02a
   rect:
     serializedVersion: 2
-    x: 1007
-    y: 258
+    x: 1270
+    y: 461
     width: 250
     height: 150
   speaker: 0
   text: "\u0414\u0430\u0430\u0430, \u043F\u044B\u043B\u044C\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0451\u043D\u043A\u0430"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -101,16 +108,20 @@ MonoBehaviour:
   id: 923a0dda-a25c-4699-afe6-4bfb2b3c63bd
   rect:
     serializedVersion: 2
-    x: 297
-    y: 260
+    x: 322
+    y: 109
     width: 250
     height: 150
   speaker: 1
   text: "\u0423 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
     \u0435\u0441\u0442\u044C \u0437\u0430\u0434\u0430\u043D\u0438\u0435"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet:
+    - disjunctionSet:
+      - predicate: 0
+        negate: 1
+        parameters:
+        - '#1 Help sailor repair the boot'
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -156,16 +167,15 @@ MonoBehaviour:
   id: f2c6da31-d8ed-45b1-a9be-09247d615924
   rect:
     serializedVersion: 2
-    x: 719
-    y: 174
+    x: 936
+    y: 336
     width: 250
     height: 160
   speaker: 1
   text: "\u041F\u043E\u043C\u043E\u0433\u0438 \u043C\u043D\u0435 \u043D\u0430\u0439\u0442\u0438
     \u0437\u0430\u043F\u0447\u0430\u0441\u0442\u0438 \u0434\u043B\u044F \u043B\u043E\u0434\u043A\u0438"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions:
   - "\u0414\u0430\u0442\u044C \u043A\u0432\u0435\u0441\u0442"
@@ -186,8 +196,8 @@ MonoBehaviour:
   id: 0f557358-2dc7-48bc-90ad-1a339d4e45aa
   rect:
     serializedVersion: 2
-    x: 719
-    y: 18
+    x: 939
+    y: 152
     width: 250
     height: 160
   speaker: 1
@@ -197,8 +207,7 @@ MonoBehaviour:
     \u043C\u043D\u043E\u0433\u043E, \u0447\u0442\u043E \u044F \u043E\u0434\u0438\u043D
     \u043D\u0435 \u0441\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0441\u044C"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -218,15 +227,14 @@ MonoBehaviour:
   id: 4889d15c-6ed1-45bd-92da-eeb37a15737e
   rect:
     serializedVersion: 2
-    x: 1537
-    y: 481
+    x: 1913
+    y: 615
     width: 250
     height: 150
   speaker: 0
   text: "\u0422\u0430\u043A \u0442\u044B \u043C\u043D\u0435 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C?"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -246,15 +254,14 @@ MonoBehaviour:
   id: 48f02023-902f-4ea2-b2d7-13c87a1ee4db
   rect:
     serializedVersion: 2
-    x: 384
-    y: 90
+    x: 617
+    y: 230
     width: 250
     height: 160
   speaker: 0
   text: "\u041D\u0443 \u0434\u0430\u0432\u0430\u0439"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -275,8 +282,8 @@ MonoBehaviour:
   id: 9194f235-67ba-4d12-838b-32e86083204c
   rect:
     serializedVersion: 2
-    x: 1272.44
-    y: 385
+    x: 1580.44
+    y: 535
     width: 250
     height: 150
   speaker: 1
@@ -284,8 +291,7 @@ MonoBehaviour:
     \u0442\u0435\u0431\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A
     \u0434\u0430\u043C 200 \u043C\u043E\u043D\u0435\u0442?"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -305,8 +311,8 @@ MonoBehaviour:
   id: 1fe1bd9a-3aaf-470d-8492-b55ffbefb9bf
   rect:
     serializedVersion: 2
-    x: 1068
-    y: 68
+    x: 1261
+    y: 44
     width: 250
     height: 150
   speaker: 0
@@ -314,8 +320,7 @@ MonoBehaviour:
     \u0443 \u0442\u0435\u0431\u044F \u0437\u0430\u0434\u0430\u043D\u0438\u0435. \u041D\u0435
     \u0445\u043E\u0447\u0443 \u044F \u0435\u0433\u043E \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C."
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions:
   - "\u0410\u0442\u0430\u043A\u0430 \u0440\u044B\u0431\u0430\u043A\u0430"
@@ -336,16 +341,15 @@ MonoBehaviour:
   id: 1a04cf2d-4710-4cbf-87d9-c6c2b9a4ef3b
   rect:
     serializedVersion: 2
-    x: 1419
-    y: 118
+    x: 1604
+    y: 106
     width: 250
     height: 150
   speaker: 1
   text: "\u0422\u044B \u043C\u0435\u043D\u044F \u0440\u0430\u0437\u043E\u0437\u043B\u0438\u0442
     \u0438 \u0442\u044B \u0437\u0430 \u044D\u0442\u043E \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0448\u044C!"
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes: []
@@ -364,16 +368,15 @@ MonoBehaviour:
   id: 14fb7f97-d333-4fc3-98ff-dd234a092f31
   rect:
     serializedVersion: 2
-    x: 600
-    y: 487
+    x: 643
+    y: 705
     width: 250
     height: 150
   speaker: 1
   text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u0412\u043E\u0442 \u0442\u0432\u043E\u0438
     200 \u043C\u043E\u043D\u0435\u0442."
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes: []
@@ -397,10 +400,9 @@ MonoBehaviour:
     width: 250
     height: 160
   speaker: 1
-  text: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E \u0442\u0435\u0431\u044F!"
+  text: '*System Root Node*'
   condition:
-    predicate: 
-    parameters: []
+    conjunctionSet: []
   onEnterActions: []
   onExitActions: []
   childNodes:

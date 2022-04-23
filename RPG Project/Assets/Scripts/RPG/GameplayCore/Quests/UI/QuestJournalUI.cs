@@ -85,14 +85,14 @@ namespace RPG.GameplayCore.Quests.UI
         private void SetupRewards(QuestStatus questStatus)
         {
             StringBuilder rewards = new StringBuilder();
-            foreach (var reward in questStatus.Rewards)
+            foreach (var displayReward in questStatus.QuestDisplayRewards())
             {
-                rewards.Append(reward.DisplayTitle);
+                rewards.Append(displayReward.DisplayTitle);
 
-                if (reward.number > 1)
+                if (displayReward.reward.number > 1)
                 {
                     rewards.Append(" (");
-                    rewards.Append(reward.number);
+                    rewards.Append(displayReward.reward.number);
                     rewards.Append(" шт.)");
                 }
                 

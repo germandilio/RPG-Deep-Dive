@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fc28a888c18ce4a82d521912c49df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventorySize: 60
+  inventorySize: 40
 --- !u!114 &7013258516275012791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +427,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd2b512de81423fad22e70f27b916d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questsStatuses: []
+  userHintOnItemsReceived: "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u044B \u043D\u043E\u0432\u044B\u0435
+    \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
+  userHintWhenInventoryIsFull: "\u041D\u0435\u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E
+    \u043C\u0435\u0441\u0442\u0430 \u0432 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u0435"
+  userHintQuestCompleted: "\u041A\u0432\u0435\u0441\u0442 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D"
 --- !u!114 &7380631272082291895
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -117,6 +117,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 613767022386535507}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1035846016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788206368550225562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a6d7a010db4ec6bd357de974b63e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: ec814b661871445b494e555704b9c009, type: 2}
+  objectiveReferenceToComplete: '#delivery to sailor'
 --- !u!114 &1183093109252752397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dfd64f09ff43b18d897044245ec7e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1035846016
+--- !u!114 &2121701618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,11 +267,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4788206368550225562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a6d7a010db4ec6bd357de974b63e11, type: 3}
+  m_Script: {fileID: 11500000, guid: 37e916fc274844e288278dc597dac8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: ec814b661871445b494e555704b9c009, type: 2}
-  objectiveReferenceToComplete: '#delivery to sailor'
+  action: "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0442\u0430\u043B\u0438"
+  triggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1035846016}
+        m_TargetAssemblyTypeName: RPG.GameplayCore.Quests.QuestCompletion, Assembly-CSharp
+        m_MethodName: OnCompletedObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &5880311151703162142
 PrefabInstance:
   m_ObjectHideFlags: 0

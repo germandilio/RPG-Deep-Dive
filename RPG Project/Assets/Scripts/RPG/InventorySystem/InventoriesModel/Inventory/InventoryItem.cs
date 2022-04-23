@@ -55,7 +55,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         /// Get the inventory item instance from its GUID.
         /// </summary>
         /// <param name="itemID">
-        /// String GUID that persists between game instances.
+        /// String GUID.
         /// </param>
         /// <returns>
         /// Inventory item instance corresponding to the ID.

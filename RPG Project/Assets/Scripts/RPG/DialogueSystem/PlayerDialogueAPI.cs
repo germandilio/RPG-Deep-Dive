@@ -105,8 +105,12 @@ namespace RPG.DialogueSystem
             _currentDialogue = dialogue;
             _currentAiSpeaker = speaker;
             _currentNode = _currentDialogue.RootNode;
-            DialogueStateUpdated?.Invoke();
             TriggerEnterActions();
+
+            if (HasNext)
+            {
+                Next();
+            }
         }
 
         public void Quit()

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using RPG.GameplayCore.Core;
+using RPG.GameplayCore.Core.Conditions;
 using RPG.InventorySystem.InventoriesModel;
 using RPG.InventorySystem.InventoriesModel.Inventory;
 using SavingSystem;
@@ -9,6 +10,10 @@ using Utils.UI.Hint;
 
 namespace RPG.GameplayCore.Quests.QuestsModel
 {
+    /// <summary>
+    /// Quest journal provides storage for quests.
+    /// Contains all information about quests statuses 
+    /// </summary>
     public class QuestsJournal : MonoBehaviour, IPredicateEvaluator, ISavable
     {
         [Header("User Hint Properties")]
@@ -17,12 +22,13 @@ namespace RPG.GameplayCore.Quests.QuestsModel
 
         [SerializeField]
         private string userHintWhenInventoryIsFull = "Недостаточно места в инвентаре";
-        
-        [Header("Quest Journal Properties")]
-        [SerializeField]
-        private List<QuestStatus> questsStatuses = new List<QuestStatus>();
 
-        public IEnumerable<QuestStatus> QuestsStatuses => questsStatuses;
+        [SerializeField]
+        private string userHintQuestCompleted = "Квест выполнен";
+
+        private readonly List<QuestStatus> _questsStatuses = new List<QuestStatus>();
+
+        public IEnumerable<QuestStatus> QuestsStatuses => _questsStatuses;
 
         public event Action QuestJournalUpdated;
 
@@ -31,14 +37,14 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             if (!Contains(quest))
             {
                 QuestStatus newQuestStatus = new QuestStatus(quest);
-                questsStatuses.Add(newQuestStatus);
+                _questsStatuses.Add(newQuestStatus);
                 QuestJournalUpdated?.Invoke();
             }
         }
 
         public QuestStatus FindQuestStatus(Quest quest)
         {
-            return questsStatuses.Find(status => ReferenceEquals(quest, status.Quest));
+            return _questsStatuses.Find(status => ReferenceEquals(quest, status.Quest));
         }
 
         public void CompleteQuestObjective(QuestStatus questStatus, string objectiveToComplete)
@@ -48,26 +54,22 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             bool success = questStatus.TryMarkCompleted(objectiveToComplete);
             if (success)
             {
-                var receiving = questStatus.Quest.GetReceiving(objectiveToComplete);
+                var receiving = questStatus.RewardsOnObjective(objectiveToComplete);
                 GiveRewards(receiving);
-                
-                // TODO spawn hint
+                var withdrawals = questStatus.GetWithdrawals(objectiveToComplete);
+                WithdrawFromInventory(withdrawals);
             }
 
             if (questStatus.Completed)
-                GiveRewards(questStatus.Rewards);
+            {
+                GiveRewards(questStatus.Rewards());
+                HintSpawner.Spawn(userHintQuestCompleted);
+            }
             
             QuestJournalUpdated?.Invoke();
         }
-        
-        public bool? Evaluate(string predicate, string[] parameters)
-        {
-            if (predicate != "HasQuest" || parameters.Length == 0) return null;
 
-            return Contains(Quest.GetByName(parameters[0]));
-        }
-
-        private void GiveRewards(IReadOnlyList<Quest.Reward> rewards)
+        private void GiveRewards(IEnumerable<InventorySlot> rewards)
         {
             if (rewards == null) return;
 
@@ -77,6 +79,8 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             bool wasDropped = false;
             foreach (var reward in rewards)
             {
+                if (reward.item == null) continue;
+                
                 bool success = playerInventory.AddToFirstEmptySlot(reward.item, reward.number);
                 if (!success)
                 {
@@ -88,15 +92,48 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             HintSpawner.Spawn(wasDropped ? userHintWhenInventoryIsFull : userHintOnItemsReceived);
         }
 
+        private void WithdrawFromInventory(IEnumerable<InventorySlot> withdrawals)
+        {
+            if (withdrawals == null) return;
+
+            var playerInventory = GetComponent<Inventory>();
+            foreach (var item in withdrawals)
+            {
+                bool success = playerInventory.WithdrawItem(item);
+                if (!success)
+                {
+                    Debug.LogError("Try to withdraw items which inventory doesn't contains!" +
+                                   $" InventoryItem: {item.item}, amount: {item.number}");
+                }
+            }
+        }
+
         private bool Contains(Quest quest)
         {
-            return questsStatuses.Find(questStatus => ReferenceEquals(quest, questStatus.Quest)) != null;
+            return _questsStatuses.Find(questStatus => ReferenceEquals(quest, questStatus.Quest)) != null;
+        }
+
+        bool? IPredicateEvaluator.Evaluate(PredicateType predicate, string[] parameters)
+        {
+            if (parameters.Length == 0) return null;
+
+            if (predicate == PredicateType.HasQuest)
+                return Contains(Quest.GetByName(parameters[0]));
+
+            if (predicate == PredicateType.CompleteQuest)
+            {
+                var questStatus = FindQuestStatus(Quest.GetByName(parameters[0]));
+                if (questStatus == null) return null;
+                return questStatus.Completed;
+            }
+
+            return null;
         }
 
         object ISavable.CaptureState()
         {
             var questList = new List<object>();
-            foreach (QuestStatus questStatus in questsStatuses)
+            foreach (QuestStatus questStatus in _questsStatuses)
             {
                 questList.Add(questStatus.CaptureState());
             }
@@ -109,10 +146,10 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             var questList = state as List<object>;
             if (questList == null) return;
 
-            questsStatuses.Clear();
+            _questsStatuses.Clear();
             foreach (object quest in questList)
             {
-                questsStatuses.Add(new QuestStatus(quest));
+                _questsStatuses.Add(new QuestStatus(quest));
             }
         }
     }

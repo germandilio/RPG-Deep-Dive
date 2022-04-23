@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using RPG.GameplayCore.Quests.Rewards;
+using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Quests.QuestsModel
@@ -27,8 +29,6 @@ namespace RPG.GameplayCore.Quests.QuestsModel
 
         public bool Completed => CompletedCount == quest.ObjectiveCount;
         
-        public IReadOnlyList<Quest.Reward> Rewards => quest.Rewards;
-
         public QuestStatus(Quest quest)
         {
             this.quest = quest;
@@ -42,6 +42,14 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             completedObjectives = saving.completedObjectives;
         }
 
+        public IEnumerable<InventorySlot> RewardsOnObjective(string objectiveRef) => quest.GetRewards(objectiveRef);
+        
+        public IEnumerable<InventorySlot> Rewards() => quest.GetRewards();
+        
+        public IEnumerable<InventorySlot> GetWithdrawals(string objectiveRef) => quest.GetWithdrawals(objectiveRef);
+
+        public IEnumerable<QuestCompletionReward> QuestDisplayRewards() => quest.QuestRewards();
+        
         /// <summary>
         /// Mark objective as completed.
         /// </summary>

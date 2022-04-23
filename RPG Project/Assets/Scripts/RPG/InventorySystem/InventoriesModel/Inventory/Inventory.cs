@@ -1,4 +1,6 @@
 ﻿using System;
+using RPG.GameplayCore.Core;
+using RPG.GameplayCore.Core.Conditions;
 using UnityEngine;
 using SavingSystem;
 
@@ -7,10 +9,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
     /// <summary>
     /// Provides storage for the player inventory. A configurable number of
     /// slots are available.
-    ///
-    /// This component should be placed on the GameObject tagged "Player".
     /// </summary>
-    public class Inventory : MonoBehaviour, ISavable
+    public class Inventory : MonoBehaviour, ISavable, IPredicateEvaluator
     {
         public event Action InventoryUpdated;
 
@@ -20,12 +20,6 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         private int inventorySize = 16;
 
         private InventorySlot[] _slots;
-
-        private struct InventorySlot
-        {
-            public InventoryItem item;
-            public int number;
-        }
 
         public int Size => _slots.Length;
 
@@ -67,6 +61,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         /// </summary>
         public bool HasItem(InventoryItem item)
         {
+            if (item == null) return false;
+            
             for (int i = 0; i < _slots.Length; i++)
             {
                 if (ReferenceEquals(_slots[i].item, item))
@@ -107,6 +103,25 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         }
 
         /// <summary>
+        /// Withdraw items in inventory.
+        /// </summary>
+        /// <param name="slot">Inventory slot which contains info about item and number to withdraw.</param>
+        /// <returns>suceeded status</returns>
+        public bool WithdrawItem(InventorySlot slot)
+        {
+            if (slot == null || slot.item == null) return false;
+
+            int slotIndex = FindSlotNonEmpty(slot.item);
+            if (slotIndex != -1)
+            {
+                RemoveFromSlot(slotIndex, slot.number);
+                return true;   
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Will add an item to the given slot if possible. If there is already
         /// a stack of this type, it will add to the existing stack. Otherwise,
         /// it will be added to the first empty slot.
@@ -134,11 +149,14 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             InventoryUpdated?.Invoke();
             return true;
         }
-
-
+        
         private void Awake()
         {
             _slots = new InventorySlot[inventorySize];
+            for (int i = 0; i < inventorySize; i++)
+            {
+                _slots[i] = new InventorySlot();
+            }
         }
 
         /// <summary>
@@ -154,6 +172,26 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             }
 
             return i;
+        }
+
+        /// <summary>
+        /// Find a slot which contains an inventory item.
+        /// </summary>
+        /// <param name="item">Inventory item to find</param>
+        /// <returns>-1 if not contains, otherwise index in inventory.</returns>
+        private int FindSlotNonEmpty(InventoryItem item)
+        {
+            if (_slots.Length < 1) return -1;
+            
+            int slotIndex;
+            for (slotIndex = 0; slotIndex < _slots.Length; slotIndex++)
+            {
+                if (ReferenceEquals(_slots[slotIndex].item, item))
+                    break;
+            }
+
+            if (slotIndex == _slots.Length) return -1;
+            return slotIndex;
         }
 
         /// <summary>
@@ -223,6 +261,12 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             }
 
             InventoryUpdated?.Invoke();
+        }
+
+        bool? IPredicateEvaluator.Evaluate(PredicateType predicate, string[] parameters)
+        {
+            if (predicate != PredicateType.HasInventoryItem || parameters.Length < 1) return null;
+            return HasItem(InventoryItem.GetFromID(parameters[0]));
         }
     }
 }

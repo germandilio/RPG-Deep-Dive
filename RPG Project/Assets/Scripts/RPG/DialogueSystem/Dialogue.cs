@@ -86,6 +86,9 @@ namespace RPG.DialogueSystem
         #region Editor code
 
 #if UNITY_EDITOR
+
+        private const string RootNodeText = "*System Root Node* Do not place any content, triggers and conditions on it.";
+        
         private void OnValidate()
         {
             UpdateLookup();
@@ -146,6 +149,7 @@ namespace RPG.DialogueSystem
             if (nodes.Count == 0)
             {
                 var newNode = CreateNode(null);
+                newNode.Text = RootNodeText;
                 AddToDialogue(newNode);
             }
 
