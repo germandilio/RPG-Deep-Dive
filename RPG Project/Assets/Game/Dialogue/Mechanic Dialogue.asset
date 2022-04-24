@@ -304,7 +304,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 3023.1602
-    y: 356
+    y: 355
     width: 250
     height: 150
   speaker: 0

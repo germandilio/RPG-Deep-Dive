@@ -415,6 +415,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 40
+  _slots:
+  - item: {fileID: 11400000, guid: 2620c413805a6472b8caae851fb604c5, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: edb32f7295efa4cab9b98434f319c3e0, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: dfe6e7e421fb44ff88a48c8a7d312c7f, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: d65ad7799bba04b2a956ed24d6301162, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: c7b109568f0f648838c274570b688947, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: d04b4a85b644e4e7eb69214661a06c3a, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: 27971009cbd024af7a886ccc4616d19b, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: 895e5a0b18e9c4cda83dc38d846cbf89, type: 2}
+    number: 1
+  - item: {fileID: 11400000, guid: 27326b84c2e364652b705cecb50891ef, type: 2}
+    number: 1
 --- !u!114 &7013258516275012791
 MonoBehaviour:
   m_ObjectHideFlags: 0

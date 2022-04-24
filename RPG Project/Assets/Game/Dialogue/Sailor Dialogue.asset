@@ -125,7 +125,7 @@ MonoBehaviour:
       - predicate: 2
         negate: 0
         parameters:
-        - 61d956f0-7d37-46f7-af33-0195354b3dde
+        - 6b3881e4-acdc-466f-ada6-63bc84959acb
   onEnterActions: []
   onExitActions:
   - "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u0442\u0430\u043B\u0438"

@@ -19,6 +19,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         [SerializeField]
         private int inventorySize = 16;
 
+        [SerializeField]
         private InventorySlot[] _slots;
 
         public int Size => _slots.Length;
@@ -152,10 +153,11 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         
         private void Awake()
         {
-            _slots = new InventorySlot[inventorySize];
+            // TODO REPLACE
+            Array.Resize(ref _slots, inventorySize);
             for (int i = 0; i < inventorySize; i++)
             {
-                _slots[i] = new InventorySlot();
+                _slots[i] ??= new InventorySlot();
             }
         }
 

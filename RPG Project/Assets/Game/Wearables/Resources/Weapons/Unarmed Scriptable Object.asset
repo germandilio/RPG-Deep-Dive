@@ -27,4 +27,4 @@ MonoBehaviour:
   animatorOverrideController: {fileID: 0}
   weaponType: 0
   weaponRange: 2
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1.8

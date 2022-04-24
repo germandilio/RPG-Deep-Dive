@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
 using RPG.InventorySystem.InventoriesModel.Pickups;
-using UnityEditor;
 using UnityEngine;
 
 namespace RPG.InventorySystem.InventoriesModel.Inventory
 {
     /// <summary>
-    /// Abstraction that represents any item that can be put in a inventory.
+    /// Represents any item that can be put in a inventory.
     /// </summary>
     public abstract class InventoryItem : ScriptableObject, ISerializationCallbackReceiver
     {

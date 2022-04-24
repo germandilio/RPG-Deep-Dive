@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 565238ee-e4e8-47b1-ac40-1ce07cab9dab
   displayName: "\u041C\u0435\u0447"
   description: "+40 \u043A \u0443\u0440\u043E\u043D\u0443."
-  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  icon: {fileID: 21300000, guid: 1c67bd5aba34f564f95c332bf14e4f84, type: 3}
   pickup: {fileID: 9056094213391728538, guid: 20473e599b1334a9880760e638710a56, type: 3}
   stackable: 0
   allowedEquipLocation: 8
@@ -30,4 +30,4 @@ MonoBehaviour:
     type: 2}
   weaponType: 1
   weaponRange: 3
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 2.6

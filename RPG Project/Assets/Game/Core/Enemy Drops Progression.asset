@@ -12,27 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084d2a4fb9ec46a19e9a87fc1bb99c22, type: 3}
   m_Name: Enemy Drops Progression
   m_EditorClassIdentifier: 
-  dropsChancePercentage: 640000003c00000014000000
+  dropsChancePercentage: 5a0000004b0000003200000032000000
   dropsNumber:
   - {x: 1, y: 3}
   - {x: 1, y: 2}
-  - {x: 1, y: 1}
+  - {x: 1, y: 2}
+  - {x: 1, y: 2}
   dropsLibrary:
-  - dropItem: {fileID: 11400000, guid: 03487a37dbfa8413b90a02a893fbfd20, type: 2}
+  - dropItem: {fileID: 11400000, guid: 87194e1c66a0f4f6d98f39b9b9f260ad, type: 2}
     relativeChance:
-    - 30.7
-    - 30.7
-    - 31
+    - 30
+    - 20
+    - 20
+    - 20
     number:
     - {x: 1, y: 1}
     - {x: 1, y: 1}
     - {x: 1, y: 1}
-  - dropItem: {fileID: 11400000, guid: 751881f344a394242b7306232db42f96, type: 2}
+    - {x: 1, y: 1}
+  - dropItem: {fileID: 11400000, guid: f5eae7f1846ef4b4f84da7a7cfeb0b0e, type: 2}
     relativeChance:
-    - 10.3
-    - 10.3
-    - 11.3
+    - 10
+    - 10
+    - 10
+    - 10
     number:
-    - {x: 1, y: 1}
-    - {x: 1, y: 1}
-    - {x: 1, y: 1}
+    - {x: 1, y: 4}
+    - {x: 1, y: 3}
+    - {x: 1, y: 2}
+    - {x: 1, y: 2}
+  - dropItem: {fileID: 11400000, guid: a45bf184e83ef4315a7cb62a33df5b74, type: 2}
+    relativeChance:
+    - 60
+    - 70
+    - 70
+    - 70
+    number:
+    - {x: 1, y: 4}
+    - {x: 1, y: 3}
+    - {x: 1, y: 2}
+    - {x: 1, y: 2}

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace RPG.InventorySystem.InventoriesModel.Equipment
 {
-    [CreateAssetMenu(menuName = "RPG Project/Inventory/New StatsEquippableItem", fileName = "New StatsEquippableItem",
+    [CreateAssetMenu(menuName = "RPG Project/Inventory/New Stats Equippable Item", fileName = "New StatsEquippableItem",
         order = 1)]
     public class StatsEquippableItem : EquippableItem, IModifyProvider
     {

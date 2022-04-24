@@ -6,7 +6,6 @@ namespace RPG.DialogueSystem
 {
     public class DialogueAISpeaker : MonoBehaviour, IRaycastable
     {
-        [Required]
         [SerializeField]
         private Dialogue dialogue;
 

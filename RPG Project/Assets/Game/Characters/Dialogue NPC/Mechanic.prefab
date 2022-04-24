@@ -152,18 +152,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 613767022386535507}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3036195390976738612 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2496738318644549991, guid: 750e3c6876a501e42b5827ec7a3d24d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 613767022386535507}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4788206368550225562}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 396f616a895854ee89eca4051df629c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &383875769089734573 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 997341848480246782, guid: 750e3c6876a501e42b5827ec7a3d24d1,
@@ -192,31 +180,19 @@ MonoBehaviour:
   triggered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3036195390976738612}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: RPG.GameplayCore.Combat.AggravatingGroup, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7472669800124913837}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 4615628777581021039}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3160074211711167938}
   - component: {fileID: 435855210876616406}
   m_Layer: 0
-  m_Name: Heal Pickup
+  m_Name: Pumpkin Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

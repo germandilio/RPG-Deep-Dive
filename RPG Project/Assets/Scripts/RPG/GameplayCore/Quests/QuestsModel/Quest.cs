@@ -10,6 +10,9 @@ namespace RPG.GameplayCore.Quests.QuestsModel
     public class Quest : ScriptableObject
     {
         [SerializeField]
+        private string title;
+        
+        [SerializeField]
         private List<Objective> objectives;
 
         [SerializeField]
@@ -20,10 +23,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
 
         [SerializeField]
         private List<ObjectiveCompletionWithdrawals> withdrawals;
-
-        [SerializeField]
-        private string title;
-
+        
         public string Title => title;
         
         public IReadOnlyList<Objective> Objectives => objectives;

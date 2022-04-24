@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using RPG.DialogueSystem;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Combat
@@ -27,6 +28,10 @@ namespace RPG.GameplayCore.Combat
                 var combatTarget = fighter.gameObject.GetComponent<CombatTarget>();
                 if (combatTarget != null)
                     combatTarget.enabled = state;
+                
+                var dialogAI = fighter.gameObject.GetComponent<DialogueAISpeaker>();
+                if (dialogAI != null)
+                    dialogAI.enabled = !state;
 
                 fighter.enabled = state;
             }

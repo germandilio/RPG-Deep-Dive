@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a0708ae7e5488aa488f90e21964f69, type: 3}
+  m_Name: GreenMagBracers
+  m_EditorClassIdentifier: 
+  itemID: a2388380-51c2-4898-87f2-d270122e5e77
+  displayName: "\u041D\u0430\u0440\u0443\u043A\u0430\u0432\u043D\u0438\u043A\u0438"
+  description: "(\u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435)"
+  icon: {fileID: 21300000, guid: d065a4197c7fdc34f9f4a3f006c3b8ae, type: 3}
+  pickup: {fileID: 8255510793927867686, guid: 8d0254371430b45f0abeb348a5756383, type: 3}
+  stackable: 0
+  allowedEquipLocation: 2
+  additiveModifiers: []
+  percentageModifiers: []
