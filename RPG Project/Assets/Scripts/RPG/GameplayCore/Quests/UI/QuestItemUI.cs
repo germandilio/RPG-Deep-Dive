@@ -1,4 +1,5 @@
 using System;
+using NaughtyAttributes;
 using RPG.GameplayCore.Quests.QuestsModel;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,11 @@ namespace RPG.GameplayCore.Quests.UI
 
         [SerializeField]
         private TextMeshProUGUI progress;
+
+        [HorizontalLine]
+        [Header("Style settings")]
+        [SerializeField]
+        private FontStyles completedTitleStyle = FontStyles.Strikethrough;
 
         private QuestStatus _quest;
 
@@ -27,6 +33,12 @@ namespace RPG.GameplayCore.Quests.UI
 
             title.text = quest.Quest.Title;
             progress.text = $"{quest.CompletedCount}/{quest.Quest.ObjectiveCount}";
+
+            if (quest.Completed)
+            {
+                title.fontStyle = completedTitleStyle;
+                progress.fontStyle = completedTitleStyle;
+            }
         }
 
         public void ShowDescription()

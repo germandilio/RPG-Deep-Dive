@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Utils.UI.Hint
@@ -6,15 +7,22 @@ namespace Utils.UI.Hint
     {
         [SerializeField]
         private GameObject hintPrefab;
-
+        
         [SerializeField]
         [Range(0, 10)]
         private float destroyAfterSeconds;
 
+        private const int MaxHintsSimultaneously = 3;
+
         private static HintSpawner _spawnerInstance;
+
+        private static int _hintsDisplayingCount;
+        private static readonly int HintNumber = Animator.StringToHash("HintNumber");
 
         private void Awake()
         {
+            _hintsDisplayingCount = 0;
+            
             if (_spawnerInstance == null)
                 _spawnerInstance = this;
             else
@@ -28,7 +36,18 @@ namespace Utils.UI.Hint
             var controller = newHint.GetComponent<HintController>();
             controller.SetDescription(text);
 
-            Destroy(newHint, destroyAfterSeconds);
+            var animator = newHint.GetComponent<Animator>();
+            animator.SetInteger(HintNumber, ++_hintsDisplayingCount);
+
+            StartCoroutine(DestroyHint(newHint));
+        }
+
+        private IEnumerator DestroyHint(GameObject hint)
+        {
+            yield return new WaitForSeconds(destroyAfterSeconds);
+            
+            --_hintsDisplayingCount;
+            Destroy(hint);
         }
 
         /// <summary>
@@ -37,10 +56,10 @@ namespace Utils.UI.Hint
         /// <param name="text">Text to display</param>
         public static void Spawn(string text)
         {
-            // TODO spawn with stack up to 4 hints
             if (string.IsNullOrWhiteSpace(text)) return;
 
-            _spawnerInstance.SetupHint(text);
+            if (_hintsDisplayingCount < MaxHintsSimultaneously)
+                _spawnerInstance.SetupHint(text);
         }
     }
 }
