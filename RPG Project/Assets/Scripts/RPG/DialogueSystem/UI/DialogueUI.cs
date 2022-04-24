@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -96,11 +97,13 @@ namespace RPG.DialogueSystem.UI
             }
         }
 
+        [Button("Show next node")]
         public void OnNextButtonClick()
         {
             _playerDialogue.Next();
         }
 
+        [Button("Exit")]
         public void OnExitButtonClick()
         {
             _playerDialogue.Quit();

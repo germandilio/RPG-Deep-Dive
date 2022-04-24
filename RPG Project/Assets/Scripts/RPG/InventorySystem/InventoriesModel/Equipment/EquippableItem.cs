@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
     [CreateAssetMenu(menuName = "RPG Project/Inventory/New EquippableItem", fileName = "New EquippableItem", order = 2)]
     public class EquippableItem : InventoryItem
     {
+        [HorizontalLine]
         [Header("Equipment Location")]
         [InspectorName("Allowed Equipment Slot")]
         [Tooltip("Where are we allowed to put this item.")]

@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using RPG.GameplayCore.Attributes;
 using RPG.GameplayCore.Core;
@@ -13,6 +14,7 @@ namespace RPG.GameplayCore.Combat
     [RequireComponent(typeof(BaseStats))]
     public class Fighter : MonoBehaviour, IAction, ISavable
     {
+        [Required]
         [SerializeField]
         private Transform rightHand, leftHand;
 

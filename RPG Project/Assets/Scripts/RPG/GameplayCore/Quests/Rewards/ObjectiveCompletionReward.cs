@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using RPG.GameplayCore.Quests.QuestsModel;
 using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace RPG.GameplayCore.Quests.Rewards
     [Serializable]
     public class ObjectiveCompletionReward
     {
+        [Required]
         [Tooltip("Objective, on which completion player will receive item.")]
         public Objective objective;
         

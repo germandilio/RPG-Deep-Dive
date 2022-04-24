@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using RPG.GameplayCore.Core;
 using RPG.GameplayCore.Core.Conditions;
 using RPG.InventorySystem.InventoriesModel;
@@ -16,6 +17,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
     /// </summary>
     public class QuestsJournal : MonoBehaviour, IPredicateEvaluator, ISavable
     {
+        [HorizontalLine]
         [Header("User Hint Properties")]
         [SerializeField]
         private string userHintOnItemsReceived = "Получены новые предметы";
@@ -41,12 +43,22 @@ namespace RPG.GameplayCore.Quests.QuestsModel
                 QuestJournalUpdated?.Invoke();
             }
         }
-
+        
+        /// <summary>
+        /// Find Quest status by quest.
+        /// </summary>
+        /// <param name="quest">Quest, which status will be returned.</param>
         public QuestStatus FindQuestStatus(Quest quest)
         {
             return _questsStatuses.Find(status => ReferenceEquals(quest, status.Quest));
         }
 
+        /// <summary>
+        /// Mark quest objective as complete.
+        /// Give defined rewards and withdrawals.
+        /// </summary>
+        /// <param name="questStatus">Quest status object to complete.</param>
+        /// <param name="objectiveToComplete">Objective reference, which is completed.</param>
         public void CompleteQuestObjective(QuestStatus questStatus, string objectiveToComplete)
         {
             if (string.IsNullOrEmpty(objectiveToComplete)) return;

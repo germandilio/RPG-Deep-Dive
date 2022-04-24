@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace Utils
 {
+    /// <summary>
+    /// Simple runtime logger.
+    /// </summary>
     public class Logger : MonoBehaviour
     {
         private const string UserHint =
             "***begin loging errors***\nЧтобы открыть/закрыть окно логгера нажмите пробел.\nПеред закрытием программы, в случае если здесь появятся ошибки пожалуйста, скопируйте их и вставьте в форму (Раздел: 'Сообщение логгера')\n-----------------------------------------------------------------\n";
 
-        private StringBuilder _output = new StringBuilder();
+        private readonly StringBuilder _output = new StringBuilder();
 
         private bool _isOpened = true;
 

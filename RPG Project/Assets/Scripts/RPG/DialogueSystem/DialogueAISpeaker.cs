@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using RPG.GameplayCore.Control;
 using UnityEngine;
 
@@ -5,9 +6,11 @@ namespace RPG.DialogueSystem
 {
     public class DialogueAISpeaker : MonoBehaviour, IRaycastable
     {
+        [Required]
         [SerializeField]
         private Dialogue dialogue;
 
+        [Required]
         [SerializeField]
         private string speakerName;
 

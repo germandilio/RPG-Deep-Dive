@@ -6,7 +6,10 @@ namespace RPG.GameplayCore.Attributes
 {
     public class Experience : MonoBehaviour, ISavable
     {
-        public event Action OnExperienceGained;
+        /// <summary>
+        /// Boolean flag, if true - silent level update, if false - general level update
+        /// </summary>
+        public event Action<bool> OnExperienceGained;
 
         private float _experiencePoints;
 
@@ -15,7 +18,7 @@ namespace RPG.GameplayCore.Attributes
         public void AwardXp(float pointsToAdd)
         {
             _experiencePoints += pointsToAdd;
-            OnExperienceGained?.Invoke();
+            OnExperienceGained?.Invoke(false);
         }
 
         public object CaptureState()
@@ -28,7 +31,7 @@ namespace RPG.GameplayCore.Attributes
             if (state is float savedPoints)
             {
                 _experiencePoints = savedPoints;
-                OnExperienceGained?.Invoke();
+                OnExperienceGained?.Invoke(true);
             }
         }
     }

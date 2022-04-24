@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using RPG.GameplayCore.Stats;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
         order = 1)]
     public class StatsEquippableItem : EquippableItem, IModifyProvider
     {
+        [HorizontalLine]
         [Header("Stats Modifiers")]
         [SerializeField]
         private Modifier[] additiveModifiers;

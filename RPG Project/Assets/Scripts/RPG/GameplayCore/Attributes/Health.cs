@@ -24,7 +24,6 @@ namespace RPG.GameplayCore.Attributes
         private TakeDamageEvent tookDamage;
 
         [SerializeField]
-        [InspectorName("Die event (without sound)")]
         private UnityEvent died;
 
         [Tooltip("This event will be called when restoring state if character health = 0")]

@@ -1,4 +1,5 @@
 using System;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Core.Conditions
@@ -6,6 +7,7 @@ namespace RPG.GameplayCore.Core.Conditions
     [Serializable]
     public class Disjunction
     {
+        [Label("OR")]
         [SerializeField]
         private Predicate[] disjunctionSet;
         

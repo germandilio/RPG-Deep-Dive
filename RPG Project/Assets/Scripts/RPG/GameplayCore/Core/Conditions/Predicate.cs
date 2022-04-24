@@ -1,4 +1,5 @@
 using System;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Core.Conditions
@@ -9,11 +10,11 @@ namespace RPG.GameplayCore.Core.Conditions
         [SerializeField]
         private PredicateType predicate;
 
-        [Tooltip("Used for 'not {predicate}'. (ex. not HasQuest)")]
+        [InfoBox("Used for 'not {predicate}'. (ex. not HasQuest)")]
         [SerializeField]
         private bool negate;
 
-        [Tooltip("Arguments to pass in predicate")]
+        [InfoBox("Arguments to pass in predicate")]
         [SerializeField]
         private string[] parameters;
 

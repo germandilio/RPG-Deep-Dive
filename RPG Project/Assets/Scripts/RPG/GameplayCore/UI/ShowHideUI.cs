@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace RPG.GameplayCore.UI
@@ -38,6 +39,7 @@ namespace RPG.GameplayCore.UI
                 SwitchState();
         }
 
+        [Button("Show/Hide")]
         public void SwitchState()
         {
             if (uiContainer != null)

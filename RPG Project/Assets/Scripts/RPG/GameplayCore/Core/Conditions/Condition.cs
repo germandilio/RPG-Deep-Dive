@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Core.Conditions
@@ -12,6 +13,10 @@ namespace RPG.GameplayCore.Core.Conditions
     [Serializable]
     public class Condition
     {
+        [InfoBox("Condition is a set of predicates, which located in special order.\n" +
+                 "First array means logical 'AND' on his elements.\n" +
+                 "Every nested array means logical 'OR' on his elements")]
+        [Label("AND")]
         [SerializeField]
         private Disjunction[] conjunctionSet;
         

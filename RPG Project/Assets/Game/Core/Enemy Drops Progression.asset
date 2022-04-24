@@ -13,20 +13,26 @@ MonoBehaviour:
   m_Name: Enemy Drops Progression
   m_EditorClassIdentifier: 
   dropsChancePercentage: 640000003c00000014000000
-  minDropsNumber: 020000000100000001000000
-  maxDropsNumber: 040000000400000002000000
+  dropsNumber:
+  - {x: 1, y: 3}
+  - {x: 1, y: 2}
+  - {x: 1, y: 1}
   dropsLibrary:
   - dropItem: {fileID: 11400000, guid: 03487a37dbfa8413b90a02a893fbfd20, type: 2}
     relativeChance:
     - 30.7
     - 30.7
     - 31
-    minNumber: 
-    maxNumber: 
+    number:
+    - {x: 1, y: 1}
+    - {x: 1, y: 1}
+    - {x: 1, y: 1}
   - dropItem: {fileID: 11400000, guid: 751881f344a394242b7306232db42f96, type: 2}
     relativeChance:
     - 10.3
     - 10.3
     - 11.3
-    minNumber: 
-    maxNumber: 
+    number:
+    - {x: 1, y: 1}
+    - {x: 1, y: 1}
+    - {x: 1, y: 1}

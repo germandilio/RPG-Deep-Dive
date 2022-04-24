@@ -60,14 +60,17 @@ namespace RPG.GameplayCore.Stats
                 _experience.OnExperienceGained -= UpdateLevel;
         }
 
-        private void UpdateLevel()
+        private void UpdateLevel(bool isSilent)
         {
             int newLevel = CalculateLevel();
             if (newLevel > _currentLevel.Value)
             {
                 _currentLevel.Value = newLevel;
-                ShowLevelUpAffect();
-
+                
+                if (!isSilent)
+                {
+                    ShowLevelUpAffect();
+                }
                 LevelUp?.Invoke();
             }
         }

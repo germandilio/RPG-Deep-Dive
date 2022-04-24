@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using RPG.InventorySystem.InventoriesModel.Pickups;
 using UnityEditor;
 using UnityEngine;
@@ -11,10 +12,12 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
     /// </summary>
     public abstract class InventoryItem : ScriptableObject, ISerializationCallbackReceiver
     {
+        [ReadOnly]
         [Tooltip("Auto-generated GUID for saving/loading. Clear this field if you want to generate a new one.")]
         [SerializeField]
         private string itemID;
 
+        [HorizontalLine]
         [Header("Tooltip Settings")]
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField]
@@ -25,6 +28,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         [SerializeField]
         private string description;
 
+        [HorizontalLine]
+        [ShowAssetPreview]
         [Header("Inventory Configuration")]
         [Tooltip("The UI icon to represent this item in the inventory.")]
         [SerializeField]

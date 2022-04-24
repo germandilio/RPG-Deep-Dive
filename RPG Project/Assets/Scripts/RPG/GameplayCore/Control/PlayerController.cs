@@ -113,7 +113,6 @@ namespace RPG.GameplayCore.Control
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns>True, if object, under hovering mouse, exists. Otherwise, False.</returns>
         private bool InteractWithMovement()

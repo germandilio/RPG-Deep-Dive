@@ -1,4 +1,5 @@
 using System.Collections;
+using NaughtyAttributes;
 using RPG.GameplayCore.Control;
 using SavingSystem;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace RPG.GameplayCore.SceneManagement
         [SerializeField]
         private Scenes destinationScene;
 
+        [Label("From / To Portal location")]
         [SerializeField]
         private PortalLocation portalLocation;
 
@@ -92,8 +94,16 @@ namespace RPG.GameplayCore.SceneManagement
         private void UpdatePlayer(Portal anotherPortal)
         {
             var player = GameObject.FindWithTag("Player");
-            player.GetComponent<NavMeshAgent>()?.Warp(anotherPortal.spawnPoint.position);
-            player.transform.rotation = anotherPortal.spawnPoint.rotation;
+
+            if(NavMesh.SamplePosition(anotherPortal.spawnPoint.position, out var closestHit, 500, NavMesh.AllAreas)) {
+                player.transform.position = closestHit.position;
+                
+                player.GetComponent<NavMeshAgent>()?.Warp(player.transform.position);
+                player.transform.rotation = anotherPortal.spawnPoint.rotation;
+            }
+            else{
+                Debug.Log("Can't place player on NavMesh");
+            }
         }
 
         private Portal GetDestinationPortal()

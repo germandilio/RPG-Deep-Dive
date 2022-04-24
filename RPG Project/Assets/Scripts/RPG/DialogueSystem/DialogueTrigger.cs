@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,6 +6,7 @@ namespace RPG.DialogueSystem
 {
     public class DialogueTrigger : MonoBehaviour
     {
+        [ValidateInput("RequireNonNullOrEmpty", "Action reference cannot be empty")]
         [SerializeField]
         private string action;
 
@@ -16,5 +18,9 @@ namespace RPG.DialogueSystem
             if (actionToTrigger == action)
                 triggered?.Invoke();
         }
-    }
+        
+        private bool RequireNonNullOrEmpty(string stringToCheck)
+        {
+            return !string.IsNullOrEmpty(stringToCheck);
+        }    }
 }

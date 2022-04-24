@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using RPG.GameplayCore.Core;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace RPG.DialogueSystem
 {
@@ -80,7 +79,7 @@ namespace RPG.DialogueSystem
             TriggerExitActions();
 
             var children = FilterByCondition(_currentDialogue.GetAIChildren(_currentNode)).ToArray();
-            int randomResponseIndex = Random.Range(0, children.Length);
+            int randomResponseIndex = UnityEngine.Random.Range(0, children.Length);
 
             _currentNode = children[randomResponseIndex];
             DialogueStateUpdated?.Invoke();

@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using RPG.GameplayCore.Attributes;
 using RPG.InventorySystem.InventoriesModel.Equipment;
 using UnityEngine;
@@ -7,12 +8,15 @@ namespace RPG.GameplayCore.Combat
     [CreateAssetMenu(fileName = "new weapon", menuName = "RPG Project/Weapons/New Weapon", order = 0)]
     public class WeaponConfig : StatsEquippableItem
     {
+        [HorizontalLine]
+        [ShowAssetPreview]
         [Header("Weapon Configuration")]
         [Tooltip(
             "Keep it none if this weapon is invisible (ex. fireball weapon have only projectiles, without visible weapon)")]
         [SerializeField]
         private Weapon weaponPrefab;
 
+        [ShowAssetPreview]
         [Tooltip("Keep it none if this weapon doesn't have projectiles")]
         [SerializeField]
         private GameObject projectilePrefab;

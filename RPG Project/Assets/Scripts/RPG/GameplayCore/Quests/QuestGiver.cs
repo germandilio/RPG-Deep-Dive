@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using RPG.GameplayCore.Quests.QuestsModel;
 using UnityEngine;
 using Utils.UI.Hint;
@@ -7,7 +8,8 @@ namespace RPG.GameplayCore.Quests
     public class QuestGiver : MonoBehaviour
     {
         private const string UserHintOnGivingQuest = "Получен новый квест";
-            
+        
+        [Required]
         [SerializeField]
         private Quest questToGive;
 

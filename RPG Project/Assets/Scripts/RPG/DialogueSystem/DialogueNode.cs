@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using RPG.GameplayCore.Core;
 using RPG.GameplayCore.Core.Conditions;
 using UnityEditor;
@@ -9,6 +10,7 @@ namespace RPG.DialogueSystem
 {
     public class DialogueNode : ScriptableObject
     {
+        [ReadOnly]
         [Header("Internal properties:")]
         [SerializeField]
         private string id;
@@ -27,12 +29,15 @@ namespace RPG.DialogueSystem
         [SerializeField]
         private Condition condition;
 
+        [BoxGroup("Actions")]
         [SerializeField]
         private List<string> onEnterActions;
 
+        [BoxGroup("Actions")]
         [SerializeField]
         private List<string> onExitActions;
 
+        [ReadOnly]
         [SerializeField]
         private List<string> childNodes = new List<string>();
 

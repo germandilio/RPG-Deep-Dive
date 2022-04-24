@@ -752,11 +752,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolPath: {fileID: 0}
-  patrolSpeedFactor: 0.2
+  patrolSpeedFactor: 0.19
   chaseDistance: 5
-  waypointTolerance: 0.5
+  waypointTolerance: 2
   suspicionTime: 4
-  dwellTime: 5
+  dwellTime: 0.2
   aggravatedTime: 5
   shoutDistance: 5
 --- !u!114 &2117239332415800011
