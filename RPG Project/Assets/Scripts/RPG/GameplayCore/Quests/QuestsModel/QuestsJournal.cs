@@ -6,6 +6,7 @@ using RPG.GameplayCore.Core.Conditions;
 using RPG.InventorySystem.InventoriesModel;
 using RPG.InventorySystem.InventoriesModel.Inventory;
 using SavingSystem;
+using Unity.Services.Analytics;
 using UnityEngine;
 using Utils.UI.Hint;
 
@@ -41,6 +42,14 @@ namespace RPG.GameplayCore.Quests.QuestsModel
                 QuestStatus newQuestStatus = new QuestStatus(quest);
                 _questsStatuses.Add(newQuestStatus);
                 QuestJournalUpdated?.Invoke();
+                
+                // analytics
+                var parameters = new Dictionary<string, object>
+                {
+                    {"itemName", quest.name}
+                };
+                
+                AnalyticsService.Instance.CustomData("quest_started", parameters);
             }
         }
         
@@ -76,6 +85,14 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             {
                 GiveRewards(questStatus.Rewards());
                 HintSpawner.Spawn(userHintQuestCompleted);
+                
+                // analytics
+                var parameters = new Dictionary<string, object>()
+                {
+                    {"itemName", questStatus.Quest.name}   
+                };
+                
+                AnalyticsService.Instance.CustomData("quest_completed", parameters);
             }
             
             QuestJournalUpdated?.Invoke();

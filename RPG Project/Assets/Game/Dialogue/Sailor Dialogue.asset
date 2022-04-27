@@ -34,6 +34,11 @@ MonoBehaviour:
         negate: 1
         parameters:
         - 6b3881e4-acdc-466f-ada6-63bc84959acb
+    - disjunctionSet:
+      - predicate: 1
+        negate: 1
+        parameters:
+        - '#1 Help sailor repair the boot'
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -158,6 +163,43 @@ MonoBehaviour:
   onExitActions: []
   childNodes:
   - 9194f235-67ba-4d12-838b-32e86083204c
+--- !u!114 &-5239937227356438819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 16
+  m_EditorClassIdentifier: 
+  id: a4bb3c24-fe69-47d2-b661-94a7f31b758c
+  rect:
+    serializedVersion: 2
+    x: 291
+    y: 1141.945
+    width: 250
+    height: 150
+  speaker: 1
+  text: "\u0423 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\u0442 \u0437\u0430\u0434\u0430\u043D\u0438\u0439"
+  condition:
+    conjunctionSet:
+    - disjunctionSet:
+      - predicate: 1
+        negate: 0
+        parameters:
+        - '#1 Help sailor repair the boot'
+    - disjunctionSet:
+      - predicate: 0
+        negate: 0
+        parameters:
+        - '#1 Help sailor repair the boot'
+  onEnterActions: []
+  onExitActions: []
+  childNodes: []
 --- !u!114 &-4134828371519947697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +346,7 @@ MonoBehaviour:
   - {fileID: -3161670463784726394}
   - {fileID: -2659569381694619687}
   - {fileID: -8452038928899016633}
+  - {fileID: -5239937227356438819}
 --- !u!114 &2018774330367523571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,3 +544,4 @@ MonoBehaviour:
   - 923a0dda-a25c-4699-afe6-4bfb2b3c63bd
   - 4961df55-979e-469c-bebd-eed03c83b385
   - 1d641b16-2687-4f07-a16b-231b962d028a
+  - a4bb3c24-fe69-47d2-b661-94a7f31b758c

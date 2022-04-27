@@ -1,14 +1,19 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using RPG.GameplayCore.Attributes;
+using Unity.Services.Analytics;
 using UnityEngine;
 using Utils;
+using Utils.UI.Hint;
 
 namespace RPG.GameplayCore.Stats
 {
     public class BaseStats : MonoBehaviour
     {
+        private const string LevelUpHint = "Уровень повышен";
+        
         [Range(1, 99)]
         [SerializeField]
         private int progressLevel = 1;
@@ -72,12 +77,21 @@ namespace RPG.GameplayCore.Stats
                     ShowLevelUpAffect();
                 }
                 LevelUp?.Invoke();
+                
+                // analytics
+                var parameters = new Dictionary<string, object>()
+                {
+                    {"userLevel", _currentLevel.Value}   
+                };
+                
+                AnalyticsService.Instance.CustomData("level_up", parameters);
             }
         }
 
         private void ShowLevelUpAffect()
         {
             Instantiate(levelUpEffect, transform);
+            HintSpawner.Spawn(LevelUpHint);
         }
 
         public float GetStat(Stats statsType)

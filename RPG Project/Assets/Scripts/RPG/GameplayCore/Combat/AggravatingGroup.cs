@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RPG.DialogueSystem;
+using Unity.Services.Analytics;
 using UnityEngine;
 
 namespace RPG.GameplayCore.Combat
@@ -35,6 +36,14 @@ namespace RPG.GameplayCore.Combat
 
                 fighter.enabled = state;
             }
+            
+            // analytics
+            var parameters = new Dictionary<string, object>
+            {
+                {"itemName", "player is aggravate mechanic and decided to steal inventory item"}
+            };
+                
+            AnalyticsService.Instance.CustomData("aggravating_group_trigger", parameters);
         }
     }
 }
