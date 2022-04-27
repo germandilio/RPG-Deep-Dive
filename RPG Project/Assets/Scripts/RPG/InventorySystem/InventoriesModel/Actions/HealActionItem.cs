@@ -8,18 +8,18 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
     {
         [Header("Heal Properties")]
         [SerializeField]
-        private int healthPointsToRestore = 50; 
-            
+        private int healthPointsToRestore = 50;
+
         public override bool Use(GameObject user)
         {
             if (user == null) return false;
-            
+
             Health health = user.GetComponent<Health>();
             bool wasHealed = health.Heal(healthPointsToRestore);
-            
+
             if (wasHealed)
                 health.ShowHealEffect();
-            
+
             return wasHealed;
         }
     }

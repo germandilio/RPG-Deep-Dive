@@ -9,6 +9,8 @@ namespace RPG.GameplayCore.Combat
     {
         public bool HandleRaycast(PlayerController interactController)
         {
+            if (!enabled) return false;
+
             var fighterSystem = interactController.GetComponent<Fighter>();
 
             if (!fighterSystem.CanAttack(gameObject)) return false;

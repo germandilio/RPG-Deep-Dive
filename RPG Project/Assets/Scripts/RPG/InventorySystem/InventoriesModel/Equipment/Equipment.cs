@@ -14,7 +14,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
     /// </summary>
     public class Equipment : MonoBehaviour, ISavable
     {
-        public event Action OnEquipmentUpdated;
+        public event Action EquipmentUpdated;
 
         private readonly Dictionary<EquipLocation, EquippableItem> _equippedItems =
             new Dictionary<EquipLocation, EquippableItem>();
@@ -42,7 +42,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
 
             _equippedItems[slot] = item;
 
-            OnEquipmentUpdated?.Invoke();
+            EquipmentUpdated?.Invoke();
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
         public void RemoveItem(EquipLocation slot)
         {
             _equippedItems.Remove(slot);
-            OnEquipmentUpdated?.Invoke();
+            EquipmentUpdated?.Invoke();
         }
 
         /// <summary>
@@ -87,8 +87,8 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
                     _equippedItems[pair.Key] = item;
                 }
             }
-            
-            OnEquipmentUpdated?.Invoke();
+
+            EquipmentUpdated?.Invoke();
         }
     }
 }

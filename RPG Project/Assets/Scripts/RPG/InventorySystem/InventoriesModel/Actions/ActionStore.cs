@@ -14,8 +14,9 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
     /// </summary>
     public class ActionStore : MonoBehaviour, ISavable
     {
-        public event Action OnStoreUpdated;
+        public event Action StoreUpdated;
 
+        // TODO replace with different types of actions and portions
         private readonly Dictionary<int, DockedItemSlot> _dockedItems = new Dictionary<int, DockedItemSlot>();
 
         private class DockedItemSlot
@@ -75,7 +76,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
                 _dockedItems[index] = slot;
             }
 
-            OnStoreUpdated?.Invoke();
+            StoreUpdated?.Invoke();
         }
 
         /// <summary>
@@ -92,7 +93,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             if (isPerformed)
             {
                 if (_dockedItems[index].item.IsConsumable)
-                    RemoveItems(index, 1);   
+                    RemoveItems(index, 1);
             }
 
             return isPerformed;
@@ -109,7 +110,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
             if (_dockedItems[index].number <= 0)
                 _dockedItems.Remove(index);
 
-            OnStoreUpdated?.Invoke();
+            StoreUpdated?.Invoke();
         }
 
         /// <summary>

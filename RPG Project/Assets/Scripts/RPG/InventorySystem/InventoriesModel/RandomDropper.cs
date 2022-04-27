@@ -41,14 +41,14 @@ namespace RPG.InventorySystem.InventoriesModel
         /// <remarks>
         /// Event function.
         /// </remarks>
-        public void RandomDrop()
+        public void OnRandomDrop()
         {
             if (dropsLibrary == null)
             {
                 Debug.LogError("Drops Library is not set");
                 return;
             }
-            
+
             Invoke(nameof(Drop), spawningDelay);
         }
 

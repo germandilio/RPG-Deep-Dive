@@ -24,12 +24,12 @@ namespace RPG.InventorySystem.UI.Inventories
         {
             var player = GameObject.FindGameObjectWithTag("Player");
             _playerEquipment = player.GetComponent<Equipment>();
-            _playerEquipment.OnEquipmentUpdated += RedrawUI;
+            _playerEquipment.EquipmentUpdated += OnInventoryUpdated;
         }
 
         private void Start()
         {
-            RedrawUI();
+            OnInventoryUpdated();
         }
 
 
@@ -67,7 +67,7 @@ namespace RPG.InventorySystem.UI.Inventories
         }
 
 
-        void RedrawUI()
+        protected virtual void OnInventoryUpdated()
         {
             icon.SetItem(_playerEquipment.GetItemInSlot(equipLocation));
         }

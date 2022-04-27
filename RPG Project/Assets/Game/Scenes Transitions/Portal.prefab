@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383200243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4321, y: 0, z: -1.682}
+  m_LocalPosition: {x: 0.4538, y: -0.55, z: 0.5858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 762626765172245313}
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 762626765172245316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -43.03, y: 1.98, z: 23.93}
-  m_LocalScale: {x: 14, y: 2.5, z: 7}
+  m_LocalScale: {x: 12, y: 2.5, z: 5}
   m_Children:
   - {fileID: 1383200244}
   m_Father: {fileID: 0}
@@ -74,8 +74,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.7670004, z: 1.5512701}
-  m_Center: {x: 0, y: 0.3835, z: -0.27563342}
+  m_Size: {x: 1.1803224, y: 1.7670004, z: 1.68216}
+  m_Center: {x: 0.09015882, y: 0.3835, z: -0.21018858}
 --- !u!114 &762626765172245319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,5 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0eab36bdde0479ba9bb2f77e66b7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 1
+  timeToFadeOut: 0.5
+  timeToFadeIn: 1
+  fadeWaitTime: 0.3
+  destinationScene: -1
+  portalLocation: 1
   spawnPoint: {fileID: 1383200244}

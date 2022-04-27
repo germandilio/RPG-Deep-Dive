@@ -1,12 +1,12 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace RPG.GameplayCore.UI.DamageText
 {
     public class DamageText : MonoBehaviour
     {
         [SerializeField]
-        private Text textComponent;
+        private TextMeshProUGUI textComponent;
 
         public void SetText(float damage)
         {

@@ -87,7 +87,7 @@ namespace RPG.InventorySystem.InventoriesModel
 
             _droppedItemsInOtherScenes.Clear();
             _droppedItems.Clear();
-            
+
             var droppedItemsList = (List<DropRecord>) state;
             foreach (var item in droppedItemsList)
             {

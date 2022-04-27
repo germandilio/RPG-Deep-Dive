@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b332d5a62048b4832411ff91bc6fc3, type: 3}
+  m_Name: Unarmed Scriptable Object
+  m_EditorClassIdentifier: 
+  itemID: 3940c734-fcc1-422e-821f-56e7567b1589
+  displayName: 
+  description: 
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  stackable: 0
+  allowedEquipLocation: 8
+  additiveModifiers: []
+  percentageModifiers: []
+  weaponPrefab: {fileID: 7181305359121167727, guid: a9e8cb916f4b5497ab8c0307cda79a6f,
+    type: 3}
+  projectilePrefab: {fileID: 0}
+  animatorOverrideController: {fileID: 0}
+  weaponType: 0
+  weaponRange: 2
+  timeBetweenAttacks: 1.8

@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelUpHealthPercentage: 70
-  onTakeDamage:
+  tookDamage:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7902633670532757169}
@@ -308,7 +308,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8319585852885270062}
-        m_TargetAssemblyTypeName: RPG.UI.DamageText.DamageTextSpawner, Assembly-CSharp
+        m_TargetAssemblyTypeName: RPG.GameplayCore.UI.DamageText.DamageTextSpawner,
+          Assembly-CSharp
         m_MethodName: Spawn
         m_Mode: 0
         m_Arguments:
@@ -319,21 +320,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onDie:
+  died:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4720340884800213691}
-        m_TargetAssemblyTypeName: RPG.GameplayCore.Movement.Mover, Assembly-CSharp
-        m_MethodName: DisableOnDeath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 9215672144092484720}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -346,12 +335,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onRestoreStateWhenDeath:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 4720340884800213691}
         m_TargetAssemblyTypeName: RPG.GameplayCore.Movement.Mover, Assembly-CSharp
-        m_MethodName: DisableOnDeath
+        m_MethodName: OnDeathDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -361,6 +347,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  restoringDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4720340884800213691}
+        m_TargetAssemblyTypeName: RPG.GameplayCore.Movement.Mover, Assembly-CSharp
+        m_MethodName: OnDeathDisable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  healEffect: {fileID: 0}
 --- !u!114 &4720340884800213691
 MonoBehaviour:
   m_ObjectHideFlags: 0

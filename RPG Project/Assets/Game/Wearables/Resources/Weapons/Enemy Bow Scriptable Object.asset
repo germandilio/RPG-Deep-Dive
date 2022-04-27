@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b332d5a62048b4832411ff91bc6fc3, type: 3}
+  m_Name: Enemy Bow Scriptable Object
+  m_EditorClassIdentifier: 
+  itemID: d4478e4e-a02a-4815-ba5d-69852782a0d4
+  displayName: "\u0412\u0440\u0430\u0436\u0435\u0441\u043A\u0438\u0439 \u043B\u0443\u043A"
+  description: "\u0414\u0430\u0435\u0442 +25 \u043A \u0443\u0440\u043E\u043D\u0443."
+  icon: {fileID: 21300000, guid: d72ead56071201244b207b7cccb331c1, type: 3}
+  pickup: {fileID: 3946488469255852960, guid: 31fa4aa06dd924ca791942bd190cde20, type: 3}
+  stackable: 0
+  allowedEquipLocation: 8
+  additiveModifiers:
+  - stat: 3
+    value: 25
+  percentageModifiers: []
+  weaponPrefab: {fileID: 8563421568223617974, guid: 7f105c0c272e6c146b4b41cdc53ea356,
+    type: 3}
+  projectilePrefab: {fileID: 4085885830373257377, guid: 4d820f6e41d5244168209041732bf863,
+    type: 3}
+  animatorOverrideController: {fileID: 22100000, guid: 22ff3c2b4ab0c40508e36e325b226098,
+    type: 2}
+  weaponType: 0
+  weaponRange: 14
+  timeBetweenAttacks: 2.2

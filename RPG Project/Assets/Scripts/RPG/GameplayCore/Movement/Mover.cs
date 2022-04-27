@@ -8,7 +8,6 @@ using Utils;
 namespace RPG.GameplayCore.Movement
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ActionScheduler))]
-    [RequireComponent(typeof(Health))]
     public class Mover : MonoBehaviour, IAction, ISavable
     {
         [SerializeField]
@@ -79,7 +78,7 @@ namespace RPG.GameplayCore.Movement
         /// <remarks>
         /// Event function.
         /// </remarks>
-        public void DisableOnDeath()
+        public void OnDeathDisable()
         {
             _navMeshAgent.enabled = false;
         }

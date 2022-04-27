@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed9871c7733401983c67b981544785e, type: 3}
+  m_Name: MechanicSpareParts
+  m_EditorClassIdentifier: 
+  itemID: 6b3881e4-acdc-466f-ada6-63bc84959acb
+  displayName: "\u0417\u0430\u043F\u0447\u0430\u0441\u0442\u0438"
+  description: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044E\u0442\u0441\u044F
+    \u0434\u043B\u044F \u043F\u043E\u0447\u043D\u043A\u0438 \u043B\u043E\u0434\u043A\u0438."
+  icon: {fileID: 21300000, guid: 5bd7ea42bb0df604eb4b3ea57c52de7a, type: 3}
+  pickup: {fileID: 8255510793927867686, guid: 8d0254371430b45f0abeb348a5756383, type: 3}
+  stackable: 0

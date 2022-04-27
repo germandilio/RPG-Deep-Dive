@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
+using NaughtyAttributes;
 using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace RPG.InventorySystem.InventoriesModel
 {
@@ -18,12 +17,11 @@ namespace RPG.InventorySystem.InventoriesModel
         [SerializeField]
         private int[] dropsChancePercentage;
 
+        [Tooltip("Min-Max drops by level")]
+        [MinMaxSlider(0, 100)]
         [SerializeField]
-        private int[] minDropsNumber;
-
-        [SerializeField]
-        private int[] maxDropsNumber;
-
+        private Vector2Int[] dropsNumber;
+        
         [SerializeField]
         private DropConfig[] dropsLibrary;
 
@@ -34,22 +32,21 @@ namespace RPG.InventorySystem.InventoriesModel
             public InventoryItem dropItem;
 
             [Header("Properties By Level")]
-            [Tooltip(
+            [InfoBox(
                 "Chance of dropping relating to other drops. (ex. Item1 with relativeChance = 1, Item2 with relativeChance = 3." +
                 " Probabilities of dropping will be: for Item1 - 1/4 (25%), for Item2 - 3/4 (75%).)")]
             [Range(0, 100)]
             public float[] relativeChance;
 
-            public int[] minNumber;
-            public int[] maxNumber;
+            [MinMaxSlider(0, 10)]
+            public Vector2Int[] number;
 
             public int GetRandomNumber(int level)
             {
                 if (!dropItem.IsStackable) return 1;
 
-                int min = GetByLevel(minNumber, level);
-                int max = GetByLevel(maxNumber, level);
-                return Random.Range(min, max + 1);
+                Vector2Int numberOnLevel = GetByLevel(number, level);
+                return UnityEngine.Random.Range(numberOnLevel.x, numberOnLevel.y + 1);
             }
         }
 
@@ -78,15 +75,13 @@ namespace RPG.InventorySystem.InventoriesModel
 
         private bool ShouldDrop(int level)
         {
-            return Random.Range(0, 101) <= GetByLevel(dropsChancePercentage, level);
+            return UnityEngine.Random.Range(0, 101) <= GetByLevel(dropsChancePercentage, level);
         }
 
         private int GetNumberOfDrops(int level)
         {
-            int min = GetByLevel(minDropsNumber, level);
-            int max = GetByLevel(maxDropsNumber, level);
-
-            return Random.Range(min, max + 1);
+            Vector2Int numberOnLevel = GetByLevel(dropsNumber, level);
+            return UnityEngine.Random.Range(numberOnLevel.x, numberOnLevel.y + 1);
         }
 
         private float GetTotalChance(int level)
@@ -97,7 +92,7 @@ namespace RPG.InventorySystem.InventoriesModel
         private DropConfig GetRandomItem(int level)
         {
             float totalChance = GetTotalChance(level);
-            float randomRoll = Random.Range(0, totalChance);
+            float randomRoll = UnityEngine.Random.Range(0, totalChance);
 
             float chanceTotal = 0f;
             foreach (var dropConfig in dropsLibrary)

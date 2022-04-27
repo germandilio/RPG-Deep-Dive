@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using RPG.InventorySystem.InventoriesModel.Pickups;
 using UnityEngine;
 
 namespace RPG.InventorySystem.InventoriesModel.Inventory
 {
     /// <summary>
-    /// Abstraction that represents any item that can be put in a inventory.
+    /// Represents any item that can be put in a inventory.
     /// </summary>
     public abstract class InventoryItem : ScriptableObject, ISerializationCallbackReceiver
     {
+        [ReadOnly]
         [Tooltip("Auto-generated GUID for saving/loading. Clear this field if you want to generate a new one.")]
         [SerializeField]
         private string itemID;
 
+        [HorizontalLine]
         [Header("Tooltip Settings")]
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField]
@@ -24,6 +27,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         [SerializeField]
         private string description;
 
+        [HorizontalLine]
+        [ShowAssetPreview]
         [Header("Inventory Configuration")]
         [Tooltip("The UI icon to represent this item in the inventory.")]
         [SerializeField]
@@ -54,7 +59,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         /// Get the inventory item instance from its GUID.
         /// </summary>
         /// <param name="itemID">
-        /// String GUID that persists between game instances.
+        /// String GUID.
         /// </param>
         /// <returns>
         /// Inventory item instance corresponding to the ID.

@@ -10,7 +10,7 @@ namespace RPG.InventorySystem.InventoriesModel.Actions
     /// Subclasses must override the `Use`
     /// method.
     /// </remarks>
-    [CreateAssetMenu(menuName = "RPG Project/Inventory/New ActionItem", fileName = "New ActionItem", order = 3)]
+    [CreateAssetMenu(menuName = "RPG Project/Inventory/New Action Item", fileName = "New ActionItem", order = 3)]
     public class ActionItem : InventoryItem
     {
         [Header("Action Configuration")]

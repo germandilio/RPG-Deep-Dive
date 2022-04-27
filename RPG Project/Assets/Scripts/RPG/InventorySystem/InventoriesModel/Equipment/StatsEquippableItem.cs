@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using RPG.GameplayCore.Stats;
 using UnityEngine;
 
 namespace RPG.InventorySystem.InventoriesModel.Equipment
 {
-    [CreateAssetMenu(menuName = "RPG Project/Inventory/New StatsEquippableItem", fileName = "New StatsEquippableItem",
+    [CreateAssetMenu(menuName = "RPG Project/Inventory/New Stats Equippable Item", fileName = "New StatsEquippableItem",
         order = 1)]
     public class StatsEquippableItem : EquippableItem, IModifyProvider
     {
+        [HorizontalLine]
         [Header("Stats Modifiers")]
         [SerializeField]
         private Modifier[] additiveModifiers;

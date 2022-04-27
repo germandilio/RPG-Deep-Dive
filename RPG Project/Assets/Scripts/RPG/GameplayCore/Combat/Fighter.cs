@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using RPG.GameplayCore.Attributes;
 using RPG.GameplayCore.Core;
@@ -14,6 +14,7 @@ namespace RPG.GameplayCore.Combat
     [RequireComponent(typeof(BaseStats))]
     public class Fighter : MonoBehaviour, IAction, ISavable
     {
+        [Required]
         [SerializeField]
         private Transform rightHand, leftHand;
 
@@ -52,7 +53,7 @@ namespace RPG.GameplayCore.Combat
             _equipment = GetComponent<Equipment>();
             if (_equipment != null)
             {
-                _equipment.OnEquipmentUpdated += UpdateWeapon;
+                _equipment.EquipmentUpdated += UpdateWeapon;
             }
         }
 
@@ -95,7 +96,7 @@ namespace RPG.GameplayCore.Combat
             return AttachWeapon(defaultWeaponConfig);
         }
 
-        public void EquipWeapon(WeaponConfig weaponConfig)
+        private void EquipWeapon(WeaponConfig weaponConfig)
         {
             if (weaponConfig == null) return;
 

@@ -7,6 +7,7 @@ namespace RPG.GameplayCore.Control
         Movement,
         OnUI,
         Pickup,
-        FullInventory
+        FullInventory,
+        Dialogue
     }
 }
