@@ -16,5 +16,6 @@ MonoBehaviour:
   displayName: "\u0422\u044B\u043A\u0432\u0430"
   description: "(\u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435)"
   icon: {fileID: 21300000, guid: 4b2c47868716c6646abffc380d96ee71, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: 4b2c47868716c6646abffc380d96ee71, type: 3}
   pickup: {fileID: 3160074211711167938, guid: 958ebde6c95334915a8c14d149f89d74, type: 3}
   stackable: 0

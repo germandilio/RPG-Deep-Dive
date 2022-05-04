@@ -1,29 +1,27 @@
 using UnityEngine;
+using Utils.UI;
 
 namespace RPG.GameplayCore.Attributes
 {
-    public class InGameHealthBar : MonoBehaviour
+    public class InGameHealthBar : DisplayBar<Health>
     {
-        [SerializeField]
-        private RectTransform barTransform;
-
         [SerializeField]
         private Health enemyHealth;
 
-        [SerializeField]
-        private Canvas canvas;
-
-        private void Update()
+        protected override float GetCurrentValue()
         {
-            float fraction = enemyHealth.GetCurrentHealth() / enemyHealth.GetMaxHealth();
-            if (Mathf.Approximately(fraction, 0f) || Mathf.Approximately(fraction, 1f))
-            {
-                canvas.enabled = false;
-                return;
-            }
+            return enemyHealth.GetCurrentHealth();
+        }
 
-            canvas.enabled = true;
-            barTransform.localScale = new Vector3(fraction, 1, 1);
+        protected override float GetMaxValue()
+        {
+            return enemyHealth.GetMaxHealth();
+        }
+
+        protected override bool ShouldShow()
+        {
+            if (!Fraction.HasValue) return false;
+            return !Mathf.Approximately(Fraction.Value, 0f) && !Mathf.Approximately(Fraction.Value, 1f);
         }
     }
 }

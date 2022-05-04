@@ -38,8 +38,9 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
         /// </summary>
         public void AddItem(EquipLocation slot, EquippableItem item)
         {
-            Debug.Assert(item.AllowedEquipLocation == slot);
-
+            if (item == null || item.AllowedEquipLocation != slot)
+                return;
+            
             _equippedItems[slot] = item;
 
             EquipmentUpdated?.Invoke();

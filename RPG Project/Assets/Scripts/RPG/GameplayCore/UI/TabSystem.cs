@@ -5,17 +5,19 @@ namespace RPG.GameplayCore.UI
 {
     public class TabSystem : MonoBehaviour
     {
-        public event Action<GameObject> TabSelected;
+        public event Action TabSelected;
+
+        public GameObject SelectedTab { get; private set; }
 
         private void Start()
         {
-            TabSelected?.Invoke(null);
+            TabSelected?.Invoke();
         }
 
         public void Select(GameObject uiContainer)
         {
-            uiContainer.SetActive(true);
-            TabSelected?.Invoke(uiContainer);
+            SelectedTab = uiContainer;
+            TabSelected?.Invoke();
         }
     }
 }

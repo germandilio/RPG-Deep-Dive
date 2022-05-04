@@ -1,15 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using RPG.InventorySystem.InventoriesModel.Equipment;
+using RPG.InventorySystem.UI.Inventories;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Utils.UI.Dragging
 {
     /// <summary>
     /// Allows a UI element to be dragged and dropped from and to a container.
-    /// 
-    /// Create a subclass for the type you want to be draggable. Then place on
-    /// the UI element you want to make draggable.
-    /// 
-    /// During dragging, the item is reparented to the parent canvas.
+    /// Also support auto swap on mouse right click.
     /// 
     /// After the item is dropped it will be automatically return to the
     /// original UI parent. It is the job of components implementing `IDragContainer`,
@@ -22,14 +21,14 @@ namespace Utils.UI.Dragging
     {
         private Vector3 _startPosition;
         private Transform _originalParent;
-        private IDragSource<T> _source;
-
         private Canvas _parentCanvas;
 
-        private void Awake()
+        protected IDragSource<T> source;
+        
+        protected virtual void Awake()
         {
             _parentCanvas = GetComponentInParent<Canvas>();
-            _source = GetComponentInParent<IDragSource<T>>();
+            source = GetComponentInParent<IDragSource<T>>();
         }
 
         public virtual void OnBeginDrag(PointerEventData eventData)
@@ -74,24 +73,23 @@ namespace Utils.UI.Dragging
             if (eventData.pointerEnter)
             {
                 var container = eventData.pointerEnter.GetComponentInParent<IDragDestination<T>>();
-
                 return container;
             }
 
             return null;
         }
 
-        private void DropItemIntoContainer(IDragDestination<T> destination)
+        protected void DropItemIntoContainer(IDragDestination<T> destination)
         {
-            if (object.ReferenceEquals(destination, _source)) return;
+            if (ReferenceEquals(destination, source)) return;
 
             var destinationContainer = destination as IDragContainer<T>;
-            var sourceContainer = _source as IDragContainer<T>;
+            var sourceContainer = source as IDragContainer<T>;
 
             // Swap won't be possible
             if (destinationContainer == null || sourceContainer == null ||
                 destinationContainer.GetItem() == null ||
-                object.ReferenceEquals(destinationContainer.GetItem(), sourceContainer.GetItem()))
+                ReferenceEquals(destinationContainer.GetItem(), sourceContainer.GetItem()))
             {
                 AttemptSimpleTransfer(destination);
                 return;
@@ -160,15 +158,15 @@ namespace Utils.UI.Dragging
 
         private bool AttemptSimpleTransfer(IDragDestination<T> destination)
         {
-            var draggingItem = _source.GetItem();
-            var draggingNumber = _source.GetNumber();
+            var draggingItem = source.GetItem();
+            var draggingNumber = source.GetNumber();
 
             var acceptable = destination.MaxAcceptable(draggingItem);
             var toTransfer = Mathf.Min(acceptable, draggingNumber);
 
             if (toTransfer > 0)
             {
-                _source.RemoveItems(toTransfer);
+                source.RemoveItems(toTransfer);
                 destination.AddItems(draggingItem, toTransfer);
                 return false;
             }

@@ -509,6 +509,15 @@ MonoBehaviour:
   - type: 6
     texture: {fileID: 2800000, guid: 96d4bfdb0d6d8c042bf8fccf6524d239, type: 3}
     hotspot: {x: 0, y: 0}
+  - type: 7
+    texture: {fileID: 2800000, guid: 71c06df75eee7124f8ab8e39ce242adc, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 8
+    texture: {fileID: 2800000, guid: a4d35a1210326f64fa2339d2ae104afe, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 9
+    texture: {fileID: 2800000, guid: f8c873f1e53e83f4aabf342d6be1dfc3, type: 3}
+    hotspot: {x: 0, y: 0}
   maxDeviationFromRaycastToNavMesh: 1
   raycastInfelicity: 0.3
 --- !u!1001 &2669362155555264324

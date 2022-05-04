@@ -32,11 +32,15 @@ namespace RPG.GameplayCore.UI
             tabSystem.TabSelected += ResetTab;
         }
 
-        private void ResetTab(GameObject uiTab)
+        private void ResetTab()
         {
-            if (!ReferenceEquals(uiTab, uiContainer))
+            if (!ReferenceEquals(tabSystem.SelectedTab, uiContainer))
             {
                 uiContainer.SetActive(false);
+            }
+            else
+            {
+                uiContainer.SetActive(!uiContainer.activeSelf);
             }
         }
 

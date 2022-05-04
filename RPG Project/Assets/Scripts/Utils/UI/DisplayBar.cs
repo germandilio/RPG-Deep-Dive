@@ -7,33 +7,52 @@ namespace Utils.UI
     /// Generic blueprint for displayBars
     /// </summary>
     /// <typeparam name="T">Type of component which values should be displayed, this component must be attached to GameObject tagged "Player"</typeparam>
-    [RequireComponent(typeof(Slider))]
     public abstract class DisplayBar<T> : MonoBehaviour where T : MonoBehaviour
     {
-        private Slider _displayBar;
+        [SerializeField]
+        private Canvas canvas;
 
-        protected T playerStatComponent;
+        [SerializeField]
+        private Slider displayBar;
+
+        protected T characterStatComponent;
+
+        protected float? Fraction
+        {
+            get
+            {
+                if (displayBar == null)
+                    return null;
+                
+                return displayBar.value;
+            }
+        }
 
         private void Awake()
         {
             var player = GameObject.FindGameObjectWithTag("Player");
-            playerStatComponent = player.GetComponent<T>();
-
-            _displayBar = GetComponent<Slider>();
+            characterStatComponent = player.GetComponent<T>();
         }
 
         private void Update()
         {
-            if (playerStatComponent == null)
+            if (characterStatComponent == null)
             {
                 Debug.LogError($"Players component {nameof(T)} is null");
             }
 
-            _displayBar.value = GetCurrentValue() / GetMaxValue();
+            if (canvas != null)
+            {
+                canvas.enabled = ShouldShow();
+            }
+            
+            displayBar.value = GetCurrentValue() / GetMaxValue();
         }
 
         protected abstract float GetCurrentValue();
 
         protected abstract float GetMaxValue();
+        
+        protected abstract bool ShouldShow();
     }
 }

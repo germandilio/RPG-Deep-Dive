@@ -44,7 +44,6 @@ namespace RPG.GameplayCore.Stats
         private void Awake()
         {
             _experience = GetComponent<Experience>();
-
             _currentLevel = new LazyValue<int>(CalculateLevel);
         }
 
@@ -98,6 +97,15 @@ namespace RPG.GameplayCore.Stats
         {
             return (GetBaseStat(statsType) + GetAdditiveModifier(statsType)) *
                    (1 + GetPercentageModifier(statsType) / 100);
+        }
+
+        public float GetStatOnPreviousLevel(Stats statType)
+        {
+            int previousLevel = _currentLevel.Value > 1 ? _currentLevel.Value - 1 : 1;
+            float baseStat = progression.GetStat(statType, characterClass, previousLevel);
+            
+            return (baseStat + GetAdditiveModifier(statType)) *
+                   (1 + GetPercentageModifier(statType) / 100);
         }
 
         private float GetPercentageModifier(Stats statsType)

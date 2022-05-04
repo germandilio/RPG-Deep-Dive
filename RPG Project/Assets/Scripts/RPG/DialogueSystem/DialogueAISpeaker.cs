@@ -46,5 +46,12 @@ namespace RPG.DialogueSystem
                 trigger.Trigger(actionToTrigger);
             }
         }
+
+        public void CancelDialogue()
+        {
+            var player = GameObject.FindGameObjectWithTag("Player");
+            var playerDialogue = player.GetComponent<PlayerDialogueAPI>();
+            playerDialogue.Quit();
+        }
     }
 }

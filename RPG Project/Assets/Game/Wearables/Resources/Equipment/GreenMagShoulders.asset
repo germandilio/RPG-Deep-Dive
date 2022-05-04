@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 098f4ffc-a13c-4979-9904-524658b6f801
   displayName: "\u0417\u0430\u0449\u0438\u0442\u0430 \u043F\u043B\u0435\u0447\u0435\u0439"
-  description: "(\u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435)"
+  description: "(\u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435)\n\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C:\n\u041F\u041A\u041C
+    \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u044C
+    \u0432 \u0441\u043E\u043E\u0442\u0432. \u0441\u043B\u043E\u0442"
   icon: {fileID: 21300000, guid: ed7262f12ab816247b9d95c8019a647a, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: b20b0270b5c698c4bbfba41b61c5561a, type: 3}
   pickup: {fileID: 8255510793927867686, guid: 8d0254371430b45f0abeb348a5756383, type: 3}
   stackable: 0
   allowedEquipLocation: 1

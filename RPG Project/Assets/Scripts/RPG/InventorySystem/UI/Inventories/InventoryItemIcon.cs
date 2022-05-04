@@ -18,21 +18,29 @@ namespace RPG.InventorySystem.UI.Inventories
         [SerializeField]
         private TextMeshProUGUI itemNumber;
 
+        private Sprite _iconWithoutBackground;
+        private Sprite _iconWithBackground;
 
         public void SetItem(InventoryItem item)
         {
-            SetItem(item, 0);
+            SetItem(item, 1);
         }
 
         public void SetItem(InventoryItem item, int number)
         {
             var iconImage = GetComponent<Image>();
             if (item == null)
+            {
                 iconImage.enabled = false;
+                _iconWithoutBackground = null;
+                _iconWithBackground = null;
+            }
             else
             {
                 iconImage.enabled = true;
-                iconImage.sprite = item.Icon;
+                _iconWithoutBackground = item.Icon;
+                _iconWithBackground = item.IconWithBackground;
+                iconImage.sprite = _iconWithBackground;
             }
 
             if (itemNumber)
@@ -44,6 +52,24 @@ namespace RPG.InventorySystem.UI.Inventories
                     textContainer.SetActive(true);
                     itemNumber.text = number.ToString();
                 }
+            }
+        }
+
+        public void CutOffBackground()
+        {
+            if (_iconWithoutBackground != null)
+            { 
+                var iconImage = GetComponent<Image>(); 
+                iconImage.sprite = _iconWithoutBackground;
+            }
+        }
+
+        public void ShowBackground()
+        {
+            if (_iconWithBackground != null)
+            { 
+                var iconImage = GetComponent<Image>(); 
+                iconImage.sprite = _iconWithBackground;
             }
         }
     }

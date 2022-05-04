@@ -30,9 +30,14 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         [HorizontalLine]
         [ShowAssetPreview]
         [Header("Inventory Configuration")]
-        [Tooltip("The UI icon to represent this item in the inventory.")]
+        [Tooltip("The UI icon to represent this item in the inventory (without background).")]
         [SerializeField]
         private Sprite icon;
+        
+        [ShowAssetPreview]
+        [Tooltip("The UI icon to represent this item in the inventory (with background).")]
+        [SerializeField]
+        private Sprite iconWithBackground;
 
         [Tooltip("The prefab that should be spawned when this item is dropped.")]
         [SerializeField]
@@ -45,6 +50,8 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         private static Dictionary<string, InventoryItem> _itemLookupCache;
 
         public Sprite Icon => icon;
+        
+        public Sprite IconWithBackground => iconWithBackground;
 
         public string ItemID => itemID;
 
@@ -53,8 +60,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         public string DisplayName => displayName;
 
         public string Description => description;
-
-
+        
         /// <summary>
         /// Get the inventory item instance from its GUID.
         /// </summary>

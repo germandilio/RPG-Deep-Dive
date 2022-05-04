@@ -80,10 +80,9 @@ MonoBehaviour:
   condition:
     conjunctionSet: []
   onEnterActions: []
-  onExitActions:
-  - "\u0410\u0442\u0430\u043A\u0430 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0430"
+  onExitActions: []
   childNodes:
-  - 931969d1-6ca8-47f8-8d51-56c4d2d7880c
+  - 5ac12760-88f6-4c28-a510-6da309f0369f
 --- !u!114 &-3577131989670475229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +143,34 @@ MonoBehaviour:
   childNodes:
   - 2ffba072-c753-4494-8a8b-c985020dffe5
   - e8452e53-0840-4b63-9f41-17820b355735
+--- !u!114 &-3467095636370791958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
+  m_Name: Node 17
+  m_EditorClassIdentifier: 
+  id: 5ac12760-88f6-4c28-a510-6da309f0369f
+  rect:
+    serializedVersion: 2
+    x: 3336.8667
+    y: 560
+    width: 250
+    height: 150
+  speaker: 1
+  text: 
+  condition:
+    conjunctionSet: []
+  onEnterActions:
+  - "\u0410\u0442\u0430\u043A\u0430 \u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0430"
+  - "\u0417\u0430\u043A\u0440\u044B\u0442\u044C \u0434\u0438\u0430\u043B\u043E\u0433"
+  onExitActions: []
+  childNodes: []
 --- !u!114 &-2869483751381301511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,33 +200,6 @@ MonoBehaviour:
   onExitActions: []
   childNodes:
   - 59c10410-2471-4727-a00b-0276fd416e96
---- !u!114 &-2406436809629807799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897ed8dedc3042c8a4db3cea8092efa7, type: 3}
-  m_Name: Node 13
-  m_EditorClassIdentifier: 
-  id: 931969d1-6ca8-47f8-8d51-56c4d2d7880c
-  rect:
-    serializedVersion: 2
-    x: 3340.2314
-    y: 526.7759
-    width: 250
-    height: 150
-  speaker: 1
-  text: "\u0422\u0435\u043F\u0435\u0440\u044C \u0442\u044B \u0443 \u043C\u0435\u043D\u044F
-    \u043F\u043E\u043B\u0443\u0447\u0438\u0448\u044C!"
-  condition:
-    conjunctionSet: []
-  onEnterActions: []
-  onExitActions: []
-  childNodes: []
 --- !u!114 &-2386995432381673541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,11 +342,11 @@ MonoBehaviour:
   - {fileID: 2583120114751674385}
   - {fileID: 7527276360247870395}
   - {fileID: -8559076845273240011}
-  - {fileID: -2406436809629807799}
   - {fileID: 4785148754938826751}
   - {fileID: -3577131989670475229}
   - {fileID: -862734977932050579}
   - {fileID: 4441180455064476395}
+  - {fileID: -3467095636370791958}
 --- !u!114 &2317208113606555191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +434,11 @@ MonoBehaviour:
         negate: 0
         parameters:
         - '#1 Help sailor repair the boot'
+    - disjunctionSet:
+      - predicate: 1
+        negate: 1
+        parameters:
+        - '#1 Help sailor repair the boot'
   onEnterActions: []
   onExitActions: []
   childNodes:
@@ -454,8 +459,8 @@ MonoBehaviour:
   id: 3dd2db6b-850b-4b19-b63c-e711d2f17e7f
   rect:
     serializedVersion: 2
-    x: 1290
-    y: 966
+    x: 1318
+    y: 982
     width: 250
     height: 150
   speaker: 1

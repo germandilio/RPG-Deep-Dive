@@ -15,8 +15,11 @@ MonoBehaviour:
   itemID: ce9cbdc7-f286-46e6-8866-cf7f0a5a7b7a
   displayName: "\u0411\u0440\u043E\u043D\u044F"
   description: "+10% \u043A \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u043C\u0443
-    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044E."
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044E.\n\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C:\n\u041F\u041A\u041C
+    \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u044C
+    \u0432 \u0441\u043E\u043E\u0442\u0432. \u0441\u043B\u043E\u0442"
   icon: {fileID: 21300000, guid: 7816e11f375feb741a0f707cd06a85e1, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: f76bc90cc9c2fd84db31e06851f0d27d, type: 3}
   pickup: {fileID: 8255510793927867686, guid: 8d0254371430b45f0abeb348a5756383, type: 3}
   stackable: 0
   allowedEquipLocation: 5

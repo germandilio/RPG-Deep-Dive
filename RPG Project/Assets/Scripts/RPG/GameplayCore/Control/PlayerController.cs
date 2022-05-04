@@ -97,16 +97,16 @@ namespace RPG.GameplayCore.Control
 
         private bool InteractWithUI()
         {
-            if (Input.GetMouseButtonUp(0))
-                _interactingWithUI = false;
-
-            if (EventSystem.current.IsPointerOverGameObject())
+            if (EventSystem.current.IsPointerOverGameObject() && !_interactingWithUI)
             {
-                if (Input.GetMouseButtonDown(0))
-                    _interactingWithUI = true;
-
+                _interactingWithUI = true;
                 SetCursor(CursorType.OnUI);
                 return true;
+            }
+
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                _interactingWithUI = false;
             }
 
             return _interactingWithUI;

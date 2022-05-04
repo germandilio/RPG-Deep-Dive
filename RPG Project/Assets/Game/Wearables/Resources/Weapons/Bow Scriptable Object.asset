@@ -17,6 +17,7 @@ MonoBehaviour:
   description: "\u041B\u0443\u043A \u043E\u0447\u0435\u043D\u044C \u043C\u043E\u0449\u043D\u043E\u0435
     \u043E\u0440\u0443\u0436\u0438\u0435. \u0414\u0430\u0435\u0442 +20 \u043A \u0443\u0440\u043E\u043D\u0443."
   icon: {fileID: 21300000, guid: d72ead56071201244b207b7cccb331c1, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: 87aaf0dcbda25384eb53a503e4dce73b, type: 3}
   pickup: {fileID: 3946488469255852960, guid: 31fa4aa06dd924ca791942bd190cde20, type: 3}
   stackable: 0
   allowedEquipLocation: 8

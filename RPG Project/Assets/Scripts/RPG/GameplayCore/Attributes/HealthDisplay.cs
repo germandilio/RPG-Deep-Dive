@@ -6,12 +6,17 @@ namespace RPG.GameplayCore.Attributes
     {
         protected override float GetCurrentValue()
         {
-            return playerStatComponent.GetCurrentHealth();
+            return characterStatComponent.GetCurrentHealth();
         }
 
         protected override float GetMaxValue()
         {
-            return playerStatComponent.GetMaxHealth();
+            return characterStatComponent.GetMaxHealth();
+        }
+
+        protected override bool ShouldShow()
+        {
+            return true;
         }
     }
 }

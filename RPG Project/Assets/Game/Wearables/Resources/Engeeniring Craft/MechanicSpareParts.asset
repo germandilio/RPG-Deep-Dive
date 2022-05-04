@@ -17,5 +17,6 @@ MonoBehaviour:
   description: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044E\u0442\u0441\u044F
     \u0434\u043B\u044F \u043F\u043E\u0447\u043D\u043A\u0438 \u043B\u043E\u0434\u043A\u0438."
   icon: {fileID: 21300000, guid: 5bd7ea42bb0df604eb4b3ea57c52de7a, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: 198c1cb8a098c8d41ba37618e833db59, type: 3}
   pickup: {fileID: 8255510793927867686, guid: 8d0254371430b45f0abeb348a5756383, type: 3}
   stackable: 0

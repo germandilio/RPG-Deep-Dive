@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 8995a884-524b-4889-9bb2-6a1edf5580f5
   displayName: "\u0429\u0438\u0442"
-  description: "(\u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435)"
+  description: "(\u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435)\n\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C:\n\u041F\u041A\u041C
+    \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u044C
+    \u0432 \u0441\u043E\u043E\u0442\u0432. \u0441\u043B\u043E\u0442"
   icon: {fileID: 21300000, guid: 421c3b12e5552e84d859f5b403ef5451, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: fdd58d325b22b904993d60021ae1799b, type: 3}
   pickup: {fileID: 8255510793927867686, guid: 8d0254371430b45f0abeb348a5756383, type: 3}
   stackable: 0
   allowedEquipLocation: 9

@@ -1,5 +1,4 @@
-﻿using RPG.InventorySystem.InventoriesModel;
-using RPG.InventorySystem.InventoriesModel.Equipment;
+﻿using RPG.InventorySystem.InventoriesModel.Equipment;
 using RPG.InventorySystem.InventoriesModel.Inventory;
 using UnityEngine;
 using Utils.UI.Dragging;
@@ -19,6 +18,7 @@ namespace RPG.InventorySystem.UI.Inventories
 
         private Equipment _playerEquipment;
 
+        public EquipLocation EquipLocation => equipLocation;
 
         private void Awake()
         {
@@ -45,7 +45,7 @@ namespace RPG.InventorySystem.UI.Inventories
 
         public void AddItems(InventoryItem item, int number)
         {
-            _playerEquipment.AddItem(equipLocation, (EquippableItem) item);
+            _playerEquipment.AddItem(equipLocation, item as EquippableItem);
         }
 
         public InventoryItem GetItem()

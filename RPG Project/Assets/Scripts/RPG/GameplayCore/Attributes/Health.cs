@@ -12,8 +12,9 @@ namespace RPG.GameplayCore.Attributes
     [RequireComponent(typeof(BaseStats))]
     public class Health : MonoBehaviour, ISavable
     {
+        [Range(0, 100)]
         [SerializeField]
-        private float levelUpHealthPercentage = 70;
+        private float levelUpHealthBonus = 35;
 
         [Serializable]
         public class TakeDamageEvent : UnityEvent<float>
@@ -81,7 +82,8 @@ namespace RPG.GameplayCore.Attributes
 
         private void NormalizeHealthPercentage()
         {
-            _currentHealthPoints.Value = _baseStats.GetStat(Stats.Stats.Health) * (levelUpHealthPercentage / 100);
+            float percentageHealth = _currentHealthPoints.Value / _baseStats.GetStatOnPreviousLevel(Stats.Stats.Health);
+            _currentHealthPoints.Value = _baseStats.GetStat(Stats.Stats.Health) * (percentageHealth + levelUpHealthBonus / 100);
         }
 
         public void TakeDamage(float damage, GameObject instigator)

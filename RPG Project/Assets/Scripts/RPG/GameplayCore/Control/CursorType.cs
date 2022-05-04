@@ -8,6 +8,9 @@ namespace RPG.GameplayCore.Control
         OnUI,
         Pickup,
         FullInventory,
-        Dialogue
+        Dialogue,
+        EquippableItem,
+        ActionItem,
+        InventoryItem
     }
 }

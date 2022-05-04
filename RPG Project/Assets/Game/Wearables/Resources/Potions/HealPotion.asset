@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4fdd45fc-d5d1-480a-9376-7b5a92fdabdb
   displayName: "\u042D\u043B\u0435\u043A\u0441\u0438\u0440 \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
-  description: +50 HP
+  description: "+50 HP\n\u0427\u0442\u043E\u0431\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C,
+    \u043F\u043E\u043C\u0435\u0441\u0442\u0438\u0442\u0435 \u0432 action bar."
   icon: {fileID: 21300000, guid: 455ef41357e886c4496e0dfe7070b4ac, type: 3}
+  iconWithBackground: {fileID: 21300000, guid: a9287b6dff998574692e8336ab894796, type: 3}
   pickup: {fileID: 951898557522327931, guid: 23b39697a3d49466d9d49a2896cc6c57, type: 3}
   stackable: 1
   consumable: 1
