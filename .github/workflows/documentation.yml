@@ -27,9 +27,6 @@ jobs:
       - name: Install DocFX
         run: choco install -y docfx
 
-      - name: Use README.md as index.md
-        run: cp README.md RPG\ Project/Documentation/index.md
-
       - name: Build
         run: docfx RPG\ Project/Documentation/docfx.json
 
