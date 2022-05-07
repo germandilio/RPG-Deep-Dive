@@ -2,967 +2,973 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.Dialogue.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.DialogueAISpeaker.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.DialogueNode.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.DialogueTrigger.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.Editor.BezierLinesStyle.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.Editor.DialogueEditor.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.Editor.DialogueModificationProcessor.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.Editor.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.PlayerDialogueAPI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.Speaker.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.UI.DialogueUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.UI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.DialogueSystem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.EnemyHealthDisplay.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.Experience.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.Health.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.HealthDisplay.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.InGameHealthBar.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.LevelDisplay.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Attributes.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Cinematics.PlayCutsceneTriggerController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Cinematics.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.AggravatingGroup.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.CombatTarget.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.DestroyAfterPlay.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.Fighter.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.ProjectileController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.Weapon.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.WeaponConfig.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.WeaponType.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Combat.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.AIController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.ClickablePickup.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.ControlRemover.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.CursorType.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.IRaycastable.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.PatrolPath.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.PlayerController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Control.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.ActionScheduler.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.Analytics.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.Conditions.Condition.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.Conditions.Disjunction.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.Conditions.Predicate.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.Conditions.PredicateType.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.Conditions.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.FollowCamera.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.IAction.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.IDestroyer.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.IPredicateEvaluator.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.PersistantObjectSpawner.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Core.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Movement.Mover.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Movement.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestCompletion.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestGiver.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestsModel.Objective.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestsModel.Quest.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestsModel.QuestsJournal.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestsModel.QuestStatus.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.QuestsModel.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionReward.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionWithdrawals.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.Rewards.QuestCompletionReward.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.Rewards.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.UI.ObjectiveUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.UI.QuestItemUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.UI.QuestJournalUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.UI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Quests.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.SceneManagement.Fader.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.SceneManagement.Portal.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.SceneManagement.PortalLocation.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.SceneManagement.Scenes.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.SceneManagement.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.BaseStats.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.CharacterClass.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.Exceptions.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.IModifyProvider.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.Progression.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.Stats.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.Stats.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.DamageText.DamageText.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.DamageText.DamageTextSpawner.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.DamageText.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.Destroyer.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.TabButton.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.TabSystem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.UICameraFacing.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.GameplayCore.UI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.ActionBarController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Actions.ActionItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Actions.ActionStore.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Actions.HealActionItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Actions.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.DropLibrary.DropConfig.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.DropLibrary.DroppedSlot.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.DropLibrary.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Equipment.EquipLocation.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Equipment.Equipment.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Equipment.EquippableItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquipment.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquippableItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Equipment.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Inventory.Inventory.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Inventory.InventoryItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Inventory.InventorySlot.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Inventory.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.ItemDropper.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Loot.LootItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Loot.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Pickups.Pickup.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Pickups.PickupSpawner.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.Pickups.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.RandomDropper.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.InventoriesModel.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.ActionSlotUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.EquipmentSlotUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.IItemHolder.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.InventoryDragItem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.InventoryDropTarget.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.InventoryItemIcon.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.InventorySlotUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.InventoryUI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.ItemTooltip.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.ItemTooltipSpawner.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.Inventories.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.ScrollButtonsController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.UI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/RPG.InventorySystem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/SavingSystem.ISavable.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/SavingSystem.SavableEntity.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/SavingSystem.SavingSystem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/SavingSystem.SavingWrapper.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/SavingSystem.SerializableVector3.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/SavingSystem.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.Editor.ReplaceWithPrefab.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.Editor.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.LazyValue-1.InitializerDelegate.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.LazyValue-1.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.Logger.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.NavMeshExtensions.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.RaycastUtils.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.DisplayBar-1.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Dragging.DragItem-1.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Dragging.IDragContainer-1.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Dragging.IDragDestination-1.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Dragging.IDragSource-1.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Dragging.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Hint.HintController.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Hint.HintSpawner.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Hint.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Tooltips.TooltipSpawner.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.Tooltips.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.UI.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/api/Utils.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://germandilio.github.io/RPG_Deep_Dive/index.html</loc>
-    <lastmod>2022-05-07T12:34:42+00:00</lastmod>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://germandilio.github.io/RPG_Deep_Dive/manual/control.html</loc>
+    <lastmod>2022-05-07T01:21:12+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
