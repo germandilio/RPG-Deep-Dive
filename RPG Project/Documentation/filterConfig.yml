@@ -1,0 +1,13 @@
+apiRules:
+- include:
+    uidRegex: ^RPG
+    type: Namespace
+- include:
+    uidRegex: ^Utils
+    type: Namespace
+- include:
+    uidRegex: ^SavingSystem
+    type: Namespace
+- exclude:
+    uidRegex: .*
+    type: Namespace

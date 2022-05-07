@@ -1,8 +1,8 @@
 # Documentation
-Documentation/api/
-Documentation/index.*
+RPG\ Project/[Dd]ocumentation/api/
+RPG\ Project/[Dd]ocumentation/index.*
+RPG\ Project/[Dd]ocumentation/[Oo]bj/
 _site/
-[Aa]ssets/**/obj*
 
 # Unity .gitignore
 # This .gitignore is a better Git ignore for Unity users. It uses the default .gitignore for Unity, but include other files 
