@@ -62,7 +62,7 @@
             }
         ],
         "sitemap": {
-            "baseUrl": "https://normanderwan.github.io/DocFxForUnity",
+            "baseUrl": "https://germandilio.github.io/RPG_Deep_Dive/",
             "changefreq": "weekly",
             "fileOptions": {
                 "api/*": {
@@ -71,7 +71,7 @@
             }
         },
         "xref": [
-            "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
+            "https://germandilio.github.io/RPG_Deep_Dive/xrefmap.yml"
         ],
         "xrefService": [
             "https://xref.docs.microsoft.com/query?uid={uid}"
