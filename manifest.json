@@ -2,11 +2,11 @@
   "sitemap": {
     "fileOptions": {
       "api/*": {
-        "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
+        "baseUrl": "https://germandilio.github.io/RPG_Deep_Dive/",
         "changefreq": "daily"
       }
     },
-    "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
+    "baseUrl": "https://germandilio.github.io/RPG_Deep_Dive/",
     "changefreq": "weekly"
   },
   "homepages": [],
