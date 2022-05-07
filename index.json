@@ -1,0 +1,802 @@
+{
+  "api/RPG.DialogueSystem.Dialogue.html": {
+    "href": "api/RPG.DialogueSystem.Dialogue.html",
+    "title": "Class Dialogue | RPG: Deep Dive Documentation",
+    "keywords": "Class Dialogue Inheritance Object Dialogue Namespace : RPG.DialogueSystem Assembly : cs.temp.dll.dll Syntax public class Dialogue : ScriptableObject Properties Nodes Declaration public IReadOnlyList<DialogueNode> Nodes { get; } Property Value Type Description IReadOnlyList < DialogueNode > RootNode Declaration public DialogueNode RootNode { get; } Property Value Type Description DialogueNode Methods GetAIChildren(DialogueNode) Declaration public IEnumerable<DialogueNode> GetAIChildren(DialogueNode parent) Parameters Type Name Description DialogueNode parent Returns Type Description IEnumerable < DialogueNode > GetAllChildNodes(DialogueNode) Declaration public IEnumerable<DialogueNode> GetAllChildNodes(DialogueNode parent) Parameters Type Name Description DialogueNode parent Returns Type Description IEnumerable < DialogueNode > GetPlayerChildren(DialogueNode) Declaration public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode parent) Parameters Type Name Description DialogueNode parent Returns Type Description IEnumerable < DialogueNode >"
+  },
+  "api/RPG.DialogueSystem.DialogueAISpeaker.html": {
+    "href": "api/RPG.DialogueSystem.DialogueAISpeaker.html",
+    "title": "Class DialogueAISpeaker | RPG: Deep Dive Documentation",
+    "keywords": "Class DialogueAISpeaker Inheritance Object DialogueAISpeaker Namespace : RPG.DialogueSystem Assembly : cs.temp.dll.dll Syntax public class DialogueAISpeaker : MonoBehaviour Properties SpeakerName Declaration public string SpeakerName { get; } Property Value Type Description String Methods CancelDialogue() Declaration public void CancelDialogue() GetCursorType() Declaration public CursorType GetCursorType() Returns Type Description CursorType HandleRaycast(PlayerController) Declaration public bool HandleRaycast(PlayerController interactController) Parameters Type Name Description PlayerController interactController Returns Type Description Boolean TriggerActions(String) Declaration public void TriggerActions(string actionToTrigger) Parameters Type Name Description String actionToTrigger"
+  },
+  "api/RPG.DialogueSystem.DialogueNode.html": {
+    "href": "api/RPG.DialogueSystem.DialogueNode.html",
+    "title": "Class DialogueNode | RPG: Deep Dive Documentation",
+    "keywords": "Class DialogueNode Inheritance Object DialogueNode Namespace : RPG.DialogueSystem Assembly : cs.temp.dll.dll Syntax public class DialogueNode : ScriptableObject Constructors DialogueNode() Declaration public DialogueNode() Properties ChildNodes Declaration public IReadOnlyList<string> ChildNodes { get; } Property Value Type Description IReadOnlyList < String > HasChildren Declaration public bool HasChildren { get; } Property Value Type Description Boolean ID DialogueNode unique identifier. Declaration public string ID { get; } Property Value Type Description String OnEnterActions Declaration public IReadOnlyList<string> OnEnterActions { get; } Property Value Type Description IReadOnlyList < String > OnExitActions Declaration public IReadOnlyList<string> OnExitActions { get; } Property Value Type Description IReadOnlyList < String > Rect Declaration public Rect Rect { get; } Property Value Type Description Rect Speaker Speaker for this phrase. Declaration public Speaker Speaker { get; } Property Value Type Description Speaker Remarks Readonly in game mode Text Text of dialogue phrase. Declaration public string Text { get; } Property Value Type Description String Remarks Readonly in game mode Methods IsParentFor(String) Declaration public bool IsParentFor(string childID) Parameters Type Name Description String childID Returns Type Description Boolean Match(IEnumerable<IPredicateEvaluator>) Declaration public bool Match(IEnumerable<IPredicateEvaluator> evaluators) Parameters Type Name Description IEnumerable < IPredicateEvaluator > evaluators Returns Type Description Boolean"
+  },
+  "api/RPG.DialogueSystem.DialogueTrigger.html": {
+    "href": "api/RPG.DialogueSystem.DialogueTrigger.html",
+    "title": "Class DialogueTrigger | RPG: Deep Dive Documentation",
+    "keywords": "Class DialogueTrigger Inheritance Object DialogueTrigger Namespace : RPG.DialogueSystem Assembly : cs.temp.dll.dll Syntax public class DialogueTrigger : MonoBehaviour Methods Trigger(String) Declaration public void Trigger(string actionToTrigger) Parameters Type Name Description String actionToTrigger"
+  },
+  "api/RPG.DialogueSystem.Editor.BezierLinesStyle.html": {
+    "href": "api/RPG.DialogueSystem.Editor.BezierLinesStyle.html",
+    "title": "Class BezierLinesStyle | RPG: Deep Dive Documentation",
+    "keywords": "Class BezierLinesStyle Inheritance Object BezierLinesStyle Namespace : RPG.DialogueSystem.Editor Assembly : cs.temp.dll.dll Syntax public class BezierLinesStyle Properties Color Declaration public Color Color { get; } Property Value Type Description Color Width Declaration public float Width { get; } Property Value Type Description Single Methods GetEndPos(Rect) Declaration public Vector3 GetEndPos(Rect nodeRect) Parameters Type Name Description Rect nodeRect Returns Type Description Vector3 GetEndTangent(Vector3, Vector3) Declaration public Vector3 GetEndTangent(Vector3 startPos, Vector3 endPos) Parameters Type Name Description Vector3 startPos Vector3 endPos Returns Type Description Vector3 GetStartPos(Rect) Declaration public Vector3 GetStartPos(Rect nodeRect) Parameters Type Name Description Rect nodeRect Returns Type Description Vector3 GetStartTangent(Vector3, Vector3) Declaration public Vector3 GetStartTangent(Vector3 startPos, Vector3 endPos) Parameters Type Name Description Vector3 startPos Vector3 endPos Returns Type Description Vector3"
+  },
+  "api/RPG.DialogueSystem.Editor.DialogueEditor.html": {
+    "href": "api/RPG.DialogueSystem.Editor.DialogueEditor.html",
+    "title": "Class DialogueEditor | RPG: Deep Dive Documentation",
+    "keywords": "Class DialogueEditor Inheritance Object DialogueEditor Namespace : RPG.DialogueSystem.Editor Assembly : cs.temp.dll.dll Syntax public class DialogueEditor : EditorWindow Methods OnOpenDialogueAsset(Int32, Int32) Declaration public static bool OnOpenDialogueAsset(int instanceID, int line) Parameters Type Name Description Int32 instanceID Int32 line Returns Type Description Boolean"
+  },
+  "api/RPG.DialogueSystem.Editor.DialogueModificationProcessor.html": {
+    "href": "api/RPG.DialogueSystem.Editor.DialogueModificationProcessor.html",
+    "title": "Class DialogueModificationProcessor | RPG: Deep Dive Documentation",
+    "keywords": "Class DialogueModificationProcessor Inheritance Object DialogueModificationProcessor Namespace : RPG.DialogueSystem.Editor Assembly : cs.temp.dll.dll Syntax public class DialogueModificationProcessor : UnityEditor.AssetModificationProcessor"
+  },
+  "api/RPG.DialogueSystem.Editor.html": {
+    "href": "api/RPG.DialogueSystem.Editor.html",
+    "title": "Namespace RPG.DialogueSystem.Editor | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.DialogueSystem.Editor Classes BezierLinesStyle DialogueEditor DialogueModificationProcessor"
+  },
+  "api/RPG.DialogueSystem.html": {
+    "href": "api/RPG.DialogueSystem.html",
+    "title": "Namespace RPG.DialogueSystem | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.DialogueSystem Classes Dialogue DialogueAISpeaker DialogueNode DialogueTrigger PlayerDialogueAPI Enums Speaker"
+  },
+  "api/RPG.DialogueSystem.PlayerDialogueAPI.html": {
+    "href": "api/RPG.DialogueSystem.PlayerDialogueAPI.html",
+    "title": "Class PlayerDialogueAPI | RPG: Deep Dive Documentation",
+    "keywords": "Class PlayerDialogueAPI Inheritance Object PlayerDialogueAPI Namespace : RPG.DialogueSystem Assembly : cs.temp.dll.dll Syntax public class PlayerDialogueAPI : MonoBehaviour Properties Active Declaration public bool Active { get; } Property Value Type Description Boolean Choices Declaration public IEnumerable<DialogueNode> Choices { get; } Property Value Type Description IEnumerable < DialogueNode > HasNext Declaration public bool HasNext { get; } Property Value Type Description Boolean IsChoosing Declaration public bool IsChoosing { get; } Property Value Type Description Boolean SpeakerName Declaration public string SpeakerName { get; } Property Value Type Description String Text Declaration public string Text { get; } Property Value Type Description String Methods Next() Declaration public void Next() Quit() Declaration public void Quit() SelectChoice(DialogueNode) Declaration public void SelectChoice(DialogueNode choiceNode) Parameters Type Name Description DialogueNode choiceNode StartDialogue(DialogueAISpeaker, Dialogue) Declaration public void StartDialogue(DialogueAISpeaker speaker, Dialogue dialogue) Parameters Type Name Description DialogueAISpeaker speaker Dialogue dialogue Events DialogueStateUpdated Declaration public event Action DialogueStateUpdated Event Type Type Description Action"
+  },
+  "api/RPG.DialogueSystem.Speaker.html": {
+    "href": "api/RPG.DialogueSystem.Speaker.html",
+    "title": "Enum Speaker | RPG: Deep Dive Documentation",
+    "keywords": "Enum Speaker Namespace : RPG.DialogueSystem Assembly : cs.temp.dll.dll Syntax public enum Speaker Fields Name Description Enemy Player"
+  },
+  "api/RPG.DialogueSystem.UI.DialogueUI.html": {
+    "href": "api/RPG.DialogueSystem.UI.DialogueUI.html",
+    "title": "Class DialogueUI | RPG: Deep Dive Documentation",
+    "keywords": "Class DialogueUI Inheritance Object DialogueUI Namespace : RPG.DialogueSystem.UI Assembly : cs.temp.dll.dll Syntax public class DialogueUI : MonoBehaviour Methods OnDialogueUpdated() Declaration protected virtual void OnDialogueUpdated() OnExitButtonClick() Declaration public void OnExitButtonClick() OnNextButtonClick() Declaration public void OnNextButtonClick()"
+  },
+  "api/RPG.DialogueSystem.UI.html": {
+    "href": "api/RPG.DialogueSystem.UI.html",
+    "title": "Namespace RPG.DialogueSystem.UI | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.DialogueSystem.UI Classes DialogueUI"
+  },
+  "api/RPG.GameplayCore.Attributes.EnemyHealthDisplay.html": {
+    "href": "api/RPG.GameplayCore.Attributes.EnemyHealthDisplay.html",
+    "title": "Class EnemyHealthDisplay | RPG: Deep Dive Documentation",
+    "keywords": "Class EnemyHealthDisplay Inheritance Object EnemyHealthDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class EnemyHealthDisplay : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Attributes.Experience.html": {
+    "href": "api/RPG.GameplayCore.Attributes.Experience.html",
+    "title": "Class Experience | RPG: Deep Dive Documentation",
+    "keywords": "Class Experience Inheritance Object Experience Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class Experience : MonoBehaviour Properties ExperiencePoints Declaration public float ExperiencePoints { get; } Property Value Type Description Single Methods AwardXp(Single) Declaration public void AwardXp(float pointsToAdd) Parameters Type Name Description Single pointsToAdd CaptureState() Declaration public object CaptureState() Returns Type Description Object RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state Events OnExperienceGained Boolean flag, if true - silent level update, if false - general level update Declaration public event Action<bool> OnExperienceGained Event Type Type Description Action < Boolean >"
+  },
+  "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html": {
+    "href": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html",
+    "title": "Class ExperiencePointsDisplay | RPG: Deep Dive Documentation",
+    "keywords": "Class ExperiencePointsDisplay Inheritance Object ExperiencePointsDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class ExperiencePointsDisplay : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Attributes.Health.html": {
+    "href": "api/RPG.GameplayCore.Attributes.Health.html",
+    "title": "Class Health | RPG: Deep Dive Documentation",
+    "keywords": "Class Health Inheritance Object Health Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class Health : MonoBehaviour Properties IsDead Declaration public bool IsDead { get; } Property Value Type Description Boolean Methods CaptureState() Declaration public object CaptureState() Returns Type Description Object GetCurrentHealth() Declaration public float GetCurrentHealth() Returns Type Description Single GetMaxHealth() Declaration public float GetMaxHealth() Returns Type Description Single Heal(Single) Heals player. Declaration public bool Heal(float healthPointsToRestore) Parameters Type Name Description Single healthPointsToRestore Returns Type Description Boolean False if not used (health was full), otherwise true. RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state ShowHealEffect() Declaration public void ShowHealEffect() TakeDamage(Single, GameObject) Declaration public void TakeDamage(float damage, GameObject instigator) Parameters Type Name Description Single damage GameObject instigator"
+  },
+  "api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.html": {
+    "href": "api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.html",
+    "title": "Class Health.TakeDamageEvent | RPG: Deep Dive Documentation",
+    "keywords": "Class Health.TakeDamageEvent Inheritance Object Health.TakeDamageEvent Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class TakeDamageEvent : UnityEvent<float>"
+  },
+  "api/RPG.GameplayCore.Attributes.HealthDisplay.html": {
+    "href": "api/RPG.GameplayCore.Attributes.HealthDisplay.html",
+    "title": "Class HealthDisplay | RPG: Deep Dive Documentation",
+    "keywords": "Class HealthDisplay Inheritance Object HealthDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class HealthDisplay : DisplayBar<Health> Methods GetCurrentValue() Declaration protected override float GetCurrentValue() Returns Type Description Single GetMaxValue() Declaration protected override float GetMaxValue() Returns Type Description Single ShouldShow() Declaration protected override bool ShouldShow() Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Attributes.html": {
+    "href": "api/RPG.GameplayCore.Attributes.html",
+    "title": "Namespace RPG.GameplayCore.Attributes | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Attributes Classes EnemyHealthDisplay Experience ExperiencePointsDisplay Health Health.TakeDamageEvent HealthDisplay InGameHealthBar LevelDisplay"
+  },
+  "api/RPG.GameplayCore.Attributes.InGameHealthBar.html": {
+    "href": "api/RPG.GameplayCore.Attributes.InGameHealthBar.html",
+    "title": "Class InGameHealthBar | RPG: Deep Dive Documentation",
+    "keywords": "Class InGameHealthBar Inheritance Object InGameHealthBar Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class InGameHealthBar : DisplayBar<Health> Methods GetCurrentValue() Declaration protected override float GetCurrentValue() Returns Type Description Single GetMaxValue() Declaration protected override float GetMaxValue() Returns Type Description Single ShouldShow() Declaration protected override bool ShouldShow() Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Attributes.LevelDisplay.html": {
+    "href": "api/RPG.GameplayCore.Attributes.LevelDisplay.html",
+    "title": "Class LevelDisplay | RPG: Deep Dive Documentation",
+    "keywords": "Class LevelDisplay Inheritance Object LevelDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class LevelDisplay : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html": {
+    "href": "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html",
+    "title": "Class CinematicControlRemover | RPG: Deep Dive Documentation",
+    "keywords": "Class CinematicControlRemover Inheritance Object CinematicControlRemover Namespace : RPG.GameplayCore.Cinematics Assembly : cs.temp.dll.dll Syntax public class CinematicControlRemover : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Cinematics.html": {
+    "href": "api/RPG.GameplayCore.Cinematics.html",
+    "title": "Namespace RPG.GameplayCore.Cinematics | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Cinematics Classes CinematicControlRemover PlayCutsceneTriggerController"
+  },
+  "api/RPG.GameplayCore.Cinematics.PlayCutsceneTriggerController.html": {
+    "href": "api/RPG.GameplayCore.Cinematics.PlayCutsceneTriggerController.html",
+    "title": "Class PlayCutsceneTriggerController | RPG: Deep Dive Documentation",
+    "keywords": "Class PlayCutsceneTriggerController Inheritance Object PlayCutsceneTriggerController Namespace : RPG.GameplayCore.Cinematics Assembly : cs.temp.dll.dll Syntax public class PlayCutsceneTriggerController : MonoBehaviour Methods CaptureState() Declaration public object CaptureState() Returns Type Description Object RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state"
+  },
+  "api/RPG.GameplayCore.Combat.AggravatingGroup.html": {
+    "href": "api/RPG.GameplayCore.Combat.AggravatingGroup.html",
+    "title": "Class AggravatingGroup | RPG: Deep Dive Documentation",
+    "keywords": "Class AggravatingGroup Inheritance Object AggravatingGroup Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class AggravatingGroup : MonoBehaviour Methods Activate() Declaration public void Activate() Deactivate() Declaration public void Deactivate()"
+  },
+  "api/RPG.GameplayCore.Combat.CombatTarget.html": {
+    "href": "api/RPG.GameplayCore.Combat.CombatTarget.html",
+    "title": "Class CombatTarget | RPG: Deep Dive Documentation",
+    "keywords": "Class CombatTarget Inheritance Object CombatTarget Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class CombatTarget : MonoBehaviour Methods GetCursorType() Declaration public CursorType GetCursorType() Returns Type Description CursorType HandleRaycast(PlayerController) Declaration public bool HandleRaycast(PlayerController interactController) Parameters Type Name Description PlayerController interactController Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Combat.DestroyAfterPlay.html": {
+    "href": "api/RPG.GameplayCore.Combat.DestroyAfterPlay.html",
+    "title": "Class DestroyAfterPlay | RPG: Deep Dive Documentation",
+    "keywords": "Class DestroyAfterPlay Inheritance Object DestroyAfterPlay Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class DestroyAfterPlay : MonoBehaviour Methods DestroyTarget() Declaration public void DestroyTarget()"
+  },
+  "api/RPG.GameplayCore.Combat.Fighter.html": {
+    "href": "api/RPG.GameplayCore.Combat.Fighter.html",
+    "title": "Class Fighter | RPG: Deep Dive Documentation",
+    "keywords": "Class Fighter Inheritance Object Fighter Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class Fighter : MonoBehaviour Properties CombatTarget Declaration public Health CombatTarget { get; } Property Value Type Description Health Methods Attack(GameObject) Declaration public void Attack(GameObject combatTarget) Parameters Type Name Description GameObject combatTarget CanAttack(GameObject) Declaration public bool CanAttack(GameObject target) Parameters Type Name Description GameObject target Returns Type Description Boolean Cancel() Declaration public void Cancel() CaptureState() Declaration public object CaptureState() Returns Type Description Object RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state"
+  },
+  "api/RPG.GameplayCore.Combat.html": {
+    "href": "api/RPG.GameplayCore.Combat.html",
+    "title": "Namespace RPG.GameplayCore.Combat | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Combat Classes AggravatingGroup CombatTarget DestroyAfterPlay Fighter ProjectileController Weapon WeaponConfig Enums WeaponType Types of weapon based on characters hand."
+  },
+  "api/RPG.GameplayCore.Combat.ProjectileController.html": {
+    "href": "api/RPG.GameplayCore.Combat.ProjectileController.html",
+    "title": "Class ProjectileController | RPG: Deep Dive Documentation",
+    "keywords": "Class ProjectileController Inheritance Object ProjectileController Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class ProjectileController : MonoBehaviour Methods SetTarget(Health, Single, GameObject) Declaration public void SetTarget(Health healthTarget, float weaponDamage, GameObject instigator) Parameters Type Name Description Health healthTarget Single weaponDamage GameObject instigator"
+  },
+  "api/RPG.GameplayCore.Combat.Weapon.html": {
+    "href": "api/RPG.GameplayCore.Combat.Weapon.html",
+    "title": "Class Weapon | RPG: Deep Dive Documentation",
+    "keywords": "Class Weapon Inheritance Object Weapon Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class Weapon : MonoBehaviour Methods OnHit() Declaration public void OnHit()"
+  },
+  "api/RPG.GameplayCore.Combat.WeaponConfig.html": {
+    "href": "api/RPG.GameplayCore.Combat.WeaponConfig.html",
+    "title": "Class WeaponConfig | RPG: Deep Dive Documentation",
+    "keywords": "Class WeaponConfig Inheritance Object WeaponConfig Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public class WeaponConfig : StatsEquippableItem Properties HasProjectile Declaration public bool HasProjectile { get; } Property Value Type Description Boolean TimeBetweenAttacks Declaration public float TimeBetweenAttacks { get; } Property Value Type Description Single WeaponRange Declaration public float WeaponRange { get; } Property Value Type Description Single Methods CreateWeapon(Transform, Transform, Animator) Instantiate weapon in hand based on weaponType. Declaration public Weapon CreateWeapon(Transform leftHand, Transform rightHand, Animator characterAnimator) Parameters Type Name Description Transform leftHand Left hand spawn point. Transform rightHand Right hand spawn point. Animator characterAnimator Character overriding animator controller. Returns Type Description Weapon LaunchProjectile(Transform, Transform, Health, GameObject, Single) Instantiate projectile of type projectilePrefab in hand based on weaponType. Declaration public void LaunchProjectile(Transform leftHand, Transform rightHand, Health target, GameObject instigator, float calculatedDamage) Parameters Type Name Description Transform leftHand Left hand spawn point. Transform rightHand Right hand spawn point. Health target Target to launch projectile. GameObject instigator Who is shooting from this weapon. Single calculatedDamage Damage to apply for target."
+  },
+  "api/RPG.GameplayCore.Combat.WeaponType.html": {
+    "href": "api/RPG.GameplayCore.Combat.WeaponType.html",
+    "title": "Enum WeaponType | RPG: Deep Dive Documentation",
+    "keywords": "Enum WeaponType Types of weapon based on characters hand. Namespace : RPG.GameplayCore.Combat Assembly : cs.temp.dll.dll Syntax public enum WeaponType Fields Name Description LeftHanded RightHanded"
+  },
+  "api/RPG.GameplayCore.Control.AIController.html": {
+    "href": "api/RPG.GameplayCore.Control.AIController.html",
+    "title": "Class AIController | RPG: Deep Dive Documentation",
+    "keywords": "Class AIController Inheritance Object AIController Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public class AIController : MonoBehaviour Methods Aggravate() Declaration public void Aggravate()"
+  },
+  "api/RPG.GameplayCore.Control.ClickablePickup.html": {
+    "href": "api/RPG.GameplayCore.Control.ClickablePickup.html",
+    "title": "Class ClickablePickup | RPG: Deep Dive Documentation",
+    "keywords": "Class ClickablePickup Inheritance Object ClickablePickup Implements IRaycastable Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public class ClickablePickup : MonoBehaviour, IRaycastable Methods GetCursorType() Declaration public CursorType GetCursorType() Returns Type Description CursorType HandleRaycast(PlayerController) Declaration public bool HandleRaycast(PlayerController interactController) Parameters Type Name Description PlayerController interactController Returns Type Description Boolean Implements IRaycastable"
+  },
+  "api/RPG.GameplayCore.Control.ControlRemover.html": {
+    "href": "api/RPG.GameplayCore.Control.ControlRemover.html",
+    "title": "Class ControlRemover | RPG: Deep Dive Documentation",
+    "keywords": "Class ControlRemover Inheritance Object ControlRemover Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public static class ControlRemover Methods DisablePlayerControl() Declaration public static void DisablePlayerControl() EnablePlayerControl() Declaration public static void EnablePlayerControl()"
+  },
+  "api/RPG.GameplayCore.Control.CursorType.html": {
+    "href": "api/RPG.GameplayCore.Control.CursorType.html",
+    "title": "Enum CursorType | RPG: Deep Dive Documentation",
+    "keywords": "Enum CursorType Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public enum CursorType Fields Name Description ActionItem Combat Default Dialogue EquippableItem FullInventory InventoryItem Movement OnUI Pickup"
+  },
+  "api/RPG.GameplayCore.Control.html": {
+    "href": "api/RPG.GameplayCore.Control.html",
+    "title": "Namespace RPG.GameplayCore.Control | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Control Classes AIController ClickablePickup ControlRemover PatrolPath PlayerController Interfaces IRaycastable Enums CursorType"
+  },
+  "api/RPG.GameplayCore.Control.IRaycastable.html": {
+    "href": "api/RPG.GameplayCore.Control.IRaycastable.html",
+    "title": "Interface IRaycastable | RPG: Deep Dive Documentation",
+    "keywords": "Interface IRaycastable Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public interface IRaycastable Methods GetCursorType() Declaration CursorType GetCursorType() Returns Type Description CursorType HandleRaycast(PlayerController) Declaration bool HandleRaycast(PlayerController interactController) Parameters Type Name Description PlayerController interactController Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Control.PatrolPath.html": {
+    "href": "api/RPG.GameplayCore.Control.PatrolPath.html",
+    "title": "Class PatrolPath | RPG: Deep Dive Documentation",
+    "keywords": "Class PatrolPath Inheritance Object PatrolPath Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public class PatrolPath : MonoBehaviour Methods CycleWaypoint() Declaration public void CycleWaypoint() GetCurrentWaypoint() Declaration public Vector3 GetCurrentWaypoint() Returns Type Description Vector3"
+  },
+  "api/RPG.GameplayCore.Control.PlayerController.html": {
+    "href": "api/RPG.GameplayCore.Control.PlayerController.html",
+    "title": "Class PlayerController | RPG: Deep Dive Documentation",
+    "keywords": "Class PlayerController Inheritance Object PlayerController Namespace : RPG.GameplayCore.Control Assembly : cs.temp.dll.dll Syntax public class PlayerController : MonoBehaviour Methods SetCursor(CursorType) Declaration public void SetCursor(CursorType type) Parameters Type Name Description CursorType type"
+  },
+  "api/RPG.GameplayCore.Core.ActionScheduler.html": {
+    "href": "api/RPG.GameplayCore.Core.ActionScheduler.html",
+    "title": "Class ActionScheduler | RPG: Deep Dive Documentation",
+    "keywords": "Class ActionScheduler Inheritance Object ActionScheduler Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public class ActionScheduler : MonoBehaviour Methods CancelCurrentAction() Declaration public void CancelCurrentAction() StartAction(IAction) Starts new action with cancelling previous action. Declaration public void StartAction(IAction action) Parameters Type Name Description IAction action Action to start."
+  },
+  "api/RPG.GameplayCore.Core.Analytics.html": {
+    "href": "api/RPG.GameplayCore.Core.Analytics.html",
+    "title": "Class Analytics | RPG: Deep Dive Documentation",
+    "keywords": "Class Analytics Inheritance Object Analytics Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public class Analytics : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Core.Conditions.Condition.html": {
+    "href": "api/RPG.GameplayCore.Core.Conditions.Condition.html",
+    "title": "Class Condition | RPG: Deep Dive Documentation",
+    "keywords": "Class Condition Condition represents conjunctive normal form (CNF). Inheritance Object Condition Namespace : RPG.GameplayCore.Core.Conditions Assembly : cs.temp.dll.dll Syntax public class Condition Remarks Link to wiki: https://en.wikipedia.org/wiki/Conjunctive_normal_form Methods Check(IEnumerable<IPredicateEvaluator>) Declaration public bool Check(IEnumerable<IPredicateEvaluator> evaluators) Parameters Type Name Description IEnumerable < IPredicateEvaluator > evaluators Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Core.Conditions.Disjunction.html": {
+    "href": "api/RPG.GameplayCore.Core.Conditions.Disjunction.html",
+    "title": "Class Disjunction | RPG: Deep Dive Documentation",
+    "keywords": "Class Disjunction Inheritance Object Disjunction Namespace : RPG.GameplayCore.Core.Conditions Assembly : cs.temp.dll.dll Syntax public class Disjunction Methods Check(IPredicateEvaluator[]) Declaration public bool Check(IPredicateEvaluator[] evaluators) Parameters Type Name Description IPredicateEvaluator [] evaluators Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Core.Conditions.html": {
+    "href": "api/RPG.GameplayCore.Core.Conditions.html",
+    "title": "Namespace RPG.GameplayCore.Core.Conditions | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Core.Conditions Classes Condition Condition represents conjunctive normal form (CNF). Disjunction Predicate Enums PredicateType"
+  },
+  "api/RPG.GameplayCore.Core.Conditions.Predicate.html": {
+    "href": "api/RPG.GameplayCore.Core.Conditions.Predicate.html",
+    "title": "Class Predicate | RPG: Deep Dive Documentation",
+    "keywords": "Class Predicate Inheritance Object Predicate Namespace : RPG.GameplayCore.Core.Conditions Assembly : cs.temp.dll.dll Syntax public class Predicate Methods Check(IPredicateEvaluator[]) Declaration public bool Check(IPredicateEvaluator[] evaluators) Parameters Type Name Description IPredicateEvaluator [] evaluators Returns Type Description Boolean"
+  },
+  "api/RPG.GameplayCore.Core.Conditions.PredicateType.html": {
+    "href": "api/RPG.GameplayCore.Core.Conditions.PredicateType.html",
+    "title": "Enum PredicateType | RPG: Deep Dive Documentation",
+    "keywords": "Enum PredicateType Namespace : RPG.GameplayCore.Core.Conditions Assembly : cs.temp.dll.dll Syntax public enum PredicateType Fields Name Description CompleteQuest HasInventoryItem HasQuest"
+  },
+  "api/RPG.GameplayCore.Core.FollowCamera.html": {
+    "href": "api/RPG.GameplayCore.Core.FollowCamera.html",
+    "title": "Class FollowCamera | RPG: Deep Dive Documentation",
+    "keywords": "Class FollowCamera Inheritance Object FollowCamera Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public class FollowCamera : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Core.html": {
+    "href": "api/RPG.GameplayCore.Core.html",
+    "title": "Namespace RPG.GameplayCore.Core | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Core Classes ActionScheduler Analytics FollowCamera PersistantObjectSpawner Interfaces IAction IDestroyer IPredicateEvaluator"
+  },
+  "api/RPG.GameplayCore.Core.IAction.html": {
+    "href": "api/RPG.GameplayCore.Core.IAction.html",
+    "title": "Interface IAction | RPG: Deep Dive Documentation",
+    "keywords": "Interface IAction Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public interface IAction Methods Cancel() Cancel current action. Declaration void Cancel()"
+  },
+  "api/RPG.GameplayCore.Core.IDestroyer.html": {
+    "href": "api/RPG.GameplayCore.Core.IDestroyer.html",
+    "title": "Interface IDestroyer | RPG: Deep Dive Documentation",
+    "keywords": "Interface IDestroyer Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public interface IDestroyer Methods DestroyTarget() Destroy defined target. Declaration void DestroyTarget()"
+  },
+  "api/RPG.GameplayCore.Core.IPredicateEvaluator.html": {
+    "href": "api/RPG.GameplayCore.Core.IPredicateEvaluator.html",
+    "title": "Interface IPredicateEvaluator | RPG: Deep Dive Documentation",
+    "keywords": "Interface IPredicateEvaluator Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public interface IPredicateEvaluator Methods Evaluate(PredicateType, String[]) Declaration bool? Evaluate(PredicateType predicate, string[] parameters) Parameters Type Name Description PredicateType predicate String [] parameters Returns Type Description Nullable < Boolean >"
+  },
+  "api/RPG.GameplayCore.Core.PersistantObjectSpawner.html": {
+    "href": "api/RPG.GameplayCore.Core.PersistantObjectSpawner.html",
+    "title": "Class PersistantObjectSpawner | RPG: Deep Dive Documentation",
+    "keywords": "Class PersistantObjectSpawner Inheritance Object PersistantObjectSpawner Namespace : RPG.GameplayCore.Core Assembly : cs.temp.dll.dll Syntax public class PersistantObjectSpawner : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Movement.html": {
+    "href": "api/RPG.GameplayCore.Movement.html",
+    "title": "Namespace RPG.GameplayCore.Movement | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Movement Classes Mover"
+  },
+  "api/RPG.GameplayCore.Movement.Mover.html": {
+    "href": "api/RPG.GameplayCore.Movement.Mover.html",
+    "title": "Class Mover | RPG: Deep Dive Documentation",
+    "keywords": "Class Mover Inheritance Object Mover Namespace : RPG.GameplayCore.Movement Assembly : cs.temp.dll.dll Syntax public class Mover : MonoBehaviour Methods Cancel() Declaration public void Cancel() CanMoveTo(Vector3) Declaration public bool CanMoveTo(Vector3 targetPosition) Parameters Type Name Description Vector3 targetPosition Returns Type Description Boolean CaptureState() Declaration public object CaptureState() Returns Type Description Object MoveTo(Vector3, Single) Declaration public void MoveTo(Vector3 destination, float speedFactor = 1F) Parameters Type Name Description Vector3 destination Single speedFactor OnDeathDisable() Disable navMeshAgent after death. Declaration public void OnDeathDisable() Remarks Event function. RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state StartMoveAction(Vector3, Single) Declaration public void StartMoveAction(Vector3 destination, float speedFactor = 1F) Parameters Type Name Description Vector3 destination Single speedFactor"
+  },
+  "api/RPG.GameplayCore.Quests.html": {
+    "href": "api/RPG.GameplayCore.Quests.html",
+    "title": "Namespace RPG.GameplayCore.Quests | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Quests Classes QuestCompletion QuestGiver"
+  },
+  "api/RPG.GameplayCore.Quests.QuestCompletion.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestCompletion.html",
+    "title": "Class QuestCompletion | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestCompletion Inheritance Object QuestCompletion Namespace : RPG.GameplayCore.Quests Assembly : cs.temp.dll.dll Syntax public class QuestCompletion : MonoBehaviour Methods OnCompletedObjective() Declaration public void OnCompletedObjective()"
+  },
+  "api/RPG.GameplayCore.Quests.QuestGiver.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestGiver.html",
+    "title": "Class QuestGiver | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestGiver Inheritance Object QuestGiver Namespace : RPG.GameplayCore.Quests Assembly : cs.temp.dll.dll Syntax public class QuestGiver : MonoBehaviour Methods GiveQuest() Declaration public void GiveQuest()"
+  },
+  "api/RPG.GameplayCore.Quests.QuestsModel.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestsModel.html",
+    "title": "Namespace RPG.GameplayCore.Quests.QuestsModel | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Quests.QuestsModel Classes Objective Quest QuestsJournal Quest journal provides storage for quests. Contains all information about quests statuses QuestStatus"
+  },
+  "api/RPG.GameplayCore.Quests.QuestsModel.Objective.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestsModel.Objective.html",
+    "title": "Class Objective | RPG: Deep Dive Documentation",
+    "keywords": "Class Objective Inheritance Object Objective Namespace : RPG.GameplayCore.Quests.QuestsModel Assembly : cs.temp.dll.dll Syntax public class Objective Fields description Declaration public string description Field Value Type Description String reference Declaration public string reference Field Value Type Description String"
+  },
+  "api/RPG.GameplayCore.Quests.QuestsModel.Quest.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestsModel.Quest.html",
+    "title": "Class Quest | RPG: Deep Dive Documentation",
+    "keywords": "Class Quest Inheritance Object Quest Namespace : RPG.GameplayCore.Quests.QuestsModel Assembly : cs.temp.dll.dll Syntax public class Quest : ScriptableObject Properties ObjectiveCount Declaration public int ObjectiveCount { get; } Property Value Type Description Int32 Objectives Declaration public IReadOnlyList<Objective> Objectives { get; } Property Value Type Description IReadOnlyList < Objective > Title Declaration public string Title { get; } Property Value Type Description String Methods GetByName(String) Declaration public static Quest GetByName(string questName) Parameters Type Name Description String questName Returns Type Description Quest"
+  },
+  "api/RPG.GameplayCore.Quests.QuestsModel.QuestsJournal.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestsModel.QuestsJournal.html",
+    "title": "Class QuestsJournal | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestsJournal Quest journal provides storage for quests. Contains all information about quests statuses Inheritance Object QuestsJournal Namespace : RPG.GameplayCore.Quests.QuestsModel Assembly : cs.temp.dll.dll Syntax public class QuestsJournal : MonoBehaviour Properties QuestsStatuses Declaration public IEnumerable<QuestStatus> QuestsStatuses { get; } Property Value Type Description IEnumerable < QuestStatus > Methods AddQuest(Quest) Declaration public void AddQuest(Quest quest) Parameters Type Name Description Quest quest CompleteQuestObjective(QuestStatus, String) Mark quest objective as complete. Give defined rewards and withdrawals. Declaration public void CompleteQuestObjective(QuestStatus questStatus, string objectiveToComplete) Parameters Type Name Description QuestStatus questStatus Quest status object to complete. String objectiveToComplete Objective reference, which is completed. FindQuestStatus(Quest) Find Quest status by quest. Declaration public QuestStatus FindQuestStatus(Quest quest) Parameters Type Name Description Quest quest Quest, which status will be returned. Returns Type Description QuestStatus Events QuestJournalUpdated Declaration public event Action QuestJournalUpdated Event Type Type Description Action"
+  },
+  "api/RPG.GameplayCore.Quests.QuestsModel.QuestStatus.html": {
+    "href": "api/RPG.GameplayCore.Quests.QuestsModel.QuestStatus.html",
+    "title": "Class QuestStatus | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestStatus Inheritance Object QuestStatus Namespace : RPG.GameplayCore.Quests.QuestsModel Assembly : cs.temp.dll.dll Syntax public class QuestStatus Constructors QuestStatus(Quest) Declaration public QuestStatus(Quest quest) Parameters Type Name Description Quest quest QuestStatus(Object) Declaration public QuestStatus(object questSaving) Parameters Type Name Description Object questSaving Properties Completed Declaration public bool Completed { get; } Property Value Type Description Boolean CompletedCount Declaration public int CompletedCount { get; } Property Value Type Description Int32 Quest Declaration public Quest Quest { get; } Property Value Type Description Quest Methods CaptureState() Declaration public object CaptureState() Returns Type Description Object GetWithdrawals(String) Declaration public IEnumerable<InventorySlot> GetWithdrawals(string objectiveRef) Parameters Type Name Description String objectiveRef Returns Type Description IEnumerable < InventorySlot > IsObjectiveCompleted(String) Declaration public bool IsObjectiveCompleted(string objectiveRef) Parameters Type Name Description String objectiveRef Returns Type Description Boolean QuestDisplayRewards() Declaration public IEnumerable<QuestCompletionReward> QuestDisplayRewards() Returns Type Description IEnumerable < QuestCompletionReward > Rewards() Declaration public IEnumerable<InventorySlot> Rewards() Returns Type Description IEnumerable < InventorySlot > RewardsOnObjective(String) Declaration public IEnumerable<InventorySlot> RewardsOnObjective(string objectiveRef) Parameters Type Name Description String objectiveRef Returns Type Description IEnumerable < InventorySlot > TryMarkCompleted(String) Mark objective as completed. Declaration public bool TryMarkCompleted(string completedObjectiveRef) Parameters Type Name Description String completedObjectiveRef objective reference, which should be marked Returns Type Description Boolean True if successfully completed, false if already completed, ot not exists."
+  },
+  "api/RPG.GameplayCore.Quests.Rewards.html": {
+    "href": "api/RPG.GameplayCore.Quests.Rewards.html",
+    "title": "Namespace RPG.GameplayCore.Quests.Rewards | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Quests.Rewards Classes ObjectiveCompletionReward List of items, which player will receive on objective completion. ObjectiveCompletionWithdrawals List of items, that will be removed from player inventory. QuestCompletionReward"
+  },
+  "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionReward.html": {
+    "href": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionReward.html",
+    "title": "Class ObjectiveCompletionReward | RPG: Deep Dive Documentation",
+    "keywords": "Class ObjectiveCompletionReward List of items, which player will receive on objective completion. Inheritance Object ObjectiveCompletionReward Namespace : RPG.GameplayCore.Quests.Rewards Assembly : cs.temp.dll.dll Syntax public class ObjectiveCompletionReward Fields objective Declaration public Objective objective Field Value Type Description Objective rewards Declaration public List<InventorySlot> rewards Field Value Type Description List < InventorySlot >"
+  },
+  "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionWithdrawals.html": {
+    "href": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionWithdrawals.html",
+    "title": "Class ObjectiveCompletionWithdrawals | RPG: Deep Dive Documentation",
+    "keywords": "Class ObjectiveCompletionWithdrawals List of items, that will be removed from player inventory. Inheritance Object ObjectiveCompletionWithdrawals Namespace : RPG.GameplayCore.Quests.Rewards Assembly : cs.temp.dll.dll Syntax public class ObjectiveCompletionWithdrawals Fields objective Declaration public Objective objective Field Value Type Description Objective withdrawals Declaration public List<InventorySlot> withdrawals Field Value Type Description List < InventorySlot >"
+  },
+  "api/RPG.GameplayCore.Quests.Rewards.QuestCompletionReward.html": {
+    "href": "api/RPG.GameplayCore.Quests.Rewards.QuestCompletionReward.html",
+    "title": "Class QuestCompletionReward | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestCompletionReward Inheritance Object QuestCompletionReward Namespace : RPG.GameplayCore.Quests.Rewards Assembly : cs.temp.dll.dll Syntax public class QuestCompletionReward Fields displayTitle Declaration public string displayTitle Field Value Type Description String reward Declaration public InventorySlot reward Field Value Type Description InventorySlot Properties DisplayTitle Declaration public string DisplayTitle { get; } Property Value Type Description String"
+  },
+  "api/RPG.GameplayCore.Quests.UI.html": {
+    "href": "api/RPG.GameplayCore.Quests.UI.html",
+    "title": "Namespace RPG.GameplayCore.Quests.UI | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Quests.UI Classes ObjectiveUI QuestItemUI QuestJournalUI"
+  },
+  "api/RPG.GameplayCore.Quests.UI.ObjectiveUI.html": {
+    "href": "api/RPG.GameplayCore.Quests.UI.ObjectiveUI.html",
+    "title": "Class ObjectiveUI | RPG: Deep Dive Documentation",
+    "keywords": "Class ObjectiveUI Inheritance Object ObjectiveUI Namespace : RPG.GameplayCore.Quests.UI Assembly : cs.temp.dll.dll Syntax public class ObjectiveUI : MonoBehaviour Methods Setup(String, Boolean) Declaration public void Setup(string title, bool isComplete) Parameters Type Name Description String title Boolean isComplete"
+  },
+  "api/RPG.GameplayCore.Quests.UI.QuestItemUI.html": {
+    "href": "api/RPG.GameplayCore.Quests.UI.QuestItemUI.html",
+    "title": "Class QuestItemUI | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestItemUI Inheritance Object QuestItemUI Namespace : RPG.GameplayCore.Quests.UI Assembly : cs.temp.dll.dll Syntax public class QuestItemUI : MonoBehaviour Methods Setup(QuestStatus) Set up quest UI based on quest status info. Declaration public void Setup(QuestStatus quest) Parameters Type Name Description QuestStatus quest Quest status object, which contains quest and completion status info. ShowDescription() Declaration public void ShowDescription() Events OpeningQuest Declaration public event Action<QuestStatus> OpeningQuest Event Type Type Description Action < QuestStatus >"
+  },
+  "api/RPG.GameplayCore.Quests.UI.QuestJournalUI.html": {
+    "href": "api/RPG.GameplayCore.Quests.UI.QuestJournalUI.html",
+    "title": "Class QuestJournalUI | RPG: Deep Dive Documentation",
+    "keywords": "Class QuestJournalUI Inheritance Object QuestJournalUI Namespace : RPG.GameplayCore.Quests.UI Assembly : cs.temp.dll.dll Syntax public class QuestJournalUI : MonoBehaviour Methods OnQuestJournalUpdated() Declaration protected virtual void OnQuestJournalUpdated() OnQuestOpening(QuestStatus) Declaration protected virtual void OnQuestOpening(QuestStatus questStatus) Parameters Type Name Description QuestStatus questStatus"
+  },
+  "api/RPG.GameplayCore.SceneManagement.Fader.html": {
+    "href": "api/RPG.GameplayCore.SceneManagement.Fader.html",
+    "title": "Class Fader | RPG: Deep Dive Documentation",
+    "keywords": "Class Fader Inheritance Object Fader Namespace : RPG.GameplayCore.SceneManagement Assembly : cs.temp.dll.dll Syntax public class Fader : MonoBehaviour Methods FadeIn(Single) Fade in screen to scene view. Declaration public Coroutine FadeIn(float time) Parameters Type Name Description Single time Time to fade in. Returns Type Description Coroutine FadeOut(Single) Fade out screen to color of \"Fader.Image\" component. Declaration public Coroutine FadeOut(float time) Parameters Type Name Description Single time Time to fade out. Returns Type Description Coroutine FadeOutImmediately() Declaration public void FadeOutImmediately()"
+  },
+  "api/RPG.GameplayCore.SceneManagement.html": {
+    "href": "api/RPG.GameplayCore.SceneManagement.html",
+    "title": "Namespace RPG.GameplayCore.SceneManagement | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.SceneManagement Classes Fader Portal Enums PortalLocation Scenes"
+  },
+  "api/RPG.GameplayCore.SceneManagement.Portal.html": {
+    "href": "api/RPG.GameplayCore.SceneManagement.Portal.html",
+    "title": "Class Portal | RPG: Deep Dive Documentation",
+    "keywords": "Class Portal Inheritance Object Portal Namespace : RPG.GameplayCore.SceneManagement Assembly : cs.temp.dll.dll Syntax public class Portal : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.SceneManagement.PortalLocation.html": {
+    "href": "api/RPG.GameplayCore.SceneManagement.PortalLocation.html",
+    "title": "Enum PortalLocation | RPG: Deep Dive Documentation",
+    "keywords": "Enum PortalLocation Namespace : RPG.GameplayCore.SceneManagement Assembly : cs.temp.dll.dll Syntax public enum PortalLocation Fields Name Description FirstMomentSceneEnd FirstMomentSceneStart PrototypeSceneEnd PrototypeSceneStart"
+  },
+  "api/RPG.GameplayCore.SceneManagement.Scenes.html": {
+    "href": "api/RPG.GameplayCore.SceneManagement.Scenes.html",
+    "title": "Enum Scenes | RPG: Deep Dive Documentation",
+    "keywords": "Enum Scenes Namespace : RPG.GameplayCore.SceneManagement Assembly : cs.temp.dll.dll Syntax public enum Scenes Fields Name Description FistMomentScene None SceneToPrototype"
+  },
+  "api/RPG.GameplayCore.Stats.BaseStats.html": {
+    "href": "api/RPG.GameplayCore.Stats.BaseStats.html",
+    "title": "Class BaseStats | RPG: Deep Dive Documentation",
+    "keywords": "Class BaseStats Inheritance Object BaseStats Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public class BaseStats : MonoBehaviour Methods GetLevel() Declaration public int GetLevel() Returns Type Description Int32 GetStat(Stats) Declaration public float GetStat(Stats statsType) Parameters Type Name Description Stats statsType Returns Type Description Single GetStatOnPreviousLevel(Stats) Declaration public float GetStatOnPreviousLevel(Stats statType) Parameters Type Name Description Stats statType Returns Type Description Single Events LevelUp Declaration public event Action LevelUp Event Type Type Description Action"
+  },
+  "api/RPG.GameplayCore.Stats.CharacterClass.html": {
+    "href": "api/RPG.GameplayCore.Stats.CharacterClass.html",
+    "title": "Enum CharacterClass | RPG: Deep Dive Documentation",
+    "keywords": "Enum CharacterClass Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public enum CharacterClass Fields Name Description Archer Bartender Fairy FortuneTeller Grunt Headsmen Hermit Jester King Mage Merchant Monk Nun Peasant Player Priest Prince Princess Queen Rider Soldier"
+  },
+  "api/RPG.GameplayCore.Stats.Exceptions.html": {
+    "href": "api/RPG.GameplayCore.Stats.Exceptions.html",
+    "title": "Namespace RPG.GameplayCore.Stats.Exceptions | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Stats.Exceptions Classes ProgressionStatException"
+  },
+  "api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html": {
+    "href": "api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html",
+    "title": "Class ProgressionStatException | RPG: Deep Dive Documentation",
+    "keywords": "Class ProgressionStatException Inheritance Object ProgressionStatException Namespace : RPG.GameplayCore.Stats.Exceptions Assembly : cs.temp.dll.dll Syntax public class ProgressionStatException : Exception Constructors ProgressionStatException(String, Exception) Declaration public ProgressionStatException(string message, Exception innerException) Parameters Type Name Description String message Exception innerException"
+  },
+  "api/RPG.GameplayCore.Stats.html": {
+    "href": "api/RPG.GameplayCore.Stats.html",
+    "title": "Namespace RPG.GameplayCore.Stats | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.Stats Classes BaseStats Progression Interfaces IModifyProvider Enums CharacterClass Stats"
+  },
+  "api/RPG.GameplayCore.Stats.IModifyProvider.html": {
+    "href": "api/RPG.GameplayCore.Stats.IModifyProvider.html",
+    "title": "Interface IModifyProvider | RPG: Deep Dive Documentation",
+    "keywords": "Interface IModifyProvider Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public interface IModifyProvider Methods GetAdditiveModifier(Stats) Declaration IEnumerable<float> GetAdditiveModifier(Stats stats) Parameters Type Name Description Stats stats Returns Type Description IEnumerable < Single > GetPercentageModifier(Stats) Declaration IEnumerable<float> GetPercentageModifier(Stats stats) Parameters Type Name Description Stats stats Returns Type Description IEnumerable < Single >"
+  },
+  "api/RPG.GameplayCore.Stats.Progression.html": {
+    "href": "api/RPG.GameplayCore.Stats.Progression.html",
+    "title": "Class Progression | RPG: Deep Dive Documentation",
+    "keywords": "Class Progression Inheritance Object Progression Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public class Progression : ScriptableObject Methods GetNumberOfLevels(Stats, CharacterClass) Declaration public int GetNumberOfLevels(Stats statsType, CharacterClass characterClass) Parameters Type Name Description Stats statsType CharacterClass characterClass Returns Type Description Int32 GetStat(Stats, CharacterClass, Int32) Declaration public float GetStat(Stats statsType, CharacterClass characterClass, int level) Parameters Type Name Description Stats statsType CharacterClass characterClass Int32 level Returns Type Description Single"
+  },
+  "api/RPG.GameplayCore.Stats.Stats.html": {
+    "href": "api/RPG.GameplayCore.Stats.Stats.html",
+    "title": "Enum Stats | RPG: Deep Dive Documentation",
+    "keywords": "Enum Stats Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public enum Stats Fields Name Description Damage ExperienceRewards ExperienceToLevelUp Health"
+  },
+  "api/RPG.GameplayCore.UI.DamageText.DamageText.html": {
+    "href": "api/RPG.GameplayCore.UI.DamageText.DamageText.html",
+    "title": "Class DamageText | RPG: Deep Dive Documentation",
+    "keywords": "Class DamageText Inheritance Object DamageText Namespace : RPG.GameplayCore.UI.DamageText Assembly : cs.temp.dll.dll Syntax public class DamageText : MonoBehaviour Methods SetText(Single) Declaration public void SetText(float damage) Parameters Type Name Description Single damage"
+  },
+  "api/RPG.GameplayCore.UI.DamageText.DamageTextSpawner.html": {
+    "href": "api/RPG.GameplayCore.UI.DamageText.DamageTextSpawner.html",
+    "title": "Class DamageTextSpawner | RPG: Deep Dive Documentation",
+    "keywords": "Class DamageTextSpawner Inheritance Object DamageTextSpawner Namespace : RPG.GameplayCore.UI.DamageText Assembly : cs.temp.dll.dll Syntax public class DamageTextSpawner : MonoBehaviour Methods Spawn(Single) Declaration public void Spawn(float damage) Parameters Type Name Description Single damage"
+  },
+  "api/RPG.GameplayCore.UI.DamageText.html": {
+    "href": "api/RPG.GameplayCore.UI.DamageText.html",
+    "title": "Namespace RPG.GameplayCore.UI.DamageText | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.UI.DamageText Classes DamageText DamageTextSpawner"
+  },
+  "api/RPG.GameplayCore.UI.Destroyer.html": {
+    "href": "api/RPG.GameplayCore.UI.Destroyer.html",
+    "title": "Class Destroyer | RPG: Deep Dive Documentation",
+    "keywords": "Class Destroyer Inheritance Object Destroyer Namespace : RPG.GameplayCore.UI Assembly : cs.temp.dll.dll Syntax public class Destroyer : MonoBehaviour Methods DestroyTarget() Declaration public void DestroyTarget()"
+  },
+  "api/RPG.GameplayCore.UI.html": {
+    "href": "api/RPG.GameplayCore.UI.html",
+    "title": "Namespace RPG.GameplayCore.UI | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.GameplayCore.UI Classes Destroyer TabButton TabSystem UICameraFacing"
+  },
+  "api/RPG.GameplayCore.UI.TabButton.html": {
+    "href": "api/RPG.GameplayCore.UI.TabButton.html",
+    "title": "Class TabButton | RPG: Deep Dive Documentation",
+    "keywords": "Class TabButton Inheritance Object TabButton Namespace : RPG.GameplayCore.UI Assembly : cs.temp.dll.dll Syntax public class TabButton : MonoBehaviour Methods SwitchState() Declaration public void SwitchState()"
+  },
+  "api/RPG.GameplayCore.UI.TabSystem.html": {
+    "href": "api/RPG.GameplayCore.UI.TabSystem.html",
+    "title": "Class TabSystem | RPG: Deep Dive Documentation",
+    "keywords": "Class TabSystem Inheritance Object TabSystem Namespace : RPG.GameplayCore.UI Assembly : cs.temp.dll.dll Syntax public class TabSystem : MonoBehaviour Properties SelectedTab Declaration public GameObject SelectedTab { get; } Property Value Type Description GameObject Methods Select(GameObject) Declaration public void Select(GameObject uiContainer) Parameters Type Name Description GameObject uiContainer Events TabSelected Declaration public event Action TabSelected Event Type Type Description Action"
+  },
+  "api/RPG.GameplayCore.UI.UICameraFacing.html": {
+    "href": "api/RPG.GameplayCore.UI.UICameraFacing.html",
+    "title": "Class UICameraFacing | RPG: Deep Dive Documentation",
+    "keywords": "Class UICameraFacing Inheritance Object UICameraFacing Namespace : RPG.GameplayCore.UI Assembly : cs.temp.dll.dll Syntax public class UICameraFacing : MonoBehaviour"
+  },
+  "api/RPG.InventorySystem.ActionBarController.html": {
+    "href": "api/RPG.InventorySystem.ActionBarController.html",
+    "title": "Class ActionBarController | RPG: Deep Dive Documentation",
+    "keywords": "Class ActionBarController Controller for handling input corresponding to actionBar. Inheritance Object ActionBarController Namespace : RPG.InventorySystem Assembly : cs.temp.dll.dll Syntax public class ActionBarController : MonoBehaviour"
+  },
+  "api/RPG.InventorySystem.html": {
+    "href": "api/RPG.InventorySystem.html",
+    "title": "Namespace RPG.InventorySystem | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem Classes ActionBarController Controller for handling input corresponding to actionBar."
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Actions.ActionItem.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionItem.html",
+    "title": "Class ActionItem | RPG: Deep Dive Documentation",
+    "keywords": "Class ActionItem An inventory item that can be placed in the action bar and \"Used\". Inheritance Object ActionItem HealActionItem Namespace : RPG.InventorySystem.InventoriesModel.Actions Assembly : cs.temp.dll.dll Syntax public class ActionItem : InventoryItem Remarks Subclasses must override the Use method. Properties IsConsumable Declaration public bool IsConsumable { get; } Property Value Type Description Boolean Methods Use(GameObject) Trigger the use of this item. Declaration public virtual bool Use(GameObject user) Parameters Type Name Description GameObject user The character that is using this action. Returns Type Description Boolean"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Actions.ActionStore.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionStore.html",
+    "title": "Class ActionStore | RPG: Deep Dive Documentation",
+    "keywords": "Class ActionStore Provides the storage for an action bar. The bar has a finite number of slots that can be filled and actions in the slots can be \"used\". This component should be placed on the GameObject tagged \"Player\". Inheritance Object ActionStore Namespace : RPG.InventorySystem.InventoriesModel.Actions Assembly : cs.temp.dll.dll Syntax public class ActionStore : MonoBehaviour Methods AddAction(InventoryItem, Int32, Int32) Add an item to the given index. Declaration public void AddAction(InventoryItem item, int index, int number) Parameters Type Name Description InventoryItem item What item should be added. Int32 index Where should the item be added. Int32 number How many items to add. GetAction(Int32) Get the action at the given index. Declaration public ActionItem GetAction(int index) Parameters Type Name Description Int32 index Returns Type Description ActionItem GetNumber(Int32) Get the number of items left at the given index. Declaration public int GetNumber(int index) Parameters Type Name Description Int32 index Returns Type Description Int32 Will return 0 if no item is in the index or the item has been fully consumed. MaxAcceptable(InventoryItem, Int32) What is the maximum number of items allowed in this slot. Declaration public int MaxAcceptable(InventoryItem item, int index) Parameters Type Name Description InventoryItem item Int32 index Returns Type Description Int32 Will return int.MaxValue when there is not defined bound. RemoveItems(Int32, Int32) Remove a given number of items from the given slot. Declaration public void RemoveItems(int index, int number) Parameters Type Name Description Int32 index Int32 number Use(Int32, GameObject) Use the item at the given slot. If the item is consumable one instance will be destroyed until the item is removed completely. Declaration public bool Use(int index, GameObject user) Parameters Type Name Description Int32 index GameObject user The character that wants to use this action. Returns Type Description Boolean False if the action could not be executed. Events StoreUpdated Declaration public event Action StoreUpdated Event Type Type Description Action"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Actions.HealActionItem.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Actions.HealActionItem.html",
+    "title": "Class HealActionItem | RPG: Deep Dive Documentation",
+    "keywords": "Class HealActionItem Inheritance Object ActionItem HealActionItem Inherited Members ActionItem.IsConsumable Namespace : RPG.InventorySystem.InventoriesModel.Actions Assembly : cs.temp.dll.dll Syntax public class HealActionItem : ActionItem Methods Use(GameObject) Declaration public override bool Use(GameObject user) Parameters Type Name Description GameObject user Returns Type Description Boolean Overrides ActionItem.Use(GameObject)"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Actions.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Actions.html",
+    "title": "Namespace RPG.InventorySystem.InventoriesModel.Actions | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.InventoriesModel.Actions Classes ActionItem An inventory item that can be placed in the action bar and \"Used\". ActionStore Provides the storage for an action bar. The bar has a finite number of slots that can be filled and actions in the slots can be \"used\". This component should be placed on the GameObject tagged \"Player\". HealActionItem"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DropConfig.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DropConfig.html",
+    "title": "Class DropLibrary.DropConfig | RPG: Deep Dive Documentation",
+    "keywords": "Class DropLibrary.DropConfig Inheritance Object DropLibrary.DropConfig Namespace : RPG.InventorySystem.InventoriesModel Assembly : cs.temp.dll.dll Syntax public class DropConfig Fields dropItem Declaration public InventoryItem dropItem Field Value Type Description InventoryItem number Declaration public Vector2Int[] number Field Value Type Description Vector2Int [] relativeChance Declaration public float[] relativeChance Field Value Type Description Single [] Methods GetRandomNumber(Int32) Declaration public int GetRandomNumber(int level) Parameters Type Name Description Int32 level Returns Type Description Int32"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DroppedSlot.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DroppedSlot.html",
+    "title": "Struct DropLibrary.DroppedSlot | RPG: Deep Dive Documentation",
+    "keywords": "Struct DropLibrary.DroppedSlot Namespace : RPG.InventorySystem.InventoriesModel Assembly : cs.temp.dll.dll Syntax public struct DroppedSlot Fields item Declaration public InventoryItem item Field Value Type Description InventoryItem number Declaration public int number Field Value Type Description Int32"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.DropLibrary.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.html",
+    "title": "Class DropLibrary | RPG: Deep Dive Documentation",
+    "keywords": "Class DropLibrary Inheritance Object DropLibrary Namespace : RPG.InventorySystem.InventoriesModel Assembly : cs.temp.dll.dll Syntax public class DropLibrary : ScriptableObject Methods GetRandomDrops(Int32) Declaration public IEnumerable<DropLibrary.DroppedSlot> GetRandomDrops(int level) Parameters Type Name Description Int32 level Returns Type Description IEnumerable < DropLibrary.DroppedSlot >"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Equipment.EquipLocation.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquipLocation.html",
+    "title": "Enum EquipLocation | RPG: Deep Dive Documentation",
+    "keywords": "Enum EquipLocation Locations on the players body where items can be equipped. Namespace : RPG.InventorySystem.InventoriesModel.Equipment Assembly : cs.temp.dll.dll Syntax public enum EquipLocation Fields Name Description Boots Bracers Chest Gloves Helmet Necklace Pants Shield Shoulders Trinket Weapon"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Equipment.Equipment.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Equipment.Equipment.html",
+    "title": "Class Equipment | RPG: Deep Dive Documentation",
+    "keywords": "Class Equipment Provides a store for the items equipped to a player. Items are stored by their equip locations. This component should be placed on the GameObject tagged \"Player\". Inheritance Object Equipment StatsEquipment Namespace : RPG.InventorySystem.InventoriesModel.Equipment Assembly : cs.temp.dll.dll Syntax public class Equipment : MonoBehaviour Methods AddItem(EquipLocation, EquippableItem) Add an item to the given equip location. Do not attempt to equip to an incompatible slot. Declaration public void AddItem(EquipLocation slot, EquippableItem item) Parameters Type Name Description EquipLocation slot EquippableItem item GetAllEquipLocations() Enumerate through all the slots that currently contain items. Declaration public IEnumerable<EquipLocation> GetAllEquipLocations() Returns Type Description IEnumerable < EquipLocation > GetItemInSlot(EquipLocation) Return the item in the given equip location. Declaration public EquippableItem GetItemInSlot(EquipLocation equipLocation) Parameters Type Name Description EquipLocation equipLocation Returns Type Description EquippableItem RemoveItem(EquipLocation) Remove the item for the given slot. Declaration public void RemoveItem(EquipLocation slot) Parameters Type Name Description EquipLocation slot Events EquipmentUpdated Declaration public event Action EquipmentUpdated Event Type Type Description Action"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Equipment.EquippableItem.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquippableItem.html",
+    "title": "Class EquippableItem | RPG: Deep Dive Documentation",
+    "keywords": "Class EquippableItem An inventory item that can be equipped to the player. Weapons could be a subclass of this. Inheritance Object EquippableItem StatsEquippableItem Namespace : RPG.InventorySystem.InventoriesModel.Equipment Assembly : cs.temp.dll.dll Syntax public class EquippableItem : InventoryItem Properties AllowedEquipLocation Declaration public EquipLocation AllowedEquipLocation { get; } Property Value Type Description EquipLocation"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Equipment.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Equipment.html",
+    "title": "Namespace RPG.InventorySystem.InventoriesModel.Equipment | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.InventoriesModel.Equipment Classes Equipment Provides a store for the items equipped to a player. Items are stored by their equip locations. This component should be placed on the GameObject tagged \"Player\". EquippableItem An inventory item that can be equipped to the player. Weapons could be a subclass of this. StatsEquipment Equipment that provides effect on player stats. StatsEquippableItem Enums EquipLocation Locations on the players body where items can be equipped."
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquipment.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquipment.html",
+    "title": "Class StatsEquipment | RPG: Deep Dive Documentation",
+    "keywords": "Class StatsEquipment Equipment that provides effect on player stats. Inheritance Object Equipment StatsEquipment Inherited Members Equipment.EquipmentUpdated Equipment.GetItemInSlot(EquipLocation) Equipment.AddItem(EquipLocation, EquippableItem) Equipment.RemoveItem(EquipLocation) Equipment.GetAllEquipLocations() Namespace : RPG.InventorySystem.InventoriesModel.Equipment Assembly : cs.temp.dll.dll Syntax public class StatsEquipment : Equipment"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquippableItem.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquippableItem.html",
+    "title": "Class StatsEquippableItem | RPG: Deep Dive Documentation",
+    "keywords": "Class StatsEquippableItem Inheritance Object EquippableItem StatsEquippableItem Inherited Members EquippableItem.AllowedEquipLocation Namespace : RPG.InventorySystem.InventoriesModel.Equipment Assembly : cs.temp.dll.dll Syntax public class StatsEquippableItem : EquippableItem"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.html",
+    "title": "Namespace RPG.InventorySystem.InventoriesModel | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.InventoriesModel Classes DropLibrary DropLibrary.DropConfig ItemDropper To be placed on anything that wishes to drop pickups into the world. Component tracks the drops for saving and restoring. RandomDropper Structs DropLibrary.DroppedSlot"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Inventory.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Inventory.html",
+    "title": "Namespace RPG.InventorySystem.InventoriesModel.Inventory | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.InventoriesModel.Inventory Classes Inventory Provides storage for the player inventory. A configurable number of slots are available. InventoryItem Represents any item that can be put in a inventory. InventorySlot"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Inventory.Inventory.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Inventory.Inventory.html",
+    "title": "Class Inventory | RPG: Deep Dive Documentation",
+    "keywords": "Class Inventory Provides storage for the player inventory. A configurable number of slots are available. Inheritance Object Inventory Namespace : RPG.InventorySystem.InventoriesModel.Inventory Assembly : cs.temp.dll.dll Syntax public class Inventory : MonoBehaviour Properties Size Declaration public int Size { get; } Property Value Type Description Int32 Methods AddItemToSlot(Int32, InventoryItem, Int32) Will add an item to the given slot if possible. If there is already a stack of this type, it will add to the existing stack. Otherwise, it will be added to the first empty slot. Declaration public bool AddItemToSlot(int slot, InventoryItem item, int number) Parameters Type Name Description Int32 slot The slot to attempt to add to. InventoryItem item The item type to add. Int32 number The number of items to add. Returns Type Description Boolean True if the item was added anywhere in the inventory. AddToFirstEmptySlot(InventoryItem, Int32) Attempt to add the items to the first available slot. Declaration public bool AddToFirstEmptySlot(InventoryItem item, int number) Parameters Type Name Description InventoryItem item The item to add. Int32 number The number to add. Returns Type Description Boolean Whether or not the item could be added. GetItemInSlot(Int32) Return the item type in the given slot. Declaration public InventoryItem GetItemInSlot(int slot) Parameters Type Name Description Int32 slot Returns Type Description InventoryItem GetNumberInSlot(Int32) Get the number of items in the given slot. Declaration public int GetNumberInSlot(int slot) Parameters Type Name Description Int32 slot Returns Type Description Int32 GetPlayerInventory() Declaration public static Inventory GetPlayerInventory() Returns Type Description Inventory HasItem(InventoryItem) Is there an instance of the item in the inventory? Declaration public bool HasItem(InventoryItem item) Parameters Type Name Description InventoryItem item Returns Type Description Boolean HasSpaceFor(InventoryItem) Declaration public bool HasSpaceFor(InventoryItem item) Parameters Type Name Description InventoryItem item Returns Type Description Boolean RemoveFromSlot(Int32, Int32) Declaration public void RemoveFromSlot(int slot, int number) Parameters Type Name Description Int32 slot Int32 number WithdrawItem(InventorySlot) Withdraw items in inventory. Declaration public bool WithdrawItem(InventorySlot slot) Parameters Type Name Description InventorySlot slot Inventory slot which contains info about item and number to withdraw. Returns Type Description Boolean suceeded status Events InventoryUpdated Declaration public event Action InventoryUpdated Event Type Type Description Action"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Inventory.InventoryItem.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventoryItem.html",
+    "title": "Class InventoryItem | RPG: Deep Dive Documentation",
+    "keywords": "Class InventoryItem Represents any item that can be put in a inventory. Inheritance Object InventoryItem Namespace : RPG.InventorySystem.InventoriesModel.Inventory Assembly : cs.temp.dll.dll Syntax public abstract class InventoryItem : ScriptableObject Properties Description Declaration public string Description { get; } Property Value Type Description String DisplayName Declaration public string DisplayName { get; } Property Value Type Description String Icon Declaration public Sprite Icon { get; } Property Value Type Description Sprite IconWithBackground Declaration public Sprite IconWithBackground { get; } Property Value Type Description Sprite IsStackable Declaration public bool IsStackable { get; } Property Value Type Description Boolean ItemID Declaration public string ItemID { get; } Property Value Type Description String Methods GetFromID(String) Get the inventory item instance from its GUID. Declaration public static InventoryItem GetFromID(string itemID) Parameters Type Name Description String itemID String GUID. Returns Type Description InventoryItem Inventory item instance corresponding to the ID. SpawnPickup(Vector3, Int32) Spawn the pickup gameObject into the world. Declaration public Pickup SpawnPickup(Vector3 position, int number) Parameters Type Name Description Vector3 position Where to spawn the pickup. Int32 number How many instances of the item does the pickup represent. Returns Type Description Pickup Reference to the pickup object spawned."
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Inventory.InventorySlot.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventorySlot.html",
+    "title": "Class InventorySlot | RPG: Deep Dive Documentation",
+    "keywords": "Class InventorySlot Inheritance Object InventorySlot Namespace : RPG.InventorySystem.InventoriesModel.Inventory Assembly : cs.temp.dll.dll Syntax public class InventorySlot Fields item Declaration public InventoryItem item Field Value Type Description InventoryItem number Declaration public int number Field Value Type Description Int32"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.ItemDropper.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.ItemDropper.html",
+    "title": "Class ItemDropper | RPG: Deep Dive Documentation",
+    "keywords": "Class ItemDropper To be placed on anything that wishes to drop pickups into the world. Component tracks the drops for saving and restoring. Inheritance Object ItemDropper RandomDropper Namespace : RPG.InventorySystem.InventoriesModel Assembly : cs.temp.dll.dll Syntax public class ItemDropper : MonoBehaviour Methods DropItem(InventoryItem) Create a pickup at the current position. Declaration public void DropItem(InventoryItem item) Parameters Type Name Description InventoryItem item The item type for the pickup. DropItem(InventoryItem, Int32) Create a pickup at the current position. Declaration public void DropItem(InventoryItem item, int number) Parameters Type Name Description InventoryItem item The item type for the pickup. Int32 number The number of items contained in the pickup. Only used if the item is stackable. GetLocationToDrop() Declaration protected virtual Vector3 GetLocationToDrop() Returns Type Description Vector3"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Loot.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Loot.html",
+    "title": "Namespace RPG.InventorySystem.InventoriesModel.Loot | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.InventoriesModel.Loot Classes LootItem"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Loot.LootItem.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Loot.LootItem.html",
+    "title": "Class LootItem | RPG: Deep Dive Documentation",
+    "keywords": "Class LootItem Inheritance Object LootItem Namespace : RPG.InventorySystem.InventoriesModel.Loot Assembly : cs.temp.dll.dll Syntax public class LootItem : InventoryItem"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Pickups.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Pickups.html",
+    "title": "Namespace RPG.InventorySystem.InventoriesModel.Pickups | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.InventoriesModel.Pickups Classes Pickup PickupSpawner Spawns pickups that should exist on first load in a level. This automatically spawns the correct prefab for a given inventory item."
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Pickups.Pickup.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Pickups.Pickup.html",
+    "title": "Class Pickup | RPG: Deep Dive Documentation",
+    "keywords": "Class Pickup Inheritance Object Pickup Namespace : RPG.InventorySystem.InventoriesModel.Pickups Assembly : cs.temp.dll.dll Syntax public class Pickup : MonoBehaviour Properties Item Declaration public InventoryItem Item { get; } Property Value Type Description InventoryItem Number Declaration public int Number { get; } Property Value Type Description Int32 Methods CanBePickedUp() Declaration public bool CanBePickedUp() Returns Type Description Boolean PickupItem() Declaration public void PickupItem() Setup(InventoryItem, Int32) Set the vital data after creating the prefab. Declaration public void Setup(InventoryItem item, int number) Parameters Type Name Description InventoryItem item The type of item this prefab represents. Int32 number The number of items represented."
+  },
+  "api/RPG.InventorySystem.InventoriesModel.Pickups.PickupSpawner.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.Pickups.PickupSpawner.html",
+    "title": "Class PickupSpawner | RPG: Deep Dive Documentation",
+    "keywords": "Class PickupSpawner Spawns pickups that should exist on first load in a level. This automatically spawns the correct prefab for a given inventory item. Inheritance Object PickupSpawner Namespace : RPG.InventorySystem.InventoriesModel.Pickups Assembly : cs.temp.dll.dll Syntax public class PickupSpawner : MonoBehaviour Methods GetPickup() Returns the pickup spawned by this class if it exists. Declaration public Pickup GetPickup() Returns Type Description Pickup Returns null if the pickup has been collected. isCollected() True if the pickup was collected. Declaration public bool isCollected() Returns Type Description Boolean"
+  },
+  "api/RPG.InventorySystem.InventoriesModel.RandomDropper.html": {
+    "href": "api/RPG.InventorySystem.InventoriesModel.RandomDropper.html",
+    "title": "Class RandomDropper | RPG: Deep Dive Documentation",
+    "keywords": "Class RandomDropper Inheritance Object ItemDropper RandomDropper Inherited Members ItemDropper.DropItem(InventoryItem, Int32) ItemDropper.DropItem(InventoryItem) Namespace : RPG.InventorySystem.InventoriesModel Assembly : cs.temp.dll.dll Syntax public class RandomDropper : ItemDropper Methods GetLocationToDrop() Declaration protected override Vector3 GetLocationToDrop() Returns Type Description Vector3 Overrides ItemDropper.GetLocationToDrop() OnRandomDrop() Drops random item from dropsLibrary Declaration public void OnRandomDrop() Remarks Event function."
+  },
+  "api/RPG.InventorySystem.UI.html": {
+    "href": "api/RPG.InventorySystem.UI.html",
+    "title": "Namespace RPG.InventorySystem.UI | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.UI Classes ScrollButtonsController"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.ActionSlotUI.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.ActionSlotUI.html",
+    "title": "Class ActionSlotUI | RPG: Deep Dive Documentation",
+    "keywords": "Class ActionSlotUI The UI slot for the player action bar. Inheritance Object ActionSlotUI Implements IItemHolder Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class ActionSlotUI : MonoBehaviour, IItemHolder Methods AddItems(InventoryItem, Int32) Declaration public void AddItems(InventoryItem item, int number) Parameters Type Name Description InventoryItem item Int32 number GetItem() Declaration public InventoryItem GetItem() Returns Type Description InventoryItem GetNumber() Declaration public int GetNumber() Returns Type Description Int32 MaxAcceptable(InventoryItem) Declaration public int MaxAcceptable(InventoryItem item) Parameters Type Name Description InventoryItem item Returns Type Description Int32 OnStoreUpdated() Declaration protected virtual void OnStoreUpdated() RemoveItems(Int32) Declaration public void RemoveItems(int number) Parameters Type Name Description Int32 number Implements IItemHolder"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.EquipmentSlotUI.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.EquipmentSlotUI.html",
+    "title": "Class EquipmentSlotUI | RPG: Deep Dive Documentation",
+    "keywords": "Class EquipmentSlotUI An slot for the players equipment. Inheritance Object EquipmentSlotUI Implements IItemHolder Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class EquipmentSlotUI : MonoBehaviour, IItemHolder Properties EquipLocation Declaration public EquipLocation EquipLocation { get; } Property Value Type Description EquipLocation Methods AddItems(InventoryItem, Int32) Declaration public void AddItems(InventoryItem item, int number) Parameters Type Name Description InventoryItem item Int32 number GetItem() Declaration public InventoryItem GetItem() Returns Type Description InventoryItem GetNumber() Declaration public int GetNumber() Returns Type Description Int32 MaxAcceptable(InventoryItem) Declaration public int MaxAcceptable(InventoryItem item) Parameters Type Name Description InventoryItem item Returns Type Description Int32 OnInventoryUpdated() Declaration protected virtual void OnInventoryUpdated() RemoveItems(Int32) Declaration public void RemoveItems(int number) Parameters Type Name Description Int32 number Implements IItemHolder"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.html",
+    "title": "Namespace RPG.InventorySystem.UI.Inventories | RPG: Deep Dive Documentation",
+    "keywords": "Namespace RPG.InventorySystem.UI.Inventories Classes ActionSlotUI The UI slot for the player action bar. EquipmentSlotUI An slot for the players equipment. InventoryDragItem Allows the item to be dragged into other slots. InventoryDropTarget Handles spawning pickups when item dropped into the world. Must be placed on the root canvas where items can be dragged. Will be called if dropped over empty space. InventoryItemIcon To be put on the icon representing an inventory item. Allows the slot to update the icon and number. InventorySlotUI InventoryUI To be placed on the root of the inventory UI. Handles spawning all the inventory slot prefabs. ItemTooltip Root of the tooltip prefab to expose properties to other classes. ItemTooltipSpawner To be placed on a UI slot to spawn and show the correct item tooltip. Interfaces IItemHolder Allows the ItemTooltipSpawner to display the right information."
+  },
+  "api/RPG.InventorySystem.UI.Inventories.IItemHolder.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.IItemHolder.html",
+    "title": "Interface IItemHolder | RPG: Deep Dive Documentation",
+    "keywords": "Interface IItemHolder Allows the ItemTooltipSpawner to display the right information. Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public interface IItemHolder Methods GetItem() Declaration InventoryItem GetItem() Returns Type Description InventoryItem"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.InventoryDragItem.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.InventoryDragItem.html",
+    "title": "Class InventoryDragItem | RPG: Deep Dive Documentation",
+    "keywords": "Class InventoryDragItem Allows the item to be dragged into other slots. Inheritance Object InventoryDragItem Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class InventoryDragItem : DragItem<InventoryItem> Methods Awake() Declaration protected override void Awake() OnBeginDrag(PointerEventData) Declaration public override void OnBeginDrag(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnEndDrag(PointerEventData) Declaration public override void OnEndDrag(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnPointerClick(PointerEventData) Declaration public void OnPointerClick(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnPointerEnter(PointerEventData) Declaration public void OnPointerEnter(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnPointerExit(PointerEventData) Declaration public void OnPointerExit(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.InventoryDropTarget.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.InventoryDropTarget.html",
+    "title": "Class InventoryDropTarget | RPG: Deep Dive Documentation",
+    "keywords": "Class InventoryDropTarget Handles spawning pickups when item dropped into the world. Must be placed on the root canvas where items can be dragged. Will be called if dropped over empty space. Inheritance Object InventoryDropTarget Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class InventoryDropTarget : MonoBehaviour Methods AddItems(InventoryItem, Int32) Declaration public void AddItems(InventoryItem item, int number) Parameters Type Name Description InventoryItem item Int32 number MaxAcceptable(InventoryItem) Declaration public int MaxAcceptable(InventoryItem item) Parameters Type Name Description InventoryItem item Returns Type Description Int32"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.InventoryItemIcon.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.InventoryItemIcon.html",
+    "title": "Class InventoryItemIcon | RPG: Deep Dive Documentation",
+    "keywords": "Class InventoryItemIcon To be put on the icon representing an inventory item. Allows the slot to update the icon and number. Inheritance Object InventoryItemIcon Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class InventoryItemIcon : MonoBehaviour Methods CutOffBackground() Declaration public void CutOffBackground() SetItem(InventoryItem) Declaration public void SetItem(InventoryItem item) Parameters Type Name Description InventoryItem item SetItem(InventoryItem, Int32) Declaration public void SetItem(InventoryItem item, int number) Parameters Type Name Description InventoryItem item Int32 number ShowBackground() Declaration public void ShowBackground()"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.InventorySlotUI.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.InventorySlotUI.html",
+    "title": "Class InventorySlotUI | RPG: Deep Dive Documentation",
+    "keywords": "Class InventorySlotUI Inheritance Object InventorySlotUI Implements IItemHolder Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class InventorySlotUI : MonoBehaviour, IItemHolder Methods AddItems(InventoryItem, Int32) Declaration public void AddItems(InventoryItem item, int number) Parameters Type Name Description InventoryItem item Int32 number GetItem() Declaration public InventoryItem GetItem() Returns Type Description InventoryItem GetNumber() Declaration public int GetNumber() Returns Type Description Int32 MaxAcceptable(InventoryItem) Declaration public int MaxAcceptable(InventoryItem item) Parameters Type Name Description InventoryItem item Returns Type Description Int32 RemoveItems(Int32) Declaration public void RemoveItems(int number) Parameters Type Name Description Int32 number Setup(Inventory, Int32) Declaration public void Setup(Inventory inventory, int index) Parameters Type Name Description Inventory inventory Int32 index Implements IItemHolder"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.InventoryUI.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.InventoryUI.html",
+    "title": "Class InventoryUI | RPG: Deep Dive Documentation",
+    "keywords": "Class InventoryUI To be placed on the root of the inventory UI. Handles spawning all the inventory slot prefabs. Inheritance Object InventoryUI Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class InventoryUI : MonoBehaviour"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.ItemTooltip.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.ItemTooltip.html",
+    "title": "Class ItemTooltip | RPG: Deep Dive Documentation",
+    "keywords": "Class ItemTooltip Root of the tooltip prefab to expose properties to other classes. Inheritance Object ItemTooltip Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class ItemTooltip : MonoBehaviour Methods Setup(InventoryItem) Declaration public void Setup(InventoryItem item) Parameters Type Name Description InventoryItem item"
+  },
+  "api/RPG.InventorySystem.UI.Inventories.ItemTooltipSpawner.html": {
+    "href": "api/RPG.InventorySystem.UI.Inventories.ItemTooltipSpawner.html",
+    "title": "Class ItemTooltipSpawner | RPG: Deep Dive Documentation",
+    "keywords": "Class ItemTooltipSpawner To be placed on a UI slot to spawn and show the correct item tooltip. Inheritance Object ItemTooltipSpawner Namespace : RPG.InventorySystem.UI.Inventories Assembly : cs.temp.dll.dll Syntax public class ItemTooltipSpawner : TooltipSpawner Methods CanCreateTooltip() Declaration public override bool CanCreateTooltip() Returns Type Description Boolean UpdateTooltip(GameObject) Declaration public override void UpdateTooltip(GameObject tooltip) Parameters Type Name Description GameObject tooltip"
+  },
+  "api/RPG.InventorySystem.UI.ScrollButtonsController.html": {
+    "href": "api/RPG.InventorySystem.UI.ScrollButtonsController.html",
+    "title": "Class ScrollButtonsController | RPG: Deep Dive Documentation",
+    "keywords": "Class ScrollButtonsController Inheritance Object ScrollButtonsController Namespace : RPG.InventorySystem.UI Assembly : cs.temp.dll.dll Syntax public class ScrollButtonsController : MonoBehaviour Methods ScrollDown() Declaration public void ScrollDown() ScrollUp() Declaration public void ScrollUp()"
+  },
+  "api/SavingSystem.html": {
+    "href": "api/SavingSystem.html",
+    "title": "Namespace SavingSystem | RPG: Deep Dive Documentation",
+    "keywords": "Namespace SavingSystem Classes SavableEntity SavingSystem Instance os this class should be created once and shared between all subsequent scenes. SavingWrapper SerializableVector3 Interfaces ISavable"
+  },
+  "api/SavingSystem.ISavable.html": {
+    "href": "api/SavingSystem.ISavable.html",
+    "title": "Interface ISavable | RPG: Deep Dive Documentation",
+    "keywords": "Interface ISavable Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax public interface ISavable Methods CaptureState() Captures object of any type by boxing to object. Declaration object CaptureState() Returns Type Description Object Object to serialize. RestoreState(Object) Restoring data. To avoid unboxing errors provide exactly the same type as it was in CaptureState. Declaration void RestoreState(object state) Parameters Type Name Description Object state Serialized object from saving system (captured state)."
+  },
+  "api/SavingSystem.SavableEntity.html": {
+    "href": "api/SavingSystem.SavableEntity.html",
+    "title": "Class SavableEntity | RPG: Deep Dive Documentation",
+    "keywords": "Class SavableEntity Inheritance Object SavableEntity Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax public class SavableEntity : MonoBehaviour Methods CaptureState() Declaration public object CaptureState() Returns Type Description Object GetUniqueIdentifier() Declaration public string GetUniqueIdentifier() Returns Type Description String RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state"
+  },
+  "api/SavingSystem.SavingSystem.html": {
+    "href": "api/SavingSystem.SavingSystem.html",
+    "title": "Class SavingSystem | RPG: Deep Dive Documentation",
+    "keywords": "Class SavingSystem Instance os this class should be created once and shared between all subsequent scenes. Inheritance Object SavingSystem Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax public class SavingSystem : MonoBehaviour Methods Delete(String) Delete the state in the given save file. Declaration public void Delete(string saveFile) Parameters Type Name Description String saveFile Load(String) Declaration public void Load(string saveFile) Parameters Type Name Description String saveFile LoadLastScene(String) Will load the last scene that was saved and restore the state. Declaration public IEnumerator LoadLastScene(string saveFile) Parameters Type Name Description String saveFile The save file to consult for loading. Returns Type Description IEnumerator Save(String) Save the current scene to the provided save file. Declaration public void Save(string saveFile) Parameters Type Name Description String saveFile"
+  },
+  "api/SavingSystem.SavingWrapper.html": {
+    "href": "api/SavingSystem.SavingWrapper.html",
+    "title": "Class SavingWrapper | RPG: Deep Dive Documentation",
+    "keywords": "Class SavingWrapper Inheritance Object SavingWrapper Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax public class SavingWrapper : MonoBehaviour Methods Delete() Declaration public void Delete() Load() Declaration public void Load() Save() Declaration public void Save()"
+  },
+  "api/SavingSystem.SerializableVector3.html": {
+    "href": "api/SavingSystem.SerializableVector3.html",
+    "title": "Class SerializableVector3 | RPG: Deep Dive Documentation",
+    "keywords": "Class SerializableVector3 Inheritance Object SerializableVector3 Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax [Serializable] public class SerializableVector3 Constructors SerializableVector3(Vector3) Declaration public SerializableVector3(Vector3 vector) Parameters Type Name Description Vector3 vector Methods ToVector() Declaration public Vector3 ToVector() Returns Type Description Vector3"
+  },
+  "api/Utils.Editor.html": {
+    "href": "api/Utils.Editor.html",
+    "title": "Namespace Utils.Editor | RPG: Deep Dive Documentation",
+    "keywords": "Namespace Utils.Editor Classes ReplaceWithPrefab"
+  },
+  "api/Utils.Editor.ReplaceWithPrefab.html": {
+    "href": "api/Utils.Editor.ReplaceWithPrefab.html",
+    "title": "Class ReplaceWithPrefab | RPG: Deep Dive Documentation",
+    "keywords": "Class ReplaceWithPrefab Inheritance Object ReplaceWithPrefab Namespace : Utils.Editor Assembly : cs.temp.dll.dll Syntax public class ReplaceWithPrefab : EditorWindow"
+  },
+  "api/Utils.html": {
+    "href": "api/Utils.html",
+    "title": "Namespace Utils | RPG: Deep Dive Documentation",
+    "keywords": "Namespace Utils Classes LazyValue<T> Container class that wraps a value and ensures initialisation is called just before first use. Logger Simple runtime logger. NavMeshExtensions RaycastUtils Delegates LazyValue<T>.InitializerDelegate"
+  },
+  "api/Utils.LazyValue-1.html": {
+    "href": "api/Utils.LazyValue-1.html",
+    "title": "Class LazyValue<T> | RPG: Deep Dive Documentation",
+    "keywords": "Class LazyValue<T> Container class that wraps a value and ensures initialisation is called just before first use. Inheritance Object LazyValue<T> Namespace : Utils Assembly : cs.temp.dll.dll Syntax public class LazyValue<T> Type Parameters Name Description T Constructors LazyValue(LazyValue<T>.InitializerDelegate) Setup the container but don't initialise the value yet. Declaration public LazyValue(LazyValue<T>.InitializerDelegate initializer) Parameters Type Name Description LazyValue.InitializerDelegate <> initializer The initialiser delegate to call when first used. Properties Value Get or set the contents of this container. Declaration public T Value { get; set; } Property Value Type Description T Remarks Note that setting the value before initialisation will initialise the class. Methods ForceInit() Force the initialisation of the value via the delegate. Declaration public void ForceInit()"
+  },
+  "api/Utils.LazyValue-1.InitializerDelegate.html": {
+    "href": "api/Utils.LazyValue-1.InitializerDelegate.html",
+    "title": "Delegate LazyValue<T>.InitializerDelegate | RPG: Deep Dive Documentation",
+    "keywords": "Delegate LazyValue<T>.InitializerDelegate Namespace : Utils Assembly : cs.temp.dll.dll Syntax public delegate T InitializerDelegate(); Returns Type Description T"
+  },
+  "api/Utils.Logger.html": {
+    "href": "api/Utils.Logger.html",
+    "title": "Class Logger | RPG: Deep Dive Documentation",
+    "keywords": "Class Logger Simple runtime logger. Inheritance Object Logger Namespace : Utils Assembly : cs.temp.dll.dll Syntax public class Logger : MonoBehaviour Methods Log(String, String, LogType) Declaration public void Log(string logString, string stackTrace, LogType type) Parameters Type Name Description String logString String stackTrace LogType type"
+  },
+  "api/Utils.NavMeshExtensions.html": {
+    "href": "api/Utils.NavMeshExtensions.html",
+    "title": "Class NavMeshExtensions | RPG: Deep Dive Documentation",
+    "keywords": "Class NavMeshExtensions Inheritance Object NavMeshExtensions Namespace : Utils Assembly : cs.temp.dll.dll Syntax public static class NavMeshExtensions Methods CalculateLength(NavMeshPath) Declaration public static float CalculateLength(NavMeshPath path) Parameters Type Name Description NavMeshPath path Returns Type Description Single"
+  },
+  "api/Utils.RaycastUtils.html": {
+    "href": "api/Utils.RaycastUtils.html",
+    "title": "Class RaycastUtils | RPG: Deep Dive Documentation",
+    "keywords": "Class RaycastUtils Inheritance Object RaycastUtils Namespace : Utils Assembly : cs.temp.dll.dll Syntax public static class RaycastUtils Methods GetMouseRay() Convert mouse position to ray from camera to object under mouse pointer Declaration public static Ray GetMouseRay() Returns Type Description Ray Ray, where origin: main camera."
+  },
+  "api/Utils.UI.DisplayBar-1.html": {
+    "href": "api/Utils.UI.DisplayBar-1.html",
+    "title": "Class DisplayBar<T> | RPG: Deep Dive Documentation",
+    "keywords": "Class DisplayBar<T> Generic blueprint for displayBars Inheritance Object DisplayBar<T> Namespace : Utils.UI Assembly : cs.temp.dll.dll Syntax public abstract class DisplayBar<T> : MonoBehaviour where T : MonoBehaviour Type Parameters Name Description T Type of component which values should be displayed, this component must be attached to GameObject tagged \"Player\" Fields characterStatComponent Declaration protected T characterStatComponent Field Value Type Description T Properties Fraction Declaration protected float? Fraction { get; } Property Value Type Description Nullable < Single > Methods GetCurrentValue() Declaration protected abstract float GetCurrentValue() Returns Type Description Single GetMaxValue() Declaration protected abstract float GetMaxValue() Returns Type Description Single ShouldShow() Declaration protected abstract bool ShouldShow() Returns Type Description Boolean"
+  },
+  "api/Utils.UI.Dragging.DragItem-1.html": {
+    "href": "api/Utils.UI.Dragging.DragItem-1.html",
+    "title": "Class DragItem<T> | RPG: Deep Dive Documentation",
+    "keywords": "Class DragItem<T> Allows a UI element to be dragged and dropped from and to a container. Also support auto swap on mouse right click. After the item is dropped it will be automatically return to the original UI parent. It is the job of components implementing IDragContainer , IDragDestination and IDragSource` to update the interface after a drag has occurred. Inheritance Object DragItem<T> Namespace : Utils.UI.Dragging Assembly : cs.temp.dll.dll Syntax public class DragItem<T> : MonoBehaviour where T : class Type Parameters Name Description T The type that represents the item being dragged. Fields source Declaration protected IDragSource<T> source Field Value Type Description IDragSource <T> Methods Awake() Declaration protected virtual void Awake() DropItemIntoContainer(IDragDestination<T>) Declaration protected void DropItemIntoContainer(IDragDestination<T> destination) Parameters Type Name Description IDragDestination <T> destination OnBeginDrag(PointerEventData) Declaration public virtual void OnBeginDrag(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnDrag(PointerEventData) Declaration public virtual void OnDrag(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnEndDrag(PointerEventData) Declaration public virtual void OnEndDrag(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData"
+  },
+  "api/Utils.UI.Dragging.html": {
+    "href": "api/Utils.UI.Dragging.html",
+    "title": "Namespace Utils.UI.Dragging | RPG: Deep Dive Documentation",
+    "keywords": "Namespace Utils.UI.Dragging Classes DragItem<T> Allows a UI element to be dragged and dropped from and to a container. Also support auto swap on mouse right click. After the item is dropped it will be automatically return to the original UI parent. It is the job of components implementing IDragContainer , IDragDestination and IDragSource` to update the interface after a drag has occurred. Interfaces IDragContainer<T> Acts both as a source and destination for dragging. If we are dragging between two containers then it is possible to swap items. IDragDestination<T> Components that implement this interfaces can act as the destination for dragging a DragItem . IDragSource<T> Components that implement this interfaces can act as the source for dragging a DragItem ."
+  },
+  "api/Utils.UI.Dragging.IDragContainer-1.html": {
+    "href": "api/Utils.UI.Dragging.IDragContainer-1.html",
+    "title": "Interface IDragContainer<T> | RPG: Deep Dive Documentation",
+    "keywords": "Interface IDragContainer<T> Acts both as a source and destination for dragging. If we are dragging between two containers then it is possible to swap items. Inherited Members IDragDestination<T>.MaxAcceptable(T) IDragDestination<T>.AddItems(T, Int32) IDragSource<T>.GetItem() IDragSource<T>.GetNumber() IDragSource<T>.RemoveItems(Int32) Namespace : Utils.UI.Dragging Assembly : cs.temp.dll.dll Syntax public interface IDragContainer<T> : IDragDestination<T>, IDragSource<T> where T : class Type Parameters Name Description T The type that represents the item being dragged."
+  },
+  "api/Utils.UI.Dragging.IDragDestination-1.html": {
+    "href": "api/Utils.UI.Dragging.IDragDestination-1.html",
+    "title": "Interface IDragDestination<T> | RPG: Deep Dive Documentation",
+    "keywords": "Interface IDragDestination<T> Components that implement this interfaces can act as the destination for dragging a DragItem . Namespace : Utils.UI.Dragging Assembly : cs.temp.dll.dll Syntax public interface IDragDestination<T> where T : class Type Parameters Name Description T Methods AddItems(T, Int32) Update the UI and any data to reflect adding the item to this destination. Declaration void AddItems(T item, int number) Parameters Type Name Description T item The item type. Int32 number The quantity of items. MaxAcceptable(T) How many of the given item can be accepted. Declaration int MaxAcceptable(T item) Parameters Type Name Description T item The item type to potentially be added. Returns Type Description Int32 If there is no limit Int.MaxValue should be returned."
+  },
+  "api/Utils.UI.Dragging.IDragSource-1.html": {
+    "href": "api/Utils.UI.Dragging.IDragSource-1.html",
+    "title": "Interface IDragSource<T> | RPG: Deep Dive Documentation",
+    "keywords": "Interface IDragSource<T> Components that implement this interfaces can act as the source for dragging a DragItem . Namespace : Utils.UI.Dragging Assembly : cs.temp.dll.dll Syntax public interface IDragSource<T> where T : class Type Parameters Name Description T The type that represents the item being dragged. Methods GetItem() What item type currently resides in this source? Declaration T GetItem() Returns Type Description T GetNumber() What is the quantity of items in this source? Declaration int GetNumber() Returns Type Description Int32 RemoveItems(Int32) Remove a given number of items from the source. Declaration void RemoveItems(int number) Parameters Type Name Description Int32 number This should never exceed the number returned by GetNumber ."
+  },
+  "api/Utils.UI.Hint.HintController.html": {
+    "href": "api/Utils.UI.Hint.HintController.html",
+    "title": "Class HintController | RPG: Deep Dive Documentation",
+    "keywords": "Class HintController Inheritance Object HintController Namespace : Utils.UI.Hint Assembly : cs.temp.dll.dll Syntax public class HintController : MonoBehaviour Methods SetDescription(String) Declaration public void SetDescription(string description) Parameters Type Name Description String description"
+  },
+  "api/Utils.UI.Hint.HintSpawner.html": {
+    "href": "api/Utils.UI.Hint.HintSpawner.html",
+    "title": "Class HintSpawner | RPG: Deep Dive Documentation",
+    "keywords": "Class HintSpawner Inheritance Object HintSpawner Namespace : Utils.UI.Hint Assembly : cs.temp.dll.dll Syntax public class HintSpawner : MonoBehaviour Methods Spawn(String) Spawn hint with default settings. Declaration public static void Spawn(string text) Parameters Type Name Description String text Text to display"
+  },
+  "api/Utils.UI.Hint.html": {
+    "href": "api/Utils.UI.Hint.html",
+    "title": "Namespace Utils.UI.Hint | RPG: Deep Dive Documentation",
+    "keywords": "Namespace Utils.UI.Hint Classes HintController HintSpawner"
+  },
+  "api/Utils.UI.html": {
+    "href": "api/Utils.UI.html",
+    "title": "Namespace Utils.UI | RPG: Deep Dive Documentation",
+    "keywords": "Namespace Utils.UI Classes DisplayBar<T> Generic blueprint for displayBars"
+  },
+  "api/Utils.UI.Tooltips.html": {
+    "href": "api/Utils.UI.Tooltips.html",
+    "title": "Namespace Utils.UI.Tooltips | RPG: Deep Dive Documentation",
+    "keywords": "Namespace Utils.UI.Tooltips Classes TooltipSpawner Abstract base class that handles the spawning of a tooltip prefab at the correct position on screen relative to a cursor. Override the abstract functions to create a tooltip spawner for your own data."
+  },
+  "api/Utils.UI.Tooltips.TooltipSpawner.html": {
+    "href": "api/Utils.UI.Tooltips.TooltipSpawner.html",
+    "title": "Class TooltipSpawner | RPG: Deep Dive Documentation",
+    "keywords": "Class TooltipSpawner Abstract base class that handles the spawning of a tooltip prefab at the correct position on screen relative to a cursor. Override the abstract functions to create a tooltip spawner for your own data. Inheritance Object TooltipSpawner Namespace : Utils.UI.Tooltips Assembly : cs.temp.dll.dll Syntax public abstract class TooltipSpawner : MonoBehaviour Methods CanCreateTooltip() Return true when the tooltip spawner should be allowed to create a tooltip. Declaration public abstract bool CanCreateTooltip() Returns Type Description Boolean UpdateTooltip(GameObject) Called when it is time to update the information on the tooltip prefab. Declaration public abstract void UpdateTooltip(GameObject tooltip) Parameters Type Name Description GameObject tooltip The spawned tooltip prefab for updating."
+  }
+}

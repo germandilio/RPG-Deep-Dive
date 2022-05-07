@@ -1,0 +1,2031 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/RPG_Deep_Dive/RPG_Deep_Dive/RPG Project/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.Dialogue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.Dialogue.html",
+          "hash": "JmdmdKwcxxymgOOOOPKgl0MzkEKwUGLgfAR9/q/p0jw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.DialogueAISpeaker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.DialogueAISpeaker.html",
+          "hash": "wjPE3maOPeRuBVzsCtlBHu6zAfb/I+0sciFg3hbNWgQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.DialogueNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.DialogueNode.html",
+          "hash": "FP0JSMjVVahexTYPKxD7gWiADk6vt1CyhKuyfF3UWA8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.DialogueTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.DialogueTrigger.html",
+          "hash": "3QOwwIW/x1voc2pwBMsePepfOMySZGrI7HCFv9Yj96k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.Editor.BezierLinesStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.Editor.BezierLinesStyle.html",
+          "hash": "fi2I3355FfoeySAc+I8+UgTwfHdAZ5OqkmO+FZo2dXA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.Editor.DialogueEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.Editor.DialogueEditor.html",
+          "hash": "+4GGtKnaxq2pUFZZBtUMFp+7bgU3I7iW6K8t8ay3WOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.Editor.DialogueModificationProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.Editor.DialogueModificationProcessor.html",
+          "hash": "2h2a+jxYghzWsGPWCYmFOqI58ziySiL2AETGJcFlNio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.Editor.html",
+          "hash": "uTUffuCe3mZgLdsTI+kVySKG2dOaGp5zqRPwl03QrYo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.PlayerDialogueAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.PlayerDialogueAPI.html",
+          "hash": "kAgZNLapAFZMBxV/RW7E+1HiibxYyGex86rbbo6SV6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.Speaker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.Speaker.html",
+          "hash": "tlCSc1s0jyS+q9fksdvDlw6giFBUVZaAu1if6o/ZeZ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.UI.DialogueUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.UI.DialogueUI.html",
+          "hash": "/0wAn5/mq8X2oBDDOhDjweOArC004zuzF+adPZLHTQ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.UI.html",
+          "hash": "n7yPlfX0QuwnKF5c7AKCKYNCfBuJaMm9B3u7lvk2u+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.DialogueSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.DialogueSystem.html",
+          "hash": "4hOGv47DfhE/3eiUGc9NuWVXFc2rTapw72U1keugpeE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.EnemyHealthDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.EnemyHealthDisplay.html",
+          "hash": "2qx6DHtXQXrNN0lSYVjNfA1L39T9gztEkWZqA8jp1SQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.Experience.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.Experience.html",
+          "hash": "ZrZFOv9/tObWTc3rXnEU9X1s+pKViTmJrwjLLEYKvek="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html",
+          "hash": "ivb4+R0f13jag0vAjze6DGoZLDke3EbnoAsHmWkNMYE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.html",
+          "hash": "JFrOF6dChw2uf7oh35gcIKRbTVYjsryScBd8JjX5jck="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.Health.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.Health.html",
+          "hash": "QVQhUA3IhPQSBZZkx5bOOFex5G+XlTZik+DIZyI9xK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.HealthDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.HealthDisplay.html",
+          "hash": "ICVqzpAOcGUb7Lj5So3O4WLYJ5iJJKMp42AZUZYFSYQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.InGameHealthBar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.InGameHealthBar.html",
+          "hash": "YT+wNXFkkmBMvT6EJmCtibb3h6to6i1D5lkKXuNqrHY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.LevelDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.LevelDisplay.html",
+          "hash": "LiZGJvTdxhncg8vZDVOvyikVqcnzIZ6y0bOdQg4Wrcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.html",
+          "hash": "Nd2puDX0a4JHyXT4LrLqyNMHK6IoY65MbIK9jFDWXK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html",
+          "hash": "qyMgENuSzma3NSeyLQiuJv8LmNrdVq5e5EH1gNvjyNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Cinematics.PlayCutsceneTriggerController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Cinematics.PlayCutsceneTriggerController.html",
+          "hash": "hDaZN41fxt3AsqN8vULU/XEy7z+qdttWlJ0RuX4uwTE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Cinematics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Cinematics.html",
+          "hash": "/5jA3u9P6XmFt9a3o2anrXq64myBo9y3Zjnwl9s3+cQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.AggravatingGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.AggravatingGroup.html",
+          "hash": "lonLIxyi++1sL07NSoH4yeNIMXbdKIh+HIaTmKTZBt8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.CombatTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.CombatTarget.html",
+          "hash": "7ETA0vR0WaVRMXmXgoKlcz/tkk3HuCHtDGz1mE22uJA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.DestroyAfterPlay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.DestroyAfterPlay.html",
+          "hash": "1K9xMTARkP0gATb66z7TtCdgy4LYF5JND/HFD7/oqSw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.Fighter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.Fighter.html",
+          "hash": "Ir+enq6hwPZGTvCacud6rVwzQxXG5tadzXBYqWnT/fE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.ProjectileController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.ProjectileController.html",
+          "hash": "Fg2HmDkxk17sG6Qo8Xv7fXDoD9/6dNBNXJGT2pFKkLM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.Weapon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.Weapon.html",
+          "hash": "vtRLBUF4PLiVEImWQuwVzC7lWzGQgvIkFDTn3v7Ys6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.WeaponConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.WeaponConfig.html",
+          "hash": "gOxjRQhXLAvAaRNT3NF4sIh5u8qNVRMu3zdsF23riuQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.WeaponType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.WeaponType.html",
+          "hash": "rP+KGkNjjJyEelyHx0C6qPTkrDVQiXMrCMk0ElREEd0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Combat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Combat.html",
+          "hash": "/Y02Uw5e2RCl2xr8bq44+LpAejW9oO5nirYMa1n7LoE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.AIController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.AIController.html",
+          "hash": "DV0kR5Z71uCk6B6INUOQ5ZbWXLit6BlW1eITXZKC/Ec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.ClickablePickup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.ClickablePickup.html",
+          "hash": "rRAcdf6HRA6LUx/MN92fR0ppK9bDGuA1B7ApbaGqyV0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.ControlRemover.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.ControlRemover.html",
+          "hash": "gNhBnULIFUD1oplmcDQGC4ILNa702H1GMH/ZMjGjjRE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.CursorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.CursorType.html",
+          "hash": "pClRwlZkvo5tdwPsPzONvf09oqEtbRCBfdmq8aqCnpM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.IRaycastable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.IRaycastable.html",
+          "hash": "Oz9kACvnHKO6BFM+ar//w1rEhzTh+GuGvjE/sJs1VjI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.PatrolPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.PatrolPath.html",
+          "hash": "zuO7AB60WQ2pST0xbyKXD1ppIZEnKYaf05Zb8DOt4zQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.PlayerController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.PlayerController.html",
+          "hash": "Obk9ubxxVpaDMV9NjrxiSS7WoxipDmZrFLEg8dXUr6g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Control.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Control.html",
+          "hash": "hG9sTeD25frgLc+PFFRcsNWK/wr+1HCtPYKOyQbEXps="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.ActionScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.ActionScheduler.html",
+          "hash": "mrUg6C4NYtHs0eLkwsem9anFP/SRikITjI7wB12vE8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.Analytics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.Analytics.html",
+          "hash": "livzY/bj+hvo+W8qZhtIRVJ6Mkq+qb94JhNqScnDvj8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.Conditions.Condition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.Conditions.Condition.html",
+          "hash": "PtUPAL1fc2LX59EDhlSBAWZLkbzvdBcFBaDSb4PdR/0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.Conditions.Disjunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.Conditions.Disjunction.html",
+          "hash": "H8GEWl2dnZ0HmWiEG0/1Wg8lR+43eqXAC69Ydn/yjL8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.Conditions.Predicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.Conditions.Predicate.html",
+          "hash": "tPQ6ysPEOyAKUtsIyYBcvic3EuuREOmuJ3ZAISacv6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.Conditions.PredicateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.Conditions.PredicateType.html",
+          "hash": "sOCavcNZIJAmOClvsploVzzXocMybcKus9nyeXfEphg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.Conditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.Conditions.html",
+          "hash": "PGxgec+XMG+SbIu2ZFuzPeAlIQwkxUfP0YncCX4AZQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.FollowCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.FollowCamera.html",
+          "hash": "+CIHNH5JatpS3quHe9yChCoIm/qXzhaUdHbFitMPlEo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.IAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.IAction.html",
+          "hash": "rghAPzb7hqiiPsw/Vm6rCO/LnELQG0IyuYIvE9yq7/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.IDestroyer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.IDestroyer.html",
+          "hash": "b67r/fgnF+MJiX49ZPiKo2d8JkLY7Bzwp+vuNEzG0cM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.IPredicateEvaluator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.IPredicateEvaluator.html",
+          "hash": "5S0rSsaxyrqcU1K+khJUWmNDBmhYI8lxoP9qVSvNY74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.PersistantObjectSpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.PersistantObjectSpawner.html",
+          "hash": "0z8d/Z11uXdavDcXoDVBiKwB7dE1ulPeq/chPIIgOH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Core.html",
+          "hash": "rtAEUAKj5V8l+8Zcg326uCbx2mQ4GcQoKbW5KoyaQCQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Movement.Mover.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Movement.Mover.html",
+          "hash": "zL8nY6LYW5VPr30oAVs9pch0SksSFTIdAnVRQALGluc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Movement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Movement.html",
+          "hash": "vPe6fVIrtZveO/Nh3pnO5F+IZV93+6NoJ1GiY7XDWdU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestCompletion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestCompletion.html",
+          "hash": "ylDtXGwDdV4g8VGaZ2p1IhJbJMEtD/Mx78I7/Tc7wyI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestGiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestGiver.html",
+          "hash": "RvBnTbfw3W5ZBC9lsxdHD7my5Yu2Obkmn01oUl4Adtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.Objective.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.Objective.html",
+          "hash": "iA6Y8OEsZD8R+ubjbUXd04oImK69DcDfDPp/1q53vqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.Quest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.Quest.html",
+          "hash": "X9tTAeb5X1C9P+p1NWKyl/cm8kH3vfb2oxX5cgAg/NE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.QuestStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.QuestStatus.html",
+          "hash": "UllWPze0ToaL1E/zxAJDsrvj+RUbnXuSu4bvxKSRPDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.QuestsJournal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.QuestsJournal.html",
+          "hash": "e8Ox6SHDzXkar1IzlIeZi1eQ6QO3UtUb+NCvGXcDyI0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.html",
+          "hash": "eaV68WNWH/0M9SkIvy/9xpk+5CuR7XxW9eIMSJKNcn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionReward.html",
+          "hash": "pfKWm+/QeCLuuuUigFml1CHBRzBrvSgAtplDxeH2S24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionWithdrawals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionWithdrawals.html",
+          "hash": "a8DCM2x2rviimAfczGGAomMpaGLhWpOqhdPZ+KqiIRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.Rewards.QuestCompletionReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.Rewards.QuestCompletionReward.html",
+          "hash": "Pd1pGxJnJN9znY9AyCpShGEh8w4GzpaYIR2ArTyHyvo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.Rewards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.Rewards.html",
+          "hash": "k6oRrgbKOpqXHQqZApxxUcxxtZ16OecYQ3uLONpcLT0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.UI.ObjectiveUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.UI.ObjectiveUI.html",
+          "hash": "2GyBuWuVALn9CxE8bxyF3DqPhY7r0KY+YGpVuSO50hk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.UI.QuestItemUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.UI.QuestItemUI.html",
+          "hash": "Bg9FqoZ5wcriaV1a6UivCkWm7Xuh1GPrHcjRu+BgrfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.UI.QuestJournalUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.UI.QuestJournalUI.html",
+          "hash": "uqAxWTaBXED0ZxYP/a0LeZtl8/QpqHRM5KOiil0jELE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.UI.html",
+          "hash": "J0jt8qiZo1ngelFsUttWs0MoMois/Mi1heRewk9GMME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Quests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Quests.html",
+          "hash": "W6M3z1+xE1JdgeBJ1xa/u7K8AhAnr0V/3DaEKbZBVVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.SceneManagement.Fader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.SceneManagement.Fader.html",
+          "hash": "S5AKNAO40xTSDl7Xmad8n1YonpGB6KS/rbFjqs01Rhk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.SceneManagement.Portal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.SceneManagement.Portal.html",
+          "hash": "4OSOTSR0V8XWy6nNiSQPoKT6X9kFrHErIaspJLZBOXQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.SceneManagement.PortalLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.SceneManagement.PortalLocation.html",
+          "hash": "7aijA1l4EuOtEOY92JgJfpauXyPS3K/KTDDv6EUAMb4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.SceneManagement.Scenes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.SceneManagement.Scenes.html",
+          "hash": "L7bHfkxMw/O7Y4sCfAg6fP59uK62/GHAjGwDrMnZy+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.SceneManagement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.SceneManagement.html",
+          "hash": "TYjkgckQvjhfpVlPM1yAIjptOr9MC1k5oJKZHUKh6+o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.BaseStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.BaseStats.html",
+          "hash": "T4WrxdhpY4tssi0fL1/QhqvIC8HP0IIX/k32qO8tXaU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.CharacterClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.CharacterClass.html",
+          "hash": "XDTdE8NALb/Y1fdL/1jove4NJK8Zq8eBO6A86ktA3LI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html",
+          "hash": "pFza4LIrXwipe4/rLLaJPlmkNky4HH0rBuZzVnmnmGY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.Exceptions.html",
+          "hash": "yY3tKmGm/5mp/Jc+Qc+fh5IFKGO0+2Uq3cvmAvIHZjQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.IModifyProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.IModifyProvider.html",
+          "hash": "paJxe9iUN7TsEidnkiDPRZ1kziG0Ozj4AJWuNxh9Dn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.Progression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.Progression.html",
+          "hash": "Wvo9q5x7V3eAAAfKZTmsy+lg/v5aAmkZu5e9fK0YdDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.Stats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.Stats.html",
+          "hash": "G9y7lse5/ncpOlUWp/4U36X0zIPon8E9JMWY52ExEkg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Stats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Stats.html",
+          "hash": "2aOVzRVjVp6jV+M7/EHL2j/QXjx0WwtIWumCRqeMq0A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.DamageText.DamageText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.DamageText.DamageText.html",
+          "hash": "iS0lE0QOv7W3gyHGnX8AmKVm60Y5nbOO8ruy2MkI4gE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.DamageText.DamageTextSpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.DamageText.DamageTextSpawner.html",
+          "hash": "kMnzl684YRpxvE33cQsrKJpOO2CTuYQs4eyeps1CfKk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.DamageText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.DamageText.html",
+          "hash": "0O6v3SD/hqfKMkhr1NkvSv/wW47Zlt4dotF1WJVft38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.Destroyer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.Destroyer.html",
+          "hash": "kuIkyhEkUdCD3WuazBrjcExNDakucz3kARukaH3xc64="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.TabButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.TabButton.html",
+          "hash": "LkSMshi60Me96fxYa23nui1tyCJW96OAr8hOf17Q3Uo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.TabSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.TabSystem.html",
+          "hash": "IRr7Y51YpYZkKspJDZj/5ad0UQe5kLTQ/d0K7Dq2Og0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.UICameraFacing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.UICameraFacing.html",
+          "hash": "ktohds745JRO39LU3lt6aI7jL9h/ltRgt9HdQw6GRC4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.UI.html",
+          "hash": "MClMAOwZDaMXYFVV5PykLDIUw7A+r67faxgidRZyVoM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.ActionBarController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.ActionBarController.html",
+          "hash": "oW4HFcXNAKa2BbvAbul/TZgpnpTGvH2biAP4/RFK58w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionItem.html",
+          "hash": "mGyo+E4qKwhKYItRTuhJ/Kp5hS4ggao1T86+41RtKe0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionStore.html",
+          "hash": "gje7qu+qpN00EWbY3caTjAFfmNtZDhCeEXfvQJgk1cI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.HealActionItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.HealActionItem.html",
+          "hash": "3tsHlFJriaEUP9VTWUbOBH0Nmu864nAH+/6dshYAJbQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.html",
+          "hash": "AOMS+mMaa2kL4tuuTOxjR6xQFuuuxDz7s68y0xsBMMk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DropConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DropConfig.html",
+          "hash": "qjGNK/3DlAn3s6lwERNGYdTm0pJQWP2lnXsL97CAjuY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DroppedSlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DroppedSlot.html",
+          "hash": "i2RsF2Xg13YzkfVoRwA0Ovivq86pBZO3N0g3YVxWLqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.html",
+          "hash": "Txdqk/Ri2iQpdWyZg1aneiF7tKlKqGW9m7Mvwnm2dSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquipLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquipLocation.html",
+          "hash": "SdAbie5Dl1cSUbFIg1poX09bHc65PizeiadTv9tujmA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.Equipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.Equipment.html",
+          "hash": "UihyLJDmW2MlMQ3KAeTT/v6REGhN7/Rz5gnHF5fE4fs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquippableItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquippableItem.html",
+          "hash": "0wP2pxhg6ZkkuC7T5sGgpamssm/Y28ADY9p784AiH90="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquipment.html",
+          "hash": "P2v3keByQrPnOkRRhVx13MRBFKgS5rYoNDvbbj7D3JU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquippableItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquippableItem.html",
+          "hash": "lhR+mkTpGGzVLLc2TKmu/oa+slvb2jKf/GaBmghuMG0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.html",
+          "hash": "FySXzTkM0ooR9M4a1y40sMANOKXyPmnfaL6s7p6nMIU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.Inventory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.Inventory.html",
+          "hash": "wHalECxrI9elrQUOPnyosyPqAKSJluYxr7FAHVgQPMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventoryItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventoryItem.html",
+          "hash": "IGlnESlYy7OjQACTiylHIZUtxbLTBY7EI/3iDDo9mKU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventorySlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventorySlot.html",
+          "hash": "qUA0DSNTW6IPf+REUN54bhFjDNPTGE1CA2st0/43qhQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.html",
+          "hash": "OzlXjqUNo0CitcorHjqI5x6wcNGRdr3+HTZ1s3R8hRI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.ItemDropper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.ItemDropper.html",
+          "hash": "KqVyNIpBv4OAMt37HsE9mlxo9dTBjhM6i2dmLVwe2sA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Loot.LootItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Loot.LootItem.html",
+          "hash": "No1J0QOJVg4o/wdA+UriXFLMjwegFmlvt8yS6p//SpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Loot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Loot.html",
+          "hash": "TPa9dvGR9B8PSgzw8AIA6rRb9bt6ru7e2OViRa6uwXE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.Pickup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.Pickup.html",
+          "hash": "BvEprAkQ+fndGZP15swpsOfzztW43dwKNRXZRC0l5JA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.PickupSpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.PickupSpawner.html",
+          "hash": "c4+9E4Oi8PMZ6Xjdh5R1WdynzbfCY1xhwMbVsa290L8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.html",
+          "hash": "GXu2Axut7zA9TPiqtYR2unOVskJlA0B6NYHrd6Ypfy4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.RandomDropper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.RandomDropper.html",
+          "hash": "fv4Pzf4Iz5EcBWyrIpNmNm1SgbI3WhRQ8+j7VUs7Dfs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.InventoriesModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.InventoriesModel.html",
+          "hash": "TQPFR+hj7LcyL3VoWR3rzWdpAVEEM028/p2VdExySh0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.ActionSlotUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.ActionSlotUI.html",
+          "hash": "A0zwJ+8jEQmWV3wk75r0Xc5BHtaCTu/0sfEJ7gINOas="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.EquipmentSlotUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.EquipmentSlotUI.html",
+          "hash": "zH/Re8iaUUxvFxvd75wY4Tx8VHErrYxNl8qMFfMlCtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.IItemHolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.IItemHolder.html",
+          "hash": "N40KcpGsNVDX1E/U15jcWJqQntz9v01gmUfiUg7k1S8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryDragItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryDragItem.html",
+          "hash": "qMw9loRzw9JiJLbkN3zgy9I7Gjkv34Zl+ytT99o0ZlI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryDropTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryDropTarget.html",
+          "hash": "W+lW+jUXsplYx9a4M7I/b4gtkFwOXtbzHeBjxmjp9nA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryItemIcon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryItemIcon.html",
+          "hash": "iDcuW5CsNA3IjZvGFiHThSd0QOZbhVbptO53SeA6FTA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.InventorySlotUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventorySlotUI.html",
+          "hash": "e0ch1+4ieUgTz+UAhuf9lMR8Y4su9lZ0In5GjYrE+ME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryUI.html",
+          "hash": "lR6FfgKIVMXbosogvpj85PCfvejUwnsAeNrBf8tFRoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.ItemTooltip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.ItemTooltip.html",
+          "hash": "jW8cAWBgRxeboZPnMrUKiHFyzC9O1kID9PwKKJWM2a8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.ItemTooltipSpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.ItemTooltipSpawner.html",
+          "hash": "zx3MwEfmmejwTNVRm+CNIm3zFyaxTGzOox2fZ3HEOp4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.Inventories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.Inventories.html",
+          "hash": "QPjHY2mLiHPRxLGw6WEjSOCcX2avthnY+81CIES/+dY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.ScrollButtonsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.ScrollButtonsController.html",
+          "hash": "7mvrRYN+hLk3akROoTr6LktmAfgQKax2v2gMKHmh8fY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.UI.html",
+          "hash": "OTRodH+uz3t+xWRmmLZ1oISg7ul2gWr9lx+44iALT84="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RPG.InventorySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.InventorySystem.html",
+          "hash": "M6yt8dk0/YAtcuMOPyzgRI24kLvFXcg3hAQDzM6N6rw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SavingSystem.ISavable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SavingSystem.ISavable.html",
+          "hash": "TCxDE3/yBZhZnd2yr4+D10mJJ6w1Fy2NYUIKwyxRE6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SavingSystem.SavableEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SavingSystem.SavableEntity.html",
+          "hash": "3kriyPYGi3RUkgDWAWfKKbousCYMxsdggXgRi+XVjoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SavingSystem.SavingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SavingSystem.SavingSystem.html",
+          "hash": "3evFe79E53vDNGDZvhAb6TH6nhp3UbYogtOaOWms3V8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SavingSystem.SavingWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SavingSystem.SavingWrapper.html",
+          "hash": "GhNcUoTHjH40WAatwS7gIhamhLBh4qk6UgBmCF3mHD0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SavingSystem.SerializableVector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SavingSystem.SerializableVector3.html",
+          "hash": "yr03EDV3hh7e01WmCRaz1dCJ8B9+hTawp2FadD17rIo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SavingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SavingSystem.html",
+          "hash": "eAxs1yhV0zfYe6sU4ITevPEURSBxc4D/S2RWviwATZc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.Editor.ReplaceWithPrefab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.Editor.ReplaceWithPrefab.html",
+          "hash": "6vQ6H9OH4dIZ/bS3QGuJZU/SCRdmyr6JEdzFRhYaY8s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.Editor.html",
+          "hash": "FeWCry9lUmLvk4a4ALT2Ur70UBIjx0fbSB3oqWps6wo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.LazyValue-1.InitializerDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.LazyValue-1.InitializerDelegate.html",
+          "hash": "pHRkUx44mE0yGbGua5YdyfzhguAwCEPzN6LUa/5wmK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.LazyValue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.LazyValue-1.html",
+          "hash": "Xmd2ilm/00uc4dWf0pGSoXa/uWQq451fhBtFxEf5Mq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.Logger.html",
+          "hash": "rQCUxSl4YmWWRpYSwy4RT+F3S6S8d6i/nkCFhLCAxFE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.NavMeshExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.NavMeshExtensions.html",
+          "hash": "JCR3X+1bywNslt1NdxW04v6YQYptbYiMrTNzihYoOwU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.RaycastUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.RaycastUtils.html",
+          "hash": "qrefu59e+hl6CH4tJnk8vgAgOtcoffPZzuJSqnvricU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.DisplayBar-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.DisplayBar-1.html",
+          "hash": "PAfTEzqosdMQ3Xf3M7Z9FhQMSFu7AfL5U7GxW4IrbQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Dragging.DragItem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Dragging.DragItem-1.html",
+          "hash": "I8CK80wh1v11YGLVyX5pFQORK9n4LVhKyFucyjr9lbg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Dragging.IDragContainer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Dragging.IDragContainer-1.html",
+          "hash": "u3ulaYMbJKbrG91gxwTRgXveD9ugTCXgyneKv/j8DYI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Dragging.IDragDestination-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Dragging.IDragDestination-1.html",
+          "hash": "5hP9HMsvCIWkd6DbNF54VpIhJ/+cXSAms4A1x89ycfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Dragging.IDragSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Dragging.IDragSource-1.html",
+          "hash": "BqOVwo11kDWueYlhMKrpkKyogPgIv+4g+O1VtE6haCQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Dragging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Dragging.html",
+          "hash": "X5roAKv6kPEOm2MxecBz9Q5X9h2Wb7n5LesMzHfOV5U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Hint.HintController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Hint.HintController.html",
+          "hash": "ODnmDDWoGTkJ6ipsp1n6CtvI51+uXzYMo4LQtNeM6KU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Hint.HintSpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Hint.HintSpawner.html",
+          "hash": "0hJpCltfptNvq6CNCbOYf04pGI0CTynhfKz8CPtWF3w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Hint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Hint.html",
+          "hash": "8gLKee7G0+g7XJiC8o9BhQYvIgaXDT1fFRBlOHuL4w4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Tooltips.TooltipSpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Tooltips.TooltipSpawner.html",
+          "hash": "NMC5v/WDHJ5CDl0NG6Ff4u7HNVw37H4QSMQKkoUfHmQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.Tooltips.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.Tooltips.html",
+          "hash": "mDa4ex44POXxXs3knGgpZn/MCRuJNM1T3uOur73NEGw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.UI.html",
+          "hash": "zznQbsRP9nxetcgkuTMxSInzsr1jxAJk44BjNHcf0JQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.html",
+          "hash": "tKFqOuT/UiZVKSzOoBoz9186QNSMduhyIdSdMMQ2dos="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "i+anhhpYXvAkFt6nInlEMG+Tcbq8jgKZAIUV3cGShgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "rTkI9LYHmdC8KDEeIX0Oti3yjozfMCqL/gBh7a02vJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "PWs0ldVFErZJnV1CDUtSP4nWHNL0vwxqOpEzxKv/bjQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 160,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
