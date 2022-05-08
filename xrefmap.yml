@@ -220,13 +220,13 @@ references:
   isSpec: "True"
   fullName: RPG.DialogueSystem.DialogueNode.IsParentFor
   nameWithType: DialogueNode.IsParentFor
-- uid: RPG.DialogueSystem.DialogueNode.Match(IEnumerable{IPredicateEvaluator})
+- uid: RPG.DialogueSystem.DialogueNode.Match(System.Collections.Generic.IEnumerable{IPredicateEvaluator})
   name: Match(IEnumerable<IPredicateEvaluator>)
-  href: api/RPG.DialogueSystem.DialogueNode.html#RPG_DialogueSystem_DialogueNode_Match_IEnumerable_IPredicateEvaluator__
-  commentId: M:RPG.DialogueSystem.DialogueNode.Match(IEnumerable{IPredicateEvaluator})
+  href: api/RPG.DialogueSystem.DialogueNode.html#RPG_DialogueSystem_DialogueNode_Match_System_Collections_Generic_IEnumerable_IPredicateEvaluator__
+  commentId: M:RPG.DialogueSystem.DialogueNode.Match(System.Collections.Generic.IEnumerable{IPredicateEvaluator})
   name.vb: Match(IEnumerable(Of IPredicateEvaluator))
-  fullName: RPG.DialogueSystem.DialogueNode.Match(IEnumerable<IPredicateEvaluator>)
-  fullName.vb: RPG.DialogueSystem.DialogueNode.Match(IEnumerable(Of IPredicateEvaluator))
+  fullName: RPG.DialogueSystem.DialogueNode.Match(System.Collections.Generic.IEnumerable<IPredicateEvaluator>)
+  fullName.vb: RPG.DialogueSystem.DialogueNode.Match(System.Collections.Generic.IEnumerable(Of IPredicateEvaluator))
   nameWithType: DialogueNode.Match(IEnumerable<IPredicateEvaluator>)
   nameWithType.vb: DialogueNode.Match(IEnumerable(Of IPredicateEvaluator))
 - uid: RPG.DialogueSystem.DialogueNode.Match*
@@ -1578,13 +1578,13 @@ references:
   commentId: T:RPG.GameplayCore.Core.Conditions.Condition
   fullName: RPG.GameplayCore.Core.Conditions.Condition
   nameWithType: Condition
-- uid: RPG.GameplayCore.Core.Conditions.Condition.Check(IEnumerable{RPG.GameplayCore.Core.IPredicateEvaluator})
+- uid: RPG.GameplayCore.Core.Conditions.Condition.Check(System.Collections.Generic.IEnumerable{RPG.GameplayCore.Core.IPredicateEvaluator})
   name: Check(IEnumerable<IPredicateEvaluator>)
-  href: api/RPG.GameplayCore.Core.Conditions.Condition.html#RPG_GameplayCore_Core_Conditions_Condition_Check_IEnumerable_RPG_GameplayCore_Core_IPredicateEvaluator__
-  commentId: M:RPG.GameplayCore.Core.Conditions.Condition.Check(IEnumerable{RPG.GameplayCore.Core.IPredicateEvaluator})
+  href: api/RPG.GameplayCore.Core.Conditions.Condition.html#RPG_GameplayCore_Core_Conditions_Condition_Check_System_Collections_Generic_IEnumerable_RPG_GameplayCore_Core_IPredicateEvaluator__
+  commentId: M:RPG.GameplayCore.Core.Conditions.Condition.Check(System.Collections.Generic.IEnumerable{RPG.GameplayCore.Core.IPredicateEvaluator})
   name.vb: Check(IEnumerable(Of IPredicateEvaluator))
-  fullName: RPG.GameplayCore.Core.Conditions.Condition.Check(IEnumerable<RPG.GameplayCore.Core.IPredicateEvaluator>)
-  fullName.vb: RPG.GameplayCore.Core.Conditions.Condition.Check(IEnumerable(Of RPG.GameplayCore.Core.IPredicateEvaluator))
+  fullName: RPG.GameplayCore.Core.Conditions.Condition.Check(System.Collections.Generic.IEnumerable<RPG.GameplayCore.Core.IPredicateEvaluator>)
+  fullName.vb: RPG.GameplayCore.Core.Conditions.Condition.Check(System.Collections.Generic.IEnumerable(Of RPG.GameplayCore.Core.IPredicateEvaluator))
   nameWithType: Condition.Check(IEnumerable<IPredicateEvaluator>)
   nameWithType.vb: Condition.Check(IEnumerable(Of IPredicateEvaluator))
 - uid: RPG.GameplayCore.Core.Conditions.Condition.Check*
@@ -2662,11 +2662,11 @@ references:
   commentId: T:RPG.GameplayCore.Stats.Exceptions.ProgressionStatException
   fullName: RPG.GameplayCore.Stats.Exceptions.ProgressionStatException
   nameWithType: ProgressionStatException
-- uid: RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.#ctor(System.String,Exception)
+- uid: RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.#ctor(System.String,System.Exception)
   name: ProgressionStatException(String, Exception)
-  href: api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html#RPG_GameplayCore_Stats_Exceptions_ProgressionStatException__ctor_System_String_Exception_
-  commentId: M:RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.#ctor(System.String,Exception)
-  fullName: RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.ProgressionStatException(System.String, Exception)
+  href: api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html#RPG_GameplayCore_Stats_Exceptions_ProgressionStatException__ctor_System_String_System_Exception_
+  commentId: M:RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.#ctor(System.String,System.Exception)
+  fullName: RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.ProgressionStatException(System.String, System.Exception)
   nameWithType: ProgressionStatException.ProgressionStatException(String, Exception)
 - uid: RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.#ctor*
   name: ProgressionStatException

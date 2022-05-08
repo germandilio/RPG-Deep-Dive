@@ -3,9 +3,9 @@
   <div>
     <div class="sidefilter">
       <form class="toc-filter">
-        <span class="glyphicon glyphicon-filter filter-icon"></span>
-        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
-        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+        <i class="bi bi-funnel-fill filter-icon"></i>
+        <i id="toc_filter_clear" class="bi bi-x-lg clear-icon"></i>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." autocomplete="off" onkeypress="if(event.keyCode==13) {return false;}">
       </form>
     </div>
     <div class="sidetoc">
@@ -13,10 +13,12 @@
           
           <ul class="nav level1">
                 <li>
-                    <a href="manual/control.html" name="manual/toc.html" title="Manual">Manual</a>
+                      <a href="manual/control.html" class="sidebar-item" name="manual/toc.html" title="Manual">Manual</a>
+                  
                 </li>
                 <li>
-                    <a href="api/RPG.DialogueSystem.html" name="api/toc.html" title="Scripting API">Scripting API</a>
+                      <a href="api/RPG.DialogueSystem.html" class="sidebar-item" name="api/toc.html" title="Scripting API">Scripting API</a>
+                  
                 </li>
           </ul>
       </div>
