@@ -24,7 +24,8 @@
             "_appLogoPath": "resources/logo.svg",
             "_enableSearch": true,
             "_enableNewTab": true,
-            "_disableContribution": false
+            "_disableContribution": false,
+            "_gitUrlPattern": "github"
         },
         "template": [
             "default"
