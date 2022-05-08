@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.Dialogue.html",
-          "hash": "JmdmdKwcxxymgOOOOPKgl0MzkEKwUGLgfAR9/q/p0jw="
+          "hash": "MBfQZlm5KYiMsf2KIPQWw6w0865zPy//9wVWvLHZt8A="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.DialogueAISpeaker.html",
-          "hash": "wjPE3maOPeRuBVzsCtlBHu6zAfb/I+0sciFg3hbNWgQ="
+          "hash": "ThyFzQJcNy2/diy9S/jOVU+AgXw3dt2Ub0GV62T3ZIg="
         }
       },
       "is_incremental": false,
@@ -52,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.DialogueNode.html",
-          "hash": "FP0JSMjVVahexTYPKxD7gWiADk6vt1CyhKuyfF3UWA8="
+          "hash": "f3tdZ+dAwegdpx2Or08zr5qdmyX3UsioO+becTzrYJM="
         }
       },
       "is_incremental": false,
@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.DialogueTrigger.html",
-          "hash": "3QOwwIW/x1voc2pwBMsePepfOMySZGrI7HCFv9Yj96k="
+          "hash": "iu+DmGCIdfy5L8obEtWpzqCSkHsBXzCpCaHJr4sx1lw="
         }
       },
       "is_incremental": false,
@@ -76,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.Editor.BezierLinesStyle.html",
-          "hash": "fi2I3355FfoeySAc+I8+UgTwfHdAZ5OqkmO+FZo2dXA="
+          "hash": "5Fv4mDgXpqAE6WOpnQtVCQx0KPGtycd1HrfsIbBkEEw="
         }
       },
       "is_incremental": false,
@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.Editor.DialogueEditor.html",
-          "hash": "+4GGtKnaxq2pUFZZBtUMFp+7bgU3I7iW6K8t8ay3WOA="
+          "hash": "wvEeDL0dQbBXz9TObjvunsdgEMUa5r+KaOoBNzeq9cE="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.Editor.DialogueModificationProcessor.html",
-          "hash": "2h2a+jxYghzWsGPWCYmFOqI58ziySiL2AETGJcFlNio="
+          "hash": "x2ZbpTRohhGLvKsDq1M4TzT845ZcyXcYMOqfoEqADa8="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.Editor.html",
-          "hash": "uTUffuCe3mZgLdsTI+kVySKG2dOaGp5zqRPwl03QrYo="
+          "hash": "eCFxW0SZq53S37pyj+IGGfyZ5RTupkfvHcV/JoyG2vE="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.PlayerDialogueAPI.html",
-          "hash": "kAgZNLapAFZMBxV/RW7E+1HiibxYyGex86rbbo6SV6Y="
+          "hash": "Yo7b8vxUG0RWdQMENJqUcayS1XC0bQX48oze5Htwax0="
         }
       },
       "is_incremental": false,
@@ -136,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.Speaker.html",
-          "hash": "tlCSc1s0jyS+q9fksdvDlw6giFBUVZaAu1if6o/ZeZ4="
+          "hash": "Sg5PHxZP2Q/0S5/mjBuJrcbq0hrdJNC/Vxo2r7R77+I="
         }
       },
       "is_incremental": false,
@@ -148,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.UI.DialogueUI.html",
-          "hash": "/0wAn5/mq8X2oBDDOhDjweOArC004zuzF+adPZLHTQ4="
+          "hash": "TrtnzApu3pLTxM6Nd3wRlOY622vrn4wCrVoU+P7vYrM="
         }
       },
       "is_incremental": false,
@@ -160,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.UI.html",
-          "hash": "n7yPlfX0QuwnKF5c7AKCKYNCfBuJaMm9B3u7lvk2u+I="
+          "hash": "HYtKcT6KwUgUS6csjeea3unJKVARiiZY2mf5xrOn2s4="
         }
       },
       "is_incremental": false,
@@ -172,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.DialogueSystem.html",
-          "hash": "4hOGv47DfhE/3eiUGc9NuWVXFc2rTapw72U1keugpeE="
+          "hash": "6Bo4ww5wbYKLnWW0vL6q0lGSCkzrFRgdNHtDkBIDA8s="
         }
       },
       "is_incremental": false,
@@ -184,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.EnemyHealthDisplay.html",
-          "hash": "2qx6DHtXQXrNN0lSYVjNfA1L39T9gztEkWZqA8jp1SQ="
+          "hash": "VznIu3AaVGYF9kOtA7kpcBaddIT4cgKK4lNMHQ0wrH8="
         }
       },
       "is_incremental": false,
@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.Experience.html",
-          "hash": "ZrZFOv9/tObWTc3rXnEU9X1s+pKViTmJrwjLLEYKvek="
+          "hash": "ajPAJJrxaQji9U7KOMAL7z1flHo5jp92Qr/rL8fT+c8="
         }
       },
       "is_incremental": false,
@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html",
-          "hash": "ivb4+R0f13jag0vAjze6DGoZLDke3EbnoAsHmWkNMYE="
+          "hash": "oylryPJEp10n7qycUVamprwmB0mZDvwkJBBCsr/nkzU="
         }
       },
       "is_incremental": false,
@@ -220,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.html",
-          "hash": "JFrOF6dChw2uf7oh35gcIKRbTVYjsryScBd8JjX5jck="
+          "hash": "7nGABi4xeuKk0WXOXYvImDLNVO2IcbxRh5TTijVEjuo="
         }
       },
       "is_incremental": false,
@@ -232,7 +232,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.Health.html",
-          "hash": "QVQhUA3IhPQSBZZkx5bOOFex5G+XlTZik+DIZyI9xK8="
+          "hash": "EhvL8nP+kHB2B8KGB3QDhGmtaKMYf/bpf3ZePqTLBaI="
         }
       },
       "is_incremental": false,
@@ -244,7 +244,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.HealthDisplay.html",
-          "hash": "ICVqzpAOcGUb7Lj5So3O4WLYJ5iJJKMp42AZUZYFSYQ="
+          "hash": "tLeDU1BxBB6JOZzBXHYFUFQSq1XfC5ojzEzB0WAc61k="
         }
       },
       "is_incremental": false,
@@ -256,7 +256,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.InGameHealthBar.html",
-          "hash": "YT+wNXFkkmBMvT6EJmCtibb3h6to6i1D5lkKXuNqrHY="
+          "hash": "dS/4JDgcjK5e2yBBSlzyP7w5rDmpx+YC9nB/xAfzF7E="
         }
       },
       "is_incremental": false,
@@ -268,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.LevelDisplay.html",
-          "hash": "LiZGJvTdxhncg8vZDVOvyikVqcnzIZ6y0bOdQg4Wrcw="
+          "hash": "1wItq7k3Db4eZbluMSqNb0QxGGjFkiTdc6x9P/6+ip8="
         }
       },
       "is_incremental": false,
@@ -280,7 +280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.html",
-          "hash": "Nd2puDX0a4JHyXT4LrLqyNMHK6IoY65MbIK9jFDWXK4="
+          "hash": "XVuO2v+4lcq0v/2PopPymfYaB/LEhYdeatSMCwbjJIM="
         }
       },
       "is_incremental": false,
@@ -292,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html",
-          "hash": "qyMgENuSzma3NSeyLQiuJv8LmNrdVq5e5EH1gNvjyNs="
+          "hash": "veUdYejTgJwxnkb5i3alHTqlQhUfWiBSZ22hvRSnS6Q="
         }
       },
       "is_incremental": false,
@@ -304,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Cinematics.PlayCutsceneTriggerController.html",
-          "hash": "hDaZN41fxt3AsqN8vULU/XEy7z+qdttWlJ0RuX4uwTE="
+          "hash": "NTj2oa8uF1+EWYQczNSxB4w9/QTtXqO3yibvdLmtHoE="
         }
       },
       "is_incremental": false,
@@ -316,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Cinematics.html",
-          "hash": "/5jA3u9P6XmFt9a3o2anrXq64myBo9y3Zjnwl9s3+cQ="
+          "hash": "ARKKwAaIWuHfzzVKW95A2x0oltLKuq6nuagTazpNveg="
         }
       },
       "is_incremental": false,
@@ -328,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.AggravatingGroup.html",
-          "hash": "lonLIxyi++1sL07NSoH4yeNIMXbdKIh+HIaTmKTZBt8="
+          "hash": "X1t/I5NZYV8fX3xv2g2Yt2YTGP+5Xup6gN+rgxH09iY="
         }
       },
       "is_incremental": false,
@@ -340,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.CombatTarget.html",
-          "hash": "7ETA0vR0WaVRMXmXgoKlcz/tkk3HuCHtDGz1mE22uJA="
+          "hash": "ARmfh+8s8/nI+ghAy2VWL2zziX9QiLHAnuUErfzLSps="
         }
       },
       "is_incremental": false,
@@ -352,7 +352,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.DestroyAfterPlay.html",
-          "hash": "1K9xMTARkP0gATb66z7TtCdgy4LYF5JND/HFD7/oqSw="
+          "hash": "p1OvwjD5B1qQfzME8EK6K7gdqfkshNawDGwLAI7OnZs="
         }
       },
       "is_incremental": false,
@@ -364,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.Fighter.html",
-          "hash": "Ir+enq6hwPZGTvCacud6rVwzQxXG5tadzXBYqWnT/fE="
+          "hash": "wxRYYeYr2IJlF+2Ei5Z4KsWu+BFSq9BVptILLPdQh+o="
         }
       },
       "is_incremental": false,
@@ -376,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.ProjectileController.html",
-          "hash": "Fg2HmDkxk17sG6Qo8Xv7fXDoD9/6dNBNXJGT2pFKkLM="
+          "hash": "9RTJj/OomhogHu0iZxLKeCLSHHt0pjKZj0MEd/SjVmA="
         }
       },
       "is_incremental": false,
@@ -388,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.Weapon.html",
-          "hash": "vtRLBUF4PLiVEImWQuwVzC7lWzGQgvIkFDTn3v7Ys6E="
+          "hash": "N7wLjWsUJpVSZs7DyfqW/Hg3uvfFv3jZ2s8woJPFd60="
         }
       },
       "is_incremental": false,
@@ -400,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.WeaponConfig.html",
-          "hash": "gOxjRQhXLAvAaRNT3NF4sIh5u8qNVRMu3zdsF23riuQ="
+          "hash": "anG5qearmgDWtgD1dSrJ9UgEiBO+kh02gK83eieP8Ag="
         }
       },
       "is_incremental": false,
@@ -412,7 +412,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.WeaponType.html",
-          "hash": "rP+KGkNjjJyEelyHx0C6qPTkrDVQiXMrCMk0ElREEd0="
+          "hash": "B2144rVk3ZuNGlvw45J8jDLPiF56j8PhAcYMx3aNY/c="
         }
       },
       "is_incremental": false,
@@ -424,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Combat.html",
-          "hash": "/Y02Uw5e2RCl2xr8bq44+LpAejW9oO5nirYMa1n7LoE="
+          "hash": "3Dv2R5RBF1b/Hq5eeXSE8Jkw8Zo1QXan7NC0yctWOf0="
         }
       },
       "is_incremental": false,
@@ -436,7 +436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.AIController.html",
-          "hash": "DV0kR5Z71uCk6B6INUOQ5ZbWXLit6BlW1eITXZKC/Ec="
+          "hash": "CA4dIB7LusYrERtKxdCjAZyZhGrsykZe+yqo6KXiVxY="
         }
       },
       "is_incremental": false,
@@ -448,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.ClickablePickup.html",
-          "hash": "rRAcdf6HRA6LUx/MN92fR0ppK9bDGuA1B7ApbaGqyV0="
+          "hash": "uTZDjW9dhHOKuKF5nYsEctTenRbcub4jVVmntr5Tui8="
         }
       },
       "is_incremental": false,
@@ -460,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.ControlRemover.html",
-          "hash": "gNhBnULIFUD1oplmcDQGC4ILNa702H1GMH/ZMjGjjRE="
+          "hash": "3xBrYzzUReoHeBMZlrsNjG22c/+9e95cOEhdxlOmDlU="
         }
       },
       "is_incremental": false,
@@ -472,7 +472,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.CursorType.html",
-          "hash": "pClRwlZkvo5tdwPsPzONvf09oqEtbRCBfdmq8aqCnpM="
+          "hash": "fLFIaAS3K6IRheDMoioxoWYG1vOPq7VPJkn1ABY95G0="
         }
       },
       "is_incremental": false,
@@ -484,7 +484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.IRaycastable.html",
-          "hash": "Oz9kACvnHKO6BFM+ar//w1rEhzTh+GuGvjE/sJs1VjI="
+          "hash": "P4NClUwdHcNwuJmPte1m0yhCn5rupy0PC4eeLmWvXxg="
         }
       },
       "is_incremental": false,
@@ -496,7 +496,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.PatrolPath.html",
-          "hash": "zuO7AB60WQ2pST0xbyKXD1ppIZEnKYaf05Zb8DOt4zQ="
+          "hash": "p/0DdBFCIkXwyP/RO8R6xrFQG97YGW07XUpAnxm2wuw="
         }
       },
       "is_incremental": false,
@@ -508,7 +508,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.PlayerController.html",
-          "hash": "Obk9ubxxVpaDMV9NjrxiSS7WoxipDmZrFLEg8dXUr6g="
+          "hash": "HV1UD+HcZ6A13ADfs/btWSI24zwmKeeXS9hJsbi9Ut0="
         }
       },
       "is_incremental": false,
@@ -520,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Control.html",
-          "hash": "hG9sTeD25frgLc+PFFRcsNWK/wr+1HCtPYKOyQbEXps="
+          "hash": "iCboEu0eCj66oUewfXtoS6XMUxGiWJfDW3ds5Y5pOr0="
         }
       },
       "is_incremental": false,
@@ -532,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.ActionScheduler.html",
-          "hash": "mrUg6C4NYtHs0eLkwsem9anFP/SRikITjI7wB12vE8M="
+          "hash": "9J1i0hZ6fVJn3YHvgu328qh24vTspkwIrd/nX7YcS3Q="
         }
       },
       "is_incremental": false,
@@ -544,7 +544,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.Analytics.html",
-          "hash": "livzY/bj+hvo+W8qZhtIRVJ6Mkq+qb94JhNqScnDvj8="
+          "hash": "eob1T21FKXoZOYg0pA2Mb6J0Kg7dtSWxbl5wJ5P8Zmc="
         }
       },
       "is_incremental": false,
@@ -556,7 +556,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.Conditions.Condition.html",
-          "hash": "PtUPAL1fc2LX59EDhlSBAWZLkbzvdBcFBaDSb4PdR/0="
+          "hash": "DKeuY2EFUj2oxQxLflAM5WYef3KVuWt5eQr5lLnnm7g="
         }
       },
       "is_incremental": false,
@@ -568,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.Conditions.Disjunction.html",
-          "hash": "H8GEWl2dnZ0HmWiEG0/1Wg8lR+43eqXAC69Ydn/yjL8="
+          "hash": "/GnhKBW/i6ty3B0nZa4dIeLPIyrO9Qn1xgsxgFWm0hc="
         }
       },
       "is_incremental": false,
@@ -580,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.Conditions.Predicate.html",
-          "hash": "tPQ6ysPEOyAKUtsIyYBcvic3EuuREOmuJ3ZAISacv6Y="
+          "hash": "jg3AJlUhMvnY09wgU7JGcH2HWA6NFduVBfGkx7xT2ho="
         }
       },
       "is_incremental": false,
@@ -592,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.Conditions.PredicateType.html",
-          "hash": "sOCavcNZIJAmOClvsploVzzXocMybcKus9nyeXfEphg="
+          "hash": "fAJ8jGOr0XLyUjtox9ZVYbFZHSdCjZFv7QTYoZgKpQ4="
         }
       },
       "is_incremental": false,
@@ -604,7 +604,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.Conditions.html",
-          "hash": "PGxgec+XMG+SbIu2ZFuzPeAlIQwkxUfP0YncCX4AZQQ="
+          "hash": "hfgZ/wb7q0rp4KefCF9Pb+yICsWB+MCKrjEK+xODQOE="
         }
       },
       "is_incremental": false,
@@ -616,7 +616,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.FollowCamera.html",
-          "hash": "+CIHNH5JatpS3quHe9yChCoIm/qXzhaUdHbFitMPlEo="
+          "hash": "tv45qRGkKw3Iv1cURN/f1Fi082GzL3T6XQM7X9JTl/U="
         }
       },
       "is_incremental": false,
@@ -628,7 +628,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.IAction.html",
-          "hash": "rghAPzb7hqiiPsw/Vm6rCO/LnELQG0IyuYIvE9yq7/8="
+          "hash": "5325K3JIzVYbFWfTLiuR4SLRWXwlWuudpmgJmo6CuS4="
         }
       },
       "is_incremental": false,
@@ -640,7 +640,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.IDestroyer.html",
-          "hash": "b67r/fgnF+MJiX49ZPiKo2d8JkLY7Bzwp+vuNEzG0cM="
+          "hash": "LQu4eq+ArvhT2JIan6/j9ZEB/fpHBYgubhs9AdfQZBE="
         }
       },
       "is_incremental": false,
@@ -652,7 +652,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.IPredicateEvaluator.html",
-          "hash": "5S0rSsaxyrqcU1K+khJUWmNDBmhYI8lxoP9qVSvNY74="
+          "hash": "14o27XOXuOSc0+Os+FkIqPkcFclUcZAVvcblTrcZ9eI="
         }
       },
       "is_incremental": false,
@@ -664,7 +664,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.PersistantObjectSpawner.html",
-          "hash": "0z8d/Z11uXdavDcXoDVBiKwB7dE1ulPeq/chPIIgOH4="
+          "hash": "F/v5prjAkSG7iAKLUKsJiZqmmM7ZSUxRmVQL2vI0YcM="
         }
       },
       "is_incremental": false,
@@ -676,7 +676,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Core.html",
-          "hash": "rtAEUAKj5V8l+8Zcg326uCbx2mQ4GcQoKbW5KoyaQCQ="
+          "hash": "APUYQf3X+THbk+1Wz1YTJIl7e/3O04dj+Q6GxQb0Poc="
         }
       },
       "is_incremental": false,
@@ -688,7 +688,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Movement.Mover.html",
-          "hash": "zL8nY6LYW5VPr30oAVs9pch0SksSFTIdAnVRQALGluc="
+          "hash": "FaKVybUfr4qxDeIfq5YDxCNJ85FwSTRfxZ54Ri8b+Hk="
         }
       },
       "is_incremental": false,
@@ -700,7 +700,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Movement.html",
-          "hash": "vPe6fVIrtZveO/Nh3pnO5F+IZV93+6NoJ1GiY7XDWdU="
+          "hash": "xvXNg+PDIth0vtVltmTIcvhdSFaU5hNNUBva7U7I+/M="
         }
       },
       "is_incremental": false,
@@ -712,7 +712,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestCompletion.html",
-          "hash": "ylDtXGwDdV4g8VGaZ2p1IhJbJMEtD/Mx78I7/Tc7wyI="
+          "hash": "t0p14+WKMdja88LArp71l+vNRDrbjhP7rVL3rYPLTeo="
         }
       },
       "is_incremental": false,
@@ -724,7 +724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestGiver.html",
-          "hash": "RvBnTbfw3W5ZBC9lsxdHD7my5Yu2Obkmn01oUl4Adtc="
+          "hash": "IxjwZ67CQOapbpqo6msxr343+yKmATcYYtmgbawEjgk="
         }
       },
       "is_incremental": false,
@@ -736,7 +736,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.Objective.html",
-          "hash": "iA6Y8OEsZD8R+ubjbUXd04oImK69DcDfDPp/1q53vqA="
+          "hash": "1WqF7A/BOGRf15ZfTTms/rWT0JxgxyWlazs2RDgvzJI="
         }
       },
       "is_incremental": false,
@@ -748,7 +748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.Quest.html",
-          "hash": "X9tTAeb5X1C9P+p1NWKyl/cm8kH3vfb2oxX5cgAg/NE="
+          "hash": "9s7wIHU46Oz5GowI/6SSpHuq6UXJ4re0RbRE1lIleG8="
         }
       },
       "is_incremental": false,
@@ -760,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.QuestStatus.html",
-          "hash": "UllWPze0ToaL1E/zxAJDsrvj+RUbnXuSu4bvxKSRPDM="
+          "hash": "QunETpfBKKtlUnIWyUe54PnguoERcyvxR6PGJE3COcM="
         }
       },
       "is_incremental": false,
@@ -772,7 +772,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.QuestsJournal.html",
-          "hash": "e8Ox6SHDzXkar1IzlIeZi1eQ6QO3UtUb+NCvGXcDyI0="
+          "hash": "x8Sxt93qFOBwGVAzJ78zY7o8/i/sKLma0LnIg1BKlZM="
         }
       },
       "is_incremental": false,
@@ -784,7 +784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.QuestsModel.html",
-          "hash": "eaV68WNWH/0M9SkIvy/9xpk+5CuR7XxW9eIMSJKNcn0="
+          "hash": "5z3r9XDsLLkNCkiqqz9fgiy41zNaphVpWYJ1uT8U3OA="
         }
       },
       "is_incremental": false,
@@ -796,7 +796,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionReward.html",
-          "hash": "pfKWm+/QeCLuuuUigFml1CHBRzBrvSgAtplDxeH2S24="
+          "hash": "kWUSdjoGO3TdipuH3JXPiXxM/JGy2uOfQEmUe+PJO+0="
         }
       },
       "is_incremental": false,
@@ -808,7 +808,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.Rewards.ObjectiveCompletionWithdrawals.html",
-          "hash": "a8DCM2x2rviimAfczGGAomMpaGLhWpOqhdPZ+KqiIRc="
+          "hash": "F9OpyMNde/zBpN19eRGOVlL1md6YJIbWfA3AO2x7Mz8="
         }
       },
       "is_incremental": false,
@@ -820,7 +820,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.Rewards.QuestCompletionReward.html",
-          "hash": "Pd1pGxJnJN9znY9AyCpShGEh8w4GzpaYIR2ArTyHyvo="
+          "hash": "sCUf63m4vusgfJXRCursEp87F7nNGw6h/yqxI5cZ+B0="
         }
       },
       "is_incremental": false,
@@ -832,7 +832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.Rewards.html",
-          "hash": "k6oRrgbKOpqXHQqZApxxUcxxtZ16OecYQ3uLONpcLT0="
+          "hash": "D6+w2T7hbtAX+rSKO7lcjHvWdnfhXAATvx8bR9hBZAw="
         }
       },
       "is_incremental": false,
@@ -844,7 +844,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.UI.ObjectiveUI.html",
-          "hash": "2GyBuWuVALn9CxE8bxyF3DqPhY7r0KY+YGpVuSO50hk="
+          "hash": "MFHAC6JwP/x+DX4/Cn1a0mNAwV4NXCemSak4eiJlesQ="
         }
       },
       "is_incremental": false,
@@ -856,7 +856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.UI.QuestItemUI.html",
-          "hash": "Bg9FqoZ5wcriaV1a6UivCkWm7Xuh1GPrHcjRu+BgrfI="
+          "hash": "5sdnMLZr2rtVLpRwgtsxcfz1a9A3d7b6+Uz3y0Vluhk="
         }
       },
       "is_incremental": false,
@@ -868,7 +868,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.UI.QuestJournalUI.html",
-          "hash": "uqAxWTaBXED0ZxYP/a0LeZtl8/QpqHRM5KOiil0jELE="
+          "hash": "zAHDS/AhPZeW+DUrHynahGsKRN8TPSv9yJjtImh5nQg="
         }
       },
       "is_incremental": false,
@@ -880,7 +880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.UI.html",
-          "hash": "J0jt8qiZo1ngelFsUttWs0MoMois/Mi1heRewk9GMME="
+          "hash": "D+/OC8HtGMROEipKafnfSwRmu8R3PaBVdZZxy0QzczU="
         }
       },
       "is_incremental": false,
@@ -892,7 +892,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Quests.html",
-          "hash": "W6M3z1+xE1JdgeBJ1xa/u7K8AhAnr0V/3DaEKbZBVVc="
+          "hash": "TnIOjDsdZcJC+TetDUrIrk6rzsA/oCtVvvtN4XVGTjs="
         }
       },
       "is_incremental": false,
@@ -904,7 +904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.SceneManagement.Fader.html",
-          "hash": "S5AKNAO40xTSDl7Xmad8n1YonpGB6KS/rbFjqs01Rhk="
+          "hash": "Pjnloj2iQnbZ2tOcB+Tosmk0xHXnQEACJa/COmzMBLo="
         }
       },
       "is_incremental": false,
@@ -916,7 +916,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.SceneManagement.Portal.html",
-          "hash": "4OSOTSR0V8XWy6nNiSQPoKT6X9kFrHErIaspJLZBOXQ="
+          "hash": "M3bcD+C9sTijUZdPmX2uaMFEBjvTBZMMm+6M9IQxFrM="
         }
       },
       "is_incremental": false,
@@ -928,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.SceneManagement.PortalLocation.html",
-          "hash": "7aijA1l4EuOtEOY92JgJfpauXyPS3K/KTDDv6EUAMb4="
+          "hash": "y/RHN2QWovQBRbxr1r6g+lCrFDiMCLf6quEuR5Kd/2Y="
         }
       },
       "is_incremental": false,
@@ -940,7 +940,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.SceneManagement.Scenes.html",
-          "hash": "L7bHfkxMw/O7Y4sCfAg6fP59uK62/GHAjGwDrMnZy+Y="
+          "hash": "cFu9qISBnvrriFSXm46gw+CmXN5NIn+DIj8CIWW8mFA="
         }
       },
       "is_incremental": false,
@@ -952,7 +952,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.SceneManagement.html",
-          "hash": "TYjkgckQvjhfpVlPM1yAIjptOr9MC1k5oJKZHUKh6+o="
+          "hash": "hONrFgOsiEaNUDfhuRNj9a2UYEfVCHOu5xueNLOnNBg="
         }
       },
       "is_incremental": false,
@@ -964,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.BaseStats.html",
-          "hash": "T4WrxdhpY4tssi0fL1/QhqvIC8HP0IIX/k32qO8tXaU="
+          "hash": "BmLPFrVz1XcFWDmRHrYIQVMt0lv0o8KkF4bZzv8ghzY="
         }
       },
       "is_incremental": false,
@@ -976,7 +976,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.CharacterClass.html",
-          "hash": "XDTdE8NALb/Y1fdL/1jove4NJK8Zq8eBO6A86ktA3LI="
+          "hash": "96vtEZpnMhoqYV5X4nxlia5GYdCg2yAuC+gYVm1JqZw="
         }
       },
       "is_incremental": false,
@@ -988,7 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.Exceptions.ProgressionStatException.html",
-          "hash": "pFza4LIrXwipe4/rLLaJPlmkNky4HH0rBuZzVnmnmGY="
+          "hash": "tNKFTO8pdWZRf6fre9nyEpNL300vhkdf+EoFFo6qm04="
         }
       },
       "is_incremental": false,
@@ -1000,7 +1000,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.Exceptions.html",
-          "hash": "yY3tKmGm/5mp/Jc+Qc+fh5IFKGO0+2Uq3cvmAvIHZjQ="
+          "hash": "XH+u8fWAUa94gE9iFzqWa+gKF32OTx6w5XC82cYo7vA="
         }
       },
       "is_incremental": false,
@@ -1012,7 +1012,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.IModifyProvider.html",
-          "hash": "paJxe9iUN7TsEidnkiDPRZ1kziG0Ozj4AJWuNxh9Dn0="
+          "hash": "YMkXSqVdLGps/vBS7eir2OCjmcfaD8m1/LJhWBpxQQ8="
         }
       },
       "is_incremental": false,
@@ -1024,7 +1024,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.Progression.html",
-          "hash": "Wvo9q5x7V3eAAAfKZTmsy+lg/v5aAmkZu5e9fK0YdDQ="
+          "hash": "aqS/Sf4wm+1Xe4jC8CN9HfVQ5IcESgZ/9E8tPE5ROdU="
         }
       },
       "is_incremental": false,
@@ -1036,7 +1036,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.Stats.html",
-          "hash": "G9y7lse5/ncpOlUWp/4U36X0zIPon8E9JMWY52ExEkg="
+          "hash": "PrcXOZEyAtA98Wuvi07cdFqmLfv3UJNcKzlNzk9TlPI="
         }
       },
       "is_incremental": false,
@@ -1048,7 +1048,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.html",
-          "hash": "2aOVzRVjVp6jV+M7/EHL2j/QXjx0WwtIWumCRqeMq0A="
+          "hash": "VIlXmeOl9PpQgjM+juKwM7RicpF+xiBf9zWYjkW4QZM="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.DamageText.DamageText.html",
-          "hash": "iS0lE0QOv7W3gyHGnX8AmKVm60Y5nbOO8ruy2MkI4gE="
+          "hash": "1Nj3zw141I3NHwCPGuQchu1R7NuU8yZeOscuSLkpEaw="
         }
       },
       "is_incremental": false,
@@ -1072,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.DamageText.DamageTextSpawner.html",
-          "hash": "kMnzl684YRpxvE33cQsrKJpOO2CTuYQs4eyeps1CfKk="
+          "hash": "hErJzHPOeKLg6Ktw9apCG7FTOeldAlwzR8EW2ffSn0k="
         }
       },
       "is_incremental": false,
@@ -1084,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.DamageText.html",
-          "hash": "0O6v3SD/hqfKMkhr1NkvSv/wW47Zlt4dotF1WJVft38="
+          "hash": "kN0bpOeS+DKHmziNcr6YLKXRkzYnn5DqtPtzATemZpg="
         }
       },
       "is_incremental": false,
@@ -1096,7 +1096,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.Destroyer.html",
-          "hash": "kuIkyhEkUdCD3WuazBrjcExNDakucz3kARukaH3xc64="
+          "hash": "9ekckNCnbUJyJ7YPzmJJ5p3sMvmnVN5M5Vd8/z0of8Q="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.TabButton.html",
-          "hash": "LkSMshi60Me96fxYa23nui1tyCJW96OAr8hOf17Q3Uo="
+          "hash": "jqmyAE+ryX9Am1MbAkveqSBCAquA0MryD4TnHlYTsaA="
         }
       },
       "is_incremental": false,
@@ -1120,7 +1120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.TabSystem.html",
-          "hash": "IRr7Y51YpYZkKspJDZj/5ad0UQe5kLTQ/d0K7Dq2Og0="
+          "hash": "URDbpyyusVuuhxToWmwy0c1uDjYqRnW9pyJohUz0TFk="
         }
       },
       "is_incremental": false,
@@ -1132,7 +1132,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.UICameraFacing.html",
-          "hash": "ktohds745JRO39LU3lt6aI7jL9h/ltRgt9HdQw6GRC4="
+          "hash": "/gT/+rAMe1tAQeHbBxPW85H5KRWSH7Un2z9iMQn1MpM="
         }
       },
       "is_incremental": false,
@@ -1144,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.UI.html",
-          "hash": "MClMAOwZDaMXYFVV5PykLDIUw7A+r67faxgidRZyVoM="
+          "hash": "36svFx5goUns0SrJFUZwErA62sBRL1QvuHgftgi/vso="
         }
       },
       "is_incremental": false,
@@ -1156,7 +1156,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.ActionBarController.html",
-          "hash": "oW4HFcXNAKa2BbvAbul/TZgpnpTGvH2biAP4/RFK58w="
+          "hash": "XYtWbc95qGb3ypIw6c80ADfcwM+1aM4teiTVuusD4NI="
         }
       },
       "is_incremental": false,
@@ -1168,7 +1168,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionItem.html",
-          "hash": "mGyo+E4qKwhKYItRTuhJ/Kp5hS4ggao1T86+41RtKe0="
+          "hash": "HE8BHi5uykoqaTsbx24ibc7sunk1nizD82e2oEUX99c="
         }
       },
       "is_incremental": false,
@@ -1180,7 +1180,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.ActionStore.html",
-          "hash": "gje7qu+qpN00EWbY3caTjAFfmNtZDhCeEXfvQJgk1cI="
+          "hash": "40ghQIa4dYtHiTNly5QdQgGqVS6uOhSydFA5r0M0BmQ="
         }
       },
       "is_incremental": false,
@@ -1192,7 +1192,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.HealActionItem.html",
-          "hash": "3tsHlFJriaEUP9VTWUbOBH0Nmu864nAH+/6dshYAJbQ="
+          "hash": "3xMKKsYISq/XszSdH2ShmXsYmlArkSMsAxFClXHBV9U="
         }
       },
       "is_incremental": false,
@@ -1204,7 +1204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Actions.html",
-          "hash": "AOMS+mMaa2kL4tuuTOxjR6xQFuuuxDz7s68y0xsBMMk="
+          "hash": "E6X0oStvv0gstTR9CscvO8ygCRmQ7p6roUFoZB8SaRg="
         }
       },
       "is_incremental": false,
@@ -1216,7 +1216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DropConfig.html",
-          "hash": "qjGNK/3DlAn3s6lwERNGYdTm0pJQWP2lnXsL97CAjuY="
+          "hash": "ZDUA/PIJVKtnmw5xZRlqpDzc/sRU8aJUagANWQ2IOgU="
         }
       },
       "is_incremental": false,
@@ -1228,7 +1228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.DroppedSlot.html",
-          "hash": "i2RsF2Xg13YzkfVoRwA0Ovivq86pBZO3N0g3YVxWLqo="
+          "hash": "LiVwN3V4LCwie2yP3uH/9KoM0i4FTLbwxCpRIJZxTnY="
         }
       },
       "is_incremental": false,
@@ -1240,7 +1240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.DropLibrary.html",
-          "hash": "Txdqk/Ri2iQpdWyZg1aneiF7tKlKqGW9m7Mvwnm2dSs="
+          "hash": "JA5JDnWGmayIV0ZBGnxc7SuER59bjb9soFIElXAMJUs="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1252,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquipLocation.html",
-          "hash": "SdAbie5Dl1cSUbFIg1poX09bHc65PizeiadTv9tujmA="
+          "hash": "vYWtTkP4lhasPNmR/360/pPR0Sc2snO/9JOkgZUHILs="
         }
       },
       "is_incremental": false,
@@ -1264,7 +1264,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.Equipment.html",
-          "hash": "UihyLJDmW2MlMQ3KAeTT/v6REGhN7/Rz5gnHF5fE4fs="
+          "hash": "i09pW6GvH3dpEKL5N57UvcKTAl/rHjADuXIRKGSTj4Y="
         }
       },
       "is_incremental": false,
@@ -1276,7 +1276,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.EquippableItem.html",
-          "hash": "0wP2pxhg6ZkkuC7T5sGgpamssm/Y28ADY9p784AiH90="
+          "hash": "UZMcq016RjiJzA59rz6YEFQawiyUzu8mWuULlfRyFbk="
         }
       },
       "is_incremental": false,
@@ -1288,7 +1288,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquipment.html",
-          "hash": "P2v3keByQrPnOkRRhVx13MRBFKgS5rYoNDvbbj7D3JU="
+          "hash": "bWUJVneNyeyv59XrYhq0RBojrbAzcjqGG/a0mq8YROc="
         }
       },
       "is_incremental": false,
@@ -1300,7 +1300,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.StatsEquippableItem.html",
-          "hash": "lhR+mkTpGGzVLLc2TKmu/oa+slvb2jKf/GaBmghuMG0="
+          "hash": "CPzJMj3URsJIRCAVl4XWkOAjk4UZJn6TVPX91wBnFm4="
         }
       },
       "is_incremental": false,
@@ -1312,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Equipment.html",
-          "hash": "FySXzTkM0ooR9M4a1y40sMANOKXyPmnfaL6s7p6nMIU="
+          "hash": "Dt2GBKnQ++6OHFLIGtUhzdl5YQDGy/QbSWpCLCv6aE8="
         }
       },
       "is_incremental": false,
@@ -1324,7 +1324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.Inventory.html",
-          "hash": "wHalECxrI9elrQUOPnyosyPqAKSJluYxr7FAHVgQPMw="
+          "hash": "669J2CtgkxtnY32onKS5loWZ9yOVX1Ge45MqnwScdBA="
         }
       },
       "is_incremental": false,
@@ -1336,7 +1336,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventoryItem.html",
-          "hash": "IGlnESlYy7OjQACTiylHIZUtxbLTBY7EI/3iDDo9mKU="
+          "hash": "fL3vshAa+c1qyWi2FVjiN6syHFdj8tegOCsqEmHF5bc="
         }
       },
       "is_incremental": false,
@@ -1348,7 +1348,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.InventorySlot.html",
-          "hash": "qUA0DSNTW6IPf+REUN54bhFjDNPTGE1CA2st0/43qhQ="
+          "hash": "LMS7K/3/4msb+gs+neewCP7aCG598PlXDdTS4sIuZgA="
         }
       },
       "is_incremental": false,
@@ -1360,7 +1360,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Inventory.html",
-          "hash": "OzlXjqUNo0CitcorHjqI5x6wcNGRdr3+HTZ1s3R8hRI="
+          "hash": "jOrIXzOKatH8tjtwZ0qAKduqfj5tzKQH2/rUSqzkZkw="
         }
       },
       "is_incremental": false,
@@ -1372,7 +1372,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.ItemDropper.html",
-          "hash": "KqVyNIpBv4OAMt37HsE9mlxo9dTBjhM6i2dmLVwe2sA="
+          "hash": "SAe8krckDEXEcTx7RsiI1mN94HwORAVxXhqHWSHp6Q8="
         }
       },
       "is_incremental": false,
@@ -1384,7 +1384,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Loot.LootItem.html",
-          "hash": "No1J0QOJVg4o/wdA+UriXFLMjwegFmlvt8yS6p//SpA="
+          "hash": "yCt7a8lR6/R3o4AEO6g3DSYnnwT2+076Tu9hlF8yVgg="
         }
       },
       "is_incremental": false,
@@ -1396,7 +1396,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Loot.html",
-          "hash": "TPa9dvGR9B8PSgzw8AIA6rRb9bt6ru7e2OViRa6uwXE="
+          "hash": "QzvR+qYeFZ83ODWW3X0B+6Z6lbTQcNbxFM4+ajcmZaA="
         }
       },
       "is_incremental": false,
@@ -1408,7 +1408,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.Pickup.html",
-          "hash": "BvEprAkQ+fndGZP15swpsOfzztW43dwKNRXZRC0l5JA="
+          "hash": "NYfeiMRYFhLobT/x2EvopMzZT6Iwl6NWx5NWZuHiPx4="
         }
       },
       "is_incremental": false,
@@ -1420,7 +1420,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.PickupSpawner.html",
-          "hash": "c4+9E4Oi8PMZ6Xjdh5R1WdynzbfCY1xhwMbVsa290L8="
+          "hash": "xm6Q8CSA57buV/LmCJbw7w8cttX1AWX/qrYtqHqtxm0="
         }
       },
       "is_incremental": false,
@@ -1432,7 +1432,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.Pickups.html",
-          "hash": "GXu2Axut7zA9TPiqtYR2unOVskJlA0B6NYHrd6Ypfy4="
+          "hash": "Oz99IrCfeejAFuLLW2s0uQGxXcuM95JpfrZfmfH5rWM="
         }
       },
       "is_incremental": false,
@@ -1444,7 +1444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.RandomDropper.html",
-          "hash": "fv4Pzf4Iz5EcBWyrIpNmNm1SgbI3WhRQ8+j7VUs7Dfs="
+          "hash": "GZeVUEINQiSpcI4nFD0sSKlQ9vNjZv0fFJQ+W0iATpQ="
         }
       },
       "is_incremental": false,
@@ -1456,7 +1456,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.InventoriesModel.html",
-          "hash": "TQPFR+hj7LcyL3VoWR3rzWdpAVEEM028/p2VdExySh0="
+          "hash": "+Mg5/iNLL/WsqP3Zo6Div4udSOpmxMKtoRNlnSaaKv8="
         }
       },
       "is_incremental": false,
@@ -1468,7 +1468,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.ActionSlotUI.html",
-          "hash": "A0zwJ+8jEQmWV3wk75r0Xc5BHtaCTu/0sfEJ7gINOas="
+          "hash": "PNz2HfORTRK/FyYTXfYR3bwIKDJPxSBcfZu3bCctrVI="
         }
       },
       "is_incremental": false,
@@ -1480,7 +1480,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.EquipmentSlotUI.html",
-          "hash": "zH/Re8iaUUxvFxvd75wY4Tx8VHErrYxNl8qMFfMlCtc="
+          "hash": "fIHbB187GEHd5zq0H0H+d2FQ8xZUQ5JtKIqn9greUO4="
         }
       },
       "is_incremental": false,
@@ -1492,7 +1492,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.IItemHolder.html",
-          "hash": "N40KcpGsNVDX1E/U15jcWJqQntz9v01gmUfiUg7k1S8="
+          "hash": "Yrjv5iI02wxYHbxpHsDWkfslSoo+wOhrcPMKTs4O1Ac="
         }
       },
       "is_incremental": false,
@@ -1504,7 +1504,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryDragItem.html",
-          "hash": "qMw9loRzw9JiJLbkN3zgy9I7Gjkv34Zl+ytT99o0ZlI="
+          "hash": "HpzRxti/RZvzsnqb0q86lo3M/OsQNNrgJD3dW0mhecI="
         }
       },
       "is_incremental": false,
@@ -1516,7 +1516,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryDropTarget.html",
-          "hash": "W+lW+jUXsplYx9a4M7I/b4gtkFwOXtbzHeBjxmjp9nA="
+          "hash": "D+iPKOBnavmfYXJN9cS6sIUxUWwWz8p0+aye1hU2hWg="
         }
       },
       "is_incremental": false,
@@ -1528,7 +1528,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryItemIcon.html",
-          "hash": "iDcuW5CsNA3IjZvGFiHThSd0QOZbhVbptO53SeA6FTA="
+          "hash": "a76UOW/jIr4gvdg3dcsWSp1HWy/dX9RAwIS8qkxjDMo="
         }
       },
       "is_incremental": false,
@@ -1540,7 +1540,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventorySlotUI.html",
-          "hash": "e0ch1+4ieUgTz+UAhuf9lMR8Y4su9lZ0In5GjYrE+ME="
+          "hash": "Mo18sOeHHRybVXgzv75ktSM7C1fXIRgGhaSMTcHnvKE="
         }
       },
       "is_incremental": false,
@@ -1552,7 +1552,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.InventoryUI.html",
-          "hash": "lR6FfgKIVMXbosogvpj85PCfvejUwnsAeNrBf8tFRoU="
+          "hash": "/aD7poESj6wFg/c8uvqyC2nprpMJ6tfqctTvUxlUolI="
         }
       },
       "is_incremental": false,
@@ -1564,7 +1564,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.ItemTooltip.html",
-          "hash": "jW8cAWBgRxeboZPnMrUKiHFyzC9O1kID9PwKKJWM2a8="
+          "hash": "0/+o60sOGHjVoHz50EKrns9d6SCa7hrD9b98n46nK70="
         }
       },
       "is_incremental": false,
@@ -1576,7 +1576,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.ItemTooltipSpawner.html",
-          "hash": "zx3MwEfmmejwTNVRm+CNIm3zFyaxTGzOox2fZ3HEOp4="
+          "hash": "pZswzSp8RU117DSuK0i5U0iPxcy0YBovdyHp1cyk9f4="
         }
       },
       "is_incremental": false,
@@ -1588,7 +1588,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.Inventories.html",
-          "hash": "QPjHY2mLiHPRxLGw6WEjSOCcX2avthnY+81CIES/+dY="
+          "hash": "4lXcaimODKlm9eOpgSJt2rwoDInyXtf93/zSPtA0cpQ="
         }
       },
       "is_incremental": false,
@@ -1600,7 +1600,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.ScrollButtonsController.html",
-          "hash": "7mvrRYN+hLk3akROoTr6LktmAfgQKax2v2gMKHmh8fY="
+          "hash": "lQoP1WkkTiuZ+XN5C9bt+MylVyA16gDN7Hf8I3WGV+s="
         }
       },
       "is_incremental": false,
@@ -1612,7 +1612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.UI.html",
-          "hash": "OTRodH+uz3t+xWRmmLZ1oISg7ul2gWr9lx+44iALT84="
+          "hash": "mTeqFc25G0J5DQ9TzJGeZvfQovTL1hDYhvaiiWJVvc4="
         }
       },
       "is_incremental": false,
@@ -1624,7 +1624,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.InventorySystem.html",
-          "hash": "M6yt8dk0/YAtcuMOPyzgRI24kLvFXcg3hAQDzM6N6rw="
+          "hash": "vpICdgmH83l1RyeYiZfZHlO7iNQWzD+R2m7cuPVpd18="
         }
       },
       "is_incremental": false,
@@ -1636,7 +1636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.ISavable.html",
-          "hash": "TCxDE3/yBZhZnd2yr4+D10mJJ6w1Fy2NYUIKwyxRE6M="
+          "hash": "/7YZsml57sp5eIJvvRo8Ju++XGp1EMQiD9OUPZU50rQ="
         }
       },
       "is_incremental": false,
@@ -1648,7 +1648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.SavableEntity.html",
-          "hash": "3kriyPYGi3RUkgDWAWfKKbousCYMxsdggXgRi+XVjoU="
+          "hash": "805c/eEekA9TuKTzHA0dL6A9myhgTwm2S7zvblS2juk="
         }
       },
       "is_incremental": false,
@@ -1660,7 +1660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.SavingSystem.html",
-          "hash": "3evFe79E53vDNGDZvhAb6TH6nhp3UbYogtOaOWms3V8="
+          "hash": "VQNKTJatemWiIunrFXAxdQVNbMdccvmcF4GsBvCb7QQ="
         }
       },
       "is_incremental": false,
@@ -1672,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.SavingWrapper.html",
-          "hash": "GhNcUoTHjH40WAatwS7gIhamhLBh4qk6UgBmCF3mHD0="
+          "hash": "GMXmlwQJu+/eHxUadw9TCdxzwpGR3wckSHqWTVx/VwE="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.SerializableVector3.html",
-          "hash": "yr03EDV3hh7e01WmCRaz1dCJ8B9+hTawp2FadD17rIo="
+          "hash": "kfKPEqZ/rfOgIF6xf17Cov8ivg++ku0JGMKOFY83GSw="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.html",
-          "hash": "eAxs1yhV0zfYe6sU4ITevPEURSBxc4D/S2RWviwATZc="
+          "hash": "O+vgWYXvQNpbVni9Yr6HdcEo0SrJz/4Blkr3sGIziTw="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.Editor.ReplaceWithPrefab.html",
-          "hash": "6vQ6H9OH4dIZ/bS3QGuJZU/SCRdmyr6JEdzFRhYaY8s="
+          "hash": "shPox8sI0z9OeZ50kHwOneO3li9DSqXwqRAH/PG1na8="
         }
       },
       "is_incremental": false,
@@ -1720,7 +1720,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.Editor.html",
-          "hash": "FeWCry9lUmLvk4a4ALT2Ur70UBIjx0fbSB3oqWps6wo="
+          "hash": "63D9f6E3yuyLnhLxpDfHLQxY70vFq4kueJs+S2JxbqQ="
         }
       },
       "is_incremental": false,
@@ -1732,7 +1732,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.LazyValue-1.InitializerDelegate.html",
-          "hash": "pHRkUx44mE0yGbGua5YdyfzhguAwCEPzN6LUa/5wmK0="
+          "hash": "GRLXCT1qTmOvm5HROhAGoUl7BcXWGMubZ2N68WYIor4="
         }
       },
       "is_incremental": false,
@@ -1744,7 +1744,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.LazyValue-1.html",
-          "hash": "Xmd2ilm/00uc4dWf0pGSoXa/uWQq451fhBtFxEf5Mq8="
+          "hash": "3zqpS9MjK+PCboeurayHzQL6hA+uM0euhW+48mD8jzs="
         }
       },
       "is_incremental": false,
@@ -1756,7 +1756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.Logger.html",
-          "hash": "rQCUxSl4YmWWRpYSwy4RT+F3S6S8d6i/nkCFhLCAxFE="
+          "hash": "iIZZWpHLO0zh3sjt0tsgq6w5BL2B9xBlhyhN3QHB31E="
         }
       },
       "is_incremental": false,
@@ -1768,7 +1768,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.NavMeshExtensions.html",
-          "hash": "JCR3X+1bywNslt1NdxW04v6YQYptbYiMrTNzihYoOwU="
+          "hash": "Kccr4vqa4Rd+LG7bGVn3jXuqg4DPyJKSYEAX6w27lMM="
         }
       },
       "is_incremental": false,
@@ -1780,7 +1780,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.RaycastUtils.html",
-          "hash": "qrefu59e+hl6CH4tJnk8vgAgOtcoffPZzuJSqnvricU="
+          "hash": "2p9WLGGTF5G7KUG6h2l+5bxt1LqoIBxknv5v2qMUxi0="
         }
       },
       "is_incremental": false,
@@ -1792,7 +1792,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.DisplayBar-1.html",
-          "hash": "PAfTEzqosdMQ3Xf3M7Z9FhQMSFu7AfL5U7GxW4IrbQw="
+          "hash": "ACiUUQZtaPWUEmvYbTxc92PRs91iIdEIGpeQnVPcIPE="
         }
       },
       "is_incremental": false,
@@ -1804,7 +1804,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Dragging.DragItem-1.html",
-          "hash": "I8CK80wh1v11YGLVyX5pFQORK9n4LVhKyFucyjr9lbg="
+          "hash": "Iv0R5PwPrYUYwyLL9iJP3tml2JQtLf7PD6NAqx7zEjo="
         }
       },
       "is_incremental": false,
@@ -1816,7 +1816,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Dragging.IDragContainer-1.html",
-          "hash": "u3ulaYMbJKbrG91gxwTRgXveD9ugTCXgyneKv/j8DYI="
+          "hash": "xXmHgwADmyYG8qbdEgUZOs/E7gcyZ9fXn9qYTWqdfF8="
         }
       },
       "is_incremental": false,
@@ -1828,7 +1828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Dragging.IDragDestination-1.html",
-          "hash": "5hP9HMsvCIWkd6DbNF54VpIhJ/+cXSAms4A1x89ycfI="
+          "hash": "L75LiI2YrJSguYiqJV53iPMwZioYhpYtoefjK866b30="
         }
       },
       "is_incremental": false,
@@ -1840,7 +1840,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Dragging.IDragSource-1.html",
-          "hash": "BqOVwo11kDWueYlhMKrpkKyogPgIv+4g+O1VtE6haCQ="
+          "hash": "Ezy2hm7tKWgggKoXVLwSedZg764OJb4rZsxvJq/jG6o="
         }
       },
       "is_incremental": false,
@@ -1852,7 +1852,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Dragging.html",
-          "hash": "X5roAKv6kPEOm2MxecBz9Q5X9h2Wb7n5LesMzHfOV5U="
+          "hash": "apUTHf3mzPkgkEW/A09oVYYwr+QrLTZczp7TOIuuoSo="
         }
       },
       "is_incremental": false,
@@ -1864,7 +1864,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Hint.HintController.html",
-          "hash": "ODnmDDWoGTkJ6ipsp1n6CtvI51+uXzYMo4LQtNeM6KU="
+          "hash": "sfEANaf/h0P+BUF3DaKgkHnySiAjVUsh/rZcDyRwqK0="
         }
       },
       "is_incremental": false,
@@ -1876,7 +1876,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Hint.HintSpawner.html",
-          "hash": "0hJpCltfptNvq6CNCbOYf04pGI0CTynhfKz8CPtWF3w="
+          "hash": "q5RKFXfMkhCWPSRbadf58Dc88JSfWg3ejd0MYK7sMao="
         }
       },
       "is_incremental": false,
@@ -1888,7 +1888,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Hint.html",
-          "hash": "8gLKee7G0+g7XJiC8o9BhQYvIgaXDT1fFRBlOHuL4w4="
+          "hash": "Xptn12zJzNGVLVk2z8DVxg3zP0RqeUAgkgS+rtFOjYU="
         }
       },
       "is_incremental": false,
@@ -1900,7 +1900,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Tooltips.TooltipSpawner.html",
-          "hash": "NMC5v/WDHJ5CDl0NG6Ff4u7HNVw37H4QSMQKkoUfHmQ="
+          "hash": "XFQQHkqTlr0c44DzO3Zhhnu+myadtF1WHSa95pTON10="
         }
       },
       "is_incremental": false,
@@ -1912,7 +1912,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.Tooltips.html",
-          "hash": "mDa4ex44POXxXs3knGgpZn/MCRuJNM1T3uOur73NEGw="
+          "hash": "pv5CD68D4Wk/AeOxW4Re/ZTt+62cKTig8Wj0zUJbuYI="
         }
       },
       "is_incremental": false,
@@ -1924,7 +1924,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.UI.html",
-          "hash": "zznQbsRP9nxetcgkuTMxSInzsr1jxAJk44BjNHcf0JQ="
+          "hash": "fpPtxaJXIr5JIhvvMNOzOHrLtUQyz63mlGa//L8SuUM="
         }
       },
       "is_incremental": false,
@@ -1936,7 +1936,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.html",
-          "hash": "tKFqOuT/UiZVKSzOoBoz9186QNSMduhyIdSdMMQ2dos="
+          "hash": "VhDoBDPrFQ2Nku7Zn6/g9xv+KZ/xDe+UUArj2pXpEQI="
         }
       },
       "is_incremental": false,
@@ -1960,7 +1960,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "qj7txKu0GyKsxJt2/MbG1A9ZPRnfNysy6eJhTx3zzLM="
+          "hash": "CBuviFfisdtmsiEOQ+0X2gy23UerxUnmCWITq52Gx3o="
         }
       },
       "is_incremental": false,
@@ -1972,7 +1972,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/control.html",
-          "hash": "vn/U0QLdoWpDGbNnfMn7C+KTzOk9LFIzhBdXr93RR7M="
+          "hash": "bwCFYdoRo6z5AbHJUZJ+YIAlle3T7lYQngN22SkCRxI="
         }
       },
       "is_incremental": false,
@@ -1985,6 +1985,17 @@
         ".html": {
           "relative_path": "manual/toc.html",
           "hash": "SbD1DBZnSzSh/h50jKq9aSUZ3+NFFD+Sb5VqFCj26X4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/logo.svg"
         }
       },
       "is_incremental": false,
@@ -2024,6 +2035,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 160,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
