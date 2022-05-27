@@ -1,5 +1,5 @@
 # Project "RPG: Deep Dive" GDD #
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/germandilio/RPG_Deep_Dive/Build%20&%20Publish%20documentation?label=docs&style=flat)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/germandilio/RPG_Deep_Dive/Build%20&%20Publish%20documentation?label=docs&style=flat)](https://germandilio.github.io/RPG_Deep_Dive/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/germandilio/RPG_Deep_Dive)
 ## Builds ##
 Mac OS: https://developer.cloud.unity3d.com/share/share.html?shareId=bJj3vc_xQO
