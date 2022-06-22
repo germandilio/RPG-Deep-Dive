@@ -722,12 +722,6 @@ references:
   isSpec: "True"
   fullName: RPG.GameplayCore.Attributes.Experience.RestoreState
   nameWithType: Experience.RestoreState
-- uid: RPG.GameplayCore.Attributes.ExperiencePointsDisplay
-  name: ExperiencePointsDisplay
-  href: api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html
-  commentId: T:RPG.GameplayCore.Attributes.ExperiencePointsDisplay
-  fullName: RPG.GameplayCore.Attributes.ExperiencePointsDisplay
-  nameWithType: ExperiencePointsDisplay
 - uid: RPG.GameplayCore.Attributes.Health
   name: Health
   href: api/RPG.GameplayCore.Attributes.Health.html
@@ -940,6 +934,38 @@ references:
   commentId: T:RPG.GameplayCore.Attributes.LevelDisplay
   fullName: RPG.GameplayCore.Attributes.LevelDisplay
   nameWithType: LevelDisplay
+- uid: RPG.GameplayCore.Attributes.LevelXpDisplay
+  name: LevelXpDisplay
+  href: api/RPG.GameplayCore.Attributes.LevelXpDisplay.html
+  commentId: T:RPG.GameplayCore.Attributes.LevelXpDisplay
+  fullName: RPG.GameplayCore.Attributes.LevelXpDisplay
+  nameWithType: LevelXpDisplay
+- uid: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerEnter(PointerEventData)
+  name: OnPointerEnter(PointerEventData)
+  href: api/RPG.GameplayCore.Attributes.LevelXpDisplay.html#RPG_GameplayCore_Attributes_LevelXpDisplay_OnPointerEnter_PointerEventData_
+  commentId: M:RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerEnter(PointerEventData)
+  fullName: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerEnter(PointerEventData)
+  nameWithType: LevelXpDisplay.OnPointerEnter(PointerEventData)
+- uid: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerEnter*
+  name: OnPointerEnter
+  href: api/RPG.GameplayCore.Attributes.LevelXpDisplay.html#RPG_GameplayCore_Attributes_LevelXpDisplay_OnPointerEnter_
+  commentId: Overload:RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerEnter
+  isSpec: "True"
+  fullName: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerEnter
+  nameWithType: LevelXpDisplay.OnPointerEnter
+- uid: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerExit(PointerEventData)
+  name: OnPointerExit(PointerEventData)
+  href: api/RPG.GameplayCore.Attributes.LevelXpDisplay.html#RPG_GameplayCore_Attributes_LevelXpDisplay_OnPointerExit_PointerEventData_
+  commentId: M:RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerExit(PointerEventData)
+  fullName: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerExit(PointerEventData)
+  nameWithType: LevelXpDisplay.OnPointerExit(PointerEventData)
+- uid: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerExit*
+  name: OnPointerExit
+  href: api/RPG.GameplayCore.Attributes.LevelXpDisplay.html#RPG_GameplayCore_Attributes_LevelXpDisplay_OnPointerExit_
+  commentId: Overload:RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerExit
+  isSpec: "True"
+  fullName: RPG.GameplayCore.Attributes.LevelXpDisplay.OnPointerExit
+  nameWithType: LevelXpDisplay.OnPointerExit
 - uid: RPG.GameplayCore.Cinematics
   name: RPG.GameplayCore.Cinematics
   href: api/RPG.GameplayCore.Cinematics.html
@@ -2473,6 +2499,19 @@ references:
   commentId: T:RPG.GameplayCore.Stats.BaseStats
   fullName: RPG.GameplayCore.Stats.BaseStats
   nameWithType: BaseStats
+- uid: RPG.GameplayCore.Stats.BaseStats.CurrentExperiencePoints
+  name: CurrentExperiencePoints
+  href: api/RPG.GameplayCore.Stats.BaseStats.html#RPG_GameplayCore_Stats_BaseStats_CurrentExperiencePoints
+  commentId: P:RPG.GameplayCore.Stats.BaseStats.CurrentExperiencePoints
+  fullName: RPG.GameplayCore.Stats.BaseStats.CurrentExperiencePoints
+  nameWithType: BaseStats.CurrentExperiencePoints
+- uid: RPG.GameplayCore.Stats.BaseStats.CurrentExperiencePoints*
+  name: CurrentExperiencePoints
+  href: api/RPG.GameplayCore.Stats.BaseStats.html#RPG_GameplayCore_Stats_BaseStats_CurrentExperiencePoints_
+  commentId: Overload:RPG.GameplayCore.Stats.BaseStats.CurrentExperiencePoints
+  isSpec: "True"
+  fullName: RPG.GameplayCore.Stats.BaseStats.CurrentExperiencePoints
+  nameWithType: BaseStats.CurrentExperiencePoints
 - uid: RPG.GameplayCore.Stats.BaseStats.GetLevel
   name: GetLevel()
   href: api/RPG.GameplayCore.Stats.BaseStats.html#RPG_GameplayCore_Stats_BaseStats_GetLevel
@@ -4577,15 +4616,15 @@ references:
   fullName.vb: Utils.LazyValue(Of T)
   nameWithType: LazyValue<T>
   nameWithType.vb: LazyValue(Of T)
-- uid: Utils.LazyValue`1.#ctor(Utils.LazyValue{`0}.InitializerDelegate)
-  name: LazyValue(LazyValue<T>.InitializerDelegate)
-  href: api/Utils.LazyValue-1.html#Utils_LazyValue_1__ctor_Utils_LazyValue__0__InitializerDelegate_
-  commentId: M:Utils.LazyValue`1.#ctor(Utils.LazyValue{`0}.InitializerDelegate)
-  name.vb: LazyValue(LazyValue(Of T).InitializerDelegate)
-  fullName: Utils.LazyValue<T>.LazyValue(Utils.LazyValue<T>.InitializerDelegate)
-  fullName.vb: Utils.LazyValue(Of T).LazyValue(Utils.LazyValue(Of T).InitializerDelegate)
-  nameWithType: LazyValue<T>.LazyValue(LazyValue<T>.InitializerDelegate)
-  nameWithType.vb: LazyValue(Of T).LazyValue(LazyValue(Of T).InitializerDelegate)
+- uid: Utils.LazyValue`1.#ctor(System.Func{`0})
+  name: LazyValue(Func<T>)
+  href: api/Utils.LazyValue-1.html#Utils_LazyValue_1__ctor_System_Func__0__
+  commentId: M:Utils.LazyValue`1.#ctor(System.Func{`0})
+  name.vb: LazyValue(Func(Of T))
+  fullName: Utils.LazyValue<T>.LazyValue(System.Func<T>)
+  fullName.vb: Utils.LazyValue(Of T).LazyValue(System.Func(Of T))
+  nameWithType: LazyValue<T>.LazyValue(Func<T>)
+  nameWithType.vb: LazyValue(Of T).LazyValue(Func(Of T))
 - uid: Utils.LazyValue`1.#ctor*
   name: LazyValue
   href: api/Utils.LazyValue-1.html#Utils_LazyValue_1__ctor_
@@ -4612,15 +4651,6 @@ references:
   fullName.vb: Utils.LazyValue(Of T).ForceInit
   nameWithType: LazyValue<T>.ForceInit
   nameWithType.vb: LazyValue(Of T).ForceInit
-- uid: Utils.LazyValue`1.InitializerDelegate
-  name: LazyValue<T>.InitializerDelegate
-  href: api/Utils.LazyValue-1.InitializerDelegate.html
-  commentId: T:Utils.LazyValue`1.InitializerDelegate
-  name.vb: LazyValue(Of T).InitializerDelegate
-  fullName: Utils.LazyValue<T>.InitializerDelegate
-  fullName.vb: Utils.LazyValue(Of T).InitializerDelegate
-  nameWithType: LazyValue<T>.InitializerDelegate
-  nameWithType.vb: LazyValue(Of T).InitializerDelegate
 - uid: Utils.LazyValue`1.Value
   name: Value
   href: api/Utils.LazyValue-1.html#Utils_LazyValue_1_Value

@@ -10,7 +10,7 @@
     "changefreq": "weekly"
   },
   "homepages": [],
-  "source_base_path": "D:/a/RPG_Deep_Dive/RPG_Deep_Dive/RPG Project/Documentation",
+  "source_base_path": "D:/a/RPG-Deep-Dive/RPG-Deep-Dive/RPG Project/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -204,18 +204,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html",
-          "hash": "ZmHFnl4jQ8o4QthTdSMl6+wuI6nhRkBiITgZXkdO+IY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/RPG.GameplayCore.Attributes.Health.TakeDamageEvent.yml",
       "output": {
         ".html": {
@@ -276,11 +264,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RPG.GameplayCore.Attributes.LevelXpDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RPG.GameplayCore.Attributes.LevelXpDisplay.html",
+          "hash": "4H11KJe2xT5Pq3iuM1qN7QqV1Ow+n0Ik19QPwJ1IecQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RPG.GameplayCore.Attributes.yml",
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Attributes.html",
-          "hash": "i1HSiLAosYl0K2JmyyzPaz+tJ3a3+yYHXgZeHASaCP8="
+          "hash": "mzGZepcT4qDp6CDS+JriI+SERiPFxxMij9f+a8lt+JE="
         }
       },
       "is_incremental": false,
@@ -964,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RPG.GameplayCore.Stats.BaseStats.html",
-          "hash": "wFTbtsJGJayr8YszbpfEDx13PzLWPW/UiUngaMKtF+k="
+          "hash": "ZFhJLakBKRjO5fb4vMBX0Bh9pLfP936L+DvG6xdTDa4="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.SerializableVector3.html",
-          "hash": "UzsyidwYN1iF4RuGupea+fol85IV5r7xjEQ2IG7hxwc="
+          "hash": "cEWTKLUNbB/69qM2SXSn4emzK95w8oA967xjcIgKRJM="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SavingSystem.html",
-          "hash": "LmPAZhYr7LEV3SQoWhYJlB9e8AfAJNbz55meX2gUSfc="
+          "hash": "LSeT/v1jcm2sj5DNkAshTCFaYTXhwWnI/3yuRjpFrQ4="
         }
       },
       "is_incremental": false,
@@ -1728,23 +1728,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Utils.LazyValue-1.InitializerDelegate.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Utils.LazyValue-1.InitializerDelegate.html",
-          "hash": "QPFIC5B+SGT/m/p02Cjg7vsa4XFaLem9qoamw4Qtnfs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Utils.LazyValue-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Utils.LazyValue-1.html",
-          "hash": "mYrMjmyNmHyqrF3OIvosxDZHi/AHY6MLxRN6znOOaCg="
+          "hash": "+64DMdvcovblKoN7hNpIlUjFejGLBkruccPGyvof1K4="
         }
       },
       "is_incremental": false,
@@ -1936,7 +1924,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Utils.html",
-          "hash": "arqmcU3Zt1iQSSuXENlGN1prU5f7/MYNY11MglwUDGo="
+          "hash": "Qv1M+77o/whPFRFcJlW+gr8+qhRFWqhoFtQtXPyG6FI="
         }
       },
       "is_incremental": false,
@@ -1948,7 +1936,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dqG0IqZsBico/P46KDF3yf9Ha4C0HUDxK07qyNLOeM0="
+          "hash": "6BCddHOnzIcFO5dofhiVQUhd7UWETfO5h+z5k1QmRQ0="
         }
       },
       "is_incremental": false,
@@ -2034,7 +2022,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 160,
+          "total_file_count": 159,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

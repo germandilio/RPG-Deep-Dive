@@ -74,11 +74,6 @@
     "title": "Class Experience | RPG: Deep Dive Docs",
     "keywords": "Class Experience Inheritance Object Experience Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class Experience : MonoBehaviour Properties ExperiencePoints Declaration public float ExperiencePoints { get; } Property Value Type Description Single Methods AwardXp(Single) Declaration public void AwardXp(float pointsToAdd) Parameters Type Name Description Single pointsToAdd CaptureState() Declaration public object CaptureState() Returns Type Description Object RestoreState(Object) Declaration public void RestoreState(object state) Parameters Type Name Description Object state Events OnExperienceGained Boolean flag, if true - silent level update, if false - general level update Declaration public event Action<bool> OnExperienceGained Event Type Type Description Action < Boolean >"
   },
-  "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html": {
-    "href": "api/RPG.GameplayCore.Attributes.ExperiencePointsDisplay.html",
-    "title": "Class ExperiencePointsDisplay | RPG: Deep Dive Docs",
-    "keywords": "Class ExperiencePointsDisplay Inheritance Object ExperiencePointsDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class ExperiencePointsDisplay : MonoBehaviour"
-  },
   "api/RPG.GameplayCore.Attributes.Health.html": {
     "href": "api/RPG.GameplayCore.Attributes.Health.html",
     "title": "Class Health | RPG: Deep Dive Docs",
@@ -97,7 +92,7 @@
   "api/RPG.GameplayCore.Attributes.html": {
     "href": "api/RPG.GameplayCore.Attributes.html",
     "title": "Namespace RPG.GameplayCore.Attributes | RPG: Deep Dive Docs",
-    "keywords": "Namespace RPG.GameplayCore.Attributes Classes EnemyHealthDisplay Experience ExperiencePointsDisplay Health Health.TakeDamageEvent HealthDisplay InGameHealthBar LevelDisplay"
+    "keywords": "Namespace RPG.GameplayCore.Attributes Classes EnemyHealthDisplay Experience Health Health.TakeDamageEvent HealthDisplay InGameHealthBar LevelDisplay LevelXpDisplay"
   },
   "api/RPG.GameplayCore.Attributes.InGameHealthBar.html": {
     "href": "api/RPG.GameplayCore.Attributes.InGameHealthBar.html",
@@ -108,6 +103,11 @@
     "href": "api/RPG.GameplayCore.Attributes.LevelDisplay.html",
     "title": "Class LevelDisplay | RPG: Deep Dive Docs",
     "keywords": "Class LevelDisplay Inheritance Object LevelDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class LevelDisplay : MonoBehaviour"
+  },
+  "api/RPG.GameplayCore.Attributes.LevelXpDisplay.html": {
+    "href": "api/RPG.GameplayCore.Attributes.LevelXpDisplay.html",
+    "title": "Class LevelXpDisplay | RPG: Deep Dive Docs",
+    "keywords": "Class LevelXpDisplay Inheritance Object LevelXpDisplay Namespace : RPG.GameplayCore.Attributes Assembly : cs.temp.dll.dll Syntax public class LevelXpDisplay : MonoBehaviour Methods OnPointerEnter(PointerEventData) Declaration public void OnPointerEnter(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData OnPointerExit(PointerEventData) Declaration public void OnPointerExit(PointerEventData eventData) Parameters Type Name Description PointerEventData eventData"
   },
   "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html": {
     "href": "api/RPG.GameplayCore.Cinematics.CinematicControlRemover.html",
@@ -392,7 +392,7 @@
   "api/RPG.GameplayCore.Stats.BaseStats.html": {
     "href": "api/RPG.GameplayCore.Stats.BaseStats.html",
     "title": "Class BaseStats | RPG: Deep Dive Docs",
-    "keywords": "Class BaseStats Inheritance Object BaseStats Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public class BaseStats : MonoBehaviour Methods GetLevel() Declaration public int GetLevel() Returns Type Description Int32 GetStat(Stats) Declaration public float GetStat(Stats statsType) Parameters Type Name Description Stats statsType Returns Type Description Single GetStatOnPreviousLevel(Stats) Declaration public float GetStatOnPreviousLevel(Stats statType) Parameters Type Name Description Stats statType Returns Type Description Single Events LevelUp Declaration public event Action LevelUp Event Type Type Description Action"
+    "keywords": "Class BaseStats Inheritance Object BaseStats Namespace : RPG.GameplayCore.Stats Assembly : cs.temp.dll.dll Syntax public class BaseStats : MonoBehaviour Properties CurrentExperiencePoints Declaration public float CurrentExperiencePoints { get; } Property Value Type Description Single Methods GetLevel() Declaration public int GetLevel() Returns Type Description Int32 GetStat(Stats) Declaration public float GetStat(Stats statsType) Parameters Type Name Description Stats statsType Returns Type Description Single GetStatOnPreviousLevel(Stats) Declaration public float GetStatOnPreviousLevel(Stats statType) Parameters Type Name Description Stats statType Returns Type Description Single Events LevelUp Declaration public event Action LevelUp Event Type Type Description Action"
   },
   "api/RPG.GameplayCore.Stats.CharacterClass.html": {
     "href": "api/RPG.GameplayCore.Stats.CharacterClass.html",
@@ -672,7 +672,7 @@
   "api/SavingSystem.html": {
     "href": "api/SavingSystem.html",
     "title": "Namespace SavingSystem | RPG: Deep Dive Docs",
-    "keywords": "Namespace SavingSystem Classes SavableEntity SavingSystem Instance os this class should be created once and shared between all subsequent scenes. SavingWrapper SerializableVector3 Interfaces ISavable"
+    "keywords": "Namespace SavingSystem Classes SavableEntity SavingSystem Instance os this class should be created once and shared between all subsequent scenes. SavingWrapper Structs SerializableVector3 Interfaces ISavable"
   },
   "api/SavingSystem.ISavable.html": {
     "href": "api/SavingSystem.ISavable.html",
@@ -696,8 +696,8 @@
   },
   "api/SavingSystem.SerializableVector3.html": {
     "href": "api/SavingSystem.SerializableVector3.html",
-    "title": "Class SerializableVector3 | RPG: Deep Dive Docs",
-    "keywords": "Class SerializableVector3 Inheritance Object SerializableVector3 Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax [Serializable] public class SerializableVector3 Constructors SerializableVector3(Vector3) Declaration public SerializableVector3(Vector3 vector) Parameters Type Name Description Vector3 vector Methods ToVector() Declaration public Vector3 ToVector() Returns Type Description Vector3"
+    "title": "Struct SerializableVector3 | RPG: Deep Dive Docs",
+    "keywords": "Struct SerializableVector3 Namespace : SavingSystem Assembly : cs.temp.dll.dll Syntax [Serializable] public struct SerializableVector3 Constructors SerializableVector3(Vector3) Declaration public SerializableVector3(Vector3 vector) Parameters Type Name Description Vector3 vector Methods ToVector() Declaration public Vector3 ToVector() Returns Type Description Vector3"
   },
   "api/Utils.Editor.html": {
     "href": "api/Utils.Editor.html",
@@ -712,17 +712,12 @@
   "api/Utils.html": {
     "href": "api/Utils.html",
     "title": "Namespace Utils | RPG: Deep Dive Docs",
-    "keywords": "Namespace Utils Classes LazyValue<T> Container class that wraps a value and ensures initialisation is called just before first use. Logger Simple runtime logger. NavMeshExtensions RaycastUtils Delegates LazyValue<T>.InitializerDelegate"
+    "keywords": "Namespace Utils Classes LazyValue<T> Container class that wraps a value and ensures initialisation is called just before first use. Logger Simple runtime logger. NavMeshExtensions RaycastUtils"
   },
   "api/Utils.LazyValue-1.html": {
     "href": "api/Utils.LazyValue-1.html",
     "title": "Class LazyValue<T> | RPG: Deep Dive Docs",
-    "keywords": "Class LazyValue<T> Container class that wraps a value and ensures initialisation is called just before first use. Inheritance Object LazyValue<T> Namespace : Utils Assembly : cs.temp.dll.dll Syntax public class LazyValue<T> Type Parameters Name Description T Constructors LazyValue(LazyValue<T>.InitializerDelegate) Setup the container but don't initialise the value yet. Declaration public LazyValue(LazyValue<T>.InitializerDelegate initializer) Parameters Type Name Description LazyValue.InitializerDelegate <> initializer The initialiser delegate to call when first used. Properties Value Get or set the contents of this container. Declaration public T Value { get; set; } Property Value Type Description T Remarks Note that setting the value before initialisation will initialise the class. Methods ForceInit() Force the initialisation of the value via the delegate. Declaration public void ForceInit()"
-  },
-  "api/Utils.LazyValue-1.InitializerDelegate.html": {
-    "href": "api/Utils.LazyValue-1.InitializerDelegate.html",
-    "title": "Delegate LazyValue<T>.InitializerDelegate | RPG: Deep Dive Docs",
-    "keywords": "Delegate LazyValue<T>.InitializerDelegate Namespace : Utils Assembly : cs.temp.dll.dll Syntax public delegate T InitializerDelegate(); Returns Type Description T"
+    "keywords": "Class LazyValue<T> Container class that wraps a value and ensures initialisation is called just before first use. Inheritance Object LazyValue<T> Namespace : Utils Assembly : cs.temp.dll.dll Syntax public class LazyValue<T> Type Parameters Name Description T Constructors LazyValue(Func<T>) Setup the container but don't initialise the value yet. Declaration public LazyValue(Func<T> initializer) Parameters Type Name Description Func <T> initializer The initializer delegate to call when first used. Properties Value Get or set the contents of this container. Declaration public T Value { get; set; } Property Value Type Description T Remarks Note that setting the value before initialisation will initialise the class. Methods ForceInit() Force the initialisation of the value via the delegate. Declaration public void ForceInit()"
   },
   "api/Utils.Logger.html": {
     "href": "api/Utils.Logger.html",
