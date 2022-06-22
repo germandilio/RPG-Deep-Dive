@@ -42,17 +42,17 @@ namespace RPG.GameplayCore.Quests.QuestsModel
                 QuestStatus newQuestStatus = new QuestStatus(quest);
                 _questsStatuses.Add(newQuestStatus);
                 QuestJournalUpdated?.Invoke();
-                
+
                 // analytics
                 var parameters = new Dictionary<string, object>
                 {
                     {"itemName", quest.name}
                 };
-                
+
                 AnalyticsService.Instance.CustomData("quest_started", parameters);
             }
         }
-        
+
         /// <summary>
         /// Find Quest status by quest.
         /// </summary>
@@ -71,7 +71,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         public void CompleteQuestObjective(QuestStatus questStatus, string objectiveToComplete)
         {
             if (string.IsNullOrEmpty(objectiveToComplete)) return;
-            
+
             bool success = questStatus.TryMarkCompleted(objectiveToComplete);
             if (success)
             {
@@ -85,16 +85,16 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             {
                 GiveRewards(questStatus.Rewards());
                 HintSpawner.Spawn(userHintQuestCompleted);
-                
+
                 // analytics
                 var parameters = new Dictionary<string, object>()
                 {
-                    {"itemName", questStatus.Quest.name}   
+                    {"itemName", questStatus.Quest.name}
                 };
-                
+
                 AnalyticsService.Instance.CustomData("quest_completed", parameters);
             }
-            
+
             QuestJournalUpdated?.Invoke();
         }
 
@@ -109,7 +109,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
             foreach (var reward in rewards)
             {
                 if (reward.item == null) continue;
-                
+
                 bool success = playerInventory.AddToFirstEmptySlot(reward.item, reward.number);
                 if (!success)
                 {

@@ -38,7 +38,7 @@ namespace RPG.DialogueSystem
         public void TriggerActions(string actionToTrigger)
         {
             if (string.IsNullOrEmpty(actionToTrigger)) return;
-            
+
             var triggers = GetComponents<DialogueTrigger>();
 
             foreach (var trigger in triggers)

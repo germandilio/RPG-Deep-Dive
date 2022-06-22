@@ -7,7 +7,7 @@ namespace Utils.UI.Hint
     {
         [SerializeField]
         private GameObject hintPrefab;
-        
+
         [SerializeField]
         [Range(0, 10)]
         private float destroyAfterSeconds;
@@ -22,7 +22,7 @@ namespace Utils.UI.Hint
         private void Awake()
         {
             _hintsDisplayingCount = 0;
-            
+
             if (_spawnerInstance == null)
                 _spawnerInstance = this;
             else
@@ -45,7 +45,7 @@ namespace Utils.UI.Hint
         private IEnumerator DestroyHint(GameObject hint)
         {
             yield return new WaitForSeconds(destroyAfterSeconds);
-            
+
             --_hintsDisplayingCount;
             Destroy(hint);
         }

@@ -57,27 +57,42 @@ namespace SavingSystem
 
         private Dictionary<string, object> LoadFile(string saveFile)
         {
-            string path = GetPathFromSaveFile(saveFile);
-            if (!File.Exists(path))
+            try
             {
-                return new Dictionary<string, object>();
-            }
+                string path = GetPathFromSaveFile(saveFile);
+                if (!File.Exists(path))
+                {
+                    return new Dictionary<string, object>();
+                }
 
-            using (FileStream stream = File.Open(path, FileMode.Open))
+                using (FileStream stream = File.Open(path, FileMode.Open))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    return (Dictionary<string, object>) formatter.Deserialize(stream);
+                }
+            }
+            catch (System.Exception ex)
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-                return (Dictionary<string, object>) formatter.Deserialize(stream);
+                Debug.LogError("Failed to load save file: " + ex.Message);
+                return new Dictionary<string, object>();
             }
         }
 
         private void SaveFile(string saveFile, object state)
         {
-            string path = GetPathFromSaveFile(saveFile);
-            print("Saving to " + path);
-            using (FileStream stream = File.Open(path, FileMode.Create))
+            try
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, state);
+                string path = GetPathFromSaveFile(saveFile);
+                print("Saving to " + path);
+                using (FileStream stream = File.Open(path, FileMode.Create))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(stream, state);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError("Failed to save file: " + ex.Message);
             }
         }
 

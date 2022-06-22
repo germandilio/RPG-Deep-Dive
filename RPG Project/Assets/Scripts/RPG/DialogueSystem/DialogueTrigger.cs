@@ -18,9 +18,10 @@ namespace RPG.DialogueSystem
             if (actionToTrigger == action)
                 triggered?.Invoke();
         }
-        
+
         private bool RequireNonNullOrEmpty(string stringToCheck)
         {
             return !string.IsNullOrEmpty(stringToCheck);
-        }    }
+        }
+    }
 }

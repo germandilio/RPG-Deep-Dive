@@ -16,7 +16,7 @@ namespace RPG.GameplayCore.Quests.Rewards
         [Required]
         [Tooltip("Objective, on which completion items will be removed from player inventory.")]
         public Objective objective;
-        
+
         public List<InventorySlot> withdrawals;
     }
 }

@@ -68,7 +68,7 @@ namespace RPG.DialogueSystem
         {
             UpdateLookup();
         }
-        
+
         private void UpdateLookup()
         {
             _nodeLookup.Clear();
@@ -87,8 +87,9 @@ namespace RPG.DialogueSystem
 
 #if UNITY_EDITOR
 
-        private const string RootNodeText = "*System Root Node* Do not place any content, triggers and conditions on it.";
-        
+        private const string RootNodeText =
+            "*System Root Node* Do not place any content, triggers and conditions on it.";
+
         private void OnValidate()
         {
             UpdateLookup();
@@ -153,14 +154,13 @@ namespace RPG.DialogueSystem
                 AddToDialogue(newNode);
             }
 
-            if (AssetDatabase.GetAssetPath(this) != String.Empty)
+            if (AssetDatabase.GetAssetPath(this) == String.Empty) return;
+
+            foreach (var node in nodes)
             {
-                foreach (var node in nodes)
+                if (AssetDatabase.GetAssetPath(node) == String.Empty)
                 {
-                    if (AssetDatabase.GetAssetPath(node) == String.Empty)
-                    {
-                        AssetDatabase.AddObjectToAsset(node, this);
-                    }
+                    AssetDatabase.AddObjectToAsset(node, this);
                 }
             }
 #endif

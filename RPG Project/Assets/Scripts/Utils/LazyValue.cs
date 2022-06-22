@@ -1,4 +1,7 @@
-﻿namespace Utils
+﻿using System;
+using System.Threading;
+
+namespace Utils
 {
     /// <summary>
     /// Container class that wraps a value and ensures initialisation is 
@@ -6,20 +9,23 @@
     /// </summary>
     public class LazyValue<T>
     {
+        private readonly object _lockObject = new object();
+
         private T _value;
         private bool _initialized;
-        private readonly InitializerDelegate _initializer;
-
-        public delegate T InitializerDelegate();
+        private readonly Func<T> _initializer;
 
         /// <summary>
         /// Setup the container but don't initialise the value yet.
         /// </summary>
         /// <param name="initializer"> 
-        /// The initialiser delegate to call when first used. 
+        /// The initializer delegate to call when first used. 
         /// </param>
-        public LazyValue(InitializerDelegate initializer)
+        public LazyValue(Func<T> initializer)
         {
+            if (initializer == null)
+                throw new ArgumentNullException(nameof(initializer));
+
             _initializer = initializer;
         }
 
@@ -40,9 +46,12 @@
             }
             set
             {
-                // Don't use default init anymore.
-                _initialized = true;
-                _value = value;
+                lock (_lockObject)
+                {
+                    // Don't use default init anymore.
+                    _initialized = true;
+                    _value = value;
+                }
             }
         }
 
@@ -51,10 +60,13 @@
         /// </summary>
         public void ForceInit()
         {
-            if (!_initialized)
+            lock (_lockObject)
             {
-                _value = _initializer.Invoke();
-                _initialized = true;
+                if (!_initialized)
+                {
+                    _value = _initializer.Invoke();
+                    _initialized = true;
+                }
             }
         }
     }

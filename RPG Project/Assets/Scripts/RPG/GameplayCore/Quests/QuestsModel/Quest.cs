@@ -11,7 +11,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
     {
         [SerializeField]
         private string title;
-        
+
         [SerializeField]
         private List<Objective> objectives;
 
@@ -23,9 +23,9 @@ namespace RPG.GameplayCore.Quests.QuestsModel
 
         [SerializeField]
         private List<ObjectiveCompletionWithdrawals> withdrawals;
-        
+
         public string Title => title;
-        
+
         public IReadOnlyList<Objective> Objectives => objectives;
 
         public int ObjectiveCount
@@ -46,7 +46,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         }
 
         internal IEnumerable<QuestCompletionReward> QuestRewards() => rewards;
-        
+
         /// <summary>
         /// Get rewards by objective reference.
         /// </summary>
@@ -57,7 +57,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         internal IEnumerable<InventorySlot> GetRewards(string objectiveRef)
         {
             if (string.IsNullOrEmpty(objectiveRef)) return null;
-            
+
             var item = receiving.Find(item => item.objective.reference == objectiveRef);
             if (item == null) return null;
 
@@ -74,7 +74,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         internal IEnumerable<InventorySlot> GetWithdrawals(string objectiveRef)
         {
             if (string.IsNullOrEmpty(objectiveRef)) return null;
-            
+
             var item = withdrawals.Find(item => item.objective.reference == objectiveRef);
             if (item == null) return null;
 

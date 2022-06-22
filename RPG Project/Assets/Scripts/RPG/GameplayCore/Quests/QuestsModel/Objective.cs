@@ -8,6 +8,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
     {
         [Required]
         public string reference;
+
         [Required]
         public string description;
     }

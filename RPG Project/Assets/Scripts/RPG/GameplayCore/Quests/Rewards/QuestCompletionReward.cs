@@ -9,7 +9,7 @@ namespace RPG.GameplayCore.Quests.Rewards
     {
         [Required]
         public string displayTitle;
-        
+
         [Required]
         public InventorySlot reward;
 

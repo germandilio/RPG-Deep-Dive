@@ -83,7 +83,8 @@ namespace RPG.GameplayCore.Attributes
         private void NormalizeHealthPercentage()
         {
             float percentageHealth = _currentHealthPoints.Value / _baseStats.GetStatOnPreviousLevel(Stats.Stats.Health);
-            _currentHealthPoints.Value = _baseStats.GetStat(Stats.Stats.Health) * (percentageHealth + levelUpHealthBonus / 100);
+            _currentHealthPoints.Value =
+                _baseStats.GetStat(Stats.Stats.Health) * (percentageHealth + levelUpHealthBonus / 100);
         }
 
         public void TakeDamage(float damage, GameObject instigator)

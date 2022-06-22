@@ -59,7 +59,7 @@ namespace RPG.GameplayCore.Quests.UI
             {
                 Destroy(child.gameObject);
             }
-            
+
             HideDescription();
 
             foreach (var questStatus in _questsJournal.QuestsStatuses)
@@ -75,7 +75,7 @@ namespace RPG.GameplayCore.Quests.UI
             questsDescriptionPanel.SetActive(true);
 
             if (questStatus == null) return;
-            
+
             header.text = questStatus.Quest.Title;
 
             SetupObjectives(questStatus);
@@ -95,10 +95,9 @@ namespace RPG.GameplayCore.Quests.UI
                     rewards.Append(displayReward.reward.number);
                     rewards.Append(" шт.)");
                 }
-                
+
                 if (rewards.Length > 0)
                     rewards.Append(",\n");
-                
             }
 
             if (rewards.Length == 0)

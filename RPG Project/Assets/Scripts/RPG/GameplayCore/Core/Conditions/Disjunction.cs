@@ -10,7 +10,7 @@ namespace RPG.GameplayCore.Core.Conditions
         [Label("OR")]
         [SerializeField]
         private Predicate[] disjunctionSet;
-        
+
         public bool Check(IPredicateEvaluator[] evaluators)
         {
             foreach (var predicate in disjunctionSet)

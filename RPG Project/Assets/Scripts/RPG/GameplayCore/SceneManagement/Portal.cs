@@ -95,13 +95,15 @@ namespace RPG.GameplayCore.SceneManagement
         {
             var player = GameObject.FindWithTag("Player");
 
-            if(NavMesh.SamplePosition(anotherPortal.spawnPoint.position, out var closestHit, 500, NavMesh.AllAreas)) {
+            if (NavMesh.SamplePosition(anotherPortal.spawnPoint.position, out var closestHit, 500, NavMesh.AllAreas))
+            {
                 player.transform.position = closestHit.position;
-                
+
                 player.GetComponent<NavMeshAgent>()?.Warp(player.transform.position);
                 player.transform.rotation = anotherPortal.spawnPoint.rotation;
             }
-            else{
+            else
+            {
                 Debug.Log("Can't place player on NavMesh");
             }
         }

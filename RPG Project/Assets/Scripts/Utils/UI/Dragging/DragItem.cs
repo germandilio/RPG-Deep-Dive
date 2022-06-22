@@ -24,7 +24,7 @@ namespace Utils.UI.Dragging
         private Canvas _parentCanvas;
 
         protected IDragSource<T> source;
-        
+
         protected virtual void Awake()
         {
             _parentCanvas = GetComponentInParent<Canvas>();

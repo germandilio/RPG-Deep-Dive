@@ -34,6 +34,7 @@ namespace RPG.GameplayCore.Control
 
         private bool _interactingWithUI;
 
+        private const int RaycastBufferSize = 3;
 
         public void SetCursor(CursorType type)
         {

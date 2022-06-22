@@ -63,7 +63,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         public bool HasItem(InventoryItem item)
         {
             if (item == null) return false;
-            
+
             for (int i = 0; i < _slots.Length; i++)
             {
                 if (ReferenceEquals(_slots[i].item, item))
@@ -116,7 +116,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             if (slotIndex != -1)
             {
                 RemoveFromSlot(slotIndex, slot.number);
-                return true;   
+                return true;
             }
 
             return false;
@@ -150,7 +150,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
             InventoryUpdated?.Invoke();
             return true;
         }
-        
+
         private void Awake()
         {
             // TODO REPLACE
@@ -184,7 +184,7 @@ namespace RPG.InventorySystem.InventoriesModel.Inventory
         private int FindSlotNonEmpty(InventoryItem item)
         {
             if (_slots.Length < 1) return -1;
-            
+
             int slotIndex;
             for (slotIndex = 0; slotIndex < _slots.Length; slotIndex++)
             {

@@ -10,7 +10,7 @@ namespace RPG.GameplayCore.UI
         [Label("Tab")]
         [SerializeField]
         private GameObject uiContainer;
-        
+
         [SerializeField]
         private TabSystem tabSystem;
 
@@ -18,7 +18,7 @@ namespace RPG.GameplayCore.UI
         private KeyCode toggleKey = KeyCode.None;
 
         private Button _button;
-        
+
         private void Awake()
         {
             _button = GetComponent<Button>();

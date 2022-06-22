@@ -40,7 +40,7 @@ namespace RPG.InventorySystem.InventoriesModel.Equipment
         {
             if (item == null || item.AllowedEquipLocation != slot)
                 return;
-            
+
             _equippedItems[slot] = item;
 
             EquipmentUpdated?.Invoke();

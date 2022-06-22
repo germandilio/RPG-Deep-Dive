@@ -57,7 +57,7 @@ namespace RPG.DialogueSystem
             get
             {
                 if (_currentNode == null || !_currentNode.HasChildren) return false;
-                
+
                 var children = _currentDialogue.GetAllChildNodes(_currentNode);
                 return FilterByCondition(children).Any();
             }

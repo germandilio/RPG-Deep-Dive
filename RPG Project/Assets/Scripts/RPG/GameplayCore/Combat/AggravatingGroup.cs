@@ -29,20 +29,20 @@ namespace RPG.GameplayCore.Combat
                 var combatTarget = fighter.gameObject.GetComponent<CombatTarget>();
                 if (combatTarget != null)
                     combatTarget.enabled = state;
-                
+
                 var dialogAI = fighter.gameObject.GetComponent<DialogueAISpeaker>();
                 if (dialogAI != null)
                     dialogAI.enabled = !state;
 
                 fighter.enabled = state;
             }
-            
+
             // analytics
             var parameters = new Dictionary<string, object>
             {
                 {"itemName", "player is aggravate mechanic and decided to steal inventory item"}
             };
-                
+
             AnalyticsService.Instance.CustomData("aggravating_group_trigger", parameters);
         }
     }

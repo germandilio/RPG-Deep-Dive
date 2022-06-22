@@ -21,16 +21,16 @@ namespace RPG.GameplayCore.Quests
                 Debug.LogError("Objective to complete must be not empty");
                 return;
             }
-            
+
             var player = GameObject.FindGameObjectWithTag("Player");
             var questsJournal = player.GetComponent<QuestsJournal>();
-            
+
             var status = questsJournal.FindQuestStatus(quest);
             // quest exists in journal
             if (status != null)
                 questsJournal.CompleteQuestObjective(status, objectiveReferenceToComplete);
         }
-        
+
         private bool RequireNotNull(Quest questToCheck)
         {
             return questToCheck != null;

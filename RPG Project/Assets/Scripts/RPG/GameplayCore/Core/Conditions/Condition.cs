@@ -19,7 +19,7 @@ namespace RPG.GameplayCore.Core.Conditions
         [Label("AND")]
         [SerializeField]
         private Disjunction[] conjunctionSet;
-        
+
         public bool Check(IEnumerable<IPredicateEvaluator> evaluators)
         {
             var predicateEvaluators = evaluators.ToArray();

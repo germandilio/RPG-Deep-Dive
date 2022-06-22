@@ -13,7 +13,7 @@ namespace RPG.InventorySystem.UI.Inventories
         private InventorySlotUI inventoryItemPrefab;
 
         private Inventory _playerInventory;
-        
+
         private void Awake()
         {
             _playerInventory = Inventory.GetPlayerInventory();

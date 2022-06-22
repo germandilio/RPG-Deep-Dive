@@ -58,8 +58,8 @@ namespace RPG.InventorySystem.UI.Inventories
         public void CutOffBackground()
         {
             if (_iconWithoutBackground != null)
-            { 
-                var iconImage = GetComponent<Image>(); 
+            {
+                var iconImage = GetComponent<Image>();
                 iconImage.sprite = _iconWithoutBackground;
             }
         }
@@ -67,8 +67,8 @@ namespace RPG.InventorySystem.UI.Inventories
         public void ShowBackground()
         {
             if (_iconWithBackground != null)
-            { 
-                var iconImage = GetComponent<Image>(); 
+            {
+                var iconImage = GetComponent<Image>();
                 iconImage.sprite = _iconWithBackground;
             }
         }

@@ -3,20 +3,20 @@ using UnityEngine;
 namespace SavingSystem
 {
     [System.Serializable]
-    public class SerializableVector3
+    public struct SerializableVector3
     {
-        private float x, y, z;
+        private float _x, _y, _z;
 
         public SerializableVector3(Vector3 vector)
         {
-            x = vector.x;
-            y = vector.y;
-            z = vector.z;
+            _x = vector.x;
+            _y = vector.y;
+            _z = vector.z;
         }
 
         public Vector3 ToVector()
         {
-            return new Vector3(x, y, z);
+            return new Vector3(_x, _y, _z);
         }
     }
 }

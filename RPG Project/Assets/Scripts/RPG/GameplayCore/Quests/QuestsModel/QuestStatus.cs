@@ -28,7 +28,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         }
 
         public bool Completed => CompletedCount == quest.ObjectiveCount;
-        
+
         public QuestStatus(Quest quest)
         {
             this.quest = quest;
@@ -43,13 +43,13 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         }
 
         public IEnumerable<InventorySlot> RewardsOnObjective(string objectiveRef) => quest.GetRewards(objectiveRef);
-        
+
         public IEnumerable<InventorySlot> Rewards() => quest.GetRewards();
-        
+
         public IEnumerable<InventorySlot> GetWithdrawals(string objectiveRef) => quest.GetWithdrawals(objectiveRef);
 
         public IEnumerable<QuestCompletionReward> QuestDisplayRewards() => quest.QuestRewards();
-        
+
         /// <summary>
         /// Mark objective as completed.
         /// </summary>
@@ -71,8 +71,8 @@ namespace RPG.GameplayCore.Quests.QuestsModel
         {
             public string questName;
             public List<string> completedObjectives;
-        } 
-        
+        }
+
         public bool IsObjectiveCompleted(string objectiveRef)
         {
             return completedObjectives.Contains(objectiveRef);
@@ -85,7 +85,7 @@ namespace RPG.GameplayCore.Quests.QuestsModel
                 questName = quest.name,
                 completedObjectives = completedObjectives
             };
-            
+
             return saving;
         }
     }

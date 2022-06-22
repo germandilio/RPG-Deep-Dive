@@ -14,10 +14,11 @@ namespace RPG.InventorySystem.UI.Inventories
     /// Allows the item to be dragged into other slots.
     /// </summary>
     [RequireComponent(typeof(InventoryItemIcon))]
-    public class InventoryDragItem : DragItem<InventoryItem>, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+    public class InventoryDragItem : DragItem<InventoryItem>, IPointerClickHandler, IPointerEnterHandler,
+        IPointerExitHandler
     {
         private PlayerController _playerController;
-        
+
         protected override void Awake()
         {
             base.Awake();
@@ -29,7 +30,7 @@ namespace RPG.InventorySystem.UI.Inventories
         {
             var icon = gameObject.GetComponent<InventoryItemIcon>();
             icon.CutOffBackground();
-            
+
             ControlRemover.DisablePlayerControl();
 
             base.OnBeginDrag(eventData);
@@ -38,18 +39,18 @@ namespace RPG.InventorySystem.UI.Inventories
         public override void OnEndDrag(PointerEventData eventData)
         {
             base.OnEndDrag(eventData);
-            
+
             var icon = gameObject.GetComponent<InventoryItemIcon>();
             icon.ShowBackground();
-            
+
             ControlRemover.EnablePlayerControl();
         }
-        
+
         public void OnPointerClick(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Right)
                 return;
-            
+
             if (source.GetItem() is EquippableItem equippableItem)
             {
                 var slot = Array.Find(FindObjectsOfType<EquipmentSlotUI>(),
@@ -65,10 +66,12 @@ namespace RPG.InventorySystem.UI.Inventories
             if (item is EquippableItem)
             {
                 _playerController.SetCursor(CursorType.EquippableItem);
-            } else if (item is ActionItem)
+            }
+            else if (item is ActionItem)
             {
                 _playerController.SetCursor(CursorType.ActionItem);
-            } else
+            }
+            else
             {
                 _playerController.SetCursor(CursorType.InventoryItem);
             }

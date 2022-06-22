@@ -16,7 +16,7 @@ namespace RPG.GameplayCore.Quests.Rewards
         [Required]
         [Tooltip("Objective, on which completion player will receive item.")]
         public Objective objective;
-        
+
         public List<InventorySlot> rewards;
     }
 }

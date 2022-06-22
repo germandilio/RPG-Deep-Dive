@@ -22,10 +22,10 @@ namespace RPG.GameplayCore.Core.Conditions
         {
             foreach (var predicateEvaluator in evaluators)
             {
-                bool? result  = predicateEvaluator.Evaluate(predicate, parameters);
+                bool? result = predicateEvaluator.Evaluate(predicate, parameters);
                 if (!result.HasValue) continue;
 
-                if (result.Value == negate) return false; 
+                if (result.Value == negate) return false;
             }
 
             return true;

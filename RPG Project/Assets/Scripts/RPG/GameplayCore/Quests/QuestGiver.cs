@@ -8,7 +8,7 @@ namespace RPG.GameplayCore.Quests
     public class QuestGiver : MonoBehaviour
     {
         private const string UserHintOnGivingQuest = "Получен новый квест";
-        
+
         [Required]
         [SerializeField]
         private Quest questToGive;

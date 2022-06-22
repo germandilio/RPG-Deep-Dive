@@ -13,7 +13,7 @@ namespace RPG.GameplayCore.Stats
     public class BaseStats : MonoBehaviour
     {
         private const string LevelUpHint = "Уровень повышен";
-        
+
         [Range(1, 99)]
         [SerializeField]
         private int progressLevel = 1;
@@ -40,6 +40,8 @@ namespace RPG.GameplayCore.Stats
         private LazyValue<int> _currentLevel;
 
         public event Action LevelUp;
+
+        public float CurrentExperiencePoints => _experience?.ExperiencePoints ?? 0f;
 
         private void Awake()
         {
@@ -70,19 +72,20 @@ namespace RPG.GameplayCore.Stats
             if (newLevel > _currentLevel.Value)
             {
                 _currentLevel.Value = newLevel;
-                
+
                 if (!isSilent)
                 {
                     ShowLevelUpAffect();
                 }
+
                 LevelUp?.Invoke();
-                
+
                 // analytics
                 var parameters = new Dictionary<string, object>()
                 {
-                    {"userLevel", _currentLevel.Value}   
+                    {"userLevel", _currentLevel.Value}
                 };
-                
+
                 AnalyticsService.Instance.CustomData("level_up", parameters);
             }
         }
@@ -103,7 +106,7 @@ namespace RPG.GameplayCore.Stats
         {
             int previousLevel = _currentLevel.Value > 1 ? _currentLevel.Value - 1 : 1;
             float baseStat = progression.GetStat(statType, characterClass, previousLevel);
-            
+
             return (baseStat + GetAdditiveModifier(statType)) *
                    (1 + GetPercentageModifier(statType) / 100);
         }

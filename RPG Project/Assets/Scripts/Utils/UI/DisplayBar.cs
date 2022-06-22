@@ -23,7 +23,7 @@ namespace Utils.UI
             {
                 if (displayBar == null)
                     return null;
-                
+
                 return displayBar.value;
             }
         }
@@ -45,14 +45,14 @@ namespace Utils.UI
             {
                 canvas.enabled = ShouldShow();
             }
-            
+
             displayBar.value = GetCurrentValue() / GetMaxValue();
         }
 
         protected abstract float GetCurrentValue();
 
         protected abstract float GetMaxValue();
-        
+
         protected abstract bool ShouldShow();
     }
 }

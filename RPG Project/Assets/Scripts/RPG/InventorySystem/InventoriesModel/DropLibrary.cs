@@ -21,7 +21,7 @@ namespace RPG.InventorySystem.InventoriesModel
         [MinMaxSlider(0, 100)]
         [SerializeField]
         private Vector2Int[] dropsNumber;
-        
+
         [SerializeField]
         private DropConfig[] dropsLibrary;
 
