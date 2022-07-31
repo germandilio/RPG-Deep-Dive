@@ -2,11 +2,11 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/germandilio/RPG_Deep_Dive/Build%20&%20Publish%20documentation?label=docs&style=flat)](https://germandilio.github.io/RPG_Deep_Dive/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/germandilio/RPG_Deep_Dive)
 ## Builds ##
-Mac OS: https://developer.cloud.unity3d.com/share/share.html?shareId=bJj3vc_xQO
+Mac OS: https://developer.cloud.unity3d.com/share/share.html?shareId=ZkHmPnPOvd
 
-Windows: https://developer.cloud.unity3d.com/share/share.html?shareId=-1_9LqOemu
+Windows: https://developer.cloud.unity3d.com/share/share.html?shareId=ZksDF3w_DO
 
-Linux: https://developer.cloud.unity3d.com/share/share.html?shareId=-ypGK9uxQd
+Linux: https://developer.cloud.unity3d.com/share/share.html?shareId=-yiZ2nv_vd
 
 ## General ##
 Genre: 3D Action RPG, inspired by Diablo III

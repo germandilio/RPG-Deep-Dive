@@ -1,10 +1,10 @@
 # Project "RPG: Deep Dive" GDD #
 ## Builds ##
-Mac OS: https://developer.cloud.unity3d.com/share/share.html?shareId=bJj3vc_xQO
+Mac OS: https://developer.cloud.unity3d.com/share/share.html?shareId=ZkHmPnPOvd
 
-Windows: https://developer.cloud.unity3d.com/share/share.html?shareId=-1_9LqOemu
+Windows: https://developer.cloud.unity3d.com/share/share.html?shareId=ZksDF3w_DO
 
-Linux: https://developer.cloud.unity3d.com/share/share.html?shareId=-ypGK9uxQd
+Linux: https://developer.cloud.unity3d.com/share/share.html?shareId=-yiZ2nv_vd
 
 ## General ##
 Genre: 3D Action RPG, inspired by Diablo III
