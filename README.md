@@ -9,10 +9,10 @@ Windows: https://developer.cloud.unity3d.com/share/share.html?shareId=ZksDF3w_DO
 Linux: https://developer.cloud.unity3d.com/share/share.html?shareId=-yiZ2nv_vd
 
 ## Screenshots ##
-<img src="./.images/ingame/Player cutscene.png" alt="Dialog" style="height: 580px; width:1280px;"/>
-<img src="./.images/ingame/Inventories & Armor.png" alt="Dialog" style="height: 580px; width:1280px;"/>
-<img src="./.images/ingame/Dialog_fullsceen.png" alt="Dialog" style="height: 580px; width:1280px;"/>
-<img src="./.images/ingame/Quest List_fullsceen.png" alt="Dialog" style="height: 580px; width:1280px;"/>
+<img src="./.images/ingame/Player cutscene.png" alt="Dialog" style="height: 480px; width:800px;"/>
+<img src="./.images/ingame/Inventories & Armor.png" alt="Dialog" style="height: 480px; width:800px;"/>
+<img src="./.images/ingame/Dialog_fullsceen.png" alt="Dialog" style="height: 480px; width:800px;"/>
+<img src="./.images/ingame/Quest List_fullsceen.png" alt="Dialog" style="height: 480px; width:800px;"/>
 
 ## General ##
 Genre: 3D Action RPG, inspired by Diablo III
