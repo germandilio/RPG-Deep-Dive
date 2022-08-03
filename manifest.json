@@ -1948,7 +1948,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "uEZfHskYCO3cLuZv251o+lpvU+beTeL8dggkCOFaeC4="
+          "hash": "v40iNY3vJAzV5VGOGy8mDhTeRWny4BmO1y2mNUmCa3g="
         }
       },
       "is_incremental": false,
@@ -1973,6 +1973,83 @@
         ".html": {
           "relative_path": "manual/toc.html",
           "hash": "DZnJXonIRNJpgEYg+QsYSwqYR9Usx4ZqTMu917GnmOM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/ingame/Dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/ingame/Dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/ingame/Dialog_fullsceen.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/ingame/Dialog_fullsceen.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/ingame/Inventories & Armor.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/ingame/Inventories & Armor.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/ingame/Player cutscene.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/ingame/Player cutscene.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/ingame/Quest List.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/ingame/Quest List.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/ingame/Quest List_fullsceen.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/ingame/Quest List_fullsceen.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/images/repo preview/head.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/repo preview/head.png"
         }
       },
       "is_incremental": false,
