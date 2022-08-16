@@ -1,12 +1,6 @@
 # Project "RPG: Deep Dive" GDD #
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/germandilio/RPG_Deep_Dive/Build%20&%20Publish%20documentation?label=docs&style=flat)](https://germandilio.github.io/RPG_Deep_Dive/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/germandilio/RPG_Deep_Dive)
-## Builds ##
-Mac OS: https://developer.cloud.unity3d.com/share/share.html?shareId=ZkHmPnPOvd
-
-Windows: https://developer.cloud.unity3d.com/share/share.html?shareId=ZksDF3w_DO
-
-Linux: https://developer.cloud.unity3d.com/share/share.html?shareId=-yiZ2nv_vd
 
 ## Screenshots ##
 <img src="RPG%20Project/Documentation/resources/images/ingame/Player cutscene.png" alt="Dialog" style="height: 480px; width:800px;"/>
