@@ -51,8 +51,8 @@ Feature Development Priorities:
 
 Reference Games: Diablo III, Witcher 3, Ember, BattleHeart: Legacy
 
-Proof-of-concept date: 25 March 2022.
+Proof-of-concept date: 30 May 2022.
 
-Pre-alpha Additional mechanics test: 28 April 2022.
+Pre-alpha Additional mechanics test: 20 July 2022.
 
-Alpha test. Level design and first level testing: 10 May 2022
+Alpha test. Level design and first level testing: 15 December 2022.
