@@ -2,6 +2,14 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/germandilio/RPG_Deep_Dive/Build%20&%20Publish%20documentation?label=docs&style=flat)](https://germandilio.github.io/RPG_Deep_Dive/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/germandilio/RPG_Deep_Dive)
 
+## Builds ##
+
+[Mac OS](https://cloud.unity.com/public/build-automation/share?shareId=fTP2YA2fgyhfTtx2GYgLyqv4CH1xo6W7PDsbow1O4nw)
+
+[Windows](https://cloud.unity.com/public/build-automation/share?shareId=JdI_7gH6QREZ24LtKKtAFKv4CH1xo6W7PDsbow1O4nw)
+
+[Linux](https://cloud.unity.com/public/build-automation/share?shareId=SzDR1rL-E986LILg9S9VDav4CH1xo6W7PDsbow1O4nw)
+
 ## Screenshots ##
 <img src="RPG%20Project/Documentation/resources/images/ingame/Player cutscene.png" alt="Dialog" style="height: 480px; width:800px;"/>
 <img src="RPG%20Project/Documentation/resources/images/ingame/Inventories & Armor.png" alt="Dialog" style="height: 480px; width:800px;"/>
