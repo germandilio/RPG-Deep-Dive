@@ -1,12 +1,15 @@
 # Project "RPG: Deep Dive" GDD #
+
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/germandilio/RPG_Deep_Dive/Build%20&%20Publish%20documentation?label=docs&style=flat)](https://germandilio.github.io/RPG_Deep_Dive/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/germandilio/RPG_Deep_Dive)
+
 ## Builds ##
-Mac OS: [https://developer.cloud.unity3d.com/share/share.html?shareId=ZkHmPnPOvd](https://developer.cloud.unity3d.com/share/share.html?shareId=Z1qnaRNLod)
 
-Windows: [https://developer.cloud.unity3d.com/share/share.html?shareId=ZksDF3w_DO](https://developer.cloud.unity3d.com/share/share.html?shareId=bJwYlySIod)
+[Mac OS](https://cloud.unity.com/public/build-automation/share?shareId=fTP2YA2fgyhfTtx2GYgLyqv4CH1xo6W7PDsbow1O4nw)
 
-Linux: [https://developer.cloud.unity3d.com/share/share.html?shareId=-yiZ2nv_vd](https://developer.cloud.unity3d.com/share/share.html?shareId=ZycDECE8sd)
+[Windows](https://cloud.unity.com/public/build-automation/share?shareId=JdI_7gH6QREZ24LtKKtAFKv4CH1xo6W7PDsbow1O4nw)
+
+[Linux](https://cloud.unity.com/public/build-automation/share?shareId=SzDR1rL-E986LILg9S9VDav4CH1xo6W7PDsbow1O4nw)
 
 ## Screenshots ###
 
